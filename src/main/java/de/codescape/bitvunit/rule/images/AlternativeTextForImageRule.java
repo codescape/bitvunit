@@ -9,13 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * AlternativeTextForImagesRule ensures that every image within the given HTML document provides an alternative text
+ * AlternativeTextForImageRule ensures that every image within the given HTML document provides an alternative text
  * through it's <code>alt</code> attribute. This rule is satisfied by an empty attribute <code>alt=""</code> since this
  * is the encouraged way for images that are used for layout aspects.
  *
  * @since 0.1
  */
-public class AlternativeTextForImagesRule extends AbstractRule {
+public class AlternativeTextForImageRule extends AbstractRule {
 
     public static final String RULE_NAME = "AlternativeTextForImages";
     private static final String RULE_MESSAGE = "Every image must provide an alternative text through it's alt attribute.";

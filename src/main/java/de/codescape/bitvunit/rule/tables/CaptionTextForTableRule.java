@@ -9,15 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * CaptionTextForTablesRule ensures that every table within the given HTML document provides a title by having a
+ * CaptionTextForTableRule ensures that every table within the given HTML document provides a title by having a
  * <code>&lt;caption&gt;Some title&lt;/caption&gt;</code> element as the first child element inside the table
  * declaration.
  *
  * @since 0.1
  */
-public class CaptionTextForTablesRule extends AbstractRule {
+public class CaptionTextForTableRule extends AbstractRule {
 
-    public static final String RULE_NAME = "CaptionTextForTables";
+    public static final String RULE_NAME = "CaptionTextForTable";
     private static final String RULE_MESSAGE = "Every tables must have a <caption/> element to provide a title of that table's content.";
 
     @Override

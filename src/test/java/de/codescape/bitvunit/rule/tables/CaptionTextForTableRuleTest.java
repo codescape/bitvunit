@@ -7,10 +7,17 @@ import java.util.List;
 
 import static de.codescape.bitvunit.test.HtmlPageCreator.create;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
-public class CaptionTextForTablesRuleTest {
+public class CaptionTextForTableRuleTest {
 
-    private CaptionTextForTablesRule rule = new CaptionTextForTablesRule();
+    private CaptionTextForTableRule rule = new CaptionTextForTableRule();
+
+    @Test
+    public void ruleHasAName() throws Exception {
+        assertNotNull(rule.getName());
+        assertEquals("CaptionTextForTable", rule.getName());
+    }
 
     @Test
     public void tableWithMissingCaptionText() throws Exception {

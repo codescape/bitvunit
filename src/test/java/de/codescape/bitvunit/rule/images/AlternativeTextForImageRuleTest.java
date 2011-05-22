@@ -6,12 +6,17 @@ import org.junit.Test;
 import java.util.List;
 
 import static de.codescape.bitvunit.test.HtmlPageCreator.create;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
-public class AlternativeTextForImagesRuleTest {
+public class AlternativeTextForImageRuleTest {
 
-    private AlternativeTextForImagesRule rule = new AlternativeTextForImagesRule();
+    private AlternativeTextForImageRule rule = new AlternativeTextForImageRule();
+
+    @Test
+    public void ruleHasAName() throws Exception {
+        assertNotNull(rule.getName());
+        assertEquals("AlternativeTextForImage", rule.getName());
+    }
 
     @Test
     public void imageWithMissingAlternativeText() throws Exception {
