@@ -1,4 +1,4 @@
-BITVUnit
+BitvUnit
 =============
 
 This library aims to automate accessibility checks for html pages.
