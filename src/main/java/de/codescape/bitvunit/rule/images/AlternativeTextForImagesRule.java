@@ -1,0 +1,40 @@
+package de.codescape.bitvunit.rule.images;
+
+import com.gargoylesoftware.htmlunit.html.HtmlImage;
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import de.codescape.bitvunit.rule.AbstractRule;
+import de.codescape.bitvunit.rule.Violation;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * TODO: add description
+ *
+ * @since 0.1
+ */
+public class AlternativeTextForImagesRule extends AbstractRule {
+
+    public static final String RULE_NAME = "AlternativeTextForImages";
+    private static final String RULE_MESSAGE = "Every image must provide an alternative text through it's alt attribute.";
+
+    @Override
+    public String getName() {
+        return RULE_NAME;
+    }
+
+    @Override
+    public List<Violation> applyTo(HtmlPage htmlPage) {
+        List<Violation> violations = new ArrayList<Violation>();
+
+        List<HtmlImage> images = getElementsByTagName(htmlPage, HtmlImage.TAG_NAME);
+        for (HtmlImage image : images) {
+            if (!image.getAttributesMap().containsKey("alt")) {
+                violations.add(createViolation(this, image.getStartLineNumber(), RULE_MESSAGE));
+            }
+        }
+
+        return violations;
+    }
+
+}

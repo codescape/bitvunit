@@ -16,4 +16,5 @@ Rules
 
 At the moment the following rules are provided by the framework:
 
+* AlternativeTextForImagesRule (since 0.1)
 * CaptionTextForTablesRule (since 0.1)
