@@ -1,14 +1,11 @@
 package de.codescape.bitvunit.rule.tables;
 
-import com.gargoylesoftware.htmlunit.MockWebConnection;
-import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.rule.Violation;
 import org.junit.Test;
 
-import java.net.URL;
 import java.util.List;
 
+import static de.codescape.bitvunit.rule.tables.de.codescape.bitvunit.test.HtmlPageCreator.create;
 import static org.junit.Assert.assertEquals;
 
 public class CaptionTextForTablesRuleTest {
@@ -19,9 +16,7 @@ public class CaptionTextForTablesRuleTest {
     public void tableWithMissingCaptionText() throws Exception {
         String content = "<html><body><table><tr><td>Hello World</td></tr></table></body></html>";
 
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
-
-        System.out.println(createHtmlPage(content).asXml());
+        List<Violation> violations = rule.applyTo(create(content));
 
         assertEquals(1, violations.size());
         assertEquals(rule, violations.get(0).getRule());
@@ -31,7 +26,7 @@ public class CaptionTextForTablesRuleTest {
     public void tableWithEmptyCaptionText() throws Exception {
         String content = "<html><body><table><caption></caption><tr><td>Hello World</td></tr></table></body></html>";
 
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        List<Violation> violations = rule.applyTo(create(content));
 
         assertEquals(1, violations.size());
         assertEquals(rule, violations.get(0).getRule());
@@ -41,7 +36,7 @@ public class CaptionTextForTablesRuleTest {
     public void tableWithWhitespaceOnlyCaptionText() throws Exception {
         String content = "<html><body><table><caption> </caption><tr><td>Hello World</td></tr></table></body></html>";
 
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        List<Violation> violations = rule.applyTo(create(content));
 
         assertEquals(1, violations.size());
         assertEquals(rule, violations.get(0).getRule());
@@ -51,18 +46,9 @@ public class CaptionTextForTablesRuleTest {
     public void tableWithCaptionText() throws Exception {
         String content = "<html><body><table><caption>Short summary</caption><tr><td>Accessibility</td></tr></table></body></html>";
 
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        List<Violation> violations = rule.applyTo(create(content));
 
         assertEquals(0, violations.size());
-    }
-
-    private HtmlPage createHtmlPage(String content) throws Exception {
-        WebClient webClient = new WebClient();
-        MockWebConnection mockWebConnection = new MockWebConnection();
-        URL url = new URL("http://localhost:8080/page.htm");
-        mockWebConnection.setResponse(url, content);
-        webClient.setWebConnection(mockWebConnection);
-        return webClient.getPage(url);
     }
 
 }
