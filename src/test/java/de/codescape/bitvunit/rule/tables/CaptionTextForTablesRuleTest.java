@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static de.codescape.bitvunit.rule.tables.de.codescape.bitvunit.test.HtmlPageCreator.create;
+import static de.codescape.bitvunit.test.HtmlPageCreator.create;
 import static org.junit.Assert.assertEquals;
 
 public class CaptionTextForTablesRuleTest {

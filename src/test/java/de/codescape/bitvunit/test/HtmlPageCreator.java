@@ -1,4 +1,4 @@
-package de.codescape.bitvunit.rule.tables.de.codescape.bitvunit.test;
+package de.codescape.bitvunit.test;
 
 import com.gargoylesoftware.htmlunit.MockWebConnection;
 import com.gargoylesoftware.htmlunit.WebClient;
