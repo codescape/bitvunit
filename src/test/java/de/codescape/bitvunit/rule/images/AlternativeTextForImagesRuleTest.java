@@ -7,6 +7,7 @@ import java.util.List;
 
 import static de.codescape.bitvunit.test.HtmlPageCreator.create;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class AlternativeTextForImagesRuleTest {
 
@@ -19,6 +20,16 @@ public class AlternativeTextForImagesRuleTest {
         List<Violation> violations = rule.applyTo(create(content));
 
         assertEquals(1, violations.size());
+        assertEquals(rule, violations.get(0).getRule());
+    }
+
+    @Test
+    public void imageWithEmptyAlternativeText() throws Exception {
+        String content = "<html><body><img src=\"myImage.gif\" alt=\"\" /></body></html>";
+
+        List<Violation> violations = rule.applyTo(create(content));
+
+        assertTrue(violations.isEmpty());
     }
 
     @Test
@@ -27,7 +38,7 @@ public class AlternativeTextForImagesRuleTest {
 
         List<Violation> violations = rule.applyTo(create(content));
 
-        assertEquals(0, violations.size());
+        assertTrue(violations.isEmpty());
     }
 
 }
