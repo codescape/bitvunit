@@ -17,7 +17,19 @@ public class CaptionTextForTablesRuleTest {
 
     @Test
     public void tableWithMissingCaptionText() throws Exception {
-        String content = "<html><body><tables><tr><td>Hello World</td></tr></tables></body></html>";
+        String content = "<html><body><table><tr><td>Hello World</td></tr></table></body></html>";
+
+        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+
+        System.out.println(createHtmlPage(content).asXml());
+
+        assertEquals(1, violations.size());
+        assertEquals(rule, violations.get(0).getRule());
+    }
+
+    @Test
+    public void tableWithEmptyCaptionText() throws Exception {
+        String content = "<html><body><table><caption></caption><tr><td>Hello World</td></tr></table></body></html>";
 
         List<Violation> violations = rule.applyTo(createHtmlPage(content));
 
@@ -26,8 +38,8 @@ public class CaptionTextForTablesRuleTest {
     }
 
     @Test
-    public void tableWithEmptyCaptionText() throws Exception {
-        String content = "<html><body><tables><caption></caption><tr><td>Hello World</td></tr></tables></body></html>";
+    public void tableWithWhitespaceOnlyCaptionText() throws Exception {
+        String content = "<html><body><table><caption> </caption><tr><td>Hello World</td></tr></table></body></html>";
 
         List<Violation> violations = rule.applyTo(createHtmlPage(content));
 
@@ -37,7 +49,7 @@ public class CaptionTextForTablesRuleTest {
 
     @Test
     public void tableWithCaptionText() throws Exception {
-        String content = "<html><body><tables><caption>Short summary</caption><tr><td>Accessibility</td></tr></tables>";
+        String content = "<html><body><table><caption>Short summary</caption><tr><td>Accessibility</td></tr></table></body></html>";
 
         List<Violation> violations = rule.applyTo(createHtmlPage(content));
 
