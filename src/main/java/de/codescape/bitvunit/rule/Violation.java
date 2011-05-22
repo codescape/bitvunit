@@ -1,7 +1,5 @@
 package de.codescape.bitvunit.rule;
 
-import de.codescape.bitvunit.rule.Rule;
-
 public class Violation {
 
     private Rule rule;
