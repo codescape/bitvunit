@@ -6,8 +6,7 @@ import org.junit.Test;
 import java.util.List;
 
 import static de.codescape.bitvunit.test.HtmlPageCreator.create;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 public class CaptionTextForTableRuleTest {
 
@@ -55,7 +54,7 @@ public class CaptionTextForTableRuleTest {
 
         List<Violation> violations = rule.applyTo(create(content));
 
-        assertEquals(0, violations.size());
+        assertTrue(violations.isEmpty());
     }
 
 }

@@ -15,9 +15,8 @@ public abstract class AbstractRule implements Rule {
 
     @SuppressWarnings("unchecked")
     protected <T extends HtmlElement> List<T> getElementsByTagName(HtmlPage htmlPage, String tagName) {
-        DomNodeList<HtmlElement> elements = htmlPage.getElementsByTagName(tagName);
         List<T> result = new ArrayList<T>();
-        for (HtmlElement element : elements) {
+        for (HtmlElement element : htmlPage.getElementsByTagName(tagName)) {
             result.add((T)element);
         }
         return result;
