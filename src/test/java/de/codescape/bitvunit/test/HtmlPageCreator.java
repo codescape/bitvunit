@@ -11,17 +11,20 @@ import java.net.URL;
 public class HtmlPageCreator {
 
     public static HtmlPage create(String content) {
-        WebClient webClient = new WebClient();
-        MockWebConnection mockWebConnection = new MockWebConnection();
         URL fakeURL = createFakeURL();
-        mockWebConnection.setResponse(fakeURL, content);
-        webClient.setWebConnection(mockWebConnection);
-
-        try {
-            return webClient.getPage(fakeURL);
+         try {
+            return createWebClient(content, fakeURL).getPage(fakeURL);
         } catch (IOException e) {
             throw new RuntimeException("Error creating HtmlPage with given content.", e);
         }
+    }
+
+    private static WebClient createWebClient(String content, URL fakeURL) {
+        WebClient webClient = new WebClient();
+        MockWebConnection mockWebConnection = new MockWebConnection();
+        mockWebConnection.setResponse(fakeURL, content);
+        webClient.setWebConnection(mockWebConnection);
+        return webClient;
     }
 
     private static URL createFakeURL() {
