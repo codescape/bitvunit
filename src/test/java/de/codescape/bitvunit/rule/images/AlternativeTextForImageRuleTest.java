@@ -21,9 +21,7 @@ public class AlternativeTextForImageRuleTest {
     @Test
     public void imageWithMissingAlternativeText() throws Exception {
         String content = "<html><body><img src=\"myImage.gif\" /></body></html>";
-
         List<Violation> violations = rule.applyTo(create(content));
-
         assertEquals(1, violations.size());
         assertEquals(rule, violations.get(0).getRule());
     }
@@ -31,18 +29,14 @@ public class AlternativeTextForImageRuleTest {
     @Test
     public void imageWithEmptyAlternativeText() throws Exception {
         String content = "<html><body><img src=\"myImage.gif\" alt=\"\" /></body></html>";
-
         List<Violation> violations = rule.applyTo(create(content));
-
         assertTrue(violations.isEmpty());
     }
 
     @Test
     public void imageWithAlternativeText() throws Exception {
         String content = "<html><body><img src=\"myImage.gif\" alt=\"Alternative Text\" /></body></html>";
-
         List<Violation> violations = rule.applyTo(create(content));
-
         assertTrue(violations.isEmpty());
     }
 

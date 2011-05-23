@@ -21,9 +21,7 @@ public class CaptionTextForTableRuleTest {
     @Test
     public void tableWithMissingCaptionText() throws Exception {
         String content = "<html><body><table><tr><td>Hello World</td></tr></table></body></html>";
-
         List<Violation> violations = rule.applyTo(create(content));
-
         assertEquals(1, violations.size());
         assertEquals(rule, violations.get(0).getRule());
     }
@@ -31,9 +29,7 @@ public class CaptionTextForTableRuleTest {
     @Test
     public void tableWithEmptyCaptionText() throws Exception {
         String content = "<html><body><table><caption></caption><tr><td>Hello World</td></tr></table></body></html>";
-
         List<Violation> violations = rule.applyTo(create(content));
-
         assertEquals(1, violations.size());
         assertEquals(rule, violations.get(0).getRule());
     }
@@ -41,9 +37,7 @@ public class CaptionTextForTableRuleTest {
     @Test
     public void tableWithWhitespaceOnlyCaptionText() throws Exception {
         String content = "<html><body><table><caption> </caption><tr><td>Hello World</td></tr></table></body></html>";
-
         List<Violation> violations = rule.applyTo(create(content));
-
         assertEquals(1, violations.size());
         assertEquals(rule, violations.get(0).getRule());
     }
@@ -51,9 +45,7 @@ public class CaptionTextForTableRuleTest {
     @Test
     public void tableWithCaptionText() throws Exception {
         String content = "<html><body><table><caption>Short summary</caption><tr><td>Accessibility</td></tr></table></body></html>";
-
         List<Violation> violations = rule.applyTo(create(content));
-
         assertTrue(violations.isEmpty());
     }
 
