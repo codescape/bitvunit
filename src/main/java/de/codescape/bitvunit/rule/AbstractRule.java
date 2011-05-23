@@ -36,5 +36,10 @@ public abstract class AbstractRule implements Rule {
         violation.setMessage(message);
         return violation;
     }
+    
+    @Override
+    public String toString() {
+        return getName();
+    }
 
 }
