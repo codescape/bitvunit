@@ -18,4 +18,5 @@ At the moment the following rules are provided by the framework:
 
 * AlternativeTextForImageRule (since 0.1)
 * CaptionTextForTableRule (since 0.1)
+* LabelContainsTextRule (since 0.1)
 * LabelForInputFieldRule (since 0.1)
