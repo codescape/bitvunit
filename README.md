@@ -20,3 +20,4 @@ At the moment the following rules are provided by the framework:
 * CaptionTextForTableRule (since 0.1)
 * LabelContainsTextRule (since 0.1)
 * LabelForInputFieldRule (since 0.1)
+* LabelForTextareaRule (since 0.1)

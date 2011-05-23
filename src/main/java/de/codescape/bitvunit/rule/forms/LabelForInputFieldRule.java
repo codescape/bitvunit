@@ -8,6 +8,9 @@ import de.codescape.bitvunit.rule.Violation;
 
 import java.util.List;
 
+import static de.codescape.bitvunit.util.ElementInspector.elementHasValidId;
+import static de.codescape.bitvunit.util.LabelInspector.labelForIdExists;
+
 /**
  * LabelForInputFieldRule ensures that every <code>&lt;input /&gt;</code> field of type <code>text</code> or
  * <code>password</code> within the given HTML document is associated with a <code>&lt;label /&gt;</code> element that
@@ -30,30 +33,15 @@ public class LabelForInputFieldRule extends AbstractRule {
         List<HtmlInput> inputs = getElementsByTagName(htmlPage, HtmlInput.TAG_NAME);
         List<HtmlLabel> labels = getElementsByTagName(htmlPage, HtmlLabel.TAG_NAME);
         for (HtmlInput input : inputs) {
-            if (hasValidId(input) && isTextOrPasswordField(input)) {
-                if (!labelExistsFor(input.getId(), labels)) {
-                    violations.add(createViolation(this, input.getStartLineNumber(), RULE_MESSAGE));
-                }
+            if (elementHasValidId(input) && isTextOrPasswordField(input) && !labelForIdExists(input.getId(), labels)) {
+                violations.add(createViolation(this, input.getStartLineNumber(), RULE_MESSAGE));
             }
         }
-    }
-
-    private boolean labelExistsFor(String id, List<HtmlLabel> labels) {
-        for (HtmlLabel label : labels) {
-            if (label.getForAttribute() != null && label.getForAttribute().equals(id)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     private boolean isTextOrPasswordField(HtmlInput input) {
         String type = input.getTypeAttribute();
         return type != null && (type.equals("text") || type.equals("password"));
-    }
-
-    private boolean hasValidId(HtmlInput input) {
-        return input.getId() != null && !input.getId().isEmpty();
     }
 
 }
