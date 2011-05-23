@@ -8,9 +8,9 @@ import de.codescape.bitvunit.rule.Violation;
 import java.util.List;
 
 /**
- * CaptionTextForTableRule ensures that every table within the given HTML document provides a title by having a
- * <code>&lt;caption&gt;Some title&lt;/caption&gt;</code> element as the first child element inside the table
- * declaration.
+ * CaptionTextForTableRule ensures that every <code>&lt;table /&gt;</code> within the given HTML document provides a
+ * title by having a <code>&lt;caption&gt;Some title&lt;/caption&gt;</code> element as the first child element inside
+ * the <code>&lt;table /&gt;</code> declaration.
  *
  * @since 0.1
  */

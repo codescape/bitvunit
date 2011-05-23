@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * AlternativeTextForImageRule ensures that every image within the given HTML document provides an alternative text
- * through it's <code>alt</code> attribute. This rule is satisfied by an empty attribute <code>alt=""</code> since this
+ * through its <code>alt</code> attribute. This rule is satisfied by an empty attribute <code>alt=""</code> since this
  * is the encouraged way for images that are used for layout aspects.
  *
  * @since 0.1
