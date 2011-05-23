@@ -5,7 +5,6 @@ import com.gargoylesoftware.htmlunit.html.HtmlTable;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violation;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,17 +25,13 @@ public class CaptionTextForTableRule extends AbstractRule {
     }
 
     @Override
-    public List<Violation> applyTo(HtmlPage htmlPage) {
-        List<Violation> violations = new ArrayList<Violation>();
-
+    protected void applyTo(HtmlPage htmlPage, List<Violation> violations) {
         List<HtmlTable> tables = getElementsByTagName(htmlPage, HtmlTable.TAG_NAME);
         for (HtmlTable table : tables) {
             if (table.getCaptionText() == null || table.getCaptionText().isEmpty()) {
                 violations.add(createViolation(this, table.getStartLineNumber(), RULE_MESSAGE));
             }
         }
-
-        return violations;
     }
 
 }

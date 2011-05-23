@@ -5,7 +5,6 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violation;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,17 +25,13 @@ public class AlternativeTextForImageRule extends AbstractRule {
     }
 
     @Override
-    public List<Violation> applyTo(HtmlPage htmlPage) {
-        List<Violation> violations = new ArrayList<Violation>();
-
+    protected void applyTo(HtmlPage htmlPage, List<Violation> violations) {
         List<HtmlImage> images = getElementsByTagName(htmlPage, HtmlImage.TAG_NAME);
         for (HtmlImage image : images) {
             if (!image.getAttributesMap().containsKey("alt")) {
                 violations.add(createViolation(this, image.getStartLineNumber(), RULE_MESSAGE));
             }
         }
-
-        return violations;
     }
 
 }

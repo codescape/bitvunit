@@ -8,9 +8,17 @@ import java.util.List;
 
 public abstract class AbstractRule implements Rule {
 
+    @Override
     public abstract String getName();
 
-    public abstract List<Violation> applyTo(HtmlPage htmlPage);
+    @Override
+    public final List<Violation> applyTo(HtmlPage htmlPage) {
+        List<Violation> violations = new ArrayList<Violation>();
+        applyTo(htmlPage, violations);
+        return violations;
+    }
+
+    protected abstract void applyTo(HtmlPage htmlPage, List<Violation> violations);
 
     @SuppressWarnings("unchecked")
     protected <T extends HtmlElement> List<T> getElementsByTagName(HtmlPage htmlPage, String tagName) {
