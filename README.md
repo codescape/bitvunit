@@ -1,15 +1,15 @@
 BitvUnit
 =============
 
-This library aims to automate accessibility checks for html pages.
+This library aims to automate accessibility checks for HTML pages.
 
 Technology
 -------------
 
 The project makes use of the following frameworks:
 
-* [Apache Maven](http://maven.apache.org/)
-* [HtmlUnit](http://htmlunit.sourceforge.net/)
+* [Apache Maven](http://maven.apache.org/) for build and dependency management
+* [HtmlUnit](http://htmlunit.sourceforge.net/) for HTML code inspection
 
 Rules
 -------------
