@@ -25,8 +25,7 @@ public class LabelContainsTextRule extends AbstractRule {
 
     @Override
     protected void applyTo(HtmlPage htmlPage, List<Violation> violations) {
-        List<HtmlLabel> labels = getElementsByTagName(htmlPage, HtmlLabel.TAG_NAME);
-        for (HtmlLabel label : labels) {
+        for (HtmlLabel label : findAllLabelTags(htmlPage)) {
             if (label.getTextContent() == null || label.getTextContent().isEmpty()) {
                 violations.add(createViolation(this, label.getStartLineNumber(), RULE_MESSAGE));
             }

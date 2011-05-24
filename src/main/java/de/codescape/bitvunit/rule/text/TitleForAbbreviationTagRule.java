@@ -28,8 +28,7 @@ public class TitleForAbbreviationTagRule extends AbstractRule {
 
     @Override
     protected void applyTo(HtmlPage htmlPage, List<Violation> violations) {
-        List<HtmlAbbreviated> abbrs = getElementsByTagName(htmlPage, HtmlAbbreviated.TAG_NAME);
-        for (HtmlAbbreviated abbr : abbrs) {
+        for (HtmlAbbreviated abbr : findAllAbbreviationTags(htmlPage)) {
             if (!elementHasNonEmptyAttribute(abbr, "title")) {
                 violations.add(createViolation(this, abbr.getStartLineNumber(), RULE_MESSAGE));
             }

@@ -1,6 +1,5 @@
 package de.codescape.bitvunit.rule.forms;
 
-import com.gargoylesoftware.htmlunit.html.HtmlLabel;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlTextArea;
 import de.codescape.bitvunit.rule.AbstractRule;
@@ -30,10 +29,8 @@ public class LabelForTextareaRule extends AbstractRule {
 
     @Override
     protected void applyTo(HtmlPage htmlPage, List<Violation> violations) {
-        List<HtmlTextArea> textareas = getElementsByTagName(htmlPage, HtmlTextArea.TAG_NAME);
-        List<HtmlLabel> labels = getElementsByTagName(htmlPage, HtmlLabel.TAG_NAME);
-        for (HtmlTextArea textarea : textareas) {
-            if (elementHasValidId(textarea) && !labelForIdExists(textarea.getId(), labels)) {
+        for (HtmlTextArea textarea : findAllTextareaTags(htmlPage)) {
+            if (elementHasValidId(textarea) && !labelForIdExists(textarea.getId(), findAllLabelTags(htmlPage))) {
                 violations.add(createViolation(this, textarea.getStartLineNumber(), RULE_MESSAGE));
             }
         }

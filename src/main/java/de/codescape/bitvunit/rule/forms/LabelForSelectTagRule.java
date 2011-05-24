@@ -1,6 +1,5 @@
 package de.codescape.bitvunit.rule.forms;
 
-import com.gargoylesoftware.htmlunit.html.HtmlLabel;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlSelect;
 import de.codescape.bitvunit.rule.AbstractRule;
@@ -30,10 +29,8 @@ public class LabelForSelectTagRule extends AbstractRule {
 
     @Override
     protected void applyTo(HtmlPage htmlPage, List<Violation> violations) {
-        List<HtmlSelect> selects = getElementsByTagName(htmlPage, HtmlSelect.TAG_NAME);
-        List<HtmlLabel> labels = getElementsByTagName(htmlPage, HtmlLabel.TAG_NAME);
-        for (HtmlSelect select : selects) {
-            if (elementHasValidId(select) && !labelForIdExists(select.getId(), labels)) {
+        for (HtmlSelect select : findAllSelectTags(htmlPage)) {
+            if (elementHasValidId(select) && !labelForIdExists(select.getId(), findAllLabelTags(htmlPage))) {
                 violations.add(createViolation(this, select.getStartLineNumber(), RULE_MESSAGE));
             }
         }

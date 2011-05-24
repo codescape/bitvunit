@@ -21,8 +21,7 @@ public class TitleForAcronymTagRule extends AbstractRule {
 
     @Override
     protected void applyTo(HtmlPage htmlPage, List<Violation> violations) {
-        List<HtmlAcronym> acronyms = getElementsByTagName(htmlPage, HtmlAcronym.TAG_NAME);
-        for (HtmlAcronym acronym : acronyms) {
+        for (HtmlAcronym acronym : findAllAcronymTags(htmlPage)) {
             if (!elementHasNonEmptyAttribute(acronym, "title")) {
                 violations.add(createViolation(this, acronym.getStartLineNumber(), RULE_MESSAGE));
             }

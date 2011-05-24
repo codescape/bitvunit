@@ -28,8 +28,7 @@ public class AlternativeTextForImageRule extends AbstractRule {
 
     @Override
     protected void applyTo(HtmlPage htmlPage, List<Violation> violations) {
-        List<HtmlImage> images = getElementsByTagName(htmlPage, HtmlImage.TAG_NAME);
-        for (HtmlImage image : images) {
+        for (HtmlImage image : findAllImageTags(htmlPage)) {
             if (!elementHasAttribute(image, "alt")) {
                 violations.add(createViolation(this, image.getStartLineNumber(), RULE_MESSAGE));
             }

@@ -26,8 +26,7 @@ public class CaptionTextForTableRule extends AbstractRule {
 
     @Override
     protected void applyTo(HtmlPage htmlPage, List<Violation> violations) {
-        List<HtmlTable> tables = getElementsByTagName(htmlPage, HtmlTable.TAG_NAME);
-        for (HtmlTable table : tables) {
+        for (HtmlTable table : findAllTableTags(htmlPage)) {
             if (table.getCaptionText() == null || table.getCaptionText().isEmpty()) {
                 violations.add(createViolation(this, table.getStartLineNumber(), RULE_MESSAGE));
             }

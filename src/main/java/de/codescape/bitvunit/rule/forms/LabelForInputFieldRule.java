@@ -1,7 +1,6 @@
 package de.codescape.bitvunit.rule.forms;
 
 import com.gargoylesoftware.htmlunit.html.HtmlInput;
-import com.gargoylesoftware.htmlunit.html.HtmlLabel;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violation;
@@ -30,10 +29,8 @@ public class LabelForInputFieldRule extends AbstractRule {
 
     @Override
     protected void applyTo(HtmlPage htmlPage, List<Violation> violations) {
-        List<HtmlInput> inputs = getElementsByTagName(htmlPage, HtmlInput.TAG_NAME);
-        List<HtmlLabel> labels = getElementsByTagName(htmlPage, HtmlLabel.TAG_NAME);
-        for (HtmlInput input : inputs) {
-            if (elementHasValidId(input) && isTextOrPasswordField(input) && !labelForIdExists(input.getId(), labels)) {
+        for (HtmlInput input : findAllInputTags(htmlPage)) {
+            if (elementHasValidId(input) && isTextOrPasswordField(input) && !labelForIdExists(input.getId(), findAllLabelTags(htmlPage))) {
                 violations.add(createViolation(this, input.getStartLineNumber(), RULE_MESSAGE));
             }
         }
