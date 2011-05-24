@@ -17,14 +17,14 @@ Rules
 At the moment the following rules are provided by the framework:
 
 * Forms
-** LabelContainsTextRule (since 0.1)
-** LabelForInputFieldRule (since 0.1)
-** LabelForTextareaRule (since 0.1)
+    * LabelContainsTextRule (since 0.1)
+    * LabelForInputFieldRule (since 0.1)
+    * LabelForTextareaRule (since 0.1)
 * Images
-** AlternativeTextForImageRule (since 0.1)
+    * AlternativeTextForImageRule (since 0.1)
 * Tables
-** CaptionTextForTableRule (since 0.1)
+    * CaptionTextForTableRule (since 0.1)
 * Text
-** AvoidBlinkTextRule (since 0.1)
-** AvoidMarqueeTextRule (since 0.1)
-** TitleForAbbreviationTag (since 0.1)
+    * AvoidBlinkTextRule (since 0.1)
+    * AvoidMarqueeTextRule (since 0.1)
+    * TitleForAbbreviationTag (since 0.1)
