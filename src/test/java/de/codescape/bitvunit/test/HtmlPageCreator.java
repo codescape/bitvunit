@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class HtmlPageCreator {
+public abstract class HtmlPageCreator {
 
     public static HtmlPage create(String content) {
         URL fakeURL = createFakeURL();
