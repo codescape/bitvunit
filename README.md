@@ -27,4 +27,5 @@ At the moment the following rules are provided by the framework:
 * Text
     * AvoidBlinkTextRule (since 0.1)
     * AvoidMarqueeTextRule (since 0.1)
-    * TitleForAbbreviationTag (since 0.1)
+    * TitleForAbbreviationTagRule (since 0.1)
+    * TitleForAcronymTagRule (since 0.1)
