@@ -10,7 +10,7 @@ import java.util.List;
 
 import static de.codescape.bitvunit.test.Assertions.assertViolation;
 import static de.codescape.bitvunit.test.Assertions.assertViolationCount;
-import static de.codescape.bitvunit.test.HtmlPageCreator.create;
+import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -44,7 +44,7 @@ public class BasicRuleSetTest {
         ruleSet.addRule(secondRule);
 
         String content = "<html><body><blink>Blinking!</blink><marquee>Running!</marquee></body></html>";
-        List<Violation> violations = ruleSet.applyTo(create(content));
+        List<Violation> violations = ruleSet.applyTo(createHtmlPage(content));
 
         assertViolationCount(violations, 2);
         assertViolation(violations, firstRule);

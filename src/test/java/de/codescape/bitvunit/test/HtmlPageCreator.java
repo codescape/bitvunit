@@ -10,7 +10,7 @@ import java.net.URL;
 
 public abstract class HtmlPageCreator {
 
-    public static HtmlPage create(String content) {
+    public static HtmlPage createHtmlPage(String content) {
         URL fakeURL = createFakeURL();
         try {
             return createWebClient(content, fakeURL).getPage(fakeURL);

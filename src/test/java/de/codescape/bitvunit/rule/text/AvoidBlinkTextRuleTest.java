@@ -7,7 +7,7 @@ import java.util.List;
 
 import static de.codescape.bitvunit.test.Assertions.assertNoViolation;
 import static de.codescape.bitvunit.test.Assertions.assertViolation;
-import static de.codescape.bitvunit.test.HtmlPageCreator.create;
+import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -24,14 +24,14 @@ public class AvoidBlinkTextRuleTest {
     @Test
     public void blinkTextPresent() throws Exception {
         String content = "<html><body><blink>Hello World</blink></body></html>";
-        List<Violation> violations = rule.applyTo(create(content));
+        List<Violation> violations = rule.applyTo(createHtmlPage(content));
         assertViolation(violations, rule);
     }
 
     @Test
     public void blinkTextNotPresent() throws Exception {
         String content = "<html><body><p>Hello World</p></body></html>";
-        List<Violation> violations = rule.applyTo(create(content));
+        List<Violation> violations = rule.applyTo(createHtmlPage(content));
         assertNoViolation(violations);
     }
 
