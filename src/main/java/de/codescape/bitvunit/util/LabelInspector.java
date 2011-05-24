@@ -4,7 +4,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlLabel;
 
 import java.util.List;
 
-public class LabelInspector {
+public abstract class LabelInspector {
 
     public static boolean labelForIdExists(String id, List<HtmlLabel> labels) {
         for (HtmlLabel label : labels) {
