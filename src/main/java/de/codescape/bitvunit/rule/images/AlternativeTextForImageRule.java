@@ -7,6 +7,8 @@ import de.codescape.bitvunit.rule.Violation;
 
 import java.util.List;
 
+import static de.codescape.bitvunit.util.ElementInspector.elementHasAttribute;
+
 /**
  * AlternativeTextForImageRule ensures that every image within the given HTML document provides an alternative text
  * through its <code>alt</code> attribute. This rule is satisfied by an empty attribute <code>alt=""</code> since this
@@ -28,7 +30,7 @@ public class AlternativeTextForImageRule extends AbstractRule {
     protected void applyTo(HtmlPage htmlPage, List<Violation> violations) {
         List<HtmlImage> images = getElementsByTagName(htmlPage, HtmlImage.TAG_NAME);
         for (HtmlImage image : images) {
-            if (!image.getAttributesMap().containsKey("alt")) {
+            if (!elementHasAttribute(image, "alt")) {
                 violations.add(createViolation(this, image.getStartLineNumber(), RULE_MESSAGE));
             }
         }

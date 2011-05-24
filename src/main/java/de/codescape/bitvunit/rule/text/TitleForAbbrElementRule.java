@@ -7,6 +7,8 @@ import de.codescape.bitvunit.rule.Violation;
 
 import java.util.List;
 
+import static de.codescape.bitvunit.util.ElementInspector.elementHasNonEmptyAttribute;
+
 /**
  * TitleForAbbrElementRule ensures that every abbreviation that is marked through the <code>&lt;abbr /&gt;</code>
  * element within the given HTML document provides a description of that abbreviation through its <code>title</code>
@@ -28,7 +30,7 @@ public class TitleForAbbrElementRule extends AbstractRule {
     protected void applyTo(HtmlPage htmlPage, List<Violation> violations) {
         List<HtmlAbbreviated> abbrs = getElementsByTagName(htmlPage, HtmlAbbreviated.TAG_NAME);
         for (HtmlAbbreviated abbr : abbrs) {
-            if (!abbr.getAttributesMap().containsKey("title") || abbr.getAttribute("title").isEmpty()) {
+            if (!elementHasNonEmptyAttribute(abbr, "title")) {
                 violations.add(createViolation(this, abbr.getStartLineNumber(), RULE_MESSAGE));
             }
         }
