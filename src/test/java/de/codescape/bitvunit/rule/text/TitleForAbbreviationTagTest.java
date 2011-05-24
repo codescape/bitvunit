@@ -11,14 +11,14 @@ import static de.codescape.bitvunit.test.HtmlPageCreator.create;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class TitleForAbbrElementRuleTest {
+public class TitleForAbbreviationTagTest {
 
-    private TitleForAbbrElementRule rule = new TitleForAbbrElementRule();
+    private TitleForAbbreviationTagRule rule = new TitleForAbbreviationTagRule();
 
     @Test
     public void ruleHasAName() throws Exception {
         assertNotNull(rule.getName());
-        assertEquals("TitleForAbbrElement", rule.getName());
+        assertEquals("TitleForAbbreviationTag", rule.getName());
     }
 
     @Test

@@ -10,15 +10,15 @@ import java.util.List;
 import static de.codescape.bitvunit.util.ElementInspector.elementHasNonEmptyAttribute;
 
 /**
- * TitleForAbbrElementRule ensures that every abbreviation that is marked through the <code>&lt;abbr /&gt;</code>
+ * TitleForAbbreviationTag ensures that every abbreviation that is marked through the <code>&lt;abbr /&gt;</code>
  * element within the given HTML document provides a description of that abbreviation through its <code>title</code>
  * attribute.
  *
  * @since 0.1
  */
-public class TitleForAbbrElementRule extends AbstractRule {
+public class TitleForAbbreviationTagRule extends AbstractRule {
 
-    public static final String RULE_NAME = "TitleForAbbrElement";
+    public static final String RULE_NAME = "TitleForAbbreviationTag";
     private static final String RULE_MESSAGE = "Every <abbr /> element should describe the marked abbreviation with the title attribute.";
 
     @Override
