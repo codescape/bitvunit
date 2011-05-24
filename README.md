@@ -32,5 +32,7 @@ Rules
 Change Log
 -------------
 
-* Release 0.1 (date)
-    * added new rules
+* Release 0.1 (release date goes here)
+    * introduced idea of Rule to check a single HTML page against a single rule
+    * introduced idea of RuleSet to check a single HTML page against multiple rules
+    * added first bunch of rules
