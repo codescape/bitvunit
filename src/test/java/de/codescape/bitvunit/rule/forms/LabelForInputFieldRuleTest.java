@@ -1,22 +1,20 @@
 package de.codescape.bitvunit.rule.forms;
 
+import de.codescape.bitvunit.rule.Violation;
+import org.junit.Test;
+
+import java.util.List;
+
 import static de.codescape.bitvunit.test.Assertions.assertNoViolation;
 import static de.codescape.bitvunit.test.Assertions.assertViolation;
 import static de.codescape.bitvunit.test.HtmlPageCreator.create;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-
-import java.util.List;
-
-import org.junit.Test;
-
-import de.codescape.bitvunit.rule.Violation;
 
 public class LabelForInputFieldRuleTest {
 
     private LabelForInputFieldRule rule = new LabelForInputFieldRule();
-    
+
     @Test
     public void ruleHasAName() throws Exception {
         assertNotNull(rule.getName());

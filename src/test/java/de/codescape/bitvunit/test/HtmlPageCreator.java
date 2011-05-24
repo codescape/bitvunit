@@ -12,7 +12,7 @@ public abstract class HtmlPageCreator {
 
     public static HtmlPage create(String content) {
         URL fakeURL = createFakeURL();
-         try {
+        try {
             return createWebClient(content, fakeURL).getPage(fakeURL);
         } catch (IOException e) {
             throw new RuntimeException("Error creating HtmlPage with given content.", e);

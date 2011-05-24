@@ -8,7 +8,8 @@ import java.util.List;
 import static de.codescape.bitvunit.test.Assertions.assertNoViolation;
 import static de.codescape.bitvunit.test.Assertions.assertViolation;
 import static de.codescape.bitvunit.test.HtmlPageCreator.create;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class AvoidBlinkTextRuleTest {
 

@@ -20,7 +20,7 @@ public abstract class Assertions {
                 foundViolation = true;
             }
         }
-        assertTrue("Expected violation of rule " +  rule + " but found no violation of that rule.", foundViolation);
+        assertTrue("Expected violation of rule " + rule + " but found no violation of that rule.", foundViolation);
     }
 
 }
