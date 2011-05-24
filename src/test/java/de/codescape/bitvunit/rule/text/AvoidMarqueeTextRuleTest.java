@@ -5,10 +5,11 @@ import org.junit.Test;
 
 import java.util.List;
 
+import static de.codescape.bitvunit.test.Assertions.assertNoViolation;
+import static de.codescape.bitvunit.test.Assertions.assertViolation;
 import static de.codescape.bitvunit.test.HtmlPageCreator.create;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 
 public class AvoidMarqueeTextRuleTest {
 
@@ -24,15 +25,14 @@ public class AvoidMarqueeTextRuleTest {
     public void marqueeTextPresent() throws Exception {
         String content = "<html><body><marquee>Hello World</marquee></body></html>";
         List<Violation> violations = rule.applyTo(create(content));
-        assertEquals(1, violations.size());
-        assertEquals(rule, violations.get(0).getRule());
+        assertViolation(violations, rule);
     }
 
     @Test
     public void marqueeTextNotPresent() throws Exception {
         String content = "<html><body><p>Hello World</p></body></html>";
         List<Violation> violations = rule.applyTo(create(content));
-        assertTrue(violations.isEmpty());
+        assertNoViolation(violations);
     }
 
 }
