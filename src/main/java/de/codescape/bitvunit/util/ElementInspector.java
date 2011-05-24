@@ -9,11 +9,11 @@ public abstract class ElementInspector {
     }
 
     public static boolean elementHasNonEmptyAttribute(HtmlElement element, String attribute) {
-        return (elementHasAttribute(element, attribute) && !element.getAttribute(attribute).isEmpty());
+        return elementHasAttribute(element, attribute) && !element.getAttribute(attribute).isEmpty();
     }
 
     public static boolean elementHasAttribute(HtmlElement element, String attribute) {
-        return (element.getAttributesMap().containsKey(attribute));
+        return element.getAttributesMap().containsKey(attribute);
     }
 
 }
