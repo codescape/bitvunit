@@ -45,6 +45,21 @@
             <version>1.8.5</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.9.5-RC2</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>google-reflections-repository</id>
+            <name>Google Reflections Maven2 Repository</name>
+            <url>http://reflections.googlecode.com/svn/repo</url>
+        </repository>
+    </repositories>
 
 </project>
