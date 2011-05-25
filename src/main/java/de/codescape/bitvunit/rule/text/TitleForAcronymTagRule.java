@@ -2,6 +2,7 @@ package de.codescape.bitvunit.rule.text;
 
 import com.gargoylesoftware.htmlunit.html.HtmlAcronym;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violation;
 
@@ -20,10 +21,10 @@ public class TitleForAcronymTagRule extends AbstractRule {
     }
 
     @Override
-    protected void applyTo(HtmlPage htmlPage, List<Violation> violations) {
-        for (HtmlAcronym acronym : findAllAcronymTags(htmlPage)) {
+    protected void applyTo(Page page, List<Violation> violations) {
+        for (HtmlAcronym acronym : page.findAllAcronymTags()) {
             if (!elementHasNonEmptyAttribute(acronym, "title")) {
-                violations.add(createViolation(this, acronym.getStartLineNumber(), RULE_MESSAGE));
+                violations.add(createViolation(acronym.getStartLineNumber(), RULE_MESSAGE));
             }
         }
     }

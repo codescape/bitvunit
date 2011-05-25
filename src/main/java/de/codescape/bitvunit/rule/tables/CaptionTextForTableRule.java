@@ -2,6 +2,7 @@ package de.codescape.bitvunit.rule.tables;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlTable;
+import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violation;
 
@@ -25,10 +26,10 @@ public class CaptionTextForTableRule extends AbstractRule {
     }
 
     @Override
-    protected void applyTo(HtmlPage htmlPage, List<Violation> violations) {
-        for (HtmlTable table : findAllTableTags(htmlPage)) {
+    protected void applyTo(Page page, List<Violation> violations) {
+        for (HtmlTable table : page.findAllTableTags()) {
             if (table.getCaptionText() == null || table.getCaptionText().isEmpty()) {
-                violations.add(createViolation(this, table.getStartLineNumber(), RULE_MESSAGE));
+                violations.add(createViolation(table.getStartLineNumber(), RULE_MESSAGE));
             }
         }
     }

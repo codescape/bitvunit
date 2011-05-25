@@ -1,7 +1,7 @@
 package de.codescape.bitvunit.rule.forms;
 
 import com.gargoylesoftware.htmlunit.html.HtmlLabel;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violation;
 
@@ -24,11 +24,15 @@ public class LabelContainsTextRule extends AbstractRule {
     }
 
     @Override
-    protected void applyTo(HtmlPage htmlPage, List<Violation> violations) {
-        for (HtmlLabel label : findAllLabelTags(htmlPage)) {
-            if (label.getTextContent() == null || label.getTextContent().isEmpty()) {
-                violations.add(createViolation(this, label.getStartLineNumber(), RULE_MESSAGE));
-            }
+    protected void applyTo(Page page, List<Violation> violations) {
+        for (HtmlLabel label : page.findAllLabelTags()) {
+            validateLabel(label, violations);
+        }
+    }
+
+    private void validateLabel(HtmlLabel label, List<Violation> violations) {
+        if (label.getTextContent() == null || label.getTextContent().isEmpty()) {
+            violations.add(createViolation(label.getStartLineNumber(), RULE_MESSAGE));
         }
     }
 

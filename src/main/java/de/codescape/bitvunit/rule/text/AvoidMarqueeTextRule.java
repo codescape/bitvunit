@@ -2,6 +2,7 @@ package de.codescape.bitvunit.rule.text;
 
 import com.gargoylesoftware.htmlunit.html.HtmlMarquee;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violation;
 
@@ -25,9 +26,9 @@ public class AvoidMarqueeTextRule extends AbstractRule {
     }
 
     @Override
-    protected void applyTo(HtmlPage htmlPage, List<Violation> violations) {
-        for (HtmlMarquee marquee : findAllMarqueeTags(htmlPage)) {
-            violations.add(createViolation(this, marquee.getStartLineNumber(), RULE_MESSAGE));
+    protected void applyTo(Page page, List<Violation> violations) {
+        for (HtmlMarquee marquee : page.findAllMarqueeTags()) {
+            violations.add(createViolation(marquee.getStartLineNumber(), RULE_MESSAGE));
         }
     }
 
