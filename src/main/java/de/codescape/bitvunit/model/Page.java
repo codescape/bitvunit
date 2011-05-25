@@ -62,4 +62,12 @@ public class Page {
         return findHtmlElementsByTagName(HtmlAcronym.TAG_NAME);
     }
 
+    public List<HtmlBold> findAllBoldTags() {
+        return findHtmlElementsByTagName(HtmlBold.TAG_NAME);
+    }
+
+    public List<HtmlItalic> findAllItalicTags() {
+        return findHtmlElementsByTagName(HtmlItalic.TAG_NAME);
+    }
+
 }

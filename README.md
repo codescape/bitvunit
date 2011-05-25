@@ -25,6 +25,8 @@ Rules
     * CaptionTextForTableRule (since 0.1)
 * Text
     * AvoidBlinkTextRule (since 0.1)
+    * AvoidBoldTagRule (since 0.2)
+    * AvoidItalicTagRule (since 0.2)
     * AvoidMarqueeTextRule (since 0.1)
     * TitleForAbbreviationTagRule (since 0.1)
     * TitleForAcronymTagRule (since 0.1)
@@ -35,6 +37,9 @@ Change Log
 * Release 0.2 (????-??-??)
     * easier selection of elements with new Page decorator
     * easier creation of violations in rule implementations
+    * added new rules
+        * AvoidBoldTagRule
+        * AvoidItalicTagRule
 
 * Release 0.1 (2011-05-24)
     * introduced Rule to check a single HTML page against a single rule
