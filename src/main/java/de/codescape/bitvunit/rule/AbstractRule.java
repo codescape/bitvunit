@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.rule;
 
-import com.gargoylesoftware.htmlunit.html.*;
+import com.gargoylesoftware.htmlunit.html.HtmlElement;
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.model.Page;
 
 import java.util.ArrayList;
