@@ -33,7 +33,8 @@ Change Log
 -------------
 
 * Release 0.2 (????-??-??)
-    * TODO
+    * easier selection of elements with new Page decorator
+    * easier creation of violations in rule implementations
 
 * Release 0.1 (2011-05-24)
     * introduced Rule to check a single HTML page against a single rule
