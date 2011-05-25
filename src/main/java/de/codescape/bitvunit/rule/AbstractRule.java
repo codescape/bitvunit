@@ -1,6 +1,5 @@
 package de.codescape.bitvunit.rule;
 
-import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.model.Page;
 
@@ -21,21 +20,8 @@ public abstract class AbstractRule implements Rule {
 
     protected abstract void applyTo(Page page, List<Violation> violations);
 
-    @SuppressWarnings("unchecked")
-    protected <T extends HtmlElement> List<T> getElementsByTagName(HtmlPage htmlPage, String tagName) {
-        List<T> result = new ArrayList<T>();
-        for (HtmlElement element : htmlPage.getElementsByTagName(tagName)) {
-            result.add((T) element);
-        }
-        return result;
-    }
-
     protected Violation createViolation(Rule rule, int lineNumber, String message) {
-        Violation violation = new Violation();
-        violation.setRule(rule);
-        violation.setLineNumber(lineNumber);
-        violation.setMessage(message);
-        return violation;
+        return new Violation(rule, lineNumber, message);
     }
 
     protected Violation createViolation(int lineNumber, String message) {

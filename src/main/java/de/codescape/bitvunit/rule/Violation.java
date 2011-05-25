@@ -2,32 +2,27 @@ package de.codescape.bitvunit.rule;
 
 public class Violation {
 
-    private Rule rule;
-    private String message;
-    private Integer lineNumber;
+    private final Rule rule;
+    private final String message;
+    private final Integer lineNumber;
+
+    public Violation(Rule rule, int lineNumber, String message) {
+        super();
+        this.rule = rule;
+        this.lineNumber = lineNumber;
+        this.message = message;
+    }
 
     public Rule getRule() {
         return rule;
-    }
-
-    public void setRule(Rule rule) {
-        this.rule = rule;
     }
 
     public String getMessage() {
         return message;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
     public Integer getLineNumber() {
         return lineNumber;
-    }
-
-    public void setLineNumber(Integer lineNumber) {
-        this.lineNumber = lineNumber;
     }
 
     @Override
