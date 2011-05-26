@@ -28,6 +28,7 @@ Rules
     * AvoidBoldTagRule (since 0.2)
     * AvoidItalicTagRule (since 0.2)
     * AvoidMarqueeTextRule (since 0.1)
+    * LanguageForHtmlTagRule (since 0.2)
     * TitleForAbbreviationTagRule (since 0.1)
     * TitleForAcronymTagRule (since 0.1)
 
