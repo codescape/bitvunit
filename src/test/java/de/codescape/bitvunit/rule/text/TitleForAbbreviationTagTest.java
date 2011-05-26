@@ -5,8 +5,8 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static de.codescape.bitvunit.test.Assertions.assertNoViolation;
-import static de.codescape.bitvunit.test.Assertions.assertViolation;
+import static de.codescape.bitvunit.test.Assertions.assertNoViolationExists;
+import static de.codescape.bitvunit.test.Assertions.assertViolationExists;
 import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -25,21 +25,21 @@ public class TitleForAbbreviationTagTest {
     public void abbrElementWithTitleAttribute() throws Exception {
         String content = "<html><body><abbr title=\"Structured Query Language\">SQL</abbr></body></html>";
         List<Violation> violations = rule.applyTo(createHtmlPage(content));
-        assertNoViolation(violations);
+        assertNoViolationExists(violations);
     }
 
     @Test
     public void abbrElementWithEmptyTitleAttribute() throws Exception {
         String content = "<html><body><abbr title=\"\">SQL</abbr></body></html>";
         List<Violation> violations = rule.applyTo(createHtmlPage(content));
-        assertViolation(violations, rule);
+        assertViolationExists(violations, rule);
     }
 
     @Test
     public void abbrElementWithMissingTitleAttribute() {
         String content = "<html><body><abbr>SQL</abbr></body></html>";
         List<Violation> violations = rule.applyTo(createHtmlPage(content));
-        assertViolation(violations, rule);
+        assertViolationExists(violations, rule);
     }
 
 }
