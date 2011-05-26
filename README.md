@@ -40,6 +40,7 @@ Change Log
     * added new rules
         * AvoidBoldTagRule
         * AvoidItalicTagRule
+        * LanguageForHtmlTagRule
 
 * Release 0.1 (2011-05-24)
     * introduced Rule to check a single HTML page against a single rule

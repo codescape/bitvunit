@@ -70,4 +70,8 @@ public class Page {
         return findHtmlElementsByTagName(HtmlItalic.TAG_NAME);
     }
 
+    public List<HtmlHtml> findAllHtmlTags() {
+        return findHtmlElementsByTagName(HtmlHtml.TAG_NAME);
+    }
+
 }
