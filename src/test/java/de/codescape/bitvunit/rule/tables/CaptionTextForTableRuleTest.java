@@ -5,8 +5,8 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static de.codescape.bitvunit.test.Assertions.assertNoViolationExists;
-import static de.codescape.bitvunit.test.Assertions.assertViolationExists;
+import static de.codescape.bitvunit.test.Assertions.assertNoViolations;
+import static de.codescape.bitvunit.test.Assertions.assertViolations;
 import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -25,28 +25,28 @@ public class CaptionTextForTableRuleTest {
     public void tableWithMissingCaptionText() throws Exception {
         String content = "<html><body><table><tr><td>Hello World</td></tr></table></body></html>";
         List<Violation> violations = rule.applyTo(createHtmlPage(content));
-        assertViolationExists(violations, rule);
+        assertViolations(violations, rule, 1);
     }
 
     @Test
     public void tableWithEmptyCaptionText() throws Exception {
         String content = "<html><body><table><caption></caption><tr><td>Hello World</td></tr></table></body></html>";
         List<Violation> violations = rule.applyTo(createHtmlPage(content));
-        assertViolationExists(violations, rule);
+        assertViolations(violations, rule, 1);
     }
 
     @Test
     public void tableWithWhitespaceOnlyCaptionText() throws Exception {
         String content = "<html><body><table><caption> </caption><tr><td>Hello World</td></tr></table></body></html>";
         List<Violation> violations = rule.applyTo(createHtmlPage(content));
-        assertViolationExists(violations, rule);
+        assertViolations(violations, rule, 1);
     }
 
     @Test
     public void tableWithCaptionText() throws Exception {
         String content = "<html><body><table><caption>Short summary</caption><tr><td>Accessibility</td></tr></table></body></html>";
         List<Violation> violations = rule.applyTo(createHtmlPage(content));
-        assertNoViolationExists(violations);
+        assertNoViolations(violations);
     }
 
 }

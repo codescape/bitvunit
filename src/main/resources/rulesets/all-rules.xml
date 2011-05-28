@@ -13,6 +13,7 @@
 
     <!-- Tables -->
     <rule class="de.codescape.bitvunit.rule.tables.CaptionTextForTableRule"/>
+    <rule class="de.codescape.bitvunit.rule.tables.TableHeaderContainsTextRule"/>
 
     <!-- Text -->
     <rule class="de.codescape.bitvunit.rule.text.AvoidBlinkTextRule"/>

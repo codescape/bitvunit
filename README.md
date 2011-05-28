@@ -23,6 +23,7 @@ Rules
     * AlternativeTextForImageRule (since 0.1)
 * Tables
     * CaptionTextForTableRule (since 0.1)
+    * TableHeaderContainsTextRule (since 0.2)
 * Text
     * AvoidBlinkTextRule (since 0.1)
     * AvoidBoldTagRule (since 0.2)
@@ -42,6 +43,7 @@ Change Log
         * AvoidBoldTagRule
         * AvoidItalicTagRule
         * LanguageForHtmlTagRule
+        * TableHeaderContainsTextRule
     * introduced XmlRuleSet to create a RuleSet based on a XML document
 
 * Release 0.1 (2011-05-24)

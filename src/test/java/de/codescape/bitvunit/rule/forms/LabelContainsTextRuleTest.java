@@ -5,8 +5,8 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static de.codescape.bitvunit.test.Assertions.assertNoViolationExists;
-import static de.codescape.bitvunit.test.Assertions.assertViolationExists;
+import static de.codescape.bitvunit.test.Assertions.assertNoViolations;
+import static de.codescape.bitvunit.test.Assertions.assertViolations;
 import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -25,21 +25,21 @@ public class LabelContainsTextRuleTest {
     public void labelWithText() throws Exception {
         String content = "<html><body><form><label for=\"firstname\">Firstname</label></form></body></html>";
         List<Violation> violations = rule.applyTo(createHtmlPage(content));
-        assertNoViolationExists(violations);
+        assertNoViolations(violations);
     }
 
     @Test
     public void labelWithWrappedText() throws Exception {
         String content = "<html><body><form><label for=\"firstname\"><span>Firstname</span></label></form></body></html>";
         List<Violation> violations = rule.applyTo(createHtmlPage(content));
-        assertNoViolationExists(violations);
+        assertNoViolations(violations);
     }
 
     @Test
     public void labelWithMissingText() throws Exception {
         String content = "<html><body><form><label for=\"firstname\"></label></form></body></html>";
         List<Violation> violations = rule.applyTo(createHtmlPage(content));
-        assertViolationExists(violations, rule);
+        assertViolations(violations, rule, 1);
     }
 
 }

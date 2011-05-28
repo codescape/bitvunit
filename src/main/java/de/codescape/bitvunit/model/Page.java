@@ -74,4 +74,8 @@ public class Page {
         return findHtmlElementsByTagName(HtmlHtml.TAG_NAME);
     }
 
+    public List<HtmlTableCell> findAllTableHeaders() {
+        return findHtmlElementsByTagName("th");
+    }
+
 }

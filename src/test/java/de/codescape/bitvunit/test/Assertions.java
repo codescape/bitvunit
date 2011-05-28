@@ -2,33 +2,30 @@ package de.codescape.bitvunit.test;
 
 import de.codescape.bitvunit.rule.Rule;
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.ruleset.RuleSet;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public abstract class Assertions {
 
-    public static void assertNoViolationExists(List<Violation> violations) {
-        assertTrue("Expected no violations but found " + violations.size() + " violations.", violations.isEmpty());
+    public static void assertViolations(List<Violation> violations, int expectedCount) {
+        int count = violations.size();
+        assertTrue("Expected " + expectedCount + " violations but found " + count + " violations.", expectedCount == count);
     }
 
-    public static void assertViolationExists(List<Violation> violations) {
-        assertTrue("Expected minimum of one violation but found none.", !violations.isEmpty());
-    }
-
-    public static void assertViolationExists(List<Violation> violations, Rule rule) {
-        assertTrue("Expected violation of rule " + rule + " but found no violation of that rule.", numberOfViolations(violations, rule) > 0);
-    }
-
-    public static void assertViolationExists(List<Violation> violations, int expectedCount) {
-        assertEquals("Expected " + expectedCount + " violations but found " + violations.size() + " violations.", expectedCount, violations.size());
-    }
-
-    public static void assertViolationExists(List<Violation> violations, Rule rule, int expectedCount) {
+    public static void assertViolations(List<Violation> violations, Rule rule, int expectedCount) {
         int count = numberOfViolations(violations, rule);
-        assertEquals("Expected " + expectedCount + " violations of rule " + rule + " but found " + count + " violations.", expectedCount, count);
+        assertTrue("Expected " + expectedCount + " violations of rule " + rule + " but found " + count + " violations.", expectedCount == count);
+    }
+
+    public static void assertNoViolations(List<Violation> violations) {
+        assertViolations(violations, 0);
+    }
+
+    public static void assertNoViolations(List<Violation> violations, Rule rule) {
+        assertViolations(violations, rule, 0);
     }
 
     private static int numberOfViolations(List<Violation> violations, Rule rule) {
@@ -39,6 +36,11 @@ public abstract class Assertions {
             }
         }
         return found;
+    }
+
+    public static void assertRules(RuleSet ruleSet, int expectedCount) {
+        int count = ruleSet.getRules().size();
+        assertTrue("Expected " + expectedCount + " rules in rule set but found " + count + " rules.", expectedCount == count);
     }
 
 }

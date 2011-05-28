@@ -8,9 +8,9 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static de.codescape.bitvunit.test.Assertions.assertViolationExists;
+import static de.codescape.bitvunit.test.Assertions.assertRules;
+import static de.codescape.bitvunit.test.Assertions.assertViolations;
 import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 public class BasicRuleSetTest {
@@ -31,8 +31,7 @@ public class BasicRuleSetTest {
     public void getRulesShouldReturnAllRules() throws Exception {
         ruleSet.addRule(new AvoidBlinkTextRule());
         ruleSet.addRule(new AvoidMarqueeTextRule());
-        assertNotNull(ruleSet.getRules());
-        assertEquals(2, ruleSet.getRules().size());
+        assertRules(ruleSet, 2);
     }
 
     @Test
@@ -45,9 +44,9 @@ public class BasicRuleSetTest {
         String content = "<html><body><blink>Blinking!</blink><marquee>Running!</marquee></body></html>";
         List<Violation> violations = ruleSet.applyTo(createHtmlPage(content));
 
-        assertViolationExists(violations, 2);
-        assertViolationExists(violations, firstRule, 1);
-        assertViolationExists(violations, secondRule, 1);
+        assertViolations(violations, 2);
+        assertViolations(violations, firstRule, 1);
+        assertViolations(violations, secondRule, 1);
     }
 
 }
