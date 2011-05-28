@@ -14,7 +14,7 @@ The project makes use of the following frameworks to do its work:
 Rules
 -------------
 
-For a list of all rules currently supported by BitvUnit please refer to the RuleSet [all-rules.xml](https://github.com/codescape/bitvunit/blob/master/src/main/resources/rulesets/all-rules.xml) which lists all rules.
+For a list of all rules that are supported please refer to the XML rule set called [all-rules.xml](https://github.com/codescape/bitvunit/blob/master/src/main/resources/rulesets/all-rules.xml) where all supported rules have to be maintained in oder to make all tests in the test suite of this framework pass.
 
 Change Log
 -------------
@@ -32,4 +32,14 @@ Change Log
 * Release 0.1 (2011-05-24)
     * introduced Rule to check a single HTML page against a single rule
     * introduced RuleSet to check a single HTML page against multiple rules
-    * added first bunch of rules
+    * added first rules
+        * AlternativeTextForImageRule
+        * AvoidBlinkTextRule
+        * AvoidMarqueeTextRule
+        * CaptionTextForTableRule
+        * LabelContainsTextRule
+        * LabelForInputFieldRule
+        * LabelForSelectTagRule
+        * LabelForTextareaRule
+        * TitleForAbbreviationTagRule
+        * TitleForAcronymTagRule
