@@ -6,7 +6,7 @@ This library aims to automate accessibility checks for HTML pages.
 Technology
 -------------
 
-The project makes use of the following frameworks to do its own work:
+The project makes use of the following frameworks to do its work:
 
 * [Apache Maven](http://maven.apache.org/) for build and dependency management
 * [HtmlUnit](http://htmlunit.sourceforge.net/) for HTML code inspection
@@ -42,6 +42,7 @@ Change Log
         * AvoidBoldTagRule
         * AvoidItalicTagRule
         * LanguageForHtmlTagRule
+    * introduced XmlRuleSet to create a RuleSet from a XML document
 
 * Release 0.1 (2011-05-24)
     * introduced Rule to check a single HTML page against a single rule

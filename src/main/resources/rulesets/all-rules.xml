@@ -1,0 +1,26 @@
+<ruleset>
+
+    <description>Set of all rules currently supported by the framework.</description>
+
+    <!-- Forms -->
+    <rule class="de.codescape.bitvunit.rule.forms.LabelContainsTextRule"/>
+    <rule class="de.codescape.bitvunit.rule.forms.LabelForInputFieldRule"/>
+    <rule class="de.codescape.bitvunit.rule.forms.LabelForSelectTagRule"/>
+    <rule class="de.codescape.bitvunit.rule.forms.LabelForTextareaRule"/>
+
+    <!-- Images -->
+    <rule class="de.codescape.bitvunit.rule.images.AlternativeTextForImageRule"/>
+
+    <!-- Tables -->
+    <rule class="de.codescape.bitvunit.rule.tables.CaptionTextForTableRule"/>
+
+    <!-- Text -->
+    <rule class="de.codescape.bitvunit.rule.text.AvoidBlinkTextRule"/>
+    <rule class="de.codescape.bitvunit.rule.text.AvoidBoldTagRule"/>
+    <rule class="de.codescape.bitvunit.rule.text.AvoidItalicTagRule"/>
+    <rule class="de.codescape.bitvunit.rule.text.AvoidMarqueeTextRule"/>
+    <rule class="de.codescape.bitvunit.rule.text.LanguageForHtmlTagRule"/>
+    <rule class="de.codescape.bitvunit.rule.text.TitleForAbbreviationTagRule"/>
+    <rule class="de.codescape.bitvunit.rule.text.TitleForAcronymTagRule"/>
+
+</ruleset>
