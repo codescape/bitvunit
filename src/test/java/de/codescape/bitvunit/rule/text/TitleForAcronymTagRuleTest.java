@@ -11,7 +11,7 @@ import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class TitleForAcronymTagTest {
+public class TitleForAcronymTagRuleTest {
 
     private TitleForAcronymTagRule rule = new TitleForAcronymTagRule();
 
