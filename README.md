@@ -26,6 +26,7 @@ Change Log
 * added new rules
     * AvoidBoldTagRule
     * AvoidItalicTagRule
+    * HeadersInCorrectOrderRule
     * LanguageForHtmlTagRule
     * TableHeaderContainsTextRule
 * introduced XmlRuleSet to create a RuleSet based on a XML document

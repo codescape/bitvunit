@@ -78,4 +78,10 @@ public class Page {
         return findHtmlElementsByTagName("th");
     }
 
+    @SuppressWarnings("unchecked")
+    public List<HtmlElement> findAllHeaderTags() {
+        return (List<HtmlElement>) htmlPage.getByXPath("//*[name()='h1' or name()='h2' or name()='h3' or name()='h4' or name() = 'h5' or name()='h6']");
+
+    }
+
 }
