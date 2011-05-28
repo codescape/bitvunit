@@ -20,26 +20,28 @@ Change Log
 -------------
 
 ### Release 0.2 (????-??-??)
-    * easier selection of elements with new Page decorator
-    * easier creation of violations in rule implementations
-    * added new rules
-        * AvoidBoldTagRule
-        * AvoidItalicTagRule
-        * LanguageForHtmlTagRule
-        * TableHeaderContainsTextRule
-    * introduced XmlRuleSet to create a RuleSet based on a XML document
+
+* easier selection of elements with new Page decorator
+* easier creation of violations in rule implementations
+* added new rules
+    * AvoidBoldTagRule
+    * AvoidItalicTagRule
+    * LanguageForHtmlTagRule
+    * TableHeaderContainsTextRule
+* introduced XmlRuleSet to create a RuleSet based on a XML document
 
 ### Release 0.1 (2011-05-24)
-    * introduced Rule to check a single HTML page against a single rule
-    * introduced RuleSet to check a single HTML page against multiple rules
-    * added first rules
-        * AlternativeTextForImageRule
-        * AvoidBlinkTextRule
-        * AvoidMarqueeTextRule
-        * CaptionTextForTableRule
-        * LabelContainsTextRule
-        * LabelForInputFieldRule
-        * LabelForSelectTagRule
-        * LabelForTextareaRule
-        * TitleForAbbreviationTagRule
-        * TitleForAcronymTagRule
+
+* introduced Rule to check a single HTML page against a single rule
+* introduced RuleSet to check a single HTML page against multiple rules
+* added first rules
+    * AlternativeTextForImageRule
+    * AvoidBlinkTextRule
+    * AvoidMarqueeTextRule
+    * CaptionTextForTableRule
+    * LabelContainsTextRule
+    * LabelForInputFieldRule
+    * LabelForSelectTagRule
+    * LabelForTextareaRule
+    * TitleForAbbreviationTagRule
+    * TitleForAcronymTagRule
