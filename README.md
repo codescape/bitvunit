@@ -42,7 +42,7 @@ Change Log
         * AvoidBoldTagRule
         * AvoidItalicTagRule
         * LanguageForHtmlTagRule
-    * introduced XmlRuleSet to create a RuleSet from a XML document
+    * introduced XmlRuleSet to create a RuleSet based on a XML document
 
 * Release 0.1 (2011-05-24)
     * introduced Rule to check a single HTML page against a single rule
