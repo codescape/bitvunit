@@ -1,4 +1,6 @@
-<ruleset>
+<?xml version="1.0" encoding="utf-8"?>
+<ruleset xmlns="http://www.codescape.de/bitvunit/ruleset/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.codescape.de/bitvunit/ruleset/1.0 http://www.codescape.de/bitvunit/ruleset-schema.xsd">
 
     <description>Set of all rules currently supported by the framework.</description>
 
