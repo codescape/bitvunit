@@ -6,7 +6,7 @@ import org.reflections.Reflections;
 
 import java.lang.reflect.Modifier;
 
-import static org.junit.Assert.assertEquals;
+import static de.codescape.bitvunit.test.Assertions.assertRules;
 
 public class XmlRuleSetTest {
 
@@ -14,9 +14,8 @@ public class XmlRuleSetTest {
 
     @Test
     public void creationOfRuleSetAllRulesFindsAllRules() throws Exception {
-        int xmlRuleCount = new XmlRuleSet("/rulesets/all-rules.xml").getRules().size();
-        int classpathRuleCount = countRulesInRulePackage();
-        assertEquals("Ruleset all-rules.xml is expected to include all rules.", classpathRuleCount, xmlRuleCount);
+        RuleSet ruleSet = new XmlRuleSet("/rulesets/all-rules.xml");
+        assertRules(ruleSet, numberOfRulesInClasspath());
     }
 
     @Test(expected = XmlRuleSetException.class)
@@ -24,7 +23,7 @@ public class XmlRuleSetTest {
         new XmlRuleSet("/rulesets/missing-ruleset.xml");
     }
 
-    private int countRulesInRulePackage() {
+    private int numberOfRulesInClasspath() {
         int count = 0;
         for (Class<? extends Rule> ruleClass : new Reflections(PACKAGE_FOR_RULES).getSubTypesOf(Rule.class)) {
             if (!Modifier.isAbstract(ruleClass.getModifiers())) {
