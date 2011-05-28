@@ -12,7 +12,7 @@ public class BasicRuleSet implements RuleSet {
 
     private List<Rule> rules = new ArrayList<Rule>();
 
-    protected void addRule(Rule rule) {
+    public void addRule(Rule rule) {
         rules.add(rule);
     }
 
