@@ -14,24 +14,7 @@ The project makes use of the following frameworks to do its work:
 Rules
 -------------
 
-* Forms
-    * LabelContainsTextRule (since 0.1)
-    * LabelForInputFieldRule (since 0.1)
-    * LabelForSelectTagRule (since 0.1)
-    * LabelForTextareaRule (since 0.1)
-* Images
-    * AlternativeTextForImageRule (since 0.1)
-* Tables
-    * CaptionTextForTableRule (since 0.1)
-    * TableHeaderContainsTextRule (since 0.2)
-* Text
-    * AvoidBlinkTextRule (since 0.1)
-    * AvoidBoldTagRule (since 0.2)
-    * AvoidItalicTagRule (since 0.2)
-    * AvoidMarqueeTextRule (since 0.1)
-    * LanguageForHtmlTagRule (since 0.2)
-    * TitleForAbbreviationTagRule (since 0.1)
-    * TitleForAcronymTagRule (since 0.1)
+For a list of all rules currently supported by BitvUnit please refer to the RuleSet [all-rules.xml](https://github.com/codescape/bitvunit/blob/master/src/main/resources/rulesets/all-rules.xml) which lists all rules.
 
 Change Log
 -------------
