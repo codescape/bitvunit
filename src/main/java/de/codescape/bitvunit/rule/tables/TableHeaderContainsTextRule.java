@@ -8,7 +8,8 @@ import de.codescape.bitvunit.rule.Violation;
 import java.util.List;
 
 /**
- * TODO document me
+ * TableHeaderContainsTextRule ensures that every <code>&lt;th /&gt;</code> element within the given HTML document
+ * contains text content. Table headers always should always describe a given row or column with text.
  *
  * @since 0.2
  */
