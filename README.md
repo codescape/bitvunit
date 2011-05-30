@@ -2,25 +2,35 @@ BitvUnit
 =============
 
 This library aims to automate accessibility checking for HTML pages and web applications. Based on the idea that some accessibility checks can be automated and find suspicious or malicious code that potentially violates rules for accessibility.
-In the current stadium the BitvUnit framework gives you the ability to apply one or multiple rules to a given page that you navigated to with the help of HtmlUnit.
+In the current stadium the BitvUnit framework gives you the ability to apply one or multiple rules to a given page that you navigated to with the help of [HtmlUnit].
 
 Technology
 ----------
 
 The project makes use of the following frameworks to do its work:
 
-* [Apache Maven](http://maven.apache.org/) for build and dependency management
+* [Apache Maven] for build and dependency management
 * [HtmlUnit] for HTML code inspection and navigation through the pages
+
+The project is inspired by the following projects, blogs and resources:
+
+* [CodeNarc](http://codenarc.sourceforge.net) for the Rule and RuleSet structure
+* [WebTestPraxis](http://webtestpraxis.de/blog/?tag=barrierefreiheit) for its great articles on accessibility testing
 
 Getting Started
 ---------------
 
-TODO
+_This chapter should include a small but helpful step-by-step guide to get started with the project._
 
-Rules
------
+How to contribute
+-----------------
 
-For a list of all rules that are supported please refer to the XML rule set called [all-rules.xml](https://github.com/codescape/bitvunit/blob/master/src/main/resources/rulesets/all-rules.xml) where all supported rules have to be maintained in oder to make all tests in the test suite of this framework pass.
+There are several way how you can help this project. Here is an incomplete list of ideas on how to contribute:
+
+* fork the project and contribute code (e.g. new rules)
+* raise an issue for new rules or improvements of the framework
+* contact me and tell me about your experiences with the framework
+* write a blog post, send a tweet or promote the project
 
 Change Log
 ----------
@@ -37,6 +47,7 @@ Change Log
     * LanguageForHtmlTagRule
     * TableHeaderContainsTextRule
 * introduced XmlRuleSet to create a RuleSet based on a XML document
+* improved documentation
 
 ### Release 0.1 (2011-05-24)
 
@@ -54,5 +65,5 @@ Change Log
     * TitleForAbbreviationTagRule
     * TitleForAcronymTagRule
 
-
+[Apache Maven]: http://maven.apache.org
 [HtmlUnit]: http://htmlunit.sourceforge.net
