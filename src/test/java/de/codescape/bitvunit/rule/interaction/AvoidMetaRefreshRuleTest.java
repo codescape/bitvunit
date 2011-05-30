@@ -1,0 +1,38 @@
+package de.codescape.bitvunit.rule.interaction;
+
+import de.codescape.bitvunit.rule.Violation;
+import org.junit.Test;
+
+import java.util.List;
+
+import static de.codescape.bitvunit.test.Assertions.assertNoViolations;
+import static de.codescape.bitvunit.test.Assertions.assertViolations;
+import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+public class AvoidMetaRefreshRuleTest {
+
+    private AvoidMetaRefreshRule rule = new AvoidMetaRefreshRule();
+
+    @Test
+    public void ruleHasAName() throws Exception {
+        assertNotNull(rule.getName());
+        assertEquals("AvoidMetaRefresh", rule.getName());
+    }
+
+    @Test
+    public void metaRefreshPresent() throws Exception {
+        String content = "<html><head><meta http-equiv=\"refresh\" content=\"3; URL=page.htm\"></head><body><p>Redirecting</p></body></html>";
+        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        assertViolations(violations, rule, 1);
+    }
+
+    @Test
+    public void metaRefreshNotPresent() throws Exception {
+        String content = "<html><head><title>No Refresh</title></head><body><p>Hello World</p></body></html>";
+        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        assertNoViolations(violations, rule);
+    }
+
+}

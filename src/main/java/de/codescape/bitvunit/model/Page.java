@@ -84,4 +84,8 @@ public class Page {
 
     }
 
+    public List<HtmlMeta> findAllMetaTags() {
+        return findHtmlElementsByTagName(HtmlMeta.TAG_NAME);
+    }
+
 }

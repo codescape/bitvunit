@@ -13,6 +13,9 @@
     <!-- Images -->
     <rule class="de.codescape.bitvunit.rule.images.AlternativeTextForImageRule"/>
 
+    <!-- Interaction -->
+    <rule class="de.codescape.bitvunit.rule.interaction.AvoidMetaRefreshRule"/>
+
     <!-- Tables -->
     <rule class="de.codescape.bitvunit.rule.tables.CaptionTextForTableRule"/>
     <rule class="de.codescape.bitvunit.rule.tables.TableHeaderContainsTextRule"/>

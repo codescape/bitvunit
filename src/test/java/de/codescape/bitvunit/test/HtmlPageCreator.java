@@ -1,6 +1,8 @@
 package de.codescape.bitvunit.test;
 
 import com.gargoylesoftware.htmlunit.MockWebConnection;
+import com.gargoylesoftware.htmlunit.ThreadedRefreshHandler;
+import com.gargoylesoftware.htmlunit.WaitingRefreshHandler;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
@@ -24,6 +26,7 @@ public abstract class HtmlPageCreator {
         MockWebConnection mockWebConnection = new MockWebConnection();
         mockWebConnection.setResponse(fakeURL, content);
         webClient.setWebConnection(mockWebConnection);
+        webClient.setRefreshHandler(new ThreadedRefreshHandler());
         return webClient;
     }
 

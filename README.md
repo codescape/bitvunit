@@ -26,6 +26,7 @@ Change Log
 * added new rules
     * AvoidBoldTagRule
     * AvoidItalicTagRule
+    * AvoidMetaRefreshRule
     * HeadersInCorrectOrderRule
     * LanguageForHtmlTagRule
     * TableHeaderContainsTextRule
