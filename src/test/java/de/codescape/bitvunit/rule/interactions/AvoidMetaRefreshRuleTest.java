@@ -1,4 +1,4 @@
-package de.codescape.bitvunit.rule.interaction;
+package de.codescape.bitvunit.rule.interactions;
 
 import de.codescape.bitvunit.rule.Violation;
 import org.junit.Test;
