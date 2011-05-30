@@ -1,23 +1,29 @@
 BitvUnit
 =============
 
-This library aims to automate accessibility checks for HTML pages.
+This library aims to automate accessibility checking for HTML pages and web applications. Based on the idea that some accessibility checks can be automated and find suspicious or malicious code that potentially violates rules for accessibility.
+In the current stadium the BitvUnit framework gives you the ability to apply one or multiple rules to a given page that you navigated to with the help of HtmlUnit.
 
 Technology
--------------
+----------
 
 The project makes use of the following frameworks to do its work:
 
 * [Apache Maven](http://maven.apache.org/) for build and dependency management
-* [HtmlUnit](http://htmlunit.sourceforge.net/) for HTML code inspection
+* [HtmlUnit] for HTML code inspection and navigation through the pages
+
+Getting Started
+---------------
+
+TODO
 
 Rules
--------------
+-----
 
 For a list of all rules that are supported please refer to the XML rule set called [all-rules.xml](https://github.com/codescape/bitvunit/blob/master/src/main/resources/rulesets/all-rules.xml) where all supported rules have to be maintained in oder to make all tests in the test suite of this framework pass.
 
 Change Log
--------------
+----------
 
 ### Release 0.2 (????-??-??)
 
@@ -47,3 +53,6 @@ Change Log
     * LabelForTextareaRule
     * TitleForAbbreviationTagRule
     * TitleForAcronymTagRule
+
+
+[HtmlUnit]: http://htmlunit.sourceforge.net
