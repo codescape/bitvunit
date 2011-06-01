@@ -1,13 +1,10 @@
 package de.codescape.bitvunit.ruleset;
 
-import de.codescape.bitvunit.rule.Violation;
 import de.codescape.bitvunit.rule.Violations;
 import de.codescape.bitvunit.rule.text.AvoidBlinkTextRule;
 import de.codescape.bitvunit.rule.text.AvoidMarqueeTextRule;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.List;
 
 import static de.codescape.bitvunit.test.Assertions.assertRules;
 import static de.codescape.bitvunit.test.Assertions.assertViolations;

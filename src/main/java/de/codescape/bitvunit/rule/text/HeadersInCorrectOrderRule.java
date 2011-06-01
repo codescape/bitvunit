@@ -3,10 +3,7 @@ package de.codescape.bitvunit.rule.text;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
-import de.codescape.bitvunit.rule.Violation;
 import de.codescape.bitvunit.rule.Violations;
-
-import java.util.List;
 
 /**
  * HeadersInCorrectOrderRule ensures that all headers from <code>&lt;h1 /&gt;</code> to <code>&lt;h6 /&gt;</code> within

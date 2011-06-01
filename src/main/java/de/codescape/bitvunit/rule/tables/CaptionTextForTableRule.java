@@ -3,10 +3,7 @@ package de.codescape.bitvunit.rule.tables;
 import com.gargoylesoftware.htmlunit.html.HtmlTable;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
-import de.codescape.bitvunit.rule.Violation;
 import de.codescape.bitvunit.rule.Violations;
-
-import java.util.List;
 
 /**
  * CaptionTextForTableRule ensures that every <code>&lt;table /&gt;</code> within the given HTML document provides a

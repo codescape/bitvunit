@@ -2,7 +2,6 @@ package de.codescape.bitvunit.ruleset;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.rule.Rule;
-import de.codescape.bitvunit.rule.Violation;
 import de.codescape.bitvunit.rule.Violations;
 
 import java.util.List;

@@ -3,10 +3,7 @@ package de.codescape.bitvunit.rule.images;
 import com.gargoylesoftware.htmlunit.html.HtmlImage;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
-import de.codescape.bitvunit.rule.Violation;
 import de.codescape.bitvunit.rule.Violations;
-
-import java.util.List;
 
 import static de.codescape.bitvunit.util.ElementInspector.elementHasAttribute;
 

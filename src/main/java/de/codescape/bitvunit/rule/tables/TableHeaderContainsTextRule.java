@@ -3,10 +3,7 @@ package de.codescape.bitvunit.rule.tables;
 import com.gargoylesoftware.htmlunit.html.HtmlTableCell;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
-import de.codescape.bitvunit.rule.Violation;
 import de.codescape.bitvunit.rule.Violations;
-
-import java.util.List;
 
 /**
  * TableHeaderContainsTextRule ensures that every <code>&lt;th /&gt;</code> element within the given HTML document

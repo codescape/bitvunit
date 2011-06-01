@@ -3,10 +3,7 @@ package de.codescape.bitvunit.rule.text;
 import com.gargoylesoftware.htmlunit.html.HtmlMarquee;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
-import de.codescape.bitvunit.rule.Violation;
 import de.codescape.bitvunit.rule.Violations;
-
-import java.util.List;
 
 /**
  * AvoidMarqueeTextRule ensures that every <code>&lt;marquee /&gt;</code> element within the given HTML document leads

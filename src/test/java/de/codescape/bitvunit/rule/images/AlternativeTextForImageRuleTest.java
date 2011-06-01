@@ -1,10 +1,7 @@
 package de.codescape.bitvunit.rule.images;
 
-import de.codescape.bitvunit.rule.Violation;
 import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;
-
-import java.util.List;
 
 import static de.codescape.bitvunit.test.Assertions.assertNoViolations;
 import static de.codescape.bitvunit.test.Assertions.assertViolations;

@@ -3,16 +3,13 @@ package de.codescape.bitvunit.rule.interactions;
 import com.gargoylesoftware.htmlunit.html.HtmlMeta;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
-import de.codescape.bitvunit.rule.Violation;
 import de.codescape.bitvunit.rule.Violations;
-
-import java.util.List;
 
 /**
  * AvoidMetaRefreshRule ensures that there is no fixed refresh caused by the <code>&lt;meta http-equiv="refresh"
  * content="seconds; URL=target" /&gt;</code> tag within the given HTML document. Automatically updating pages may cause
- * significant accessibility problems to people that are disabled or that use technology that hinders normal interactions
- * patters.
+ * significant accessibility problems to people that are disabled or that use technology that hinders normal
+ * interactions patters.
  *
  * @since 0.2
  */

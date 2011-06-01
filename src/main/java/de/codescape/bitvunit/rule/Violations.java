@@ -13,7 +13,7 @@ public class Violations {
     }
 
     public boolean hasViolations() {
-        return violations.isEmpty();
+        return !violations.isEmpty();
     }
 
     public int size() {

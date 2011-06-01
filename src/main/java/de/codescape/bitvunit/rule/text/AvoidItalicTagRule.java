@@ -3,10 +3,7 @@ package de.codescape.bitvunit.rule.text;
 import com.gargoylesoftware.htmlunit.html.HtmlItalic;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
-import de.codescape.bitvunit.rule.Violation;
 import de.codescape.bitvunit.rule.Violations;
-
-import java.util.List;
 
 /**
  * AvoidItalicTagRule ensures that every <code>&lt;i /&gt;</code> element within the given HTML document leads to a

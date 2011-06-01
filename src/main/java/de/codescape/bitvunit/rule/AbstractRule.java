@@ -3,9 +3,6 @@ package de.codescape.bitvunit.rule;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.model.Page;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Base class to all implementations of the Rule interface. It provides convenience methods to create violations within
  * the implementation of a rule and allows to apply a rule to a given HtmlPage object.

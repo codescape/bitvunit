@@ -9,6 +9,10 @@ import static org.junit.Assert.assertTrue;
 
 public abstract class Assertions {
 
+    public static void assertViolations(Violations violations) {
+        assertTrue("Expected violations but found no violations.", violations.hasViolations());
+    }
+
     public static void assertViolations(Violations violations, int expectedCount) {
         int count = violations.size();
         assertTrue("Expected " + expectedCount + " violations but found " + count + " violations.", expectedCount == count);

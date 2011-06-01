@@ -3,10 +3,7 @@ package de.codescape.bitvunit.rule.forms;
 import com.gargoylesoftware.htmlunit.html.HtmlInput;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
-import de.codescape.bitvunit.rule.Violation;
 import de.codescape.bitvunit.rule.Violations;
-
-import java.util.List;
 
 import static de.codescape.bitvunit.util.ElementInspector.elementHasValidId;
 import static de.codescape.bitvunit.util.LabelInspector.labelForIdExists;

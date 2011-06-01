@@ -1,10 +1,7 @@
 package de.codescape.bitvunit.rule.tables;
 
-import de.codescape.bitvunit.rule.Violation;
 import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;
-
-import java.util.List;
 
 import static de.codescape.bitvunit.test.Assertions.assertViolations;
 import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
