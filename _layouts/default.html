@@ -6,40 +6,32 @@
   <link rel="stylesheet" href="/css/bitvunit.css" />
 </head>
 <body>
-<div id="header">
-  <h2 id="logo" onclick="location.href='/'"><a href="/">BitvUnit</a></h2>
-  <p>Accessibility Testing Framework</p>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/downloads">Downloads</a></li>
-      <li><a href="/contribute">Contribute</a></li>
-    </ul>
-  </nav>
-</div>
+  <div id="container">
 
-<div id="container">
-  <h1>{{ page.title }}</h1>
-  <div id="content">
-    {{ content }}
-  </div>
+    <div id="navigation">
+      <nav>
+        <h2>BitvUnit</h2>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#downloads">Downloads</a></li>
+          <li><a href="#contribute">Contribute</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <div id="content">
+      <header>
+        <h1>{{ page.title }}</h1>
+      </header>
+      <div id="main">
+        {{ content }}
+      </div>
+    
+      <div id="footer">
+        <p>ipsum lorem footer</p>
+      </div>
+    </div>
 
-  <div id="sidebar">
-    <h3>Pages</h3>
-    <ul id="nav">
-    {% for post in site.posts reversed %}
-      {% if page.title == post.title %}
-        <li>{{ page.title }}</li>
-      {% else %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endif %}
-    {% endfor %}
-    </ul>
-  </div> 
-   
-  <div id="footer">
-    <p>ipsum lorem footer</p>
-  </div>
 </div>
 
   <a href="http://github.com/codescape/bitvunit"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://d3nwyuy0nl342s.cloudfront.net/img/30f550e0d38ceb6ef5b81500c64d970b7fb0f028/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>

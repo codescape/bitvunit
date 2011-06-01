@@ -28,4 +28,9 @@ body, html {
   background: #fff;
   font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #444; }
+#container {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0; }
 
