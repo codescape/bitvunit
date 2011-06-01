@@ -1,0 +1,8 @@
+---
+layout: default
+title: First sample
+---
+
+h1. {{ page.title }}
+
+Some text stands here.
