@@ -49,7 +49,9 @@ Change Log
     * TableHeaderContainsTextRule
 * introduced XmlRuleSet to create a RuleSet based on a XML document
 * improved documentation
-* added [Hamcrest] RuleMatcher for verification of compliance to a specific Rule and a complete RuleSet
+* added [Hamcrest] Matchers for compliance checking
+    * introduced RuleMatcher for verification against a specific Rule
+    * introduced RuleSetMatcher for verification against a RuleSet
 
 ### Release 0.1 (2011-05-24)
 
