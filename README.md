@@ -48,6 +48,7 @@ Change Log
     * TableHeaderContainsTextRule
 * introduced XmlRuleSet to create a RuleSet based on a XML document
 * improved documentation
+* added [Hamcrest] RuleMatcher for verification of compliance to a specific Rule
 
 ### Release 0.1 (2011-05-24)
 
@@ -66,4 +67,5 @@ Change Log
     * TitleForAcronymTagRule
 
 [Apache Maven]: http://maven.apache.org
+[Hamcrest]: http://code.google.com/p/hamcrest/
 [HtmlUnit]: http://htmlunit.sourceforge.net
