@@ -30,4 +30,13 @@ public class BasicRuleSet implements RuleSet {
         return violations;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("RuleSet with rules:");
+        for (Rule rule : rules) {
+            sb.append("\n").append(rule);
+        }
+        return sb.toString();
+    }
+
 }

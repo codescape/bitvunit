@@ -7,7 +7,7 @@ import de.codescape.bitvunit.rule.Violations;
 import org.junit.Before;
 import org.junit.Test;
 
-import static de.codescape.bitvunit.hamcrest.RuleMatcher.complaintToRule;
+import static de.codescape.bitvunit.hamcrest.RuleMatcher.complaintTo;
 import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNot.not;
@@ -32,12 +32,12 @@ public class RuleMatcherTest {
 
     @Test
     public void matchesPositivelyToComplianceOfRule() throws Exception {
-        assertThat(somePage(), is(complaintToRule(satisfiedRule)));
+        assertThat(somePage(), is(complaintTo(satisfiedRule)));
     }
 
     @Test
     public void matchesNegativelyToViolationOfRule() throws Exception {
-        assertThat(somePage(), not(complaintToRule(unsatisfiedRule)));
+        assertThat(somePage(), not(complaintTo(unsatisfiedRule)));
     }
 
     private HtmlPage somePage() {

@@ -30,7 +30,7 @@ public class Violations {
 
     @Override
     public String toString() {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         if (!hasViolations()) {
             sb.append("No violations found.");
         } else {
