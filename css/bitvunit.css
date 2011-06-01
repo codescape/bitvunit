@@ -43,4 +43,8 @@ body, html {
 #navigation {
   position: fixed;
   width: 160px;
+  text-align: right;
 }
+
+#content {
+    float: left; }
