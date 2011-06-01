@@ -11,6 +11,7 @@ The project makes use of the following frameworks to do its work:
 
 * [Apache Maven] for build and dependency management
 * [HtmlUnit] for HTML code inspection and navigation through the pages
+* [Hamcrest] for compliance checking with an expressive syntax
 
 The project is inspired by the following projects, blogs and resources:
 
