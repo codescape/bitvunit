@@ -1,3 +1,2 @@
-permalink:  /documentation/:title
-auto:       true
-baseurl:   http://bitvunit.codescape.de/
+permalink: /documentation/:title
+auto: true

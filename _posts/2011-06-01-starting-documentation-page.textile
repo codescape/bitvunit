@@ -1,8 +1,0 @@
----
-layout: post
-title: Demo article
----
-
-h1. {{ page.title }}
-
-Some text stands here.
