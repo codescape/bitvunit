@@ -36,7 +36,7 @@ There are several way how you can help this project. Here is an incomplete list 
 Change Log
 ----------
 
-### Release 0.2 (????-??-??)
+### Release 0.2 (2011-06-01)
 
 * easier selection of elements with new Page decorator
 * easier creation of violations in rule implementations
