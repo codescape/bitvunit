@@ -10,7 +10,7 @@ import static org.junit.Assert.assertTrue;
 public abstract class Assertions {
 
     public static void assertViolations(Violations violations) {
-        assertTrue("Expected violations but found no violations.", violations.hasViolations());
+        assertTrue("Expected minimum of one violation but found none.", violations.hasViolations());
     }
 
     public static void assertViolations(Violations violations, int expectedCount) {

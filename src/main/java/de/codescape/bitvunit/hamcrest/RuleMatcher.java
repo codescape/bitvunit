@@ -2,6 +2,7 @@ package de.codescape.bitvunit.hamcrest;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.rule.Rule;
+import de.codescape.bitvunit.rule.Violations;
 import org.hamcrest.Description;
 import org.hamcrest.Factory;
 import org.hamcrest.Matcher;
@@ -22,17 +23,16 @@ public class RuleMatcher extends TypeSafeMatcher<HtmlPage> {
 
     @Override
     protected boolean matchesSafely(HtmlPage htmlPage) {
-        return !rule.applyTo(htmlPage).hasViolations();
-    }
-
-    public void describeTo(Description description) {
-        description.appendText("compliant to rule ").appendText(rule.toString());
+        Violations violations = rule.applyTo(htmlPage);
+        if (violations.hasViolations()) {
+            System.out.println(violations);
+        }
+        return !violations.hasViolations();
     }
 
     @Override
-    protected void describeMismatchSafely(HtmlPage htmlPage, Description mismatchDescription) {
-        // TODO change to a more helpful message after refactoring of List<Violation> to Violations in Rule and RuleSet
-        super.describeMismatchSafely(htmlPage, mismatchDescription);
+    public void describeTo(Description description) {
+        description.appendText("compliant to rule ").appendText(rule.toString());
     }
 
     @Factory

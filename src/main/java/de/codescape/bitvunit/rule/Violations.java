@@ -28,4 +28,19 @@ public class Violations {
         this.violations.addAll(violations.asList());
     }
 
+    @Override
+    public String toString() {
+        StringBuffer sb = new StringBuffer();
+        if (!hasViolations()) {
+            sb.append("No violations found.");
+        } else {
+            sb.append("Found violations:");
+            int num = 1;
+            for (Violation violation : violations) {
+                sb.append("\n").append(num++).append(") ").append(violation);
+            }
+        }
+        return sb.toString();
+    }
+
 }
