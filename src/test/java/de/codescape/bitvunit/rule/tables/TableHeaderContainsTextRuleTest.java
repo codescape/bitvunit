@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.rule.tables;
 
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;
 
 import java.util.List;
@@ -23,14 +24,14 @@ public class TableHeaderContainsTextRuleTest {
     @Test
     public void tableHeadersWithText() throws Exception {
         String content = "<html><body><table><tr><th>Heading 1</th><th>Heading 2</th></tr><tr><td>Cell 1</td><td>Cell 2</td></tr></table></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertViolations(violations, rule, 0);
     }
 
     @Test
     public void tableHeadersWithMissingText() throws Exception {
         String content = "<html><body><table><tr><th></th><th /></tr><tr><td>Cell 1</td><td>Cell 2</td></tr></table></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertEquals(2, violations.size());
         assertViolations(violations, rule, 2);
     }

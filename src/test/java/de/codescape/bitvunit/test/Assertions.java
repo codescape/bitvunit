@@ -2,35 +2,34 @@ package de.codescape.bitvunit.test;
 
 import de.codescape.bitvunit.rule.Rule;
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 import de.codescape.bitvunit.ruleset.RuleSet;
-
-import java.util.List;
 
 import static org.junit.Assert.assertTrue;
 
 public abstract class Assertions {
 
-    public static void assertViolations(List<Violation> violations, int expectedCount) {
+    public static void assertViolations(Violations violations, int expectedCount) {
         int count = violations.size();
         assertTrue("Expected " + expectedCount + " violations but found " + count + " violations.", expectedCount == count);
     }
 
-    public static void assertViolations(List<Violation> violations, Rule rule, int expectedCount) {
+    public static void assertViolations(Violations violations, Rule rule, int expectedCount) {
         int count = numberOfViolations(violations, rule);
         assertTrue("Expected " + expectedCount + " violations of rule " + rule + " but found " + count + " violations.", expectedCount == count);
     }
 
-    public static void assertNoViolations(List<Violation> violations) {
+    public static void assertNoViolations(Violations violations) {
         assertViolations(violations, 0);
     }
 
-    public static void assertNoViolations(List<Violation> violations, Rule rule) {
+    public static void assertNoViolations(Violations violations, Rule rule) {
         assertViolations(violations, rule, 0);
     }
 
-    private static int numberOfViolations(List<Violation> violations, Rule rule) {
+    private static int numberOfViolations(Violations violations, Rule rule) {
         int found = 0;
-        for (Violation violation : violations) {
+        for (Violation violation : violations.asList()) {
             if (violation.getRule().equals(rule)) {
                 found++;
             }

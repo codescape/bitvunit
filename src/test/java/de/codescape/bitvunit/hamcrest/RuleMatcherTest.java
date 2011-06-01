@@ -3,12 +3,9 @@ package de.codescape.bitvunit.hamcrest;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.rule.Rule;
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import static de.codescape.bitvunit.hamcrest.RuleMatcher.complaintToRule;
 import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
@@ -48,12 +45,14 @@ public class RuleMatcherTest {
     }
 
 
-    private List<Violation> someViolation() {
-        return Arrays.asList(new Violation(unsatisfiedRule, 1, "uh oh"));
+    private Violations someViolation() {
+        Violations violations = new Violations();
+        violations.add(new Violation(unsatisfiedRule, 1, "uh oh"));
+        return violations;
     }
 
-    private ArrayList<Violation> noViolation() {
-        return new ArrayList<Violation>();
+    private Violations noViolation() {
+        return new Violations();
     }
 
 }

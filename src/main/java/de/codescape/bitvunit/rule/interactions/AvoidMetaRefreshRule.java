@@ -4,6 +4,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlMeta;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class AvoidMetaRefreshRule extends AbstractRule {
     }
 
     @Override
-    protected void applyTo(Page page, List<Violation> violations) {
+    protected void applyTo(Page page, Violations violations) {
         for (HtmlMeta metaTag : page.findAllMetaTags()) {
             if ("refresh".equalsIgnoreCase(metaTag.getHttpEquivAttribute())) {
                 violations.add(createViolation(metaTag.getStartLineNumber(), RULE_MESSAGE));

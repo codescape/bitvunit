@@ -4,6 +4,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlLabel;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 
 import java.util.List;
 
@@ -24,13 +25,13 @@ public class LabelContainsTextRule extends AbstractRule {
     }
 
     @Override
-    protected void applyTo(Page page, List<Violation> violations) {
+    protected void applyTo(Page page, Violations violations) {
         for (HtmlLabel label : page.findAllLabelTags()) {
             validateLabel(label, violations);
         }
     }
 
-    private void validateLabel(HtmlLabel label, List<Violation> violations) {
+    private void validateLabel(HtmlLabel label, Violations violations) {
         if (label.getTextContent() == null || label.getTextContent().isEmpty()) {
             violations.add(createViolation(label.getStartLineNumber(), RULE_MESSAGE));
         }

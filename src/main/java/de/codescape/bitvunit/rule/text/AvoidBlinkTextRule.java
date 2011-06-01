@@ -4,6 +4,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlBlink;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 
 import java.util.List;
 
@@ -25,7 +26,7 @@ public class AvoidBlinkTextRule extends AbstractRule {
     }
 
     @Override
-    protected void applyTo(Page page, List<Violation> violations) {
+    protected void applyTo(Page page, Violations violations) {
         for (HtmlBlink blink : page.findAllBlinkTags()) {
             violations.add(createViolation(blink.getStartLineNumber(), RULE_MESSAGE));
         }

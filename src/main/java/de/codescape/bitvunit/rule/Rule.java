@@ -8,6 +8,6 @@ public interface Rule {
 
     String getName();
 
-    List<Violation> applyTo(HtmlPage htmlPage);
+    Violations applyTo(HtmlPage htmlPage);
 
 }

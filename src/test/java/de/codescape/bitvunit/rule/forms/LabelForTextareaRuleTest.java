@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.rule.forms;
 
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;
 
 import java.util.List;
@@ -24,14 +25,14 @@ public class LabelForTextareaRuleTest {
     @Test
     public void textareaWithAssociatedLabel() throws Exception {
         String content = "<html><body><form><label for=\"comment\">Comment</label><textarea id=\"comment\"></textarea></form></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertNoViolations(violations);
     }
 
     @Test
     public void textareaWithMissingLabel() throws Exception {
         String content = "<html><body><form><textarea id=\"firstname\"></textarea></form></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 

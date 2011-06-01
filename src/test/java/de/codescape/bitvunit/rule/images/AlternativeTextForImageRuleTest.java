@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.rule.images;
 
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;
 
 import java.util.List;
@@ -24,21 +25,21 @@ public class AlternativeTextForImageRuleTest {
     @Test
     public void imageWithMissingAlternativeText() throws Exception {
         String content = "<html><body><img src=\"myImage.gif\" /></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 
     @Test
     public void imageWithEmptyAlternativeText() throws Exception {
         String content = "<html><body><img src=\"myImage.gif\" alt=\"\" /></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertNoViolations(violations);
     }
 
     @Test
     public void imageWithAlternativeText() throws Exception {
         String content = "<html><body><img src=\"myImage.gif\" alt=\"Alternative Text\" /></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertNoViolations(violations);
     }
 

@@ -27,8 +27,8 @@ public abstract class AbstractRule implements Rule {
      * @return list of violations
      */
     @Override
-    public final List<Violation> applyTo(HtmlPage htmlPage) {
-        List<Violation> violations = new ArrayList<Violation>();
+    public final Violations applyTo(HtmlPage htmlPage) {
+        Violations violations = new Violations();
         applyTo(new Page(htmlPage), violations);
         return violations;
     }
@@ -39,7 +39,7 @@ public abstract class AbstractRule implements Rule {
      * @param page       page under test
      * @param violations list of violations
      */
-    protected abstract void applyTo(Page page, List<Violation> violations);
+    protected abstract void applyTo(Page page, Violations violations);
 
     /**
      * Creates a new violation for that rule with the line number of the violating element in the given page and a

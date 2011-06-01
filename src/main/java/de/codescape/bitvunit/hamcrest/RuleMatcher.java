@@ -22,7 +22,7 @@ public class RuleMatcher extends TypeSafeMatcher<HtmlPage> {
 
     @Override
     protected boolean matchesSafely(HtmlPage htmlPage) {
-        return rule.applyTo(htmlPage).isEmpty();
+        return rule.applyTo(htmlPage).hasViolations();
     }
 
     public void describeTo(Description description) {

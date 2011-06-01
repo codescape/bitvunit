@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.rule.text;
 
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;
 
 import java.util.List;
@@ -24,14 +25,14 @@ public class AvoidBlinkTextRuleTest {
     @Test
     public void blinkTextPresent() throws Exception {
         String content = "<html><body><blink>Hello World</blink></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 
     @Test
     public void blinkTextNotPresent() throws Exception {
         String content = "<html><body><p>Hello World</p></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertNoViolations(violations);
     }
 

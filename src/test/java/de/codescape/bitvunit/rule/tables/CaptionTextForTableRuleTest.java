@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.rule.tables;
 
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;
 
 import java.util.List;
@@ -24,28 +25,28 @@ public class CaptionTextForTableRuleTest {
     @Test
     public void tableWithMissingCaptionText() throws Exception {
         String content = "<html><body><table><tr><td>Hello World</td></tr></table></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 
     @Test
     public void tableWithEmptyCaptionText() throws Exception {
         String content = "<html><body><table><caption></caption><tr><td>Hello World</td></tr></table></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 
     @Test
     public void tableWithWhitespaceOnlyCaptionText() throws Exception {
         String content = "<html><body><table><caption> </caption><tr><td>Hello World</td></tr></table></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 
     @Test
     public void tableWithCaptionText() throws Exception {
         String content = "<html><body><table><caption>Short summary</caption><tr><td>Accessibility</td></tr></table></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertNoViolations(violations);
     }
 

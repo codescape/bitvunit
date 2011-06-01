@@ -4,6 +4,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlHtml;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class LanguageForHtmlTagRule extends AbstractRule {
     }
 
     @Override
-    protected void applyTo(Page page, List<Violation> violations) {
+    protected void applyTo(Page page, Violations violations) {
         for (HtmlHtml html : page.findAllHtmlTags()) {
             if (!elementHasNonEmptyAttribute(html, LANG_ATTRIBUTE)) {
                 violations.add(createViolation(html.getStartLineNumber(), RULE_MESSAGE));

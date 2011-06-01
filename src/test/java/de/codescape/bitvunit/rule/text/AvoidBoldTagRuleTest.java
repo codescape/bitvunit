@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.rule.text;
 
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;
 
 import java.util.List;
@@ -24,14 +25,14 @@ public class AvoidBoldTagRuleTest {
     @Test
     public void boldTagPresent() throws Exception {
         String content = "<html><body><b>Meaningful words</b></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 
     @Test
     public void boldTagNotPresent() throws Exception {
         String content = "<html><body><strong>Meaningful words</strong></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertNoViolations(violations);
     }
 

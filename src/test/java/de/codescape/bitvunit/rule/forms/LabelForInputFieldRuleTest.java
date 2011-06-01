@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.rule.forms;
 
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;
 
 import java.util.List;
@@ -24,35 +25,35 @@ public class LabelForInputFieldRuleTest {
     @Test
     public void inputTextFieldWithAssociatedLabel() throws Exception {
         String content = "<html><body><form><label for=\"firstname\">Firstname</label><input type=\"text\" id=\"firstname\" /></form></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertNoViolations(violations);
     }
 
     @Test
     public void inputTextFieldWithMissingLabel() throws Exception {
         String content = "<html><body><form><input type=\"text\" id=\"firstname\" /></form></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 
     @Test
     public void inputHiddenFieldWithMissingLabel() throws Exception {
         String content = "<html><body><form><input type=\"hidden\" id=\"firstname\" /></form></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertNoViolations(violations);
     }
 
     @Test
     public void inputPasswordFieldWithMissingLabel() throws Exception {
         String content = "<html><body><form><input type=\"password\" id=\"password\" /></form></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 
     @Test
     public void inputPasswordFieldWithAssociatedLabel() throws Exception {
         String content = "<html><body><form><label for=\"password\">Password</label><input type=\"password\" id=\"password\" /></form></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertNoViolations(violations);
     }
 

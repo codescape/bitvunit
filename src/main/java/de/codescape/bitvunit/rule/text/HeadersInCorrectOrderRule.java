@@ -4,6 +4,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class HeadersInCorrectOrderRule extends AbstractRule {
     }
 
     @Override
-    protected void applyTo(Page page, List<Violation> violations) {
+    protected void applyTo(Page page, Violations violations) {
         HtmlElement lastHeader = null;
         for (HtmlElement currentHeader : page.findAllHeaderTags()) {
             if (lastHeader == null) {
@@ -40,24 +41,24 @@ public class HeadersInCorrectOrderRule extends AbstractRule {
         }
     }
 
-    private void checkAllOtherHeaders(List<Violation> violations, HtmlElement lastHeader, HtmlElement currentHeader) {
+    private void checkAllOtherHeaders(Violations violations, HtmlElement lastHeader, HtmlElement currentHeader) {
         checkOnlyOneLevelOneHeaderAllowed(violations, currentHeader);
         checkNoSkippingOfLevelsAllowed(violations, lastHeader, currentHeader);
     }
 
-    private void checkNoSkippingOfLevelsAllowed(List<Violation> violations, HtmlElement lastHeader, HtmlElement currentHeader) {
+    private void checkNoSkippingOfLevelsAllowed(Violations violations, HtmlElement lastHeader, HtmlElement currentHeader) {
         if (headerLevel(currentHeader) > headerLevel(lastHeader) + 1) {
             violations.add(createViolation(currentHeader.getStartLineNumber(), RULE_MESSAGE_SKIPPING));
         }
     }
 
-    private void checkOnlyOneLevelOneHeaderAllowed(List<Violation> violations, HtmlElement currentHeader) {
+    private void checkOnlyOneLevelOneHeaderAllowed(Violations violations, HtmlElement currentHeader) {
         if (headerLevel(currentHeader) == 1) {
             violations.add(createViolation(currentHeader.getStartLineNumber(), RULE_MESSAGE_MULTIPLE_H1));
         }
     }
 
-    private void checkFirstHeader(List<Violation> violations, HtmlElement currentHeader) {
+    private void checkFirstHeader(Violations violations, HtmlElement currentHeader) {
         if (headerLevel(currentHeader) != 1) {
             violations.add(createViolation(currentHeader.getStartLineNumber(), RULE_MESSAGE_FIRST_H1));
         }

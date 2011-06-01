@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.rule.forms;
 
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;
 
 import java.util.List;
@@ -24,21 +25,21 @@ public class LabelContainsTextRuleTest {
     @Test
     public void labelWithText() throws Exception {
         String content = "<html><body><form><label for=\"firstname\">Firstname</label></form></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertNoViolations(violations);
     }
 
     @Test
     public void labelWithWrappedText() throws Exception {
         String content = "<html><body><form><label for=\"firstname\"><span>Firstname</span></label></form></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertNoViolations(violations);
     }
 
     @Test
     public void labelWithMissingText() throws Exception {
         String content = "<html><body><form><label for=\"firstname\"></label></form></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 

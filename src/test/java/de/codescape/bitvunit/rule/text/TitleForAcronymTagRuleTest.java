@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.rule.text;
 
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;
 
 import java.util.List;
@@ -24,21 +25,21 @@ public class TitleForAcronymTagRuleTest {
     @Test
     public void acronymElementWithTitleAttribute() throws Exception {
         String content = "<html><body><acronym title=\"as soon as possible\">ASAP</acronym></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertNoViolations(violations);
     }
 
     @Test
     public void acronymElementWithEmptyTitleAttribute() throws Exception {
         String content = "<html><body><acronym title=\"\">ASAP</acronym></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 
     @Test
     public void acronymElementWithMissingTitleAttribute() {
         String content = "<html><body><acronym>ASAP</acronym></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 

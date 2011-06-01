@@ -4,6 +4,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlTableCell;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class TableHeaderContainsTextRule extends AbstractRule {
     }
 
     @Override
-    protected void applyTo(Page page, List<Violation> violations) {
+    protected void applyTo(Page page, Violations violations) {
         for (HtmlTableCell cell : page.findAllTableHeaders()) {
             if (cell.getTextContent() == null || cell.getTextContent().isEmpty()) {
                 violations.add(createViolation(cell.getStartLineNumber(), RULE_MESSAGE));

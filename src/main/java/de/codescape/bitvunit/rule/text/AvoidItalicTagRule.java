@@ -4,6 +4,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlItalic;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class AvoidItalicTagRule extends AbstractRule {
     }
 
     @Override
-    protected void applyTo(Page page, List<Violation> violations) {
+    protected void applyTo(Page page, Violations violations) {
         for (HtmlItalic italic : page.findAllItalicTags()) {
             violations.add(createViolation(italic.getStartLineNumber(), RULE_MESSAGE));
         }

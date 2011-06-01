@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.rule.forms;
 
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;
 
 import java.util.List;
@@ -24,14 +25,14 @@ public class LabelForSelectTagRuleTest {
     @Test
     public void selectWithAssociatedLabel() throws Exception {
         String content = "<html><body><form><label for=\"gender\">Comment</label><select id=\"gender\"><option>m</option><option>f</option></select></form></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertNoViolations(violations);
     }
 
     @Test
     public void selectWithMissingLabel() throws Exception {
         String content = "<html><body><form><select id=\"gender\"><option>m</option><option>f</option></select></form></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 

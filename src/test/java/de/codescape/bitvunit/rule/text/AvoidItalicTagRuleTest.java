@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.rule.text;
 
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;
 
 import java.util.List;
@@ -24,14 +25,14 @@ public class AvoidItalicTagRuleTest {
     @Test
     public void italicTagPresent() throws Exception {
         String content = "<html><body><i>Meaningful words</i></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 
     @Test
     public void italicTagNotPresent() throws Exception {
         String content = "<html><body><em>Meaningful words</em></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertNoViolations(violations);
     }
 

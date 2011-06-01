@@ -4,6 +4,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlSelect;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class LabelForSelectTagRule extends AbstractRule {
     }
 
     @Override
-    protected void applyTo(Page page, List<Violation> violations) {
+    protected void applyTo(Page page, Violations violations) {
         for (HtmlSelect select : page.findAllSelectTags()) {
             if (elementHasValidId(select) && !labelForIdExists(select.getId(), page.findAllLabelTags())) {
                 violations.add(createViolation(select.getStartLineNumber(), RULE_MESSAGE));

@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.ruleset;
 
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 import de.codescape.bitvunit.rule.text.AvoidBlinkTextRule;
 import de.codescape.bitvunit.rule.text.AvoidMarqueeTextRule;
 import org.junit.Before;
@@ -42,7 +43,7 @@ public class BasicRuleSetTest {
         ruleSet.addRule(secondRule);
 
         String content = "<html><body><blink>Blinking!</blink><marquee>Running!</marquee></body></html>";
-        List<Violation> violations = ruleSet.applyTo(createHtmlPage(content));
+        Violations violations = ruleSet.applyTo(createHtmlPage(content));
 
         assertViolations(violations, 2);
         assertViolations(violations, firstRule, 1);

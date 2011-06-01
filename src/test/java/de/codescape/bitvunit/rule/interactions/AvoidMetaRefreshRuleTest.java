@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.rule.interactions;
 
 import de.codescape.bitvunit.rule.Violation;
+import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;
 
 import java.util.List;
@@ -24,14 +25,14 @@ public class AvoidMetaRefreshRuleTest {
     @Test
     public void metaRefreshPresent() throws Exception {
         String content = "<html><head><meta http-equiv=\"refresh\" content=\"3; URL=page.htm\"></head><body><p>Redirecting</p></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 
     @Test
     public void metaRefreshNotPresent() throws Exception {
         String content = "<html><head><title>No Refresh</title></head><body><p>Hello World</p></body></html>";
-        List<Violation> violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(createHtmlPage(content));
         assertNoViolations(violations, rule);
     }
 
