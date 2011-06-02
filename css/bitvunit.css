@@ -2,7 +2,7 @@
 
 body, html {
     background: #fff;
-    font: normal normal normal 13.34px/normal helvetica, arial, freesans, clean, sans-serif;
+    font: normal normal normal 14px/normal helvetica, arial, freesans, clean, sans-serif;
     color: #444;
 }
 
@@ -88,6 +88,10 @@ small {
     font-size: 24px;
     color: #181818;
     font-weight: bold;
+}
+
+#footer {
+    text-align: center;
 }
 
 /***** Headers ***************************************************************/
