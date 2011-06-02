@@ -2,7 +2,7 @@
 
 body, html {
     background: #fff;
-    font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: normal normal normal 13.34px/normal helvetica, arial, freesans, clean, sans-serif;
     color: #444;
 }
 
@@ -80,45 +80,34 @@ small {
     font-size: 80%;
 }
 
+#logo {
+    
+}
+
 /***** Headers ***************************************************************/
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: helvetica, arial, freesans, clean, sans-serif;
     color: #181818;
     font-weight: bold;
 }
 
-h1 { 
-    font-size: 46px;
-    line-height: 50px;
+h1, h2 { 
+    font-size: 24px;
+    line-height: 30px;
     margin-bottom: 14px;
 }
 
-h2 {
-    font-size: 35px;
-    line-height: 40px;
-    margin-bottom: 10px;
+
+h3, h4 {
+    font-size: 22px;
+    line-height: 25px;
+    margin-bottom: 7px;
 }
 
-h3 {
-    font-size: 28px;
-    line-height: 34px;
-    margin-bottom: 8px;
-}
-
-h4 {
-    font-size: 21px;
-    line-height: 30px;
-    margin-bottom: 4px;
-}
-
-h5 {
-    font-size: 17px;
-    line-height: 24px;
-}
-
-h6 {
+h5, h6 {
     font-size: 14px;
-    line-height: 21px;
+    line-height: 20px;
 }
 
 /***** Lists *****************************************************************/
