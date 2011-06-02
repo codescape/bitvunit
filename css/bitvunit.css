@@ -6,6 +6,10 @@ body, html {
     color: #444;
 }
 
+body * {
+    line-height: 1.4em;
+}
+
 #container {
     position: relative;
     width: 960px;
@@ -81,7 +85,9 @@ small {
 }
 
 #logo {
-    
+    font-size: 24px;
+    color: #181818;
+    font-weight: bold;
 }
 
 /***** Headers ***************************************************************/
