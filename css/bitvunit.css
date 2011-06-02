@@ -55,6 +55,14 @@ nav a:hover {
     margin: 0 10px;
 }
 
+hr {
+    border: solid #DDD;
+    clear: both;
+    margin: 10px 0 30px;
+    height: 0;
+    border-width: 1px 0 0;
+}
+
 /***** Headers ***************************************************************/
 
 h1, h2, h3, h4, h5, h6 {
