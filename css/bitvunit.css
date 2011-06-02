@@ -46,13 +46,16 @@ body, html {
     width: 160px;
     margin: 0 10px; }
 
-#navigation nav {
+nav {
     position: fixed; 
     width: 160px;
     text-align: right; }
     
-nav li {
-    font-weight: bold; }
+nav ul li {
+    font-weight: bold;
+    text-align: right;
+    display: block;
+    margin-bottom: 10px; }
 
 nav a, nav a:hover, nav a:visited, nav a:active {
     color: #181818;
