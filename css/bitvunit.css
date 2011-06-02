@@ -50,6 +50,13 @@ body, html {
     position: fixed; 
     width: 160px;
     text-align: right; }
+    
+nav li {
+    font-weight: bold; }
+
+nav a, nav a:hover, nav a:visited, nav a:active {
+    color: #181818;
+    text-decoration: none; }
 
 #content {
     float: left;
