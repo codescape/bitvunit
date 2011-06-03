@@ -20,7 +20,10 @@ Change Log
 
 ### Release 0.3 (????-??-??)
 
-_TBD_
+* added new rules
+    * OrderedListContainsListItemsRule
+    * UnorderedListContainsListItemsRule
+* fixed invalid filename of class XmlRuleSetException
 
 ### Release 0.2 (2011-06-01)
 

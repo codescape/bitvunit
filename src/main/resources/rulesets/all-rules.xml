@@ -13,8 +13,12 @@
     <!-- Images -->
     <rule class="de.codescape.bitvunit.rule.images.AlternativeTextForImageRule"/>
 
-    <!-- Interaction -->
+    <!-- Interactions -->
     <rule class="de.codescape.bitvunit.rule.interactions.AvoidMetaRefreshRule"/>
+
+    <!-- Lists -->
+    <rule class="de.codescape.bitvunit.rule.lists.OrderedListContainsListItemsRule"/>
+    <rule class="de.codescape.bitvunit.rule.lists.UnorderedListContainsListItemsRule"/>
 
     <!-- Tables -->
     <rule class="de.codescape.bitvunit.rule.tables.CaptionTextForTableRule"/>

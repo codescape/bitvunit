@@ -88,4 +88,12 @@ public class Page {
         return findHtmlElementsByTagName(HtmlMeta.TAG_NAME);
     }
 
+    public List<HtmlUnorderedList> findAllUnorderedLists() {
+        return findHtmlElementsByTagName(HtmlUnorderedList.TAG_NAME);
+    }
+
+    public List<HtmlOrderedList> findAllOrderedLists() {
+        return findHtmlElementsByTagName(HtmlOrderedList.TAG_NAME);
+    }
+
 }
