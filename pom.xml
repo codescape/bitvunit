@@ -9,6 +9,7 @@
 
     <name>BitvUnit</name>
     <description>Accessibility Testing Framework</description>
+    <url>http://bitvunit.codescape.de</url>
 
     <properties>
         <maven.compiler.source>1.6</maven.compiler.source>
@@ -16,14 +17,6 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <developers>
-        <developer>
-            <id>codescape</id>
-            <name>Stefan Glase</name>
-            <email>stefan.glase@googlemail.com</email>
-        </developer>
-    </developers>
 
     <dependencies>
         <dependency>
