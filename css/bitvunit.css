@@ -94,6 +94,11 @@ small {
     font-weight: bold;
 }
 
+.post-date {
+    color: #666;
+    margin-bottom: 10px;
+}
+
 #footer {}
 
 /***** Headers ***************************************************************/
