@@ -3,16 +3,7 @@ BitvUnit
 
 BitvUnit is an open source accessibility testing framework that makes it easy to automate accessibility checking for pages and applications that run in a web browser.
 
-Please have a look at the [BitvUnit Documentation] for more information!
-
-Technology
-----------
-
-The project makes use of the following frameworks to do its work:
-
-* [Apache Maven] for build and dependency management
-* [HtmlUnit] for HTML code inspection and navigation through the pages
-* [Hamcrest] for compliance checking with an expressive syntax
+*Please have a look at the [BitvUnit Documentation] for more information!*
 
 Change Log
 ----------
