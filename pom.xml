@@ -8,7 +8,7 @@
     <version>0.3.0-SNAPSHOT</version>
 
     <name>BitvUnit</name>
-    <description>Accessibility checking for webpages.</description>
+    <description>Accessibility Testing Framework</description>
 
     <properties>
         <maven.compiler.source>1.6</maven.compiler.source>
