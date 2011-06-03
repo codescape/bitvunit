@@ -3,21 +3,12 @@ layout: default
 title: Accessibility Testing Framework
 ---
 
-<h2 id="about">About</h3>
+<h2>About</h2>
 <p>BitvUnit is an open source accessibility testing framework that makes it easy to automate accessibility checking for pages and applications that run in a web browser.</p>
 
-<h2 id="gettingstarted">Getting Started</h2>
-<em>This chapter will soon include a small but helpful step-by-step guide to get started with the framework.</em>
-
-<h2 id="downloads">Downloads</h3>
-<p>You can find downloads of all versions of the framework on the GitHub project page.</p>
-  
-<h2 id="contribute">Contribute</h3>
-<p>There are several ways to support this project. Here is an incomplete list of ideas on how to contribute:</p>
+<h2>Blog Posts</h2>
 <ul class="square">
-  <li>fork the project and contribute code (e.g. new rules)</li>
-  <li>raise an issue for new rules or improvements of the framework</li>
-  <li>contact me and tell me about your experiences with the framework</li>
-  <li>write a blog post, send a tweet or promote the project</li>
+  {% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
 </ul>
-

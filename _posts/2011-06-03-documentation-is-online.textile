@@ -1,0 +1,6 @@
+---
+layout: default
+title: Documentation is online
+---
+
+I am happy to announce that the initial version of the documentation is online right now. 
