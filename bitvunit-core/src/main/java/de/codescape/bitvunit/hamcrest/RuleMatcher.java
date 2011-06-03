@@ -36,7 +36,7 @@ public class RuleMatcher extends TypeSafeMatcher<HtmlPage> {
     }
 
     @Factory
-    public static Matcher<HtmlPage> complaintTo(Rule rule) {
+    public static Matcher<HtmlPage> compliantTo(Rule rule) {
         return new RuleMatcher(rule);
     }
 

@@ -8,7 +8,7 @@ import de.codescape.bitvunit.ruleset.RuleSet;
 import org.junit.Before;
 import org.junit.Test;
 
-import static de.codescape.bitvunit.hamcrest.RuleSetMatcher.complaintTo;
+import static de.codescape.bitvunit.hamcrest.RuleSetMatcher.compliantTo;
 import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNot.not;
@@ -37,12 +37,12 @@ public class RuleSetMatcherTest {
 
     @Test
     public void matchesPositivelyToComplianceOfRuleSet() throws Exception {
-        assertThat(somePage(), is(complaintTo(satisfiedRuleSet)));
+        assertThat(somePage(), is(compliantTo(satisfiedRuleSet)));
     }
 
     @Test
     public void matchesNegativelyToViolationOfRuleSet() throws Exception {
-        assertThat(somePage(), not(complaintTo(unsatisfiedRuleSet)));
+        assertThat(somePage(), not(compliantTo(unsatisfiedRuleSet)));
     }
 
     private HtmlPage somePage() {
