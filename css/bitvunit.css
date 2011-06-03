@@ -132,31 +132,16 @@ h5, h6 {
 /***** Lists *****************************************************************/
 
 ul, ol {
+    margin-left: 30px;
     margin-bottom: 20px;
 }
 
 ul {
-    list-style: none outside;
+    list-style: square outside;
 }
 
 ol {
     list-style: decimal;
-}
-
-ol, ul.square, ul.circle, ul.disc {
-    margin-left: 30px;
-}
-
-ul.square {
-    list-style: square outside;
-}
-
-ul.circle {
-    list-style: circle outside;
-}
-
-ul.disc {
-    list-style: disc outside;
 }
 
 li {

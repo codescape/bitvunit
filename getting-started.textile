@@ -1,0 +1,6 @@
+---
+layout: default
+title: Getting Started
+---
+
+_This chapter will soon include a small but helpful step-by-step guide to get started with the framework._

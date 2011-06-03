@@ -1,0 +1,10 @@
+---
+layout: default
+title: Contribute
+---
+
+There are many ways to support this project. Here is an incomplete list of ideas on how to contribute:
+* fork the project and contribute code (e.g. new rules)
+* raise an issue for new rules or improvements of the framework
+* contact me and tell me about your experiences with the framework
+* write a blog post, send a tweet or promote the project
