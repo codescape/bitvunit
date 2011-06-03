@@ -23,6 +23,9 @@ Change Log
     * OrderedListContainsListItemsRule
     * UnorderedListContainsListItemsRule
 * fixed invalid filename of class XmlRuleSetException
+* introduced multi module maven build
+    * added bitvunit-test-integration as a sample application
+    * renamed bitvunit to bitvunit-core for further modularization
 
 ### Release 0.2 (2011-06-01)
 
