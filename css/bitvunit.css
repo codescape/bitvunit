@@ -1,7 +1,7 @@
 /***** Layout ****************************************************************/
 
 body, html {
-    background: #fff;
+    background: #f6f6f6;
     font: normal normal normal 14px/normal helvetica, arial, freesans, clean, sans-serif;
     color: #444;
 }
@@ -13,7 +13,7 @@ body * {
 #container {
     position: relative;
     width: 960px;
-    margin: 60px auto;
+    margin: 45px auto;
 }
 
 #container:after {
@@ -27,7 +27,8 @@ body * {
 #navigation {
     float: left;
     width: 160px;
-    margin: 0 10px;
+    margin: 0 20px 0 10px;
+    padding: 15px;
 }
 
 nav {
@@ -54,13 +55,16 @@ nav a:hover {
 
 #content {
     float: left;
-    width: 700px;
-    padding-left: 60px;
-    margin: 0 10px;
+    width: 680px;
+    padding: 15px;
+    margin: 0 10px 0 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: #fff;
 }
 
 hr {
-    border: solid #DDD;
+    border: solid #ddd;
     clear: both;
     margin: 10px 0 30px;
     height: 0;
@@ -107,7 +111,6 @@ h1, h2 {
     line-height: 30px;
     margin-bottom: 14px;
 }
-
 
 h3, h4 {
     font-size: 22px;
