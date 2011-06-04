@@ -17,11 +17,16 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    
+
     <modules>
         <module>bitvunit-core</module>
         <module>bitvunit-test-integration</module>
     </modules>
+
+    <issueManagement>
+        <system>github</system>
+        <url>https://github.com/codescape/bitvunit/issues</url>
+    </issueManagement>
 
     <dependencyManagement>
         <dependencies>
@@ -30,7 +35,7 @@
                 <artifactId>bitvunit-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
-          
+
             <dependency>
                 <groupId>net.sourceforge.htmlunit</groupId>
                 <artifactId>htmlunit</artifactId>
