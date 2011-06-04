@@ -23,6 +23,14 @@
         <module>bitvunit-test-integration</module>
     </modules>
 
+    <developers>
+        <developer>
+            <id>codescape</id>
+            <name>Stefan Glase</name>
+            <email>stefan.glase@googlemail.com</email>
+        </developer>
+    </developers>
+
     <scm>
         <connection>scm:git:git@github.com:codescape/bitvunit.git</connection>
         <url>scm:git:git@github.com:codescape/bitvunit.git</url>
