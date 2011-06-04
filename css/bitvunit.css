@@ -144,6 +144,10 @@ ol {
     list-style: decimal;
 }
 
+ul ul, ul ol, ol ul, ol ol {
+    margin-top: 12px;
+}
+
 li {
     line-height: 18px;
     margin-bottom: 12px;
