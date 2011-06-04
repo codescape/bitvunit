@@ -1,0 +1,49 @@
+---
+layout: default
+title: Change Log
+---
+
+Below you can find all changes applied to the framework through its different releases. This list will be updated whenever there are new functions being introduced to the framework.
+
+h2(03). Release 0.3 (_pending_)
+
+* added new rules
+** OrderedListContainsListItemsRule
+** UnorderedListContainsListItemsRule
+* fixed invalid filename of class XmlRuleSetException
+* introduced multi module maven build
+** added bitvunit-test-integration as a sample application
+** renamed bitvunit to bitvunit-core for further modularization
+
+h2(02). Release 0.2 (2011-06-01)
+
+* easier selection of elements with new Page decorator
+* easier creation of violations in rule implementations
+* added new rules
+** AvoidBoldTagRule
+** AvoidItalicTagRule
+** AvoidMetaRefreshRule
+** HeadersInCorrectOrderRule
+** LanguageForHtmlTagRule
+** TableHeaderContainsTextRule
+* introduced XmlRuleSet to create a RuleSet based on a XML document
+* improved documentation
+* added [Hamcrest] Matchers for compliance checking
+** introduced RuleMatcher for verification against a specific Rule
+** introduced RuleSetMatcher for verification against a RuleSet
+
+h2(01). Release 0.1 (2011-05-24)
+
+* introduced Rule to check a single HTML page against a single rule
+* introduced RuleSet to check a single HTML page against multiple rules
+* added first rules
+** AlternativeTextForImageRule
+** AvoidBlinkTextRule
+** AvoidMarqueeTextRule
+** CaptionTextForTableRule
+** LabelContainsTextRule
+** LabelForInputFieldRule
+** LabelForSelectTagRule
+** LabelForTextareaRule
+** TitleForAbbreviationTagRule
+** TitleForAcronymTagRule
