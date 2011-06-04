@@ -101,7 +101,7 @@ small {
 
 #footer {
     border-top: 1px solid #ddd;
-    padding: 10px 0 0 0;
+    padding: 12px 0 0 0;
 }
 
 /***** Headers ***************************************************************/
@@ -111,11 +111,15 @@ h1, h2, h3, h4, h5, h6 {
     color: #181818;
     font-weight: bold;
 }
-
 h1 { font-size: 24px; line-height: 30px; margin-bottom: 20px; }
 h2 { font-size: 20px; line-height: 26px; margin-bottom: 16px; }
 h3, h4 { font-size: 18px; line-height: 24px; margin-bottom: 14px; }
 h5, h6 { font-size: 14px; line-height: 20px; margin-bottom: 10px; }
+
+h2, h3, h4, h5, h6 {
+    border-top: 1px solid #ddd;
+    padding-top: 12px;
+}
 
 /***** Lists *****************************************************************/
 
