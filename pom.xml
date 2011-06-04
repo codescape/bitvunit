@@ -23,6 +23,12 @@
         <module>bitvunit-test-integration</module>
     </modules>
 
+    <scm>
+        <connection>scm:git:git@github.com:codescape/bitvunit.git</connection>
+        <url>scm:git:git@github.com:codescape/bitvunit.git</url>
+        <developerConnection>scm:git:git@github.com:codescape/bitvunit.git</developerConnection>
+    </scm>
+
     <issueManagement>
         <system>github</system>
         <url>https://github.com/codescape/bitvunit/issues</url>
