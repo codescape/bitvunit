@@ -16,7 +16,7 @@ import static de.codescape.bitvunit.util.ElementInspector.elementHasNonEmptyAttr
  */
 public class TitleForAbbreviationTagRule extends AbstractRule {
 
-    public static final String RULE_NAME = "TitleForAbbreviationTag";
+    private static final String RULE_NAME = "TitleForAbbreviationTag";
     private static final String RULE_MESSAGE = "Every <abbr /> tag should describe the marked abbreviation with its title attribute.";
 
     @Override

@@ -14,7 +14,7 @@ import de.codescape.bitvunit.rule.Violations;
  */
 public class AvoidBlinkTextRule extends AbstractRule {
 
-    public static final String RULE_NAME = "AvoidBlinkText";
+    private static final String RULE_NAME = "AvoidBlinkText";
     private static final String RULE_MESSAGE = "The <blink /> element is not defined in any W3C HTML specification and should not be used.";
 
     @Override

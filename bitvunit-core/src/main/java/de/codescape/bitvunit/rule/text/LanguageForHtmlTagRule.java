@@ -15,9 +15,8 @@ import static de.codescape.bitvunit.util.ElementInspector.elementHasNonEmptyAttr
  */
 public class LanguageForHtmlTagRule extends AbstractRule {
 
-    public static final String RULE_NAME = "LanguageForHtmlTag";
+    private static final String RULE_NAME = "LanguageForHtmlTag";
     private static final String RULE_MESSAGE = "Every <html /> tag should communicate the main language of that page with its lang attribute.";
-
     private static final String LANG_ATTRIBUTE = "lang";
 
     @Override

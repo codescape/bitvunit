@@ -16,7 +16,7 @@ import static de.codescape.bitvunit.util.ElementInspector.elementHasAttribute;
  */
 public class AlternativeTextForImageRule extends AbstractRule {
 
-    public static final String RULE_NAME = "AlternativeTextForImage";
+    private static final String RULE_NAME = "AlternativeTextForImage";
     private static final String RULE_MESSAGE = "Every image must provide an alternative text through its alt attribute.";
 
     @Override

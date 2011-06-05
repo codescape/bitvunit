@@ -13,7 +13,7 @@ import de.codescape.bitvunit.rule.Violations;
  */
 public class AvoidItalicTagRule extends AbstractRule {
 
-    public static final String RULE_NAME = "AvoidItalicTag";
+    private static final String RULE_NAME = "AvoidItalicTag";
     private static final String RULE_MESSAGE = "The <i /> element should not be used because <em /> is a more semantic way to outline text.";
 
     @Override

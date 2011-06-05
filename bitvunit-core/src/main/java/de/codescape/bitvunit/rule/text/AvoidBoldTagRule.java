@@ -13,7 +13,7 @@ import de.codescape.bitvunit.rule.Violations;
  */
 public class AvoidBoldTagRule extends AbstractRule {
 
-    public static final String RULE_NAME = "AvoidBoldTag";
+    private static final String RULE_NAME = "AvoidBoldTag";
     private static final String RULE_MESSAGE = "The <b /> element should not be used because <strong /> is a more semantic way to outline text.";
 
     @Override

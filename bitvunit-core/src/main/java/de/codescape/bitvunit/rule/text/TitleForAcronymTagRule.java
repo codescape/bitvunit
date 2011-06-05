@@ -9,7 +9,7 @@ import static de.codescape.bitvunit.util.ElementInspector.elementHasNonEmptyAttr
 
 public class TitleForAcronymTagRule extends AbstractRule {
 
-    public static final String RULE_NAME = "TitleForAcronymTag";
+    private static final String RULE_NAME = "TitleForAcronymTag";
     private static final String RULE_MESSAGE = "Every <acronym /> tag should describe the marked acronym with its title attribute.";
 
     @Override

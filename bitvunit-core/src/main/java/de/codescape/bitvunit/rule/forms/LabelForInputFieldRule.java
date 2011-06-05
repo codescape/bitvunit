@@ -17,7 +17,7 @@ import static de.codescape.bitvunit.util.LabelInspector.labelForIdExists;
  */
 public class LabelForInputFieldRule extends AbstractRule {
 
-    public static final String RULE_NAME = "LabelForInputField";
+    private static final String RULE_NAME = "LabelForInputField";
     private static final String RULE_MESSAGE = "For every input field there must be exactly one associated label tag.";
 
     @Override

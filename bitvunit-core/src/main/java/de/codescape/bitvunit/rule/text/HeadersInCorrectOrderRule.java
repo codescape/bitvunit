@@ -15,7 +15,7 @@ import de.codescape.bitvunit.rule.Violations;
  */
 public class HeadersInCorrectOrderRule extends AbstractRule {
 
-    public static final String RULE_NAME = "HeadersInCorrectOrder";
+    private static final String RULE_NAME = "HeadersInCorrectOrder";
     private static final String RULE_MESSAGE_SKIPPING = "Header levels may only be one level deeper than the level of the previous header.";
     private static final String RULE_MESSAGE_MULTIPLE_H1 = "The first header on the given page must be the only one of type <h1 />.";
     private static final String RULE_MESSAGE_FIRST_H1 = "The first header on the given page must be of type <h1 />.";

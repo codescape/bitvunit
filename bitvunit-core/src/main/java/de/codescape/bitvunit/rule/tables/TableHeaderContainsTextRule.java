@@ -13,7 +13,7 @@ import de.codescape.bitvunit.rule.Violations;
  */
 public class TableHeaderContainsTextRule extends AbstractRule {
 
-    public static final String RULE_NAME = "TableHeaderContainsText";
+    private static final String RULE_NAME = "TableHeaderContainsText";
     private static final String RULE_MESSAGE = "Every table cell that is a table header should contain text.";
 
     @Override

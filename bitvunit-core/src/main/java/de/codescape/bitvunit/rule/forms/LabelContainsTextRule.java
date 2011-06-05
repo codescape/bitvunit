@@ -13,7 +13,7 @@ import de.codescape.bitvunit.rule.Violations;
  */
 public class LabelContainsTextRule extends AbstractRule {
 
-    public static final String RULE_NAME = "LabelContainsText";
+    private static final String RULE_NAME = "LabelContainsText";
     private static final String RULE_MESSAGE = "Every label must contain text to describe the associated form field.";
 
     @Override

@@ -17,7 +17,7 @@ import static de.codescape.bitvunit.util.LabelInspector.labelForIdExists;
  */
 public class LabelForTextareaRule extends AbstractRule {
 
-    public static final String RULE_NAME = "LabelForTextarea";
+    private static final String RULE_NAME = "LabelForTextarea";
     private static final String RULE_MESSAGE = "For every textarea there must be exactly one associated label tag.";
 
     @Override

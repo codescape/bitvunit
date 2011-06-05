@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class UnorderedListContainsListItemsRule extends AbstractRule {
 
-    public static final String RULE_NAME = "UnorderedListContainsListItems";
+    private static final String RULE_NAME = "UnorderedListContainsListItems";
     private static final String RULE_MESSAGE = "Unordered lists should always have one or more list items.";
 
     @Override

@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class OrderedListContainsListItemsRule extends AbstractRule {
 
-    public static final String RULE_NAME = "OrderedListContainsListItems";
+    private static final String RULE_NAME = "OrderedListContainsListItems";
     private static final String RULE_MESSAGE = "Ordered lists should always have one or more list items.";
 
     @Override

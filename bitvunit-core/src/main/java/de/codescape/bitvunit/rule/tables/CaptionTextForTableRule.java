@@ -14,7 +14,7 @@ import de.codescape.bitvunit.rule.Violations;
  */
 public class CaptionTextForTableRule extends AbstractRule {
 
-    public static final String RULE_NAME = "CaptionTextForTable";
+    private static final String RULE_NAME = "CaptionTextForTable";
     private static final String RULE_MESSAGE = "Every table must have a <caption/> element to provide a title for its content.";
 
     @Override

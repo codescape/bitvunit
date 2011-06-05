@@ -17,7 +17,7 @@ import static de.codescape.bitvunit.util.LabelInspector.labelForIdExists;
  */
 public class LabelForSelectTagRule extends AbstractRule {
 
-    public static final String RULE_NAME = "LabelForSelectTag";
+    private static final String RULE_NAME = "LabelForSelectTag";
     private static final String RULE_MESSAGE = "For every <select /> tag there must be exactly one associated label tag.";
 
     @Override
