@@ -9,6 +9,7 @@
     <packaging>pom</packaging>
 
     <name>BitvUnit Parent</name>
+    <description>Accessibility Testing Framework</description>
     <url>http://bitvunit.codescape.de</url>
 
     <properties>
