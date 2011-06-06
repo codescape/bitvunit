@@ -4,8 +4,9 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.model.Page;
 
 /**
- * Base class to all implementations of the Rule interface. It provides convenience methods to create violations within
- * the implementation of a rule and allows to apply a rule to a given HtmlPage object.
+ * Base class to all implementations of the {@link Rule} interface. It provides convenience methods to create new {@link
+ * Violation} instances within the implementation of a {@link Rule} and allows to apply a {@link Rule} to a given {@link
+ * HtmlPage} object.
  */
 public abstract class AbstractRule implements Rule {
 
@@ -18,10 +19,10 @@ public abstract class AbstractRule implements Rule {
     public abstract String getName();
 
     /**
-     * Applies that rule to the given HtmlPage and returns a list of violations.
+     * Applies that rule to the given {@link HtmlPage} and returns all {@link Violations} of that rule.
      *
-     * @param htmlPage HtmlPage under test
-     * @return list of violations
+     * @param htmlPage {@link HtmlPage} under test
+     * @return all {@link Violations} of that rule
      */
     @Override
     public final Violations applyTo(HtmlPage htmlPage) {
