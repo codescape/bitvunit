@@ -32,11 +32,16 @@ public class BasicRuleSet implements RuleSet {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("RuleSet with rules:");
+        StringBuilder sb = new StringBuilder("RuleSet [");
+        boolean first = true;
         for (Rule rule : rules) {
-            sb.append("\n").append(rule);
+            if (!first) {
+                sb.append(", ");
+            }
+            first = false;
+            sb.append(rule);
         }
-        return sb.toString();
+        return sb.append("]").toString();
     }
 
 }
