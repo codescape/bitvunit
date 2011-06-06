@@ -10,20 +10,9 @@ import de.codescape.bitvunit.model.Page;
  */
 public abstract class AbstractRule implements Rule {
 
-    /**
-     * Returns the name of that rule.
-     *
-     * @return name of that rule
-     */
     @Override
     public abstract String getName();
 
-    /**
-     * Applies that rule to the given {@link HtmlPage} and returns all {@link Violations} of that rule.
-     *
-     * @param htmlPage {@link HtmlPage} under test
-     * @return all {@link Violations} of that rule
-     */
     @Override
     public final Violations applyTo(HtmlPage htmlPage) {
         Violations violations = new Violations();
@@ -51,12 +40,6 @@ public abstract class AbstractRule implements Rule {
         return new Violation(this, lineNumber, message);
     }
 
-    /**
-     * Returns a String representation of the name of that rule. Per default this results in a call of the getName()
-     * method.
-     *
-     * @return name of that rule
-     */
     @Override
     public String toString() {
         return getName();
