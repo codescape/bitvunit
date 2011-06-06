@@ -3,6 +3,7 @@ package de.codescape.bitvunit.ruleset;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.rule.Rule;
 import de.codescape.bitvunit.rule.Violations;
+import org.apache.commons.lang.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -32,16 +33,7 @@ public class BasicRuleSet implements RuleSet {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("RuleSet [");
-        boolean first = true;
-        for (Rule rule : rules) {
-            if (!first) {
-                sb.append(", ");
-            }
-            first = false;
-            sb.append(rule);
-        }
-        return sb.append("]").toString();
+        return "[" + (rules.isEmpty() ? "<Empty RuleSet>" : StringUtils.join(rules, ", ")) + "]";
     }
 
 }

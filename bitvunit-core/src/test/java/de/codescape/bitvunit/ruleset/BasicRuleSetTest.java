@@ -53,13 +53,13 @@ public class BasicRuleSetTest {
 
     @Test
     public void toStringReturnsReadableStringForEmptyListOfRules() {
-        String expectedString = "RuleSet []";
+        String expectedString = "[<Empty RuleSet>]";
         assertEquals(expectedString, ruleSet.toString());
     }
 
     @Test
     public void toStringReturnsReadableStringForSingleRule() {
-        String expectedString = "RuleSet [SingleRuleName]";
+        String expectedString = "[SingleRuleName]";
 
         ruleSet.addRule(createRuleWithName("SingleRuleName"));
 
@@ -68,7 +68,7 @@ public class BasicRuleSetTest {
 
     @Test
     public void toStringReturnsReadableStringForMultipleRules() {
-        String expectedString = "RuleSet [FirstRuleName, SecondRuleName]";
+        String expectedString = "[FirstRuleName, SecondRuleName]";
 
         ruleSet.addRule(createRuleWithName("FirstRuleName"));
         ruleSet.addRule(createRuleWithName("SecondRuleName"));
