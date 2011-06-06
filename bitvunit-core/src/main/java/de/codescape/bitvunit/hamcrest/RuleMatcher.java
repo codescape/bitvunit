@@ -35,6 +35,13 @@ public class RuleMatcher extends TypeSafeMatcher<HtmlPage> {
         description.appendText("compliant to rule ").appendText(rule.toString());
     }
 
+    /**
+     * Returns a {@link Matcher} instance that can be applied to a {@link HtmlPage} and checks that page against a given
+     * {@link Rule}.
+     *
+     * @param rule {@link Rule} to be checked
+     * @return {@link Matcher} instance
+     */
     @Factory
     public static Matcher<HtmlPage> compliantTo(Rule rule) {
         return new RuleMatcher(rule);
