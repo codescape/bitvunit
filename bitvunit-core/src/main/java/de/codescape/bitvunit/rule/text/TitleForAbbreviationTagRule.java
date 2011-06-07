@@ -8,7 +8,7 @@ import de.codescape.bitvunit.rule.Violations;
 import static de.codescape.bitvunit.util.ElementInspector.elementHasNonEmptyAttribute;
 
 /**
- * TitleForAbbreviationTag ensures that every abbreviation that is marked through the <code>&lt;abbr /&gt;</code>
+ * TitleForAbbreviationTagRule ensures that every abbreviation that is marked through the <code>&lt;abbr /&gt;</code>
  * element within the given HTML document provides a description of that abbreviation through its <code>title</code>
  * attribute.
  *
