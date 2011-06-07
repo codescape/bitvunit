@@ -22,6 +22,7 @@ public class Page {
         return result;
     }
 
+
     public List<HtmlLabel> findAllLabelTags() {
         return findHtmlElementsByTagName(HtmlLabel.TAG_NAME);
     }
@@ -98,6 +99,10 @@ public class Page {
 
     public List<HtmlInlineFrame> findAllInlineFrameTags() {
         return findHtmlElementsByTagName(HtmlInlineFrame.TAG_NAME);
+    }
+
+    public HtmlElement findHtmlElementById(String elementId) {
+        return htmlPage.getElementById(elementId);
     }
 
 }
