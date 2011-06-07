@@ -12,6 +12,8 @@ import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNot.not;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -33,17 +35,32 @@ public class RuleMatcherTest {
     @Test
     public void matchesPositivelyToComplianceOfRule() throws Exception {
         assertThat(somePage(), is(compliantTo(satisfiedRule)));
+
+        boolean hasFailed = false;
+        try {
+            assertThat(somePage(), not(compliantTo(satisfiedRule)));
+        } catch (AssertionError e) {
+            hasFailed = true;
+        }
+        assertTrue(hasFailed);
     }
 
     @Test
     public void matchesNegativelyToViolationOfRule() throws Exception {
         assertThat(somePage(), not(compliantTo(unsatisfiedRule)));
+
+        boolean hasFailed = false;
+        try {
+            assertThat(somePage(), is(compliantTo(unsatisfiedRule)));
+        } catch (AssertionError e) {
+            hasFailed = true;
+        }
+        assertTrue(hasFailed);
     }
 
     private HtmlPage somePage() {
         return createHtmlPage("<html></html>");
     }
-
 
     private Violations someViolation() {
         Violations violations = new Violations();
