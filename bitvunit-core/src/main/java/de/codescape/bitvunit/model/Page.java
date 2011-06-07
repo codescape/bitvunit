@@ -96,4 +96,8 @@ public class Page {
         return findHtmlElementsByTagName(HtmlOrderedList.TAG_NAME);
     }
 
+    public List<HtmlInlineFrame> findAllInlineFrameTags() {
+        return findHtmlElementsByTagName(HtmlInlineFrame.TAG_NAME);
+    }
+
 }
