@@ -13,6 +13,7 @@ h2(#r03). Release 0.3 (_pending_)
 
 * added new rules
 ** OrderedListContainsListItemsRule
+** TitleForInlineFrameRule
 ** UnorderedListContainsListItemsRule
 * fixed invalid filename of class XmlRuleSetException
 * introduced multi module maven build
