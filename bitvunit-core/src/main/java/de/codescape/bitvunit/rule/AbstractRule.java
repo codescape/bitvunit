@@ -42,7 +42,7 @@ public abstract class AbstractRule implements Rule {
 
     @Override
     public String toString() {
-        return getName();
+        return getClass().getSimpleName() + "[name=" + getName() + "]";
     }
 
 }

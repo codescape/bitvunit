@@ -52,34 +52,39 @@ public class BasicRuleSetTest {
     }
 
     @Test
-    public void toStringReturnsReadableStringForEmptyListOfRules() {
-        String expectedString = "[<Empty RuleSet>]";
+    public void toStringReturnsReadableStringForEmptyListOfRules() throws Exception  {
+        String expectedString = ruleSet.getClass().getSimpleName() + "[<Empty RuleSet>]";
         assertEquals(expectedString, ruleSet.toString());
     }
 
     @Test
-    public void toStringReturnsReadableStringForSingleRule() {
-        String expectedString = "[SingleRuleName]";
-
+    public void toStringReturnsReadableStringForSingleRule() throws Exception {
+        String expectedString = ruleSet.getClass().getSimpleName() + "[SingleRuleName]";
         ruleSet.addRule(createRuleWithName("SingleRuleName"));
-
         assertEquals(expectedString, ruleSet.toString());
     }
 
     @Test
-    public void toStringReturnsReadableStringForMultipleRules() {
-        String expectedString = "[FirstRuleName, SecondRuleName]";
-
+    public void toStringReturnsReadableStringForMultipleRules() throws Exception {
+        String expectedString = ruleSet.getClass().getSimpleName() + "[FirstRuleName, SecondRuleName]";
         ruleSet.addRule(createRuleWithName("FirstRuleName"));
         ruleSet.addRule(createRuleWithName("SecondRuleName"));
+        assertEquals(expectedString, ruleSet.toString());
+    }
 
+    @Test
+    public void toStringListsContainedRulesInAlphabeticalOrder() throws Exception {
+        String expectedString = ruleSet.getClass().getSimpleName() + "[ARule, BRule, XRule]";
+        ruleSet.addRule(createRuleWithName("BRule"));
+        ruleSet.addRule(createRuleWithName("XRule"));
+        ruleSet.addRule(createRuleWithName("ARule"));
         assertEquals(expectedString, ruleSet.toString());
     }
 
     private Rule createRuleWithName(String ruleName) {
-        Rule secondRule = mock(Rule.class);
-        when(secondRule.toString()).thenReturn(ruleName);
-        return secondRule;
+        Rule mockedRule = mock(Rule.class);
+        when(mockedRule.getName()).thenReturn(ruleName);
+        return mockedRule;
     }
 
 }

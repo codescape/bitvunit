@@ -6,6 +6,7 @@ import de.codescape.bitvunit.rule.Violations;
 import org.apache.commons.lang.StringUtils;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -33,7 +34,16 @@ public class BasicRuleSet implements RuleSet {
 
     @Override
     public String toString() {
-        return "[" + (rules.isEmpty() ? "<Empty RuleSet>" : StringUtils.join(rules, ", ")) + "]";
+        return getClass().getSimpleName() + "[" + (rules.isEmpty() ? "<Empty RuleSet>" : StringUtils.join(collectRuleNames(), ", ")) + "]";
+    }
+
+    private List<String> collectRuleNames() {
+        List<String> ruleNames = new ArrayList<String>();
+        for (Rule rule : rules) {
+            ruleNames.add(rule.getName());
+        }
+        Collections.sort(ruleNames);
+        return ruleNames;
     }
 
 }
