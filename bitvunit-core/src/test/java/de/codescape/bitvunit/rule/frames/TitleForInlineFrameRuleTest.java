@@ -27,7 +27,7 @@ public class TitleForInlineFrameRuleTest {
     }
 
     @Test
-    public void inlineFrameWithTitlePresent() throws Exception  {
+    public void inlineFrameWithTitlePresent() throws Exception {
         String content = "<html><body><iframe title=\"Navigation\" src=\"nav.html\" /></body></html>";
         Violations violations = rule.applyTo(createHtmlPage(content));
         assertNoViolations(violations, rule);

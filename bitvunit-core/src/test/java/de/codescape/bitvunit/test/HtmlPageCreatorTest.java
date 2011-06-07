@@ -5,7 +5,6 @@ import org.junit.Test;
 
 import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 public class HtmlPageCreatorTest {
 

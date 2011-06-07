@@ -52,7 +52,7 @@ public class BasicRuleSetTest {
     }
 
     @Test
-    public void toStringReturnsReadableStringForEmptyListOfRules() throws Exception  {
+    public void toStringReturnsReadableStringForEmptyListOfRules() throws Exception {
         String expectedString = ruleSet.getClass().getSimpleName() + "[<Empty RuleSet>]";
         assertEquals(expectedString, ruleSet.toString());
     }
