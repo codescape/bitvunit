@@ -33,7 +33,7 @@ public class AlternativeTextForImageRule extends AbstractRule {
 
     private void validateImage(HtmlImage image, Violations violations) {
         if (!elementHasAttribute(image, "alt")) {
-            violations.add(createViolation(image.getStartLineNumber(), RULE_MESSAGE));
+            violations.add(createViolation(image, RULE_MESSAGE));
         }
     }
 

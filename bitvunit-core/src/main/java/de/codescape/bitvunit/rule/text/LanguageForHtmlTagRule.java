@@ -28,7 +28,7 @@ public class LanguageForHtmlTagRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlHtml html : page.findAllHtmlTags()) {
             if (!elementHasNonEmptyAttribute(html, LANG_ATTRIBUTE)) {
-                violations.add(createViolation(html.getStartLineNumber(), RULE_MESSAGE));
+                violations.add(createViolation(html, RULE_MESSAGE));
             }
         }
     }

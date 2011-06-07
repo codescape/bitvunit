@@ -25,7 +25,7 @@ public class AvoidBlinkTextRule extends AbstractRule {
     @Override
     protected void applyTo(Page page, Violations violations) {
         for (HtmlBlink blink : page.findAllBlinkTags()) {
-            violations.add(createViolation(blink.getStartLineNumber(), RULE_MESSAGE));
+            violations.add(createViolation(blink, RULE_MESSAGE));
         }
     }
 

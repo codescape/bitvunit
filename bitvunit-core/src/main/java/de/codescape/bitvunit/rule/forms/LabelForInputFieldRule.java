@@ -29,7 +29,7 @@ public class LabelForInputFieldRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlInput input : page.findAllInputTags()) {
             if (elementHasValidId(input) && isTextOrPasswordField(input) && !labelForIdExists(input.getId(), page.findAllLabelTags())) {
-                violations.add(createViolation(input.getStartLineNumber(), RULE_MESSAGE));
+                violations.add(createViolation(input, RULE_MESSAGE));
             }
         }
     }

@@ -1,5 +1,6 @@
 package de.codescape.bitvunit.rule;
 
+import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.model.Page;
 
@@ -32,12 +33,12 @@ public abstract class AbstractRule implements Rule {
      * Creates a new violation for that rule with the line number of the violating element in the given page and a
      * message that describes the violation in detail.
      *
-     * @param lineNumber line number where the violation occurs
-     * @param message    description of the violation
+     * @param htmlElement the {@link HtmlElement} where the violation occurs
+     * @param message     description of the violation
      * @return new violation to be added to the list of violations
      */
-    protected Violation createViolation(int lineNumber, String message) {
-        return new Violation(this, lineNumber, message);
+    protected Violation createViolation(HtmlElement htmlElement, String message) {
+        return new Violation(this, htmlElement, message);
     }
 
     @Override

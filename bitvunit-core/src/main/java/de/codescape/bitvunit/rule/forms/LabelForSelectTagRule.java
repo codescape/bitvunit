@@ -29,7 +29,7 @@ public class LabelForSelectTagRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlSelect select : page.findAllSelectTags()) {
             if (elementHasValidId(select) && !labelForIdExists(select.getId(), page.findAllLabelTags())) {
-                violations.add(createViolation(select.getStartLineNumber(), RULE_MESSAGE));
+                violations.add(createViolation(select, RULE_MESSAGE));
             }
         }
     }

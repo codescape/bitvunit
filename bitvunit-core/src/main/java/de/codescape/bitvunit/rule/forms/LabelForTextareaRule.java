@@ -29,7 +29,7 @@ public class LabelForTextareaRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlTextArea textarea : page.findAllTextareaTags()) {
             if (elementHasValidId(textarea) && !labelForIdExists(textarea.getId(), page.findAllLabelTags())) {
-                violations.add(createViolation(textarea.getStartLineNumber(), RULE_MESSAGE));
+                violations.add(createViolation(textarea, RULE_MESSAGE));
             }
         }
     }

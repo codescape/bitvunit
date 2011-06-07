@@ -45,19 +45,19 @@ public class HeadersInCorrectOrderRule extends AbstractRule {
 
     private void checkNoSkippingOfLevelsAllowed(Violations violations, HtmlElement lastHeader, HtmlElement currentHeader) {
         if (headerLevel(currentHeader) > headerLevel(lastHeader) + 1) {
-            violations.add(createViolation(currentHeader.getStartLineNumber(), RULE_MESSAGE_SKIPPING));
+            violations.add(createViolation(currentHeader, RULE_MESSAGE_SKIPPING));
         }
     }
 
     private void checkOnlyOneLevelOneHeaderAllowed(Violations violations, HtmlElement currentHeader) {
         if (headerLevel(currentHeader) == 1) {
-            violations.add(createViolation(currentHeader.getStartLineNumber(), RULE_MESSAGE_MULTIPLE_H1));
+            violations.add(createViolation(currentHeader, RULE_MESSAGE_MULTIPLE_H1));
         }
     }
 
     private void checkFirstHeader(Violations violations, HtmlElement currentHeader) {
         if (headerLevel(currentHeader) != 1) {
-            violations.add(createViolation(currentHeader.getStartLineNumber(), RULE_MESSAGE_FIRST_H1));
+            violations.add(createViolation(currentHeader, RULE_MESSAGE_FIRST_H1));
         }
     }
 

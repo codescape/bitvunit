@@ -30,7 +30,7 @@ public class LabelContainsTextRule extends AbstractRule {
 
     private void validateLabel(HtmlLabel label, Violations violations) {
         if (label.getTextContent() == null || label.getTextContent().isEmpty()) {
-            violations.add(createViolation(label.getStartLineNumber(), RULE_MESSAGE));
+            violations.add(createViolation(label, RULE_MESSAGE));
         }
     }
 
