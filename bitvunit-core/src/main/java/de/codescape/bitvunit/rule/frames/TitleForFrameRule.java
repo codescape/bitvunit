@@ -27,8 +27,7 @@ public class TitleForFrameRule extends AbstractRule {
 
     @Override
     protected void applyTo(Page page, Violations violations) {
-        List<HtmlFrame> frames = page.findAllFrameTags();
-        for (HtmlFrame frame : frames) {
+        for (HtmlFrame frame : page.findAllFrameTags()) {
             if (!elementHasNonEmptyAttribute(frame, "title")) {
                 violations.add(createViolation(frame, RULE_MESSAGE));
             }
