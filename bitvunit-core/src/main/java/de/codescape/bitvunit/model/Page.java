@@ -104,4 +104,8 @@ public class Page {
         return htmlPage.getElementById(elementId);
     }
 
+    public List<HtmlFrame> findAllFrameTags() {
+        return findHtmlElementsByTagName(HtmlFrame.TAG_NAME);
+    }
+
 }
