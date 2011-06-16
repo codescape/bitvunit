@@ -16,6 +16,7 @@
     <rule class="de.codescape.bitvunit.rule.frames.TitleForInlineFrameRule"/>
 
     <!-- Images -->
+    <rule class="de.codescape.bitvunit.rule.images.AlternativeTextForAreaOfImageMapRule"/>
     <rule class="de.codescape.bitvunit.rule.images.AlternativeTextForImageRule"/>
 
     <!-- Interactions -->

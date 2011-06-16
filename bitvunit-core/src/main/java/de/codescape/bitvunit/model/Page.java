@@ -108,4 +108,8 @@ public class Page {
         return findHtmlElementsByTagName(HtmlFrame.TAG_NAME);
     }
 
+    public List<HtmlArea> findAllAreaTags() {
+        return findHtmlElementsByTagName(HtmlArea.TAG_NAME);
+    }
+
 }
