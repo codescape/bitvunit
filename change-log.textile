@@ -19,9 +19,6 @@ h2(#r03). Release 0.3 (_pending_)
 ** TitleForInlineFrameRule
 ** UnorderedListContainsListItemsRule
 * fixed invalid filename of class XmlRuleSetException
-* introduced multi module maven build
-** added bitvunit-test-integration as a sample application
-** renamed bitvunit to bitvunit-core for further modularization
 * added license information to the framework
 * every violation knows the element that caused the violation
 
