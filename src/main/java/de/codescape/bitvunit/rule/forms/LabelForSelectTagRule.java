@@ -5,7 +5,7 @@ import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
-import static de.codescape.bitvunit.util.HtmlElementUtil.elementHasNonEmptyAttribute;
+import static de.codescape.bitvunit.util.HtmlElementUtil.hasNonEmptyAttribute;
 import static de.codescape.bitvunit.util.HtmlLabelUtil.containsLabelForId;
 
 /**
@@ -28,7 +28,7 @@ public class LabelForSelectTagRule extends AbstractRule {
     @Override
     protected void applyTo(Page page, Violations violations) {
         for (HtmlSelect select : page.findAllSelectTags()) {
-            if (elementHasNonEmptyAttribute(select, "id") && !containsLabelForId(page.findAllLabelTags(), select.getId())) {
+            if (hasNonEmptyAttribute(select, "id") && !containsLabelForId(page.findAllLabelTags(), select.getId())) {
                 violations.add(createViolation(select, RULE_MESSAGE));
             }
         }

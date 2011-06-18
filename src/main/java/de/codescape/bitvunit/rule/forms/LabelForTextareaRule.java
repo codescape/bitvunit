@@ -5,7 +5,7 @@ import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
-import static de.codescape.bitvunit.util.HtmlElementUtil.elementHasNonEmptyAttribute;
+import static de.codescape.bitvunit.util.HtmlElementUtil.hasNonEmptyAttribute;
 import static de.codescape.bitvunit.util.HtmlLabelUtil.containsLabelForId;
 
 /**
@@ -28,7 +28,7 @@ public class LabelForTextareaRule extends AbstractRule {
     @Override
     protected void applyTo(Page page, Violations violations) {
         for (HtmlTextArea textarea : page.findAllTextareaTags()) {
-            if (elementHasNonEmptyAttribute(textarea, "id") && !containsLabelForId(page.findAllLabelTags(), textarea.getId())) {
+            if (hasNonEmptyAttribute(textarea, "id") && !containsLabelForId(page.findAllLabelTags(), textarea.getId())) {
                 violations.add(createViolation(textarea, RULE_MESSAGE));
             }
         }

@@ -5,7 +5,7 @@ import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
-import static de.codescape.bitvunit.util.HtmlElementUtil.elementHasNonEmptyAttribute;
+import static de.codescape.bitvunit.util.HtmlElementUtil.hasNonEmptyAttribute;
 
 /**
  * LanguageForHtmlTagRule ensures that the given HTML document provides its language information through the
@@ -27,7 +27,7 @@ public class LanguageForHtmlTagRule extends AbstractRule {
     @Override
     protected void applyTo(Page page, Violations violations) {
         for (HtmlHtml html : page.findAllHtmlTags()) {
-            if (!elementHasNonEmptyAttribute(html, LANG_ATTRIBUTE)) {
+            if (!hasNonEmptyAttribute(html, LANG_ATTRIBUTE)) {
                 violations.add(createViolation(html, RULE_MESSAGE));
             }
         }

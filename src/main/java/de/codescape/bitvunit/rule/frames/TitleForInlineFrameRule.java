@@ -5,7 +5,7 @@ import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
-import static de.codescape.bitvunit.util.HtmlElementUtil.elementHasNonEmptyAttribute;
+import static de.codescape.bitvunit.util.HtmlElementUtil.hasNonEmptyAttribute;
 
 /**
  * TitleForInlineFrameRule ensures that every inline frame that is marked through the <code>&lt;iframe /&gt;</code>
@@ -27,7 +27,7 @@ public class TitleForInlineFrameRule extends AbstractRule {
     @Override
     protected void applyTo(Page page, Violations violations) {
         for (HtmlInlineFrame inlineFrame : page.findAllInlineFrameTags()) {
-            if (!elementHasNonEmptyAttribute(inlineFrame, "title")) {
+            if (!hasNonEmptyAttribute(inlineFrame, "title")) {
                 violations.add(createViolation(inlineFrame, RULE_MESSAGE));
             }
         }

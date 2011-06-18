@@ -12,8 +12,8 @@ public abstract class HtmlElementUtil {
      * @return <code>true</code> if an attribute with the given name exists and is not empty, otherwise
      *         <code>false</code>
      */
-    public static boolean elementHasNonEmptyAttribute(HtmlElement element, String attributeName) {
-        return elementHasAttribute(element, attributeName) && !element.getAttribute(attributeName).isEmpty();
+    public static boolean hasNonEmptyAttribute(HtmlElement element, String attributeName) {
+        return hasAttribute(element, attributeName) && !element.getAttribute(attributeName).isEmpty();
     }
 
     /**
@@ -23,7 +23,7 @@ public abstract class HtmlElementUtil {
      * @param attributeName name of the attribute
      * @return <code>true</code> if an attribute with the given name exists, otherwise <code>false</code>
      */
-    public static boolean elementHasAttribute(HtmlElement element, String attributeName) {
+    public static boolean hasAttribute(HtmlElement element, String attributeName) {
         return element.getAttributesMap().containsKey(attributeName);
     }
 

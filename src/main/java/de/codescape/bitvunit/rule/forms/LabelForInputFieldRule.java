@@ -5,7 +5,7 @@ import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
-import static de.codescape.bitvunit.util.HtmlElementUtil.elementHasNonEmptyAttribute;
+import static de.codescape.bitvunit.util.HtmlElementUtil.hasNonEmptyAttribute;
 import static de.codescape.bitvunit.util.HtmlLabelUtil.containsLabelForId;
 
 /**
@@ -28,7 +28,7 @@ public class LabelForInputFieldRule extends AbstractRule {
     @Override
     protected void applyTo(Page page, Violations violations) {
         for (HtmlInput input : page.findAllInputTags()) {
-            if (elementHasNonEmptyAttribute(input, "id") && isTextOrPasswordField(input) && !containsLabelForId(page.findAllLabelTags(), input.getId())) {
+            if (hasNonEmptyAttribute(input, "id") && isTextOrPasswordField(input) && !containsLabelForId(page.findAllLabelTags(), input.getId())) {
                 violations.add(createViolation(input, RULE_MESSAGE));
             }
         }
