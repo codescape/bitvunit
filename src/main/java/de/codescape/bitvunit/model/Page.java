@@ -111,4 +111,8 @@ public class Page {
         return findHtmlElementsByTagName(HtmlArea.TAG_NAME);
     }
 
+    public List<HtmlApplet> findAllAppletTags() {
+        return findHtmlElementsByTagName(HtmlApplet.TAG_NAME);
+    }
+
 }

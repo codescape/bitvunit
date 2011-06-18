@@ -6,7 +6,7 @@ import static de.codescape.bitvunit.test.Assertions.assertRules;
 
 public class XmlRuleSetTest {
 
-    public static final int NUMBER_OF_RULES = 22;
+    public static final int NUMBER_OF_RULES = 23;
 
     @Test
     public void creationOfRuleSetAllRulesFindsAllRules() throws Exception {
