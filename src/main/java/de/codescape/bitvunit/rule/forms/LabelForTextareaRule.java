@@ -5,8 +5,8 @@ import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
-import static de.codescape.bitvunit.util.ElementInspector.elementHasValidId;
-import static de.codescape.bitvunit.util.LabelInspector.labelForIdExists;
+import static de.codescape.bitvunit.util.HtmlElementUtil.elementHasNonEmptyAttribute;
+import static de.codescape.bitvunit.util.HtmlLabelUtil.containsLabelForId;
 
 /**
  * LabelForTextareaRule ensures that every <code>&lt;textarea /&gt;</code> within the given HTML document is associated
@@ -28,7 +28,7 @@ public class LabelForTextareaRule extends AbstractRule {
     @Override
     protected void applyTo(Page page, Violations violations) {
         for (HtmlTextArea textarea : page.findAllTextareaTags()) {
-            if (elementHasValidId(textarea) && !labelForIdExists(textarea.getId(), page.findAllLabelTags())) {
+            if (elementHasNonEmptyAttribute(textarea, "id") && !containsLabelForId(page.findAllLabelTags(), textarea.getId())) {
                 violations.add(createViolation(textarea, RULE_MESSAGE));
             }
         }

@@ -5,7 +5,7 @@ import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
-import static de.codescape.bitvunit.util.ElementInspector.elementHasNonEmptyAttribute;
+import static de.codescape.bitvunit.util.HtmlElementUtil.elementHasNonEmptyAttribute;
 
 /**
  * TitleForAbbreviationTagRule ensures that every abbreviation that is marked through the <code>&lt;abbr /&gt;</code>

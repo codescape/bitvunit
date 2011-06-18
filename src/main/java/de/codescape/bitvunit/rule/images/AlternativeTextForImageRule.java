@@ -5,7 +5,7 @@ import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
-import static de.codescape.bitvunit.util.ElementInspector.elementHasAttribute;
+import static de.codescape.bitvunit.util.HtmlElementUtil.elementHasAttribute;
 
 /**
  * AlternativeTextForImageRule ensures that every image within the given HTML document provides an alternative text

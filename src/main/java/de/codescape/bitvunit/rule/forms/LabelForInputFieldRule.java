@@ -5,8 +5,8 @@ import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
-import static de.codescape.bitvunit.util.ElementInspector.elementHasValidId;
-import static de.codescape.bitvunit.util.LabelInspector.labelForIdExists;
+import static de.codescape.bitvunit.util.HtmlElementUtil.elementHasNonEmptyAttribute;
+import static de.codescape.bitvunit.util.HtmlLabelUtil.containsLabelForId;
 
 /**
  * LabelForInputFieldRule ensures that every <code>&lt;input /&gt;</code> field of type <code>text</code> or
@@ -28,7 +28,7 @@ public class LabelForInputFieldRule extends AbstractRule {
     @Override
     protected void applyTo(Page page, Violations violations) {
         for (HtmlInput input : page.findAllInputTags()) {
-            if (elementHasValidId(input) && isTextOrPasswordField(input) && !labelForIdExists(input.getId(), page.findAllLabelTags())) {
+            if (elementHasNonEmptyAttribute(input, "id") && isTextOrPasswordField(input) && !containsLabelForId(page.findAllLabelTags(), input.getId())) {
                 violations.add(createViolation(input, RULE_MESSAGE));
             }
         }
