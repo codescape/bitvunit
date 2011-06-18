@@ -22,7 +22,6 @@ public class Page {
         return result;
     }
 
-
     public List<HtmlLabel> findAllLabelTags() {
         return findHtmlElementsByTagName(HtmlLabel.TAG_NAME);
     }
