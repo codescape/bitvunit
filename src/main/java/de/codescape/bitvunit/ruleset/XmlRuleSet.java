@@ -7,10 +7,20 @@ import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 
+/**
+ * Implementation of a {@link RuleSet} that is backed by a XML document declaring the list of rules to be applied.
+ *
+ * @since 0.2
+ */
 public class XmlRuleSet extends BasicRuleSet implements RuleSet {
 
     private static DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 
+    /**
+     * Constructs a new instance with the given location to the XML document.
+     *
+     * @param location location of the XML document
+     */
     public XmlRuleSet(String location) {
         super();
         addRulesFromDocument(buildDocument(location));
