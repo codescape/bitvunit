@@ -49,6 +49,11 @@
                     </excludes>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.0-beta-3</version>
+            </plugin>
         </plugins>
     </build>
 
@@ -126,7 +131,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>2.7.2</version><!-- change to version 2.9 for Maven 3 and maven-site-plugin 2.1 or higher -->
+                <version>2.9</version>
             </plugin>
         </plugins>
     </reporting>
