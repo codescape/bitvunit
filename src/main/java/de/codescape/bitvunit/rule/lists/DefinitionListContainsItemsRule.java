@@ -9,14 +9,16 @@ import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
 /**
- * TODO document rule
+ * DefinitionListContainsItemsRule ensures that every definition list <code>&lt;dl /&gt;</code> within the given HTML
+ * document contains one or more definition terms <code>&lt;dt /&gt;</code> and definition descriptions <code>&lt;dd
+ * /&gt;</code>.
  *
  * @since 0.3
  */
 public class DefinitionListContainsItemsRule extends AbstractRule {
 
     private static final String RULE_NAME = "DefinitionListContainsItems";
-    private static final String RULE_MESSAGE = "Some message!";
+    private static final String RULE_MESSAGE = "Definition lists should always have one or more list items.";
 
     @Override
     public String getName() {
