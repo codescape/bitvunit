@@ -12,7 +12,6 @@ public class Page {
         this.htmlPage = htmlPage;
     }
 
-    @SuppressWarnings("unchecked")
     private <T extends HtmlElement> List<T> allByTagName(String tagName) {
         return (List<T>)htmlPage.getElementsByTagName(tagName);
     }
