@@ -14,6 +14,7 @@ h2(#r03). Release 0.3 (_pending_)
 * added new rules
 ** AlternativeTextForAppletRule
 ** AlternativeTextForAreaOfImageMapRule
+** DefinitionListContainsItemsRule
 ** LabelWithoutFormElementRule
 ** OrderedListContainsListItemsRule
 ** TitleForFrameRule
