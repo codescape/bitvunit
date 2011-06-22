@@ -13,7 +13,7 @@ public class Page {
     }
 
     private <T extends HtmlElement> List<T> allByTagName(String tagName) {
-        return (List<T>)htmlPage.getElementsByTagName(tagName);
+        return (List<T>) htmlPage.getElementsByTagName(tagName);
     }
 
     public List<HtmlLabel> findAllLabelTags() {
@@ -107,6 +107,10 @@ public class Page {
 
     public List<HtmlApplet> findAllAppletTags() {
         return allByTagName(HtmlApplet.TAG_NAME);
+    }
+
+    public List<HtmlDefinitionList> findAllDefinitionLists() {
+        return allByTagName(HtmlDefinitionList.TAG_NAME);
     }
 
 }
