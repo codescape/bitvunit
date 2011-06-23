@@ -1,0 +1,8 @@
+---
+layout: default
+title: About
+---
+
+BitvUnit is an open source accessibility testing framework that makes it easy to automate accessibility checking for pages and applications that run in a web browser.
+
+The framework uses "Apache Maven":http://maven.apache.org for its build and dependency management. With the help of "HtmlUnit":http://htmlunit.sourceforge.net the framework inspects HTML pages that are checked against the rules of the framework. It provides adapters for "Hamcrest":http://code.google.com/p/hamcrest matchers because of their expressive syntax.

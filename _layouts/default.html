@@ -8,36 +8,32 @@
   <link rel="shortcut icon" href="/images/favicon.ico" />
 </head>
 <body>
-  <div id="container">
-    <div id="navigation">
-      <nav>
-        <p id="logo">BitvUnit</p>
-        <ul>
-          <li><a href="/">About</a></li>
-          <li><a href="/getting-started.html">Getting Started</a></li>
-          <li><a href="/downloads.html">Downloads</a></li>
-          <li><a href="/change-log.html">Change Log</a></li>
-          <li><a href="/contribute.html">Contribute</a></li>
-        </ul>
-      </nav>
-      &nbsp;
+  <div id="header">
+    <div id="logo">
+      BitvUnit
+      <span class="sub">Accessibility Testing Framework</span>
     </div>
-    <div id="content">
-      <header>
-        <h1>{{ page.title }}</h1>
-      </header>
-      <div id="main">
-        {{ content }}
-      </div>
-      <footer>
-        <small>
-          BitvUnit is created by <a href="http://www.stefanglase.de">Stefan Glase</a>, 2011 ©
-          <br />
-          I want to thank everyone who uses, supports or affiliates this project. Special thanks to <a href="http://webtestpraxis.de/blog/?tag=barrierefreiheit">WebTestPraxis</a> for their inspirational posts, the <a href="http://codenarc.sourceforge.net">CodeNarc</a> project for some architectural inspirations and <a href="http://www.github.com">GitHub</a> for their great social coding platform.
-        </small>
-      </footer>
+    <div id="navigation">
+      <ul>
+        <li><a href="/">About</a></li>
+        <li><a href="/usage.html">Usage</a></li>
+        <li><a href="/download.html">Download</a></li>
+        <li><a href="/changes.html">Changes</a></li>
+        <li><a href="/contribute.html">Contribute</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+      </ul>
     </div>
   </div>
-  <a href="http://github.com/codescape/bitvunit"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://d3nwyuy0nl342s.cloudfront.net/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
+  
+  <div id="content">
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+  </div>
+
+  <div id="footer">
+    (( BitvUnit is created by <a href="http://www.stefanglase.de">Stefan Glase</a> ))
+  </div>
+
+  <a href="http://github.com/codescape/bitvunit"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://d3nwyuy0nl342s.cloudfront.net/img/abad93f42020b733148435e2cd92ce15c542d320/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub"></a>
 </body>
 </html>

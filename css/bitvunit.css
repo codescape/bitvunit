@@ -1,158 +1,75 @@
-/***** Layout ****************************************************************/
+/******************************************************************************
+ Defaults
+ ********/
 
-body, html {
-    background: #f6f6f6;
-    font: normal normal normal 14px/normal helvetica, arial, freesans, clean, sans-serif;
-    color: #444;
-}
+body {
+    background: #0E0E0E url('../images/background.gif') repeat 0 0;
+    font: 12px/18px "Lucida Grande", Geneva, Arial, Verdana;
+    color: #999;
+    text-align: center;
+    text-shadow: #000 0 1px 1px; }
 
-body * {
-    line-height: 1.4em;
-}
+h1, h2, h3, h4, h5, h6 { color: #FFF; }
+h1 { font-size: 19px; margin: 15px 0; }
+h1:first-child { margin: 0 0 15px 0; }
+h2 { font-size: 15px; margin: 10px 0; }
+h3 { font-size: 13px; margin: 8px 0; }
 
-a, a:hover, a:visited, a:active {
-    color: #900;
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
+p { margin: 5px 0; }
 
-#container {
-    position: relative;
-    width: 960px;
-    margin: 45px auto;
-}
+a { color: #00CC00; text-decoration: none; }
+a:hover { color: #FF9900; }
 
-#container:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-} 
+ul { margin: 0 0 0 2em; }
+li { margin: 0 0 0 1em; list-style-type: disc; }
 
-#navigation {
-    float: left;
-    width: 160px;
-    margin: 0 20px 0 10px;
-    padding: 15px;
-}
+em { font-style: italic; }
 
-nav {
-    position: fixed; 
-    width: 160px;
-    text-align: right;
-}
-    
-nav ul li {
-    font-weight: bold;
-    text-align: right;
-    display: block;
-    margin-bottom: 10px;
-}
+/******************************************************************************
+ Box Layout
+ **********/
 
-nav a, nav a:hover, nav a:visited, nav a:active {
-    color: #282828;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: #181818;
-}
-
-#content {
-    float: left;
-    width: 678px;
-    padding: 15px;
-    margin: 0 10px 0 20px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    background: #fff;
-}
-
-hr {
-    border: solid #ddd;
-    clear: both;
-    margin: 10px 0 30px;
-    height: 0;
-    border-width: 1px 0 0;
-}
-
-p { 
-    margin: 0 0 20px 0;
-}
-
-em {
-    font-style: italic;
-}
-
-strong {
-    font-weight: bold;
-    color: #333;
-}
-
-small {
-    font-size: 80%;
-}
+#header {
+    width: 780px;
+    margin: 30px auto 20px auto; }
 
 #logo {
-    font-size: 24px;
-    color: #181818;
-    font-weight: bold;
-}
+    font-size: 35px;
+    color: #FFF;
+    text-align: left;
+    float: left; }
+#logo .sub {
+    font-size: 11px;
+    float: left;
+    margin: 5px 0; }
+
+#navigation {
+    text-align: right;
+    padding: 10px 0 0 0;
+    font-size: 12px; }
+#navigation li {
+    display: inline-block; }
+
+#content {
+    width: 780px;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    text-align: left;
+    font-size: 12px;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    background-color: #303030;
+    color: #C4C4C4;
+    overflow: hidden; }
+
+#footer {
+    margin: 0 0 30px 0; }
+
+/******************************************************************************
+ Articles
+ ********/
 
 .post-date {
-    color: #666;
-    margin-bottom: 10px;
-}
-
-footer {
-    border-top: 1px solid #ddd;
-    padding: 12px 0 0 0;
-}
-
-/***** Headers ***************************************************************/
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: helvetica, arial, freesans, clean, sans-serif;
-    color: #181818;
-    font-weight: bold;
-}
-h1 { font-size: 24px; line-height: 30px; margin-bottom: 20px; }
-h2 { font-size: 20px; line-height: 26px; margin-bottom: 16px; }
-h3, h4 { font-size: 18px; line-height: 24px; margin-bottom: 14px; }
-h5, h6 { font-size: 14px; line-height: 20px; margin-bottom: 10px; }
-
-h2, h3, h4, h5, h6 {
-    border-top: 1px solid #ddd;
-    padding-top: 12px;
-}
-
-/***** Lists *****************************************************************/
-
-ul, ol {
-    margin-left: 30px;
-    margin-bottom: 20px;
-}
-
-ul {
-    list-style: square outside;
-}
-
-ol {
-    list-style: decimal;
-}
-
-ul ul, ul ol, ol ul, ol ol {
-    margin-top: 12px;
-}
-
-li {
-    line-height: 18px;
-    margin-bottom: 12px;
-}
-
-li p {
-    line-height: 21px;
-}
+    margin: -10px 0 0 0; 
+    font-style: italic; }
