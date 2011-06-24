@@ -1,3 +1,4 @@
-permalink: /blog/:title
-auto: true
-pygments: true
+permalink:  /blog/:year/:month/:day/:title
+auto:       true
+pygments:   true
+server:     true
