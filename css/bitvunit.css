@@ -67,6 +67,28 @@ em { font-style: italic; }
     margin: 0 0 30px 0; }
 
 /******************************************************************************
+ Further Resources
+ *****************/
+
+.resources dt {
+    display: inline-block;
+    padding: 0 5px;
+    margin: 10px 0 0 0;
+    vertical-align: top; }
+.resources dt img {
+    width: 64px;
+    height: 64px;
+}
+.resources dd {
+    display: inline-block;
+    margin: 10px 0 0 0;
+    vertical-align: top;
+    width: 300px; }
+.resources dd h3 {
+    margin: 0 0 5px 0;
+}
+
+/******************************************************************************
  Articles
  ********/
 

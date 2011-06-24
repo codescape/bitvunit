@@ -6,3 +6,32 @@ title: About
 BitvUnit is an open source accessibility testing framework that makes it easy to automate accessibility checking for pages and applications that run in a web browser.
 
 The framework uses "Apache Maven":http://maven.apache.org for its build and dependency management. With the help of "HtmlUnit":http://htmlunit.sourceforge.net the framework inspects HTML pages that are checked against the rules of the framework. It provides adapters for "Hamcrest":http://code.google.com/p/hamcrest matchers because of their expressive syntax.
+
+h2. Further Resources
+
+If you want learn more about the framework, these resources might be interesting for you:
+
+<dl class="resources">
+  <dt>!images/icons/issue-tracker.png!:https://github.com/codescape/bitvunit/issues</dt>
+  <dd>
+    <h3>Issue Tracker</h3>
+    Found a bug? Want to request an improvement? The "Issue Tracker":https://github.com/codescape/bitvunit/issues is the right tool for you!
+  </dd>
+  
+  <dt>!images/icons/source-code.png!:https://github.com/codescape/bitvunit</dt>
+  <dd>
+    <h3>Source Code Repository</h3>
+    The source code for this framework is hosted at "GitHub":https://github.com/codescape/bitvunit and can be downloaded, forked...
+  </dd>
+
+  <dt>!images/icons/documentation.png!:http://bitvunit.codescape.de</dt>
+  <dd>
+    <h3>Documentation</h3>
+    The page you are currently viewing holds all relevant "Documentation":http://bitvunit.codescape.de to the framework.
+  </dd>
+  
+  <dt>!images/icons/blog.png!:http://bitvunit.codescape.de/blog.html</dt>
+  <dd>
+    <h3>Blog</h3>
+    Stay informed about the BitvUnit framework with the help of our "Blog":http://bitvunit.codescape.de/blog.html from time to time.
+</dl>
