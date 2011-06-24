@@ -12,25 +12,25 @@ h2. Further Resources
 If you want learn more about the framework, these resources might be interesting for you:
 
 <dl class="resources">
-  <dt>!images/icons/issue-tracker.png!:https://github.com/codescape/bitvunit/issues</dt>
+  <dt>"!images/icons/issue-tracker.png!(Issue Tracker)":https://github.com/codescape/bitvunit/issues</dt>
   <dd>
     <h3>Issue Tracker</h3>
     Found a bug? Want to request an improvement? The "Issue Tracker":https://github.com/codescape/bitvunit/issues is the right tool for you!
   </dd>
   
-  <dt>!images/icons/source-code.png!:https://github.com/codescape/bitvunit</dt>
+  <dt>"!images/icons/source-code.png!(Source Code Repository)":https://github.com/codescape/bitvunit</dt>
   <dd>
     <h3>Source Code Repository</h3>
     The source code for this framework is hosted at "GitHub":https://github.com/codescape/bitvunit and can be downloaded, forked...
   </dd>
 
-  <dt>!images/icons/documentation.png!:http://bitvunit.codescape.de</dt>
+  <dt>"!images/icons/documentation.png!(Documentation)":http://bitvunit.codescape.de</dt>
   <dd>
     <h3>Documentation</h3>
     The page you are currently viewing holds all relevant "Documentation":http://bitvunit.codescape.de to the framework.
   </dd>
   
-  <dt>!images/icons/blog.png!:http://bitvunit.codescape.de/blog.html</dt>
+  <dt>"!images/icons/blog.png!(Blog)":http://bitvunit.codescape.de/blog.html</dt>
   <dd>
     <h3>Blog</h3>
     Stay informed about the BitvUnit framework with the help of our "Blog":http://bitvunit.codescape.de/blog.html from time to time.
