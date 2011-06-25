@@ -1,0 +1,31 @@
+---
+layout: post
+title: Releasing BitvUnit 0.1 
+---
+
+Two days before I started to work on the framework and I am happy to annouce a first version of the framework to the public.
+
+There is already a working implementation of ten rules for accessibility testing. These rules can be applied to a given page to report violations or put together into a set of rules (<code>RuleSet</code>) that can also be applied to a given page to report violations.
+
+{% highlight java %}
+package demo;
+
+import com.gargoylesoftware.htmlunit.WebClient;
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import de.codescape.bitvunit.rule.forms.LabelForSelectTagRule;
+import org.junit.Test;
+
+import static org.junit.Assert.assertTrue;
+
+public class CheckSingleRuleTest {
+
+    @Test
+    public void checkBitvUnitHomepage() throws Exception {
+        HtmlPage pageUnderTest = new WebClient().getPage("http://bitvunit.codescape.de");
+        assertTrue(new LabelForSelectTagRule().applyTo(pageUnderTest).isEmpty());
+    }
+
+}
+{% endhighlight %}
+
+See the "Change Log":/changes.html#r01 for further details.
