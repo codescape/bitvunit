@@ -33,6 +33,7 @@
     <!-- Tables -->
     <rule class="de.codescape.bitvunit.rule.tables.CaptionTextForTableRule"/>
     <rule class="de.codescape.bitvunit.rule.tables.TableHeaderContainsTextRule"/>
+    <rule class="de.codescape.bitvunit.rule.tables.TableHeaderForTableColumnRule"/>
 
     <!-- Text -->
     <rule class="de.codescape.bitvunit.rule.text.AvoidBlinkTextRule"/>
