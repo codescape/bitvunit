@@ -25,6 +25,8 @@ li { margin: 0 0 0 1em; list-style-type: disc; }
 
 em { font-style: italic; }
 
+code { font-family: monospace; }
+
 /******************************************************************************
  Box Layout
  **********/
@@ -94,7 +96,7 @@ em { font-style: italic; }
 
 .post-date {
     margin: -10px 0 0 0; 
-    font-style: italic; }
+    font-family: monospace; }
 
 /******************************************************************************
  Source Code
