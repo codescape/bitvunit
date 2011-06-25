@@ -1,0 +1,6 @@
+---
+layout: post
+title: Major site update
+---
+
+In the last two days I spent some free time on updating the documentation page you are currently reading in. Since today there is a first "Usage":http://bitvunit.codescape.de/usage.html example available online and the "About":http://bitvunit.codescape.de has some nice icons pointing to the relevant resources you will need to deal with when using the framework.
