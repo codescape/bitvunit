@@ -2,7 +2,11 @@ package de.codescape.bitvunit.util;
 
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 
-public abstract class HtmlElementUtil {
+public final class HtmlElementUtil {
+
+    private HtmlElementUtil() {
+        throw new UnsupportedOperationException("Utility class should not be instantiated.");
+    }
 
     /**
      * Returns <code>true</code> when the given element contains a non empty attribute with the given attribute name.

@@ -4,7 +4,11 @@ import com.gargoylesoftware.htmlunit.html.HtmlLabel;
 
 import java.util.List;
 
-public abstract class HtmlLabelUtil {
+public final class HtmlLabelUtil {
+
+    private HtmlLabelUtil() {
+        throw new UnsupportedOperationException("Utility class should not be instantiated.");
+    }
 
     /**
      * Returns <code>true</code> for a label in the given list of labels with the value of the <code>for</code>
