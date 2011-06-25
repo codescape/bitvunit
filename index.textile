@@ -21,7 +21,7 @@ If you want learn more about the framework, these resources might be interesting
   <dt>"!images/icons/source-code.png!(Source Code Repository)":https://github.com/codescape/bitvunit</dt>
   <dd>
     <h3>Source Code Repository</h3>
-    The source code for this framework is hosted at "GitHub":https://github.com/codescape/bitvunit and can be downloaded, forked...
+    The framework's "Source Code Repository":https://github.com/codescape/bitvunit is hosted on GitHub and can be accessed easily.
   </dd>
 
   <dt>"!images/icons/blog.png!(Blog)":http://bitvunit.codescape.de/blog.html</dt>
