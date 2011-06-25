@@ -105,6 +105,7 @@ code { font-family: monospace; }
     text-shadow: none;
     font-family: monospace;
     padding: 10px;
+    overflow-x: auto;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px; }
 

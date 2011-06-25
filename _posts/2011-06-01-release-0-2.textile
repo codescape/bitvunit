@@ -1,0 +1,79 @@
+---
+layout: post
+title: Releasing BitvUnit 0.2 
+---
+
+The second release of the framework ships with some very interesting features that make it easier to use the framework for accessibility testing. Continue reading to learn more about these new features. Aside from that the framework now has a total number of 16 rules.
+
+h2. Using XML to define sets of rules
+
+With the new <code>XmlRuleSet</code> you can now easily put all rules that should be checked together in a single XML document and let the <code>XmlRuleSet</code> class do the rest.
+
+h3. my-rules.xml
+
+{% highlight xml %}
+<?xml version="1.0" encoding="utf-8"?>
+<ruleset>
+
+    <description>A list of rules to be checked.</description>
+
+    <rule class="de.codescape.bitvunit.rule.text.AvoidBlinkTextRule"/>
+    <rule class="de.codescape.bitvunit.rule.text.AvoidBoldTagRule"/>
+    <rule class="de.codescape.bitvunit.rule.text.AvoidItalicTagRule"/>
+    <rule class="de.codescape.bitvunit.rule.text.AvoidMarqueeTextRule"/>
+
+</ruleset>
+{% endhighlight %}
+
+h3. CheckXmlRuleSetTest.java
+
+{% highlight java %}
+package demo;
+
+import com.gargoylesoftware.htmlunit.WebClient;
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import de.codescape.bitvunit.ruleset.XmlRuleSet;
+import org.junit.Test;
+
+import static org.junit.Assert.assertFalse;
+
+public class CheckXmlRuleSetTest {
+
+    @Test
+    public void checkBitvUnitHomepage() throws Exception {
+        HtmlPage pageUnderTest = new WebClient().getPage("http://bitvunit.codescape.de");
+        assertFalse(new XmlRuleSet("/my-rules.xml").applyTo(pageUnderTest).hasViolations());
+    }
+
+}
+{% endhighlight %}
+
+h2. Using Hamcrest matchers
+
+Another great feature that found its way into this release are the Hamcrest matchers (<code>RuleMatcher</code> and <code>RuleSetMatcher</code>) for verification of compliance to a single rule or a rule set. Using Hamcrest matchers gives a great improvement in readability of your tests.
+
+{% highlight java %}
+package demo;
+
+import com.gargoylesoftware.htmlunit.WebClient;
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import de.codescape.bitvunit.ruleset.XmlRuleSet;
+import org.junit.Test;
+
+import static de.codescape.bitvunit.hamcrest.RuleSetMatcher.compliantTo;
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
+
+public class UsingHamcrestMatchersTest {
+
+    @Test
+    public void checkBitvUnitHomepage() throws Exception {
+        HtmlPage pageUnderTest = new WebClient().getPage("http://bitvunit.codescape.de");
+        assertThat(pageUnderTest, is(compliantTo(new XmlRuleSet("/my-rules.xml"))));
+    }
+
+} 
+{% endhighlight %}
+
+See the "Change Log":/changes.html#r02 for further details.
+
