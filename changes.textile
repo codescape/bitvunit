@@ -6,6 +6,7 @@ title: Changes
 Below you can find a list of all changes applied to the framework through its different releases. This list will be updated whenever there are new functions being introduced to the framework.
 
 Please select a version:
+
 * "Release 0.3":#r03
 * "Release 0.2":#r02
 * "Release 0.1":#r01
@@ -18,6 +19,7 @@ h2(#r03). Release 0.3 (_pending_)
 ** DefinitionListContainsItemsRule
 ** LabelWithoutFormElementRule
 ** OrderedListContainsListItemsRule
+** TableHeaderForTableColumnRule
 ** TitleForFrameRule
 ** TitleForInlineFrameRule
 ** UnorderedListContainsListItemsRule
