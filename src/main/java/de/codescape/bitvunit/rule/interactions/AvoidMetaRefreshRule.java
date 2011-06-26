@@ -16,7 +16,7 @@ import de.codescape.bitvunit.rule.Violations;
 public class AvoidMetaRefreshRule extends AbstractRule {
 
     private static final String RULE_NAME = "AvoidMetaRefresh";
-    private static final String RULE_MESSAGE = "Automatically updating pages may cause significant accessibility problems to people that are disabled or that use technology that hinders normal interaction patters.";
+    private static final String RULE_MESSAGE = "Automatically updating pages may cause significant accessibility problems to people that are disabled or that use technology that hinders normal interaction patterns.";
 
     @Override
     public String getName() {

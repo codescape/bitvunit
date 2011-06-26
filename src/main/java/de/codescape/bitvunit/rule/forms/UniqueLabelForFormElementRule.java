@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * UniqueLabelForFormElementRule ensures that there is never more than one <code>&lt;label /&gt;</code> with the same
- * value in it's <code>for</code> attribute. There should be never be more than one label pointing to a single form
+ * value in its <code>for</code> attribute. There should be never be more than one label pointing to a single form
  * element.
  *
  * @since 0.3

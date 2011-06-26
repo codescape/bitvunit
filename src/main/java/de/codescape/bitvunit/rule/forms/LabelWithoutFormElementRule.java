@@ -18,7 +18,7 @@ import java.util.List;
 public class LabelWithoutFormElementRule extends AbstractRule {
 
     private static final String RULE_NAME = "LabelWithoutFormElement";
-    private static final String RULE_MESSAGE = "A label always has to reference a valid form element with it's for attribute.";
+    private static final String RULE_MESSAGE = "A label always has to reference a valid form element with its for attribute.";
 
     @Override
     public String getName() {
