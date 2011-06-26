@@ -5,13 +5,9 @@ title: Changes
 
 Below you can find a list of all changes applied to the framework through its different releases. This list will be updated whenever there are new functions being introduced to the framework.
 
-Please select a version:
+Hide and show details to releases in clicking on the release you are interested in:
 
-* "Release 0.3":#r03
-* "Release 0.2":#r02
-* "Release 0.1":#r01
-
-h2(#r03). Release 0.3 (_pending_)
+h2(release#r03). Release 0.3 (_pending_)
 
 * added new rules
 ** AlternativeTextForAppletRule
@@ -28,7 +24,7 @@ h2(#r03). Release 0.3 (_pending_)
 * added license information to the framework
 * every violation knows the element that caused the violation
 
-h2(#r02). Release 0.2 (2011-06-01)
+h2(release#r02). Release 0.2 (2011-06-01)
 
 * easier selection of elements with new Page decorator
 * easier creation of violations in rule implementations
@@ -45,7 +41,7 @@ h2(#r02). Release 0.2 (2011-06-01)
 ** introduced RuleMatcher for verification against a specific Rule
 ** introduced RuleSetMatcher for verification against a RuleSet
 
-h2(#r01). Release 0.1 (2011-05-24)
+h2(release#r01). Release 0.1 (2011-05-24)
 
 * introduced Rule to check a single HTML page against a single rule
 * introduced RuleSet to check a single HTML page against multiple rules
@@ -60,3 +56,22 @@ h2(#r01). Release 0.1 (2011-05-24)
 ** LabelForTextareaRule
 ** TitleForAbbreviationTagRule
 ** TitleForAcronymTagRule
+
+<script>
+  $(document).ready(function(){
+    // wrap each list in a div
+    $('h2.release + ul')
+      .wrap('<div class="changelog" />');
+
+    // hide each div and show the first
+    $('.changelog')
+      .hide()
+      .first().show();
+    
+    // add functionality to toggle the visibility
+    $('h2.release')
+      .css('cursor', 'pointer')
+      .click(function() { $(this).next('.changelog').slideToggle(); })
+      .attr('title', function() { return 'Toggle visibility of details for ' + $(this).text(); });
+  });
+</script>
