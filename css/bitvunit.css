@@ -102,7 +102,6 @@ code { font-family: monospace; }
  Source Code
  ***********/
 .highlight  {
-    text-shadow: none;
     font-family: monospace;
     padding: 10px;
     overflow-x: auto;
