@@ -42,7 +42,7 @@ code { font-family: monospace; }
     float: left; }
 #logo .sub {
     font-size: 11px;
-    float: left;
+    display: block;
     margin: 5px 0; }
 
 #navigation {
