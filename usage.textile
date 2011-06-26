@@ -10,7 +10,7 @@ h2. Sample (with Hamcrest matchers and XmlRuleSet)
 The following sample demonstrates already a bunch of features that are coming with the BitvUnit framework. The sample shows how to check against a set of rules defined in a XML document with the use of the provided Hamcrest matchers to verify accessibility compliance.
 
 {% highlight java %}
-package integration;
+package demo;
 
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
