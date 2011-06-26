@@ -3,7 +3,7 @@ layout: default
 title: Changes
 ---
 
-Below you can find a list of all changes applied to the framework through its different releases. This list will be updated whenever there are new functions being introduced to the framework.
+Below you can find a list of all changes applied to the framework through its different releases. This list will be updated whenever there are new functions or improvements being introduced or known bugs corrected.
 
 Hide and show details to releases in clicking on the release you are interested in:
 
