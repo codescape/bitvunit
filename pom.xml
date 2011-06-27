@@ -28,7 +28,7 @@
     <scm>
         <connection>scm:git:git@github.com:codescape/bitvunit.git</connection>
         <developerConnection>scm:git:git@github.com:codescape/bitvunit.git</developerConnection>
-        <url>git@github.com:codescape/bitvunit.git</url>
+        <url>https://github.com/codescape/bitvunit</url>
     </scm>
 
     <issueManagement>
