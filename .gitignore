@@ -1,8 +1,8 @@
 # Maven
-target
+target/
 
 # IDEA
-.idea
+.idea/
 *.iml
 *.ipr
 *.iws
@@ -10,7 +10,7 @@ target
 # Eclipse
 .classpath
 .project
-.settings
+.settings/
 
 # Mac OS X
 .DS_Store
