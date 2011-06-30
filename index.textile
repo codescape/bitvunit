@@ -27,13 +27,13 @@ If you want learn more about the framework, these resources might be interesting
   <dt>"!images/icons/blog.png!(Blog)":http://bitvunit.codescape.de/blog.html</dt>
   <dd>
     <h3>Blog</h3>
-    Stay informed about the BitvUnit framework with the help of our "Blog":http://bitvunit.codescape.de/blog.html from time to time.
+    Stay informed about the BitvUnit framework with the help of our "Blog":blog.html from time to time.
   </dd>
 
   <dt>"!images/icons/documentation.png!(Documentation)":http://bitvunit.codescape.de</dt>
   <dd>
     <h3>Documentation</h3>
-    The page you are currently viewing holds all relevant "Documentation":http://bitvunit.codescape.de to the framework.
+    The page you are currently viewing holds all relevant "Documentation":/ to the framework.
   </dd>
 </dl>
 
@@ -44,3 +44,5 @@ h2. Recent Blog Posts
     <li><span class="post-date">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
+
+Older posts can be found in our "Blog":blog.html archive.
