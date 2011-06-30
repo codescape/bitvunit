@@ -3,4 +3,27 @@ layout: default
 title: Download
 ---
 
-You can find downloads of all versions of the framework on the "GitHub project page":http://github.com/codescape/bitvunit.
+Please choose your preferred way to download BitvUnit.
+
+h2. GitHub Download
+
+Download the latest version of the framework from the GitHub download page:
+
+* "bitvunit-core-0.3.0.jar":https://github.com/downloads/codescape/bitvunit/bitvunit-core-0.3.0.jar
+* "bitvunit-core-0.3.0-sources.jar":https://github.com/downloads/codescape/bitvunit/bitvunit-core-0.3.0-sources.jar
+* "bitvunit-core-0.3.0-javadoc.jar":https://github.com/downloads/codescape/bitvunit/bitvunit-core-0.3.0-javadoc.jar
+
+You can find more versions on the "GitHub download page":https://github.com/codescape/bitvunit/downloads.
+
+h2. Maven Repository
+
+BitvUnit is available in the "Maven Central Repository":http://repo1.maven.org/maven2/de/codescape/bitvunit/ and can be included in the <code><dependencies/></code> of your project as easily:
+
+{% highlight xml %}
+    <dependency>
+      <groupId>de.codescape.bitvunit</groupId>
+      <artifactId>bitvunit-core</artifactId>
+      <version>0.3.0</version>
+    </dependency>
+{% endhighlight %}
+
