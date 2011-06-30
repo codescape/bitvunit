@@ -60,14 +60,20 @@ h2(release#r01). Release 0.1 (2011-05-24)
 
 <script>
   $(document).ready(function(){
+    // specific changelog requested?
+    var fragment = $.url().attr('fragment');
+    
     // wrap each list in a div
     $('h2.release + ul')
       .wrap('<div class="changelog" />');
 
-    // hide each div and show the first
-    $('.changelog')
-      .hide()
-      .first().show();
+    // hide each div and show the first or the requested
+    $('.changelog').hide();
+    if (!fragment) {
+      $('.changelog').first().show();
+    } else {
+      $("#" + fragment).next('.changelog').show();
+    }
     
     // add functionality to toggle the visibility
     $('h2.release')
