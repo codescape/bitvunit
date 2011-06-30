@@ -7,7 +7,7 @@ Below you can find a list of all changes applied to the framework through its di
 
 Hide and show details to releases in clicking on the release you are interested in:
 
-h2(release#r03). Release 0.3 (_pending_)
+h2(release#r03). Release 0.3 (2011-06-30)
 
 * added new rules
 ** AlternativeTextForAppletRule
@@ -23,6 +23,7 @@ h2(release#r03). Release 0.3 (_pending_)
 * fixed invalid filename of class XmlRuleSetException
 * added license information to the framework
 * every violation knows the element that caused the violation
+* availability in Maven Central Repository
 
 h2(release#r02). Release 0.2 (2011-06-01)
 
