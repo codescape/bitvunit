@@ -1,0 +1,24 @@
+---
+layout: post
+title: Releasing BitvUnit 0.3
+---
+
+The third release adds 10 new rules to the framework and ships with a total of 26 rules. There is a first rule for applets, two rules for frames, three rules for lists, one new rule for images, one new rule for tables and two new rules for forms. 
+
+h2. License
+
+BitvUnit will now be distributed under "The Apache Software License, Version 2.0":http://www.apache.org/licenses/LICENSE-2.0.txt. A detailed explanation of this license can be found in the preceeding hyperlink. 
+
+h2. Available in Maven Central Repository
+
+This release is the first release that is also available from "Maven Central Repository":http://repo1.maven.org/maven2/de/codescape/bitvunit/. So all you have to do to use BitvUnit in your project is adding the following dependency to the <code><dependencies/></code> section of your project:
+
+{% highlight xml %}
+    <dependency>
+      <groupId>de.codescape.bitvunit</groupId>
+      <artifactId>bitvunit-core</artifactId>
+      <version>0.3.0</version>
+    </dependency>
+{% endhighlight %}
+
+See the "Change Log":/changes.html#r03 for further details.
