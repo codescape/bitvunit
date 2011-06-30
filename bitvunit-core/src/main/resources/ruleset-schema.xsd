@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.codescape.de/bitvunit/ruleset/1.0"
-           targetNamespace="http://www.codescape.de/bitvunit/ruleset/1.0" elementFormDefault="qualified"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://bitvunit.codescape.de/ruleset/1.0"
+           targetNamespace="http://bitvunit.codescape.de/ruleset/1.0" elementFormDefault="qualified"
            attributeFormDefault="unqualified">
 
     <xs:element name="ruleset">
