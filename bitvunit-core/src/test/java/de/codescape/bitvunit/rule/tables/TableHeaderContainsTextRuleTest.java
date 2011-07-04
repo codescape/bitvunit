@@ -4,7 +4,7 @@ import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;
 
 import static de.codescape.bitvunit.test.Assertions.assertViolations;
-import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
+import static de.codescape.bitvunit.util.HtmlPageUtil.htmlPageFromString;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -21,14 +21,14 @@ public class TableHeaderContainsTextRuleTest {
     @Test
     public void tableHeadersWithText() throws Exception {
         String content = "<html><body><table><tr><th>Heading 1</th><th>Heading 2</th></tr><tr><td>Cell 1</td><td>Cell 2</td></tr></table></body></html>";
-        Violations violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(htmlPageFromString(content));
         assertViolations(violations, rule, 0);
     }
 
     @Test
     public void tableHeadersWithMissingText() throws Exception {
         String content = "<html><body><table><tr><th></th><th /></tr><tr><td>Cell 1</td><td>Cell 2</td></tr></table></body></html>";
-        Violations violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(htmlPageFromString(content));
         assertEquals(2, violations.size());
         assertViolations(violations, rule, 2);
     }

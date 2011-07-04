@@ -9,7 +9,7 @@ import org.junit.Test;
 
 import static de.codescape.bitvunit.test.Assertions.assertRules;
 import static de.codescape.bitvunit.test.Assertions.assertViolations;
-import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
+import static de.codescape.bitvunit.util.HtmlPageUtil.htmlPageFromString;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.mock;
@@ -44,7 +44,7 @@ public class BasicRuleSetTest {
         ruleSet.addRule(secondRule);
 
         String content = "<html><body><blink>Blinking!</blink><marquee>Running!</marquee></body></html>";
-        Violations violations = ruleSet.applyTo(createHtmlPage(content));
+        Violations violations = ruleSet.applyTo(htmlPageFromString(content));
 
         assertViolations(violations, 2);
         assertViolations(violations, firstRule, 1);

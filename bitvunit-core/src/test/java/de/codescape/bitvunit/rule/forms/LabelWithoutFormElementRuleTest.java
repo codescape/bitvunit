@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static de.codescape.bitvunit.test.Assertions.assertNoViolations;
 import static de.codescape.bitvunit.test.Assertions.assertViolations;
-import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
+import static de.codescape.bitvunit.util.HtmlPageUtil.htmlPageFromString;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -22,21 +22,21 @@ public class LabelWithoutFormElementRuleTest {
     @Test
     public void labelWithoutFormElementPresent() throws Exception {
         String content = "<html><body><form><label for=\"missingId\">Some text</label></form></body></html>";
-        Violations violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(htmlPageFromString(content));
         assertViolations(violations, rule, 1);
     }
 
     @Test
     public void labelWithFormElementPresent() throws Exception {
         String content = "<html><body><form><label for=\"validId\">Some text</label><input id=\"validId\" /></form></body></html>";
-        Violations violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(htmlPageFromString(content));
         assertNoViolations(violations, rule);
     }
 
     @Test
     public void labelWithNonFormElementPresent() throws Exception {
         String content = "<html><body><form><label for=\"wrongElement\">Some Text</label><p id=\"wrongElement\">Not a form element</p></body></html>";
-        Violations violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(htmlPageFromString(content));
         assertViolations(violations, rule, 1);
     }
 

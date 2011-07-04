@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static de.codescape.bitvunit.test.Assertions.assertNoViolations;
 import static de.codescape.bitvunit.test.Assertions.assertViolations;
-import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
+import static de.codescape.bitvunit.util.HtmlPageUtil.htmlPageFromString;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -22,21 +22,21 @@ public class UnorderedListContainsListItemsRuleTest {
     @Test
     public void unorderedListWithoutItems() throws Exception {
         String content = "<html><body><ul></ul></body></html>";
-        Violations violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(htmlPageFromString(content));
         assertViolations(violations, rule, 1);
     }
 
     @Test
     public void unorderedListContainingToUnorderedListsWithoutItems() throws Exception {
         String content = "<html><body><ul><li><ul></ul></li><li><ul></ul></li></ul></body></html>";
-        Violations violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(htmlPageFromString(content));
         assertViolations(violations, rule, 2);
     }
 
     @Test
     public void unorderedListWithItems() throws Exception {
         String content = "<html><body><ul><li>First item</li></ul></body></html>";
-        Violations violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(htmlPageFromString(content));
         assertNoViolations(violations);
     }
 

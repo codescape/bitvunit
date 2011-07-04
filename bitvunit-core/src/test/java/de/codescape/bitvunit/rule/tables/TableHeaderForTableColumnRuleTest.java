@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static de.codescape.bitvunit.test.Assertions.assertNoViolations;
 import static de.codescape.bitvunit.test.Assertions.assertViolations;
-import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
+import static de.codescape.bitvunit.util.HtmlPageUtil.htmlPageFromString;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -35,7 +35,7 @@ public class TableHeaderForTableColumnRuleTest {
                 "  </table>" +
                 "</body>" +
                 "</html>";
-        Violations violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(htmlPageFromString(content));
         assertNoViolations(violations, rule);
     }
 
@@ -55,7 +55,7 @@ public class TableHeaderForTableColumnRuleTest {
                 "  </table>" +
                 "</body>" +
                 "</html>";
-        Violations violations = rule.applyTo(createHtmlPage(content));
+        Violations violations = rule.applyTo(htmlPageFromString(content));
         assertViolations(violations, rule, 2);
     }
 

@@ -5,12 +5,12 @@ import de.codescape.bitvunit.rule.Rule;
 import de.codescape.bitvunit.rule.Violation;
 import de.codescape.bitvunit.rule.Violations;
 
-import static de.codescape.bitvunit.test.HtmlPageCreator.createHtmlPage;
+import static de.codescape.bitvunit.util.HtmlPageUtil.htmlPageFromString;
 
 public class AbstractHamcrestTest {
 
     protected HtmlPage somePage() {
-        return createHtmlPage("<html><body><p>Hello Hamcrest!</p></body></html>");
+        return htmlPageFromString("<html><body><p>Hello Hamcrest!</p></body></html>");
     }
 
     protected Violations someViolation(Rule rule) {
