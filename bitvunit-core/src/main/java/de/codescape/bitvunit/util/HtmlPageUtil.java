@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 
-public class HtmlPageUtil {
+public final class HtmlPageUtil {
 
     private HtmlPageUtil() {
         throw new UnsupportedOperationException("Utility class should not be instantiated.");
