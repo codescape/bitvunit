@@ -8,6 +8,7 @@ import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Reader;
 import java.net.URL;
 
 public final class HtmlPageUtil {
@@ -43,6 +44,20 @@ public final class HtmlPageUtil {
             return htmlPageFromString(IOUtils.toString(inputStream));
         } catch (IOException e) {
             throw new RuntimeException("Error creating HtmlPage from InputStream.", e);
+        }
+    }
+
+    /**
+     * Creates a {@link HtmlPage} from a given {@link Reader} that reads the HTML code for that page.
+     *
+     * @param reader {@link Reader} that reads the HTML code
+     * @return {@link HtmlPage} for this {@link Reader}
+     */
+    public static HtmlPage htmlPageFromReader(Reader reader) {
+        try {
+            return htmlPageFromString(IOUtils.toString(reader));
+        } catch (IOException e) {
+            throw new RuntimeException("Error creating HtmlPage from Reader.", e);
         }
     }
 
