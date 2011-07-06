@@ -7,6 +7,10 @@ Below you can find a list of all changes applied to the framework through its di
 
 Hide and show details to releases in clicking on the release you are interested in:
 
+h2(release#r04). Release 0.4 (...)
+
+* added HtmlPageUtil to make testing against HTML pages contained in String, Reader and InputStream easier 
+
 h2(release#r03). Release 0.3 (2011-06-30)
 
 * added new rules
