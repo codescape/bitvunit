@@ -6,6 +6,7 @@ import de.codescape.bitvunit.rule.Violations;
 import org.apache.commons.lang.StringUtils;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -16,6 +17,16 @@ import java.util.List;
 public class BasicRuleSet implements RuleSet {
 
     private List<Rule> rules = new ArrayList<Rule>();
+
+    /**
+     * Create a BasicRuleSet from the optionally provided list of {@link Rule} instances.
+     *
+     * @param rules optional list of {@link Rule} instances
+     */
+    public BasicRuleSet(Rule... rules) {
+        super();
+        this.rules.addAll(Arrays.asList(rules));
+    }
 
     /**
      * Adds the given {@link Rule} to that rule set.
