@@ -2,35 +2,23 @@ package de.codescape.bitvunit.hamcrest;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.rule.Rule;
-import de.codescape.bitvunit.ruleset.BasicRuleSet;
 import de.codescape.bitvunit.ruleset.RuleSet;
-import org.hamcrest.Description;
 import org.hamcrest.Factory;
 import org.hamcrest.Matcher;
-import org.hamcrest.TypeSafeMatcher;
 
-public class ComplianceHtmlPageMatcher extends TypeSafeMatcher<HtmlPage> {
-
-    private final RuleSet ruleSet;
+public class ComplianceHtmlPageMatcher extends AbstractComplianceMatcher<HtmlPage> {
 
     private ComplianceHtmlPageMatcher(Rule rule) {
-        super();
-        this.ruleSet = new BasicRuleSet(rule);
+        super(rule);
     }
 
     private ComplianceHtmlPageMatcher(RuleSet ruleSet) {
-        super();
-        this.ruleSet = ruleSet;
+        super(ruleSet);
     }
 
     @Override
-    protected boolean matchesSafely(HtmlPage item) {
-        return !ruleSet.applyTo(item).hasViolations();
-    }
-
-    @Override
-    public void describeTo(Description description) {
-        description.appendText("compliant to ").appendText(ruleSet.toString());
+    protected HtmlPage getAsHtmlPage(HtmlPage htmlPage) {
+        return htmlPage;
     }
 
     @Factory
@@ -42,6 +30,5 @@ public class ComplianceHtmlPageMatcher extends TypeSafeMatcher<HtmlPage> {
     public static Matcher<HtmlPage> compliantTo(RuleSet ruleSet) {
         return new ComplianceHtmlPageMatcher(ruleSet);
     }
-
 
 }
