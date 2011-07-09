@@ -14,6 +14,8 @@ h2(release#r04). Release 0.4 (...)
 ** replaced RuleMatcher and RuleSetMatcher by ComplianceHtmlPageMatcher 
 ** added ComplianceStringMatcher to test java.lang.String representations of HTML pages
 ** added ComplianceReaderMatcher to test HTML pages being accessed by java.io.Reader instances
+* added reporting functionality
+** added ConsoleReportWriter as first implementation of ReportWriter to write to system console
 
 h2(release#r03). Release 0.3 (2011-06-30)
 
