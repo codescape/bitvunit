@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.ruleset;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import de.codescape.bitvunit.report.ReportingContext;
 import de.codescape.bitvunit.rule.Rule;
 import de.codescape.bitvunit.rule.Violations;
 import org.apache.commons.lang.StringUtils;
@@ -9,6 +10,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
+import static de.codescape.bitvunit.report.ReportingContext.getReportWriter;
 
 /**
  * Basic implementation of a {@link RuleSet} that provides some convenience methods. This class should normally be
@@ -48,6 +51,7 @@ public class BasicRuleSet implements RuleSet {
         for (Rule rule : rules) {
             violations.addAll(rule.applyTo(htmlPage));
         }
+        getReportWriter().writeReport(htmlPage, this, violations);
         return violations;
     }
 
