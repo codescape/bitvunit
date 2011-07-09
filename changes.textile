@@ -9,7 +9,11 @@ Hide and show details to releases in clicking on the release you are interested 
 
 h2(release#r04). Release 0.4 (...)
 
-* added HtmlPageUtil to make testing against HTML pages contained in String, Reader and InputStream easier 
+* added HtmlPageUtil to create HtmlPage objects from String, Reader and InputStream instances
+* updated Hamcrest functionality
+** replaced RuleMatcher and RuleSetMatcher by ComplianceHtmlPageMatcher 
+** added ComplianceStringMatcher to test java.lang.String representations of HTML pages
+** added ComplianceReaderMatcher to test HTML pages being accessed by java.io.Reader instances
 
 h2(release#r03). Release 0.3 (2011-06-30)
 

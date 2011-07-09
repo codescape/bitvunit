@@ -17,7 +17,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.ruleset.XmlRuleSet;
 import org.junit.Test;
 
-import static de.codescape.bitvunit.hamcrest.RuleSetMatcher.compliantTo;
+import static de.codescape.bitvunit.hamcrest.ComplianceHtmlPageMatcher.compliantTo;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
