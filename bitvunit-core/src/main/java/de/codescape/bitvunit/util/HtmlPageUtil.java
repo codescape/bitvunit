@@ -61,4 +61,18 @@ public final class HtmlPageUtil {
         }
     }
 
+    /**
+     * Creates a {@link HtmlPage} from a given {@link URL} that points to the HTML code for that page.
+     *
+     * @param url {@link URL} that points to the HTML code
+     * @return {@link HtmlPage} for this {@link URL}
+     */
+    public static HtmlPage htmlPageFromURL(URL url) {
+        try {
+            return (HtmlPage) new WebClient().getPage(url);
+        } catch (IOException e) {
+            throw new RuntimeException("Error creating HtmlPage from URL.", e);
+        }
+    }
+
 }
