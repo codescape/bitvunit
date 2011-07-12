@@ -9,7 +9,7 @@ Hide and show details to releases in clicking on the release you are interested 
 
 h2(release#r04). Release 0.4 (...)
 
-* added HtmlPageUtil to create HtmlPage objects from String, Reader and InputStream instances
+* added HtmlPageUtil to create HtmlPage objects from String, Reader, InputStream and URL instances
 * updated Hamcrest functionality
 ** replaced RuleMatcher and RuleSetMatcher by ComplianceHtmlPageMatcher 
 ** added ComplianceStringMatcher to test java.lang.String representations of HTML pages
