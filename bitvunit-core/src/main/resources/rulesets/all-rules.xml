@@ -22,6 +22,7 @@
     <!-- Images -->
     <rule class="de.codescape.bitvunit.rule.images.AlternativeTextForAreaOfImageMapRule"/>
     <rule class="de.codescape.bitvunit.rule.images.AlternativeTextForImageRule"/>
+    <rule class="de.codescape.bitvunit.rule.images.AvoidServerSideImageMapRule"/>
 
     <!-- Interactions -->
     <rule class="de.codescape.bitvunit.rule.interactions.AvoidMetaRefreshRule"/>
