@@ -16,7 +16,7 @@ import static de.codescape.bitvunit.util.HtmlElementUtil.hasAttribute;
 public class AvoidServerSideImageMapRule extends AbstractRule {
 
     private static final String RULE_NAME = "AvoidServerSideImageMap";
-    private static final String RULE_MESSAGE = "Do not use server side image maps since because they are inaccessible without a mouse.";
+    private static final String RULE_MESSAGE = "Do not use server side image maps because they are inaccessible without a mouse.";
 
     @Override
     public String getName() {
