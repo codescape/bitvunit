@@ -20,6 +20,8 @@ h2(release#r04). Release 0.4 (...)
 *** added capability to test java.net.URL representations of HTML pages
 * added reporting functionality
 ** added ConsoleReportWriter as first implementation of ReportWriter to write to system console
+* updated usage documentation
+* added and improved JavaDoc
 
 h2(release#r03). Release 0.3 (2011-06-30)
 
