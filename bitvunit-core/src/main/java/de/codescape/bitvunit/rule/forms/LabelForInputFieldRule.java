@@ -14,6 +14,7 @@ import static de.codescape.bitvunit.util.HtmlLabelUtil.containsLabelForId;
  * references the <code>&lt;input /&gt;</code> element through its <code>for</code> attribute.
  *
  * @since 0.1
+ * @author Stefan Glase
  */
 public class LabelForInputFieldRule extends AbstractRule {
 

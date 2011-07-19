@@ -34,6 +34,7 @@ import static de.codescape.bitvunit.util.HtmlPageUtil.*;
  * </code></pre>
  *
  * @param <T> one of the supported types
+ * @author Stefan Glase
  */
 public class ComplianceMatcher<T> extends TypeSafeMatcher<T> {
 

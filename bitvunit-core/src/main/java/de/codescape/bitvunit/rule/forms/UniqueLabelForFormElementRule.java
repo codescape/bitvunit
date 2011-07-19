@@ -13,6 +13,7 @@ import java.util.List;
  * element.
  *
  * @since 0.3
+ * @author Stefan Glase
  */
 public class UniqueLabelForFormElementRule extends AbstractRule {
 

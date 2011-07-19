@@ -1,7 +1,9 @@
 package de.codescape.bitvunit.report;
 
 /**
- * Singleton class that holds the {@link ReportWriter} which is used to write out reports for any check that has run.
+ * Singleton class that holds the configured {@link ReportWriter} to write out reports for any check that is executed.
+ *
+ * @author Stefan Glase
  */
 public class ReportingContext {
 

@@ -11,6 +11,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
  * Implementation of a {@link RuleSet} that is backed by a XML document declaring the list of rules to be applied.
  *
  * @since 0.2
+ * @author Stefan Glase
  */
 public class XmlRuleSet extends BasicRuleSet implements RuleSet {
 

@@ -10,6 +10,7 @@ import de.codescape.bitvunit.rule.Violations;
  * textual representation for the given label.
  *
  * @since 0.1
+ * @author Stefan Glase
  */
 public class LabelContainsTextRule extends AbstractRule {
 

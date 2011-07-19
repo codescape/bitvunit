@@ -2,6 +2,11 @@ package de.codescape.bitvunit.util;
 
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 
+/**
+ * Utility class to work with {@link HtmlElement} instances.
+ *
+ * @author Stefan Glase
+ */
 public final class HtmlElementUtil {
 
     private HtmlElementUtil() {

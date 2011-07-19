@@ -14,6 +14,7 @@ import static de.codescape.bitvunit.util.HtmlLabelUtil.containsLabelForId;
  * its <code>for</code> attribute.
  *
  * @since 0.1
+ * @author Stefan Glase
  */
 public class LabelForSelectTagRule extends AbstractRule {
 

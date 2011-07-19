@@ -14,6 +14,7 @@ import java.util.List;
  * elements.
  *
  * @since 0.3
+ * @author Stefan Glase
  */
 public class LabelWithoutFormElementRule extends AbstractRule {
 

@@ -6,6 +6,8 @@ import de.codescape.bitvunit.ruleset.RuleSet;
 
 /**
  * Common interface for any class that writes out reports for this framework.
+ *
+ * @author Stefan Glase
  */
 public interface ReportWriter {
 

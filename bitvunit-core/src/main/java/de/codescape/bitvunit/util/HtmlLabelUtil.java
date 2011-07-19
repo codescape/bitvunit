@@ -4,6 +4,11 @@ import com.gargoylesoftware.htmlunit.html.HtmlLabel;
 
 import java.util.List;
 
+/**
+ * Utility class to work with {@link HtmlLabel} instances.
+ *
+ * @author Stefan Glase
+ */
 public final class HtmlLabelUtil {
 
     private HtmlLabelUtil() {

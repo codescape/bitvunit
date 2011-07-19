@@ -9,7 +9,9 @@ import de.codescape.bitvunit.ruleset.RuleSet;
 import java.io.PrintStream;
 
 /**
- * Writes reports to the Console.
+ * Implementation of {@link ReportWriter} that writes text based reports to the console.
+ *
+ * @author Stefan Glase
  */
 public class ConsoleReportWriter extends AbstractReportWriter {
 

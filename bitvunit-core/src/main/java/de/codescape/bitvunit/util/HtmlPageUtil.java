@@ -11,6 +11,11 @@ import java.io.InputStream;
 import java.io.Reader;
 import java.net.URL;
 
+/**
+ * Utility class to work with {@link HtmlPage} instances.
+ *
+ * @author Stefan Glase
+ */
 public final class HtmlPageUtil {
 
     private HtmlPageUtil() {

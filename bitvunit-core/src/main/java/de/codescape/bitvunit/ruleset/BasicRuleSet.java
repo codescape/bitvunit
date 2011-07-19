@@ -1,7 +1,6 @@
 package de.codescape.bitvunit.ruleset;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import de.codescape.bitvunit.report.ReportingContext;
 import de.codescape.bitvunit.rule.Rule;
 import de.codescape.bitvunit.rule.Violations;
 import org.apache.commons.lang.StringUtils;
@@ -16,6 +15,8 @@ import static de.codescape.bitvunit.report.ReportingContext.getReportWriter;
 /**
  * Basic implementation of a {@link RuleSet} that provides some convenience methods. This class should normally be
  * extended by other {@link RuleSet} implementations.
+ *
+ * @author Stefan Glase
  */
 public class BasicRuleSet implements RuleSet {
 

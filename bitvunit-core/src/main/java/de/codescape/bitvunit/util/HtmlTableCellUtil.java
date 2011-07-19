@@ -2,6 +2,11 @@ package de.codescape.bitvunit.util;
 
 import com.gargoylesoftware.htmlunit.html.HtmlTableCell;
 
+/**
+ * Utility class to work with {@link HtmlTableCell} instances.
+ *
+ * @author Stefan Glase
+ */
 public final class HtmlTableCellUtil {
 
     private HtmlTableCellUtil() {

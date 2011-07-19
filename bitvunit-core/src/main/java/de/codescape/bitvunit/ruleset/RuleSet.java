@@ -10,6 +10,8 @@ import java.util.List;
  * Interface that must be implemented by all rule sets that should be checked with this framework. You should always
  * extend {@link BasicRuleSet} which gives you some convenience functionality instead of implementing this interface
  * directly.
+ *
+ * @author Stefan Glase
  */
 public interface RuleSet {
 

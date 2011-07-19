@@ -4,6 +4,12 @@ import com.gargoylesoftware.htmlunit.html.*;
 
 import java.util.List;
 
+/**
+ * Wrapper class around a {@link HtmlPage} instance that provides convenience operations used from {@link
+ * de.codescape.bitvunit.rule.Rule} implementations.
+ *
+ * @author Stefan Glase
+ */
 public class Page {
 
     private final HtmlPage htmlPage;
