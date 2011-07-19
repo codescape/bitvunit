@@ -53,6 +53,7 @@ code { font-family: monospace; }
     display: inline-block; }
 
 #content {
+    clear: both;
     width: 780px;
     margin: 0 auto 20px auto;
     padding: 20px;
@@ -112,6 +113,7 @@ code { font-family: monospace; }
 /******************************************************************************
  Source Code
  ***********/
+
 .highlight  {
     font-family: monospace;
     padding: 10px;
