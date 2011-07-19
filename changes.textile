@@ -13,10 +13,11 @@ h2(release#r04). Release 0.4 (...)
 ** AvoidServerSideImageMapRule
 * added HtmlPageUtil to create HtmlPage objects from String, Reader, InputStream and URL instances
 * updated Hamcrest functionality
-** replaced RuleMatcher and RuleSetMatcher by ComplianceHtmlPageMatcher 
-** added ComplianceStringMatcher to test java.lang.String representations of HTML pages
-** added ComplianceReaderMatcher to test HTML pages being accessed by java.io.Reader instances
-** added ComplianceURLMatcher to test HTML pages being accessed by java.net.URL instances
+** replaced RuleMatcher and RuleSetMatcher by ComplianceMatcher
+*** added capability to test java.io.InputStream representations of HTML pages
+*** added capability to test java.io.Reader representations of HTML pages
+*** added capability to test java.lang.String representations of HTML pages
+*** added capability to test java.net.URL representations of HTML pages
 * added reporting functionality
 ** added ConsoleReportWriter as first implementation of ReportWriter to write to system console
 
