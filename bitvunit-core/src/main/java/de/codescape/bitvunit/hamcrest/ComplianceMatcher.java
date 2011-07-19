@@ -15,6 +15,26 @@ import java.net.URL;
 
 import static de.codescape.bitvunit.util.HtmlPageUtil.*;
 
+/**
+ * Hamcrest matcher to be used to run accessibility checks against a single {@link Rule} or a {@link RuleSet}.<p/>
+ *
+ * <b>Usage examples:</b>
+ * <pre><code>
+ * assertThat(supportedType, is(compliantTo(ruleSet)));
+ * assertThat(supportedType, is(compliantTo(rule)));
+ * </code></pre>
+ *
+ * <b>Supported types:</b>
+ * <pre><code>
+ * com.gargoylesoftware.htmlunit.html.HtmlPage
+ * java.io.InputStream
+ * java.io.Reader
+ * java.lang.String
+ * java.net.URL
+ * </code></pre>
+ *
+ * @param <T> one of the supported types
+ */
 public class ComplianceMatcher<T> extends TypeSafeMatcher<T> {
 
     private RuleSet ruleSet;
