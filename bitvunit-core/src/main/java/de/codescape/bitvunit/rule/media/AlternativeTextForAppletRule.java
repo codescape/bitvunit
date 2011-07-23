@@ -1,4 +1,4 @@
-package de.codescape.bitvunit.rule.applets;
+package de.codescape.bitvunit.rule.media;
 
 import com.gargoylesoftware.htmlunit.html.HtmlApplet;
 import de.codescape.bitvunit.model.Page;

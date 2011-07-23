@@ -4,9 +4,6 @@
 
     <description>Set of all rules currently supported by the framework.</description>
 
-    <!-- Applets -->
-    <rule class="de.codescape.bitvunit.rule.applets.AlternativeTextForAppletRule"/>
-
     <!-- Forms -->
     <rule class="de.codescape.bitvunit.rule.forms.LabelContainsTextRule"/>
     <rule class="de.codescape.bitvunit.rule.forms.LabelForInputFieldRule"/>
@@ -31,6 +28,9 @@
     <rule class="de.codescape.bitvunit.rule.lists.DefinitionListContainsItemsRule"/>
     <rule class="de.codescape.bitvunit.rule.lists.OrderedListContainsListItemsRule"/>
     <rule class="de.codescape.bitvunit.rule.lists.UnorderedListContainsListItemsRule"/>
+
+    <!-- Media -->
+    <rule class="de.codescape.bitvunit.rule.media.AlternativeTextForAppletRule"/>
 
     <!-- Tables -->
     <rule class="de.codescape.bitvunit.rule.tables.CaptionTextForTableRule"/>

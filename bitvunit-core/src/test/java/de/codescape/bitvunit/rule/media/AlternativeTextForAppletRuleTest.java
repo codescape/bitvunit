@@ -1,4 +1,4 @@
-package de.codescape.bitvunit.rule.applets;
+package de.codescape.bitvunit.rule.media;
 
 import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;
