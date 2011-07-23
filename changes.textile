@@ -22,6 +22,7 @@ h2(release#r04). Release 0.4 (...)
 ** added ConsoleReportWriter as first implementation of ReportWriter to write to system console
 * updated usage documentation
 * added and improved JavaDoc
+* increased test coverage for internal functionality
 
 h2(release#r03). Release 0.3 (2011-06-30)
 
