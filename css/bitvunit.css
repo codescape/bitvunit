@@ -3,29 +3,30 @@
  ********/
 
 body {
-    background: #0E0E0E url('../images/background.gif') repeat 0 0;
+    background: #0e0e0e url('../images/background.gif') repeat 0 0;
     font: 12px/18px "Lucida Grande", Geneva, Arial, Verdana;
     color: #999;
     text-align: center;
     text-shadow: #000 0 1px 1px; }
 
-h1, h2, h3, h4, h5, h6 { color: #FFF; }
+h1, h2, h3, h4, h5, h6 { color: #fff; }
 h1 { font-size: 19px; margin: 15px 0; }
 h1:first-child { margin: 0 0 15px 0; }
 h2 { font-size: 15px; margin: 10px 0; }
 h3 { font-size: 13px; margin: 8px 0; }
 
-p { margin: 5px 0; }
+p { margin: 8px 0; }
 
-a { color: #00CC00; text-decoration: none; }
-a:hover { color: #FF9900; }
+a { color: #0c0; text-decoration: none; }
+a:hover { color: #f90; }
 
 ul { margin: 0 0 0 2em; }
 li { margin: 0 0 0 1em; list-style-type: disc; }
 
 em { font-style: italic; }
+strong { font-weight: bold; }
 
-code { font-family: monospace; }
+code { font-family: monospace; color: #e6db74; }
 
 /******************************************************************************
  Box Layout
@@ -37,7 +38,7 @@ code { font-family: monospace; }
 
 #logo {
     font-size: 35px;
-    color: #FFF;
+    color: #fff;
     text-align: left;
     float: left; }
 #logo .sub {
@@ -63,7 +64,7 @@ code { font-family: monospace; }
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
     background-color: #303030;
-    color: #C4C4C4;
+    color: #c4c4c4;
     overflow: hidden; }
 
 #footer {
@@ -120,6 +121,10 @@ code { font-family: monospace; }
     overflow-x: auto;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px; }
+
+.highlight code {
+    color: #fff;
+}
 
 /* slightly modified pygments monokay theme */
 .highlight .hll { background-color: #49483e }

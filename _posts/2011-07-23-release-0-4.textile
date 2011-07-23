@@ -1,0 +1,66 @@
+---
+layout: post
+title: Releasing BitvUnit 0.4 - Input Sources, Hamcrest Integration, Reporting
+---
+
+This release is focused on infrastructure to ease the use and integration of the project. But still two new rules made it into the framework with this release and so there is a total number of 28 rules now. Have a look at the "all-rules.xml":AllRulesXml file to get an impression. 
+
+h2. Supported Input Sources
+
+With this release BitvUnit supports five different types of input to check against the framework's rules and verify for accessibility compliance. 
+
+Aside from it's native support for <code>com.gargoylesoftware.htmlunit.html.HtmlPage</code> instances to be checked you can now use the HtmlPageUtil class to read HTML code from <code>java.io.InputStream</code> or <code>java.io.Reader</code> instances. Other options are simple Java <code>java.lang.String</code> instances that contain the HTML code to be checked or <code>java.net.URL</code> instances pointing to an resource (e.g. online available HTML pages) that should be checked with the framework.
+
+h2. Hamcrest Integration
+
+The existing Hamcrest integration was completely replaced by the new "ComplianceMatcher":ComplianceMatcher version because the old typesafe solution was limiting the user too much. For example using two different input types within on test class was not possible.
+
+Have a look at the following three code examples using the same Hamcrest Matcher:
+
+{% highlight java %}
+    @Test
+    public void checkAgainstHtmlPage() throws Exception {
+        HtmlPage pageUnderTest = new WebClient().getPage("http://bitvunit.codescape.de");
+        assertThat(pageUnderTest, is(compliantTo(new XmlRuleSet("/rulesets/all-rules.xml"))));
+    }
+    
+    @Test
+    public void checkAgainstURL() throws Exception {
+        URL pageUnderTest = new URL("http://bitvunit.codescape.de");
+        assertThat(pageUnderTest, is(compliantTo(new XmlRuleSet("/rulesets/all-rules.xml"))));
+    }
+
+    @Test
+    public void checkAgainstString() throws Exception {
+        String pageUnderTest = "<html><head><title>Some simple HTML page</title></head></html>";
+        assertThat(pageUnderTest, is(compliantTo(new XmlRuleSet("/rulesets/all-rules.xml"))));
+    }
+{% endhighlight %}
+
+h2. Reporting
+
+With the release every accessibility check against a set of rules will now write out a report to the previously configured "ReportWriter":ReportWriter. Per default the "ConsoleReportWriter":ConsoleReportWriter will be used and write the results to the console. See a sample output below:
+
+{% highlight text %}
+BitvUnit Report - http://bitvunit.codescape.de/ - 23.07.2011 16:31:43
+Violations found:
+ - No violations found.
+Rules checked:
+ - LabelContainsTextRule[name=LabelContainsText]
+ - LabelWithoutFormElementRule[name=LabelWithoutFormElement]
+ - UniqueLabelForFormElementRule[name=UniqueLabelForFormElement]
+ - TitleForFrameRule[name=TitleForFrame]
+ - TitleForInlineFrameRule[name=TitleForInlineFrame]
+ - AlternativeTextForAreaOfImageMapRule[name=AlternativeTextForAreaOfImageMap]
+ - AlternativeTextForImageRule[name=AlternativeTextForImage]
+[..]
+{% endhighlight %}
+
+The "ConsoleReportWriter":ConsoleReportWriter currently is the only "ReportWriter":ReportWriter implementation that is shipped with release 0.4.0 of the framework but next versions will support more types of reports.
+
+See the "Change Log":/changes.html#r04 for further details.
+
+[AllRulesXml]https://github.com/codescape/bitvunit/blob/v0.4.0/bitvunit-core/src/main/resources/rulesets/all-rules.xml
+[ComplianceMatcher]https://github.com/codescape/bitvunit/blob/v0.4.0/bitvunit-core/src/main/java/de/codescape/bitvunit/hamcrest/ComplianceMatcher.java
+[ConsoleReportWriter]https://github.com/codescape/bitvunit/blob/v0.4.0/bitvunit-core/src/main/java/de/codescape/bitvunit/report/ConsoleReportWriter.java
+[ReportWriter]https://github.com/codescape/bitvunit/blob/v0.4.0/bitvunit-core/src/main/java/de/codescape/bitvunit/report/ReportWriter.java

@@ -40,7 +40,7 @@ If you want learn more about the framework, these resources might be interesting
 h2. Recent Blog Posts
 
 <ul class="square">
-  {% for post in site.posts limit:5 %}
+  {% for post in site.posts limit:3 %}
     <li><span class="post-date">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>

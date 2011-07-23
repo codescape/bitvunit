@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Releasing BitvUnit 0.3
+title: Releasing BitvUnit 0.3 - New Rules, Apache License, Maven Repository
 ---
 
 The third release adds 10 new rules to the framework and ships with a total of 26 rules. There is a first rule for applets, two rules for frames, three rules for lists, one new rule for images, one new rule for tables and two new rules for forms. 
