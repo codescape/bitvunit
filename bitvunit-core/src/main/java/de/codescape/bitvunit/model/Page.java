@@ -169,7 +169,7 @@ public class Page {
      *         instances
      */
     @SuppressWarnings("unchecked")
-    public List<HtmlElement> findAllHeaderTags() {
+    public List<HtmlElement> findAllHeadingTags() {
         return (List<HtmlElement>) htmlPage.getByXPath("//*[name()='h1' or name()='h2' or name()='h3' or name()='h4' or name() = 'h5' or name()='h6']");
     }
 

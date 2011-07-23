@@ -28,7 +28,7 @@ public class HeadersInCorrectOrderRule extends AbstractRule {
     @Override
     protected void applyTo(Page page, Violations violations) {
         HtmlElement lastHeader = null;
-        for (HtmlElement currentHeader : page.findAllHeaderTags()) {
+        for (HtmlElement currentHeader : page.findAllHeadingTags()) {
             if (lastHeader == null) {
                 checkFirstHeader(violations, currentHeader);
             } else {
