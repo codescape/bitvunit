@@ -22,7 +22,6 @@ public class Violation {
      * @param htmlElement the {@link HtmlElement} where the {@link Violation} occurs
      * @param message     message describing this {@link Violation}
      */
-
     public Violation(Rule rule, HtmlElement htmlElement, String message) {
         super();
         this.rule = rule;
