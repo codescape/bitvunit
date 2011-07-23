@@ -10,6 +10,7 @@ Hide and show details to releases in clicking on the release you are interested 
 h2(release#r04). Release 0.4 (...)
 
 * added new rules
+** AlternativeTextForObjectRule
 ** AvoidServerSideImageMapRule
 * added HtmlPageUtil to create HtmlPage objects from String, Reader, InputStream and URL instances
 * updated Hamcrest functionality
