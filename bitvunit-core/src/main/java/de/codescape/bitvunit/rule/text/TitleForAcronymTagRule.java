@@ -11,6 +11,7 @@ import static de.codescape.bitvunit.util.HtmlElementUtil.hasNonEmptyAttribute;
  * TitleForAcronymTagRule ensures that every acronym that is marked through the <code>&lt;acronym /&gt;</code> element
  * within the given HTML document provides a description of that acronym through its <code>title</code> attribute.
  *
+ * @author Stefan Glase
  * @since 0.1
  */
 public class TitleForAcronymTagRule extends AbstractRule {

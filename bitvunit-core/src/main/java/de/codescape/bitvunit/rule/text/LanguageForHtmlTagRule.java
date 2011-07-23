@@ -11,6 +11,7 @@ import static de.codescape.bitvunit.util.HtmlElementUtil.hasNonEmptyAttribute;
  * LanguageForHtmlTagRule ensures that the given HTML document provides its language information through the
  * <code>lang</code> attribute on the <code>&lt;html&gt;</code> tag.
  *
+ * @author Stefan Glase
  * @since 0.2
  */
 public class LanguageForHtmlTagRule extends AbstractRule {

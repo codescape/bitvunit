@@ -13,8 +13,8 @@ import static de.codescape.bitvunit.util.HtmlLabelUtil.containsLabelForId;
  * with a <code>&lt;label /&gt;</code> element that references the <code>&lt;textarea /&gt;</code> element through its
  * <code>for</code> attribute.
  *
- * @since 0.1
  * @author Stefan Glase
+ * @since 0.1
  */
 public class LabelForTextareaRule extends AbstractRule {
 

@@ -12,8 +12,8 @@ import java.util.List;
  * value in its <code>for</code> attribute. There should be never be more than one label pointing to a single form
  * element.
  *
- * @since 0.3
  * @author Stefan Glase
+ * @since 0.3
  */
 public class UniqueLabelForFormElementRule extends AbstractRule {
 

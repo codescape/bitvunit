@@ -9,8 +9,8 @@ import de.codescape.bitvunit.rule.Violations;
  * AlternativeTextForAppletRule ensures that every applet within the given HTML document provides an alternative textual
  * description to explain the applet to everyone who is not able to view and display the applet itself.
  *
- * @since 0.3
  * @author Stefan Glase
+ * @since 0.3
  */
 public class AlternativeTextForAppletRule extends AbstractRule {
 

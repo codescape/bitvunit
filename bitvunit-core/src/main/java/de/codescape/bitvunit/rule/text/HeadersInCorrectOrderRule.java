@@ -11,6 +11,7 @@ import de.codescape.bitvunit.rule.Violations;
  * the given page must be the only one of type <code>&lt;h1 /&gt;</code>. All other headers may only one level deeper
  * and all levels higher than the previous header.
  *
+ * @author Stefan Glase
  * @since 0.2
  */
 public class HeadersInCorrectOrderRule extends AbstractRule {

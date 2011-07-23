@@ -13,6 +13,7 @@ import de.codescape.bitvunit.rule.Violations;
  * document contains one or more definition terms <code>&lt;dt /&gt;</code> and definition descriptions <code>&lt;dd
  * /&gt;</code>.
  *
+ * @author Stefan Glase
  * @since 0.3
  */
 public class DefinitionListContainsItemsRule extends AbstractRule {

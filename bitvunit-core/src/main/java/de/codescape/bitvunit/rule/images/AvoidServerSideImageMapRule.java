@@ -11,6 +11,7 @@ import static de.codescape.bitvunit.util.HtmlElementUtil.hasAttribute;
  * AvoidServerSideImageMapRule ensures that there are no server side image maps within the given HTML document because
  * they are inaccessible by users who cannot use a mouse because of some disability.
  *
+ * @author Stefan Glase
  * @since 0.4
  */
 public class AvoidServerSideImageMapRule extends AbstractRule {

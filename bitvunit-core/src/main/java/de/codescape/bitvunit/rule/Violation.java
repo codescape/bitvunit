@@ -7,6 +7,8 @@ import java.net.URL;
 /**
  * Every violation of a {@link Rule} should result in a {@link Violation} pointing to the {@link Rule} that was violated
  * providing a message explaining the problem in detail and the code in question.
+ *
+ * @author Stefan Glase
  */
 public class Violation {
 

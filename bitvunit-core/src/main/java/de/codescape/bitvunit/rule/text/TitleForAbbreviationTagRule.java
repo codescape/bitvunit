@@ -12,6 +12,7 @@ import static de.codescape.bitvunit.util.HtmlElementUtil.hasNonEmptyAttribute;
  * element within the given HTML document provides a description of that abbreviation through its <code>title</code>
  * attribute.
  *
+ * @author Stefan Glase
  * @since 0.1
  */
 public class TitleForAbbreviationTagRule extends AbstractRule {

@@ -13,8 +13,8 @@ import java.util.List;
  * form elements are <code>&lt;select /&gt;</code>, <code>&lt;input /&gt;</code> and <code>&lt;textarea /&gt;</code>
  * elements.
  *
- * @since 0.3
  * @author Stefan Glase
+ * @since 0.3
  */
 public class LabelWithoutFormElementRule extends AbstractRule {
 

@@ -10,6 +10,7 @@ import de.codescape.bitvunit.rule.Violations;
  * to a violation because the <code>&lt;marquee /&gt;</code> results in moving text that cannot be stopped and it is not
  * defined in any W3C HTML specification.
  *
+ * @author Stefan Glase
  * @since 0.1
  */
 public class AvoidMarqueeTextRule extends AbstractRule {

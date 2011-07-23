@@ -10,6 +10,7 @@ import de.codescape.bitvunit.rule.Violations;
  * title by having a <code>&lt;caption&gt;Some title&lt;/caption&gt;</code> element as the first child element inside
  * the <code>&lt;table /&gt;</code> declaration.
  *
+ * @author Stefan Glase
  * @since 0.1
  */
 public class CaptionTextForTableRule extends AbstractRule {

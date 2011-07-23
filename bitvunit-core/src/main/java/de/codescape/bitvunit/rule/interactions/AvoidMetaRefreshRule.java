@@ -11,6 +11,7 @@ import de.codescape.bitvunit.rule.Violations;
  * significant accessibility problems to people that are disabled or that use technology that hinders normal
  * interactions patterns.
  *
+ * @author Stefan Glase
  * @since 0.2
  */
 public class AvoidMetaRefreshRule extends AbstractRule {

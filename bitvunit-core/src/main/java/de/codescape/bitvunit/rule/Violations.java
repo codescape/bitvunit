@@ -7,6 +7,8 @@ import java.util.List;
 /**
  * Violations serves as a container class that holds all {@link Violation} objects that were created during analysis
  * with a single {@link Rule} or a {@link de.codescape.bitvunit.ruleset.RuleSet}.
+ *
+ * @author Stefan Glase
  */
 public class Violations {
 

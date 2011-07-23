@@ -9,6 +9,7 @@ import de.codescape.bitvunit.rule.Violations;
  * AvoidBoldTagRule ensures that every <code>&lt;b /&gt;</code> element within the given HTML document leads to a
  * violation because the <code>&lt;strong /&gt;</code> element should be used to outline important text.
  *
+ * @author Stefan Glase
  * @since 0.2
  */
 public class AvoidBoldTagRule extends AbstractRule {

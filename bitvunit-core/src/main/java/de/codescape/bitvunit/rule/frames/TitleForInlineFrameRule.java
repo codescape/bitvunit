@@ -12,6 +12,7 @@ import static de.codescape.bitvunit.util.HtmlElementUtil.hasNonEmptyAttribute;
  * element within the given HTML document provides a description of that inline frame through its <code>title</code>
  * attribute.
  *
+ * @author Stefan Glase
  * @since 0.3
  */
 public class TitleForInlineFrameRule extends AbstractRule {

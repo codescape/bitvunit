@@ -11,6 +11,7 @@ import static de.codescape.bitvunit.util.HtmlElementUtil.hasNonEmptyAttribute;
  * TitleForFrameRule ensures that every frame that is marked through the <code>&lt;frame /&gt;</code> element within the
  * given HTML document provides a description of that frame through its <code>title</code> attribute.
  *
+ * @author Stefan Glase
  * @since 0.3
  */
 public class TitleForFrameRule extends AbstractRule {

@@ -10,6 +10,7 @@ import de.codescape.bitvunit.rule.Violations;
  * violation because the <code>&lt;blink /&gt;</code> tag result in blinking text that cannot be stopped and it is not
  * defined in any W3C HTML specification.
  *
+ * @author Stefan Glase
  * @since 0.1
  */
 public class AvoidBlinkTextRule extends AbstractRule {

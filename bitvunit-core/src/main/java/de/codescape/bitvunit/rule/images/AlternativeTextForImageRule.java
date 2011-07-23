@@ -12,6 +12,7 @@ import static de.codescape.bitvunit.util.HtmlElementUtil.hasAttribute;
  * through its <code>alt</code> attribute. This rule is satisfied by an empty attribute <code>alt=""</code> since this
  * is the encouraged way for images that are used for layout aspects.
  *
+ * @author Stefan Glase
  * @since 0.1
  */
 public class AlternativeTextForImageRule extends AbstractRule {
