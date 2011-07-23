@@ -59,4 +59,20 @@ public class TableHeaderForTableColumnRuleTest {
         assertViolations(violations, rule, 2);
     }
 
+    @Test
+    public void tableWithOnlyOneRow() throws Exception {
+        String content = "<html>" +
+                "<body>" +
+                "  <table>" +
+                "    <tr>" +
+                "      <td>Some value</td>" +
+                "      <td>Another value</td>" +
+                "    </tr>" +
+                "  </table>" +
+                "</body>" +
+                "</html>";
+        Violations violations = rule.applyTo(htmlPageFromString(content));
+        assertViolations(violations, rule, 1);
+    }
+
 }
