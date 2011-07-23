@@ -7,7 +7,7 @@ import static de.codescape.bitvunit.test.Assertions.assertRules;
 public class XmlRuleSetTest {
 
     // TODO calculate automatically based on the amount of non abstract classes implementing the rule interface
-    public static final int NUMBER_OF_RULES = 27;
+    public static final int NUMBER_OF_RULES = 28;
 
     @Test
     public void creationOfRuleSetAllRulesFindsAllRules() throws Exception {

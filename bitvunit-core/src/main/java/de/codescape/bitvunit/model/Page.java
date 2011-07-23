@@ -255,4 +255,13 @@ public class Page {
         return allByTagName(HtmlDefinitionList.TAG_NAME);
     }
 
+    /**
+     * Returns all <code>&lt;object /&gt;</code> tags as {@link HtmlObject} instances.
+     *
+     * @return all <code>&lt;object /&gt;</code> tags as {@link HtmlObject} instances
+     */
+    public List<HtmlObject> findAllObjectTags() {
+        return allByTagName(HtmlObject.TAG_NAME);
+    }
+
 }
