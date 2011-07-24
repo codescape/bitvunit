@@ -21,6 +21,11 @@ public class TextReportWriter extends AbstractReportWriter {
     }
 
     @Override
+    protected String getOutputFilename() {
+        return DEFAULT_FILENAME + ".txt";
+    }
+
+    @Override
     public void writeReport(Writer writer, HtmlPage htmlPage, RuleSet ruleSet, Violations violations) {
         PrintWriter out = new PrintWriter(writer);
 

@@ -12,7 +12,7 @@ import de.codescape.bitvunit.ruleset.RuleSet;
 public interface ReportWriter {
 
     /**
-     * Writes out the report for the <code>htmlPage</code> checked against the <code>ruleSet</code> and with the
+     * Writes the report for the <code>htmlPage</code> checked against the <code>ruleSet</code> and with the
      * <code>violations</code> result.
      *
      * @param htmlPage   {@link HtmlPage} that was checked

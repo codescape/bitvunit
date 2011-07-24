@@ -6,11 +6,13 @@ import de.codescape.bitvunit.rule.Violation;
 import de.codescape.bitvunit.rule.Violations;
 import de.codescape.bitvunit.ruleset.RuleSet;
 import de.codescape.bitvunit.ruleset.XmlRuleSet;
+import org.apache.commons.io.IOUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileReader;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
@@ -48,8 +50,25 @@ public class TextReportWriterTest {
         assertTrue("Should contain rules", getConsoleOutput().contains("Rules checked:"));
     }
 
+    @Test
+    public void writesToFile() throws Exception {
+        TextReportWriter writer = new TextReportWriter();
+        writer.setWriteToFile(true);
+
+        writer.writeReport(someHtmlPage(), someRuleSet(), someViolations());
+
+        String fileOutput = getFileOutput(writer.getOutputFilename());
+        assertTrue("Should contain header", fileOutput.contains("BitvUnit Report"));
+        assertTrue("Should contain violations", fileOutput.contains("Violations found:"));
+        assertTrue("Should contain rules", fileOutput.contains("Rules checked:"));
+    }
+
     private String getConsoleOutput() {
         return consoleOutput.toString();
+    }
+
+    private String getFileOutput(String filename) throws Exception {
+        return IOUtils.toString(new FileReader(filename));
     }
 
     private Violations someViolations() {
