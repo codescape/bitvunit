@@ -13,7 +13,7 @@ public class ReportingContext {
 
     private ReportingContext() {
         super();
-        reportWriter = new ConsoleReportWriter();
+        reportWriter = new TextReportWriter();
     }
 
     private static ReportingContext getInstance() {
