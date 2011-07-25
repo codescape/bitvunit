@@ -1,4 +1,8 @@
-permalink:  /blog/:year/:month/:day/:title  # urls generated for permalinks
-auto:       true                            # regnerate when files are changed
-pyments:    true                            # code highlight with pygments
-server:     true                            # start server hosting _site directory
+# urls generated for permalinks
+permalink:  /blog/:year/:month/:day/:title
+# regnerate when files are changed
+auto:       true
+# code highlight with pygments
+pyments:    true
+# start server hosting _site directory
+server:     true
