@@ -3,6 +3,7 @@ package de.codescape.bitvunit.report;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.rule.Violations;
 import de.codescape.bitvunit.ruleset.RuleSet;
+import de.codescape.bitvunit.util.file.ClassPathResource;
 
 import java.io.*;
 import java.text.DateFormat;
@@ -17,6 +18,8 @@ import java.util.Date;
 public abstract class AbstractReportWriter implements ReportWriter {
 
     protected static final String DEFAULT_FILENAME = "BitvUnitReport";
+
+    private static final String VERSION_FILE = "bitvunit-version.txt";
 
     private boolean writeToFile = false;
 
@@ -75,6 +78,15 @@ public abstract class AbstractReportWriter implements ReportWriter {
      */
     protected String getFormattedDate() {
         return DateFormat.getDateTimeInstance().format(new Date());
+    }
+
+    /**
+     * Returns the version of the BitvUnit framework in use.
+     *
+     * @return version of the BitvUnit framework in use
+     */
+    protected String getBitvUnitVersion() {
+        return ClassPathResource.asString(VERSION_FILE);
     }
 
 }

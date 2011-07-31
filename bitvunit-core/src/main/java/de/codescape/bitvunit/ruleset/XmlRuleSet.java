@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.ruleset;
 
 import de.codescape.bitvunit.rule.Rule;
+import de.codescape.bitvunit.util.file.ClassPathResource;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -29,7 +30,7 @@ public class XmlRuleSet extends BasicRuleSet implements RuleSet {
 
     private Document buildDocument(String location) {
         try {
-            return documentBuilderFactory.newDocumentBuilder().parse(this.getClass().getResource(location).getFile());
+            return documentBuilderFactory.newDocumentBuilder().parse(ClassPathResource.asInputStream(location));
         } catch (Exception e) {
             throw new XmlRuleSetException("Could not parse RuleSet from given location.", e);
         }

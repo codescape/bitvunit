@@ -32,11 +32,12 @@ public class TextReportWriter extends AbstractReportWriter {
         printTitle(htmlPage, out);
         printViolations(violations, out);
         printRules(ruleSet, out);
+
         out.flush();
     }
 
     private void printTitle(HtmlPage htmlPage, PrintWriter out) {
-        out.println("BitvUnit Report - " + htmlPage.getUrl() + " - " + getFormattedDate());
+        out.println(String.format("BitvUnit %s Report - %s - %s", getBitvUnitVersion(), htmlPage.getUrl(), getFormattedDate()));
     }
 
     private void printRules(RuleSet ruleSet, PrintWriter out) {

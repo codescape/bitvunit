@@ -45,7 +45,7 @@ public class TextReportWriterTest {
         writer.writeReport(someHtmlPage(), someRuleSet(), someViolations());
 
         assertNotNull(getConsoleOutput());
-        assertTrue("Should contain header", getConsoleOutput().contains("BitvUnit Report"));
+        assertTrue("Should contain header", getConsoleOutput().contains("BitvUnit"));
         assertTrue("Should contain violations", getConsoleOutput().contains("Violations found:"));
         assertTrue("Should contain rules", getConsoleOutput().contains("Rules checked:"));
     }
@@ -58,7 +58,7 @@ public class TextReportWriterTest {
         writer.writeReport(someHtmlPage(), someRuleSet(), someViolations());
 
         String fileOutput = getFileOutput(writer.getOutputFilename());
-        assertTrue("Should contain header", fileOutput.contains("BitvUnit Report"));
+        assertTrue("Should contain header", fileOutput.contains("BitvUnit"));
         assertTrue("Should contain violations", fileOutput.contains("Violations found:"));
         assertTrue("Should contain rules", fileOutput.contains("Rules checked:"));
     }
