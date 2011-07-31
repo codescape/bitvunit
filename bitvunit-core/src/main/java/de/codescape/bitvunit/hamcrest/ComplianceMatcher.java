@@ -1,6 +1,5 @@
 package de.codescape.bitvunit.hamcrest;
 
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.rule.Rule;
 import de.codescape.bitvunit.ruleset.BasicRuleSet;
 import de.codescape.bitvunit.ruleset.RuleSet;
@@ -9,11 +8,7 @@ import org.hamcrest.Factory;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
 
-import java.io.InputStream;
-import java.io.Reader;
-import java.net.URL;
-
-import static de.codescape.bitvunit.util.HtmlPageUtil.*;
+import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
 
 /**
  * Hamcrest matcher to be used to run accessibility checks against a single {@link Rule} or a {@link RuleSet}.<p/>
@@ -52,33 +47,7 @@ public class ComplianceMatcher<T> extends TypeSafeMatcher<T> {
 
     @Override
     protected boolean matchesSafely(T item) {
-        return !ruleSet.applyTo(createHtmlPage(item)).hasViolations();
-    }
-
-    /**
-     * Creates a {@link HtmlPage} from the provided <code>item</code> if it is an instance of one of the supported
-     * types.
-     *
-     * @param item
-     * @return
-     */
-    private HtmlPage createHtmlPage(T item) {
-        if (item instanceof HtmlPage) {
-            return (HtmlPage) item;
-        }
-        if (item instanceof String) {
-            return htmlPageFromString((String) item);
-        }
-        if (item instanceof Reader) {
-            return htmlPageFromReader((Reader) item);
-        }
-        if (item instanceof URL) {
-            return htmlPageFromURL((URL) item);
-        }
-        if (item instanceof InputStream) {
-            return htmlPageFromInputStream((InputStream) item);
-        }
-        throw new UnsupportedOperationException("Creation of HtmlPage from " + item.getClass() + " not supported.");
+        return !ruleSet.applyTo(toHtmlPage(item)).hasViolations();
     }
 
     @Override

@@ -80,4 +80,31 @@ public final class HtmlPageUtil {
         }
     }
 
+    /**
+     * Creates a {@link HtmlPage} from one of the supported types that can be transformed into a {@link HtmlPage} by the
+     * framework.
+     *
+     * @param item item that should be transformed into a {@link HtmlPage}
+     * @param <T>  type of the item that should be transformed
+     * @return {@link HtmlPage} constructed from the given input
+     */
+    public static <T> HtmlPage toHtmlPage(T item) {
+        if (item instanceof HtmlPage) {
+            return (HtmlPage) item;
+        }
+        if (item instanceof String) {
+            return htmlPageFromString((String) item);
+        }
+        if (item instanceof Reader) {
+            return htmlPageFromReader((Reader) item);
+        }
+        if (item instanceof URL) {
+            return htmlPageFromURL((URL) item);
+        }
+        if (item instanceof InputStream) {
+            return htmlPageFromInputStream((InputStream) item);
+        }
+        throw new UnsupportedOperationException("Unable to create HtmlPage from " + item.getClass() + ".");
+    }
+
 }
