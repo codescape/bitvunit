@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.util;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import de.codescape.bitvunit.util.file.ClassPathResource;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 
@@ -58,7 +59,7 @@ public class HtmlPageUtilTest {
     }
 
     private String pageAsString() throws Exception {
-        return IOUtils.toString(getClass().getClassLoader().getResource(FILE_NAME).openStream());
+        return ClassPathResource.asString(FILE_NAME);
     }
 
 }
