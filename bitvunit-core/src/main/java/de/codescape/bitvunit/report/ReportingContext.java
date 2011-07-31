@@ -12,11 +12,19 @@ public class ReportingContext {
 
     private ReportWriter reportWriter;
 
+    /**
+     * Constructs a new {@link ReportingContext} and assigns the default {@link ReportWriter}.
+     */
     private ReportingContext() {
         super();
         reportWriter = new TextReportWriter();
     }
 
+    /**
+     * Returns the singleton instance of the {@link ReportingContext}.
+     *
+     * @return singleton instance of the {@link ReportingContext}
+     */
     private static ReportingContext getInstance() {
         return instance;
     }

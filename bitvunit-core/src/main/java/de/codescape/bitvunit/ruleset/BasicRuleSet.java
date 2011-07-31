@@ -61,6 +61,11 @@ public class BasicRuleSet implements RuleSet {
         return getClass().getSimpleName() + "[" + (rules.isEmpty() ? "<Empty RuleSet>" : StringUtils.join(collectRuleNames(), ", ")) + "]";
     }
 
+    /**
+     * Returns a list of the names of all rules in this {@link RuleSet} sorted by name.
+     *
+     * @return names of all rules in this {@link RuleSet} sorted by name
+     */
     private List<String> collectRuleNames() {
         List<String> ruleNames = new ArrayList<String>();
         for (Rule rule : rules) {

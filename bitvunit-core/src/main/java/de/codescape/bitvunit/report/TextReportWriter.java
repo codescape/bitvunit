@@ -36,10 +36,22 @@ public class TextReportWriter extends AbstractReportWriter {
         out.flush();
     }
 
+    /**
+     * Writes the header.
+     *
+     * @param htmlPage {@link HtmlPage} that was inspected
+     * @param out      target where the report is written to
+     */
     private void printTitle(HtmlPage htmlPage, PrintWriter out) {
         out.println(String.format("BitvUnit %s Report - %s - %s", getBitvUnitVersion(), htmlPage.getUrl(), getFormattedDate()));
     }
 
+    /**
+     * Writes the part where all used rules from the {@link RuleSet} are listed.
+     *
+     * @param ruleSet {@link RuleSet} that was used
+     * @param out     target where the report is written to
+     */
     private void printRules(RuleSet ruleSet, PrintWriter out) {
         out.println("Rules checked:");
         for (Rule rule : ruleSet.getRules()) {
@@ -47,6 +59,12 @@ public class TextReportWriter extends AbstractReportWriter {
         }
     }
 
+    /**
+     * Writes the part where all {@link Violations} that were found are listed.
+     *
+     * @param violations {@link Violations} that were found
+     * @param out        target where the report is written to
+     */
     private void printViolations(Violations violations, PrintWriter out) {
         out.println("Violations found:");
         if (violations.hasViolations()) {

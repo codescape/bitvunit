@@ -17,13 +17,13 @@ import static de.codescape.bitvunit.util.HtmlPageUtil.*;
 
 /**
  * Hamcrest matcher to be used to run accessibility checks against a single {@link Rule} or a {@link RuleSet}.<p/>
- *
+ * <p/>
  * <b>Usage examples:</b>
  * <pre><code>
  * assertThat(supportedType, is(compliantTo(ruleSet)));
  * assertThat(supportedType, is(compliantTo(rule)));
  * </code></pre>
- *
+ * <p/>
  * <b>Supported types:</b>
  * <pre><code>
  * com.gargoylesoftware.htmlunit.html.HtmlPage
@@ -41,6 +41,11 @@ public class ComplianceMatcher<T> extends TypeSafeMatcher<T> {
 
     private RuleSet ruleSet;
 
+    /**
+     * Creates a new {@link ComplianceMatcher} against the provided {@link RuleSet}.
+     *
+     * @param ruleSet
+     */
     public ComplianceMatcher(RuleSet ruleSet) {
         this.ruleSet = ruleSet;
     }
@@ -50,6 +55,13 @@ public class ComplianceMatcher<T> extends TypeSafeMatcher<T> {
         return !ruleSet.applyTo(createHtmlPage(item)).hasViolations();
     }
 
+    /**
+     * Creates a {@link HtmlPage} from the provided <code>item</code> if it is an instance of one of the supported
+     * types.
+     *
+     * @param item
+     * @return
+     */
     private HtmlPage createHtmlPage(T item) {
         if (item instanceof HtmlPage) {
             return (HtmlPage) item;
@@ -74,11 +86,27 @@ public class ComplianceMatcher<T> extends TypeSafeMatcher<T> {
         description.appendText("compliant to ").appendText(ruleSet.toString());
     }
 
+    /**
+     * Returns a {@link ComplianceMatcher} that checks one of the supported types (see JavaDoc at class level) against
+     * the given {@link RuleSet}.
+     *
+     * @param ruleSet {@@link RuleSet} that should be used
+     * @param <T>     supported types are contained in JavaDoc at class level
+     * @return {@link ComplianceMatcher} to check against the {@link RuleSet}
+     */
     @Factory
     public static <T> Matcher<T> compliantTo(RuleSet ruleSet) {
         return new ComplianceMatcher<T>(ruleSet);
     }
 
+    /**
+     * Returns a {@link ComplianceMatcher} that checks one of the supported types (see JavaDoc at class level) against
+     * the given {@link Rule}.
+     *
+     * @param rule {@@link Rule} that should be used
+     * @param <T>  supported types are contained in JavaDoc at class level
+     * @return {@link ComplianceMatcher} to check against the {@link Rule}
+     */
     @Factory
     public static <T> Matcher<T> compliantTo(Rule rule) {
         return compliantTo(new BasicRuleSet(rule));
