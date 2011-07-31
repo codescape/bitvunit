@@ -12,6 +12,7 @@ h2(release#r05). Release 0.5 (...)
 * improved reporting functionality
 ** added functionality to write report results to files and to console
 ** renamed ConsoleReportWriter to TextReportWriter to reflect that it can also be used to write to files
+** added functionality to print out the framework version in reports to AbstractReportWriter
 * improved JavaDoc
 ** added package documentation to all packages
 ** added documentation von ReportingContext
