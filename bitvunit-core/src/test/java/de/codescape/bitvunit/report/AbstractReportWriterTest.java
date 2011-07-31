@@ -12,7 +12,7 @@ import static org.junit.Assert.assertNotNull;
 public class AbstractReportWriterTest {
 
     @Test
-    public void shouldBeAbleToGetBitvUnitVersionInUse() {
+    public void shouldBeAbleToGetBitvUnitVersionInUse() throws Exception {
         assertNotNull(new ReportWriterUnderTest().getBitvUnitVersion());
     }
 

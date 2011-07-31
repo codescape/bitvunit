@@ -22,7 +22,7 @@ public class ClassPathResource {
      * @param path the path to the resource or file
      */
     private ClassPathResource(String path) {
-        if (path == null || path.isEmpty()) {
+        if (path == null || path.trim().isEmpty()) {
             throw new IllegalArgumentException("Given path must not be null or empty.");
         }
         if (path.startsWith("/")) {
@@ -51,7 +51,7 @@ public class ClassPathResource {
         try {
             return IOUtils.toString(asInputStream());
         } catch (IOException e) {
-            throw new RuntimeException("Could not read from file: " + path, e);
+            throw new RuntimeException("Could not read from file '" + path + "'.", e);
         }
     }
 
