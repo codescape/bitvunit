@@ -11,7 +11,7 @@ import org.hamcrest.TypeSafeMatcher;
 import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
 
 /**
- * Hamcrest matcher to be used to run accessibility checks against a single {@link Rule} or a {@link RuleSet}.<p/>
+ * Hamcrest matcher to be used to run accessibility checks against a single {@link Rule} or a {@link RuleSet}.
  * <p/>
  * <b>Usage examples:</b>
  * <pre><code>
@@ -19,17 +19,11 @@ import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
  * assertThat(supportedType, is(compliantTo(rule)));
  * </code></pre>
  * <p/>
- * <b>Supported types:</b>
- * <pre><code>
- * com.gargoylesoftware.htmlunit.html.HtmlPage
- * java.io.InputStream
- * java.io.Reader
- * java.lang.String
- * java.net.URL
- * </code></pre>
+ * Have a look at {@link de.codescape.bitvunit.util.HtmlPageUtil} methods for supported types.
  *
  * @param <T> one of the supported types
  * @author Stefan Glase
+ * @see de.codescape.bitvunit.util.HtmlPageUtil
  * @since 0.4
  */
 public class ComplianceMatcher<T> extends TypeSafeMatcher<T> {

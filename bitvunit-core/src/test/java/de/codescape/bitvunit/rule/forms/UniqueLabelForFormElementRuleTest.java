@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static de.codescape.bitvunit.test.Assertions.assertNoViolations;
 import static de.codescape.bitvunit.test.Assertions.assertViolations;
-import static de.codescape.bitvunit.util.HtmlPageUtil.htmlPageFromString;
+import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -29,7 +29,7 @@ public class UniqueLabelForFormElementRuleTest {
                 "  </form>" +
                 "</body>" +
                 "</html>";
-        Violations violations = rule.applyTo(htmlPageFromString(content));
+        Violations violations = rule.applyTo(toHtmlPage(content));
         assertNoViolations(violations, rule);
     }
 
@@ -45,7 +45,7 @@ public class UniqueLabelForFormElementRuleTest {
                 "  </form>" +
                 "</body>" +
                 "</html>";
-        Violations violations = rule.applyTo(htmlPageFromString(content));
+        Violations violations = rule.applyTo(toHtmlPage(content));
         assertNoViolations(violations, rule);
     }
 
@@ -60,7 +60,7 @@ public class UniqueLabelForFormElementRuleTest {
                 "  </form>" +
                 "</body>" +
                 "</html>";
-        Violations violations = rule.applyTo(htmlPageFromString(content));
+        Violations violations = rule.applyTo(toHtmlPage(content));
         assertViolations(violations, rule, 2);
     }
 

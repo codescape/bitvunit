@@ -16,7 +16,7 @@ import java.io.FileReader;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
-import static de.codescape.bitvunit.util.HtmlPageUtil.htmlPageFromString;
+import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -84,7 +84,7 @@ public class TextReportWriterTest {
     }
 
     private HtmlPage someHtmlPage() {
-        return htmlPageFromString("<html><head><title>Hello World</title></head><body></body></html>");
+        return toHtmlPage("<html><head><title>Hello World</title></head><body></body></html>");
     }
 
 }

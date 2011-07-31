@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static de.codescape.bitvunit.test.Assertions.assertNoViolations;
 import static de.codescape.bitvunit.test.Assertions.assertViolations;
-import static de.codescape.bitvunit.util.HtmlPageUtil.htmlPageFromString;
+import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -22,14 +22,14 @@ public class LabelForSelectTagRuleTest {
     @Test
     public void selectWithAssociatedLabel() throws Exception {
         String content = "<html><body><form><label for=\"gender\">Comment</label><select id=\"gender\"><option>m</option><option>f</option></select></form></body></html>";
-        Violations violations = rule.applyTo(htmlPageFromString(content));
+        Violations violations = rule.applyTo(toHtmlPage(content));
         assertNoViolations(violations);
     }
 
     @Test
     public void selectWithMissingLabel() throws Exception {
         String content = "<html><body><form><select id=\"gender\"><option>m</option><option>f</option></select></form></body></html>";
-        Violations violations = rule.applyTo(htmlPageFromString(content));
+        Violations violations = rule.applyTo(toHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 

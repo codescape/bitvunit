@@ -15,7 +15,7 @@ import java.io.StringReader;
 import java.net.URL;
 
 import static de.codescape.bitvunit.hamcrest.ComplianceMatcher.compliantTo;
-import static de.codescape.bitvunit.util.HtmlPageUtil.htmlPageFromString;
+import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.assertThat;
@@ -136,7 +136,7 @@ public class ComplianceMatcherTest {
     }
 
     private HtmlPage somePage() {
-        return htmlPageFromString(someString());
+        return toHtmlPage(someString());
     }
 
     private Reader someReader() {

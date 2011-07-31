@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static de.codescape.bitvunit.test.Assertions.assertNoViolations;
 import static de.codescape.bitvunit.test.Assertions.assertViolations;
-import static de.codescape.bitvunit.util.HtmlPageUtil.htmlPageFromString;
+import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -22,21 +22,21 @@ public class AlternativeTextForImageRuleTest {
     @Test
     public void imageWithMissingAlternativeText() throws Exception {
         String content = "<html><body><img src=\"myImage.gif\" /></body></html>";
-        Violations violations = rule.applyTo(htmlPageFromString(content));
+        Violations violations = rule.applyTo(toHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 
     @Test
     public void imageWithEmptyAlternativeText() throws Exception {
         String content = "<html><body><img src=\"myImage.gif\" alt=\"\" /></body></html>";
-        Violations violations = rule.applyTo(htmlPageFromString(content));
+        Violations violations = rule.applyTo(toHtmlPage(content));
         assertNoViolations(violations);
     }
 
     @Test
     public void imageWithAlternativeText() throws Exception {
         String content = "<html><body><img src=\"myImage.gif\" alt=\"Alternative Text\" /></body></html>";
-        Violations violations = rule.applyTo(htmlPageFromString(content));
+        Violations violations = rule.applyTo(toHtmlPage(content));
         assertNoViolations(violations);
     }
 

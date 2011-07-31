@@ -28,7 +28,7 @@ public final class HtmlPageUtil {
      * @param string {@link String} that contains the HTML code
      * @return {@link HtmlPage} for this {@link String}
      */
-    public static HtmlPage htmlPageFromString(String string) {
+    public static HtmlPage toHtmlPage(String string) {
         try {
             URL url = new URL("http://bitvunit.codescape.de/some_page.html");
             StringWebResponse response = new StringWebResponse(string, url);
@@ -44,9 +44,9 @@ public final class HtmlPageUtil {
      * @param inputStream {@link InputStream} that reads the HTML code
      * @return {@link HtmlPage} for this {@link InputStream}
      */
-    public static HtmlPage htmlPageFromInputStream(InputStream inputStream) {
+    public static HtmlPage toHtmlPage(InputStream inputStream) {
         try {
-            return htmlPageFromString(IOUtils.toString(inputStream));
+            return toHtmlPage(IOUtils.toString(inputStream));
         } catch (IOException e) {
             throw new RuntimeException("Error creating HtmlPage from InputStream.", e);
         }
@@ -58,9 +58,9 @@ public final class HtmlPageUtil {
      * @param reader {@link Reader} that reads the HTML code
      * @return {@link HtmlPage} for this {@link Reader}
      */
-    public static HtmlPage htmlPageFromReader(Reader reader) {
+    public static HtmlPage toHtmlPage(Reader reader) {
         try {
-            return htmlPageFromString(IOUtils.toString(reader));
+            return toHtmlPage(IOUtils.toString(reader));
         } catch (IOException e) {
             throw new RuntimeException("Error creating HtmlPage from Reader.", e);
         }
@@ -72,7 +72,7 @@ public final class HtmlPageUtil {
      * @param url {@link URL} that points to the HTML code
      * @return {@link HtmlPage} for this {@link URL}
      */
-    public static HtmlPage htmlPageFromURL(URL url) {
+    public static HtmlPage toHtmlPage(URL url) {
         try {
             return (HtmlPage) new WebClient().getPage(url);
         } catch (IOException e) {
@@ -81,8 +81,10 @@ public final class HtmlPageUtil {
     }
 
     /**
-     * Creates a {@link HtmlPage} from one of the supported types that can be transformed into a {@link HtmlPage} by the
-     * framework.
+     * Creates a {@link HtmlPage} from the given <code>item</code> if it is of one of the supported types.
+     * <p/>
+     * <b>Supported types:</b> <ul> <li>com.gargoylesoftware.htmlunit.html.HtmlPage</li> <li>java.io.InputStream</li>
+     * <li>java.io.Reader</li> <li>java.lang.String</li> <li>java.net.URL</li> </ul>
      *
      * @param item item that should be transformed into a {@link HtmlPage}
      * @param <T>  type of the item that should be transformed
@@ -93,16 +95,16 @@ public final class HtmlPageUtil {
             return (HtmlPage) item;
         }
         if (item instanceof String) {
-            return htmlPageFromString((String) item);
+            return toHtmlPage((String) item);
         }
         if (item instanceof Reader) {
-            return htmlPageFromReader((Reader) item);
+            return toHtmlPage((Reader) item);
         }
         if (item instanceof URL) {
-            return htmlPageFromURL((URL) item);
+            return toHtmlPage((URL) item);
         }
         if (item instanceof InputStream) {
-            return htmlPageFromInputStream((InputStream) item);
+            return toHtmlPage((InputStream) item);
         }
         throw new UnsupportedOperationException("Unable to create HtmlPage from " + item.getClass() + ".");
     }

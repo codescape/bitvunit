@@ -29,25 +29,30 @@ public class HtmlPageUtilTest {
 
     @Test
     public void createValidHtmlPageFromString() throws Exception {
-        assertCorrectHtmlPage(HtmlPageUtil.htmlPageFromString(pageAsString()));
+        assertCorrectHtmlPage(HtmlPageUtil.toHtmlPage(pageAsString()));
     }
 
     @Test
     public void createValidHtmlPageFromInputStream() throws Exception {
         InputStream is = IOUtils.toInputStream(pageAsString());
-        assertCorrectHtmlPage(HtmlPageUtil.htmlPageFromInputStream(is));
+        assertCorrectHtmlPage(HtmlPageUtil.toHtmlPage(is));
     }
 
     @Test
     public void createValidHtmlPageFromReader() throws Exception {
         Reader reader = new StringReader(pageAsString());
-        assertCorrectHtmlPage(HtmlPageUtil.htmlPageFromReader(reader));
+        assertCorrectHtmlPage(HtmlPageUtil.toHtmlPage(reader));
     }
 
     @Test
     public void createValidHtmlPageFromURL() throws Exception {
         URL url = getClass().getClassLoader().getResource(FILE_NAME);
-        assertCorrectHtmlPage(HtmlPageUtil.htmlPageFromURL(url));
+        assertCorrectHtmlPage(HtmlPageUtil.toHtmlPage(url));
+    }
+
+    @Test(expected = UnsupportedOperationException.class)
+    public void createHtmlPageFromUnsupportedTypeThrowsException() throws Exception {
+        HtmlPageUtil.toHtmlPage(new Object());
     }
 
     private void assertCorrectHtmlPage(HtmlPage htmlPage) {

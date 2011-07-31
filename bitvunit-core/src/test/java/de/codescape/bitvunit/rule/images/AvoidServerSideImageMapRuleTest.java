@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static de.codescape.bitvunit.test.Assertions.assertNoViolations;
 import static de.codescape.bitvunit.test.Assertions.assertViolations;
-import static de.codescape.bitvunit.util.HtmlPageUtil.htmlPageFromString;
+import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -22,21 +22,21 @@ public class AvoidServerSideImageMapRuleTest {
     @Test
     public void serverSideImageMapPresent() throws Exception {
         String content = "<html><body><img src=\"map.gif\" ismap=\"ismap\"/></body></html>";
-        Violations violations = rule.applyTo(htmlPageFromString(content));
+        Violations violations = rule.applyTo(toHtmlPage(content));
         assertViolations(violations, rule, 1);
     }
 
     @Test
     public void clientSideImageMapPresent() throws Exception {
         String content = "<html><body><img src=\"map.gif\" usemap=\"somemap\" /></body></html>";
-        Violations violations = rule.applyTo(htmlPageFromString(content));
+        Violations violations = rule.applyTo(toHtmlPage(content));
         assertNoViolations(violations, rule);
     }
 
     @Test
     public void normalImagePresent() throws Exception {
         String content = "<html><body><img src=\"image.gif\" /></body></html>";
-        Violations violations = rule.applyTo(htmlPageFromString(content));
+        Violations violations = rule.applyTo(toHtmlPage(content));
         assertNoViolations(violations, rule);
     }
 
