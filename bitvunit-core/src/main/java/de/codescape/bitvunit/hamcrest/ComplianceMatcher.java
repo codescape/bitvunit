@@ -59,7 +59,7 @@ public class ComplianceMatcher<T> extends TypeSafeMatcher<T> {
      * Returns a {@link ComplianceMatcher} that checks one of the supported types (see JavaDoc at class level) against
      * the given {@link RuleSet}.
      *
-     * @param ruleSet {@@link RuleSet} that should be used
+     * @param ruleSet {@link RuleSet} that should be used
      * @param <T>     supported types are contained in JavaDoc at class level
      * @return {@link ComplianceMatcher} to check against the {@link RuleSet}
      */
@@ -72,7 +72,7 @@ public class ComplianceMatcher<T> extends TypeSafeMatcher<T> {
      * Returns a {@link ComplianceMatcher} that checks one of the supported types (see JavaDoc at class level) against
      * the given {@link Rule}.
      *
-     * @param rule {@@link Rule} that should be used
+     * @param rule {@link Rule} that should be used
      * @param <T>  supported types are contained in JavaDoc at class level
      * @return {@link ComplianceMatcher} to check against the {@link Rule}
      */
