@@ -59,6 +59,11 @@ public class Violations {
         return Collections.unmodifiableList(violations);
     }
 
+    /**
+     * Returns a {@link String} representation with a list of all collected {@link Violation} instances.
+     *
+     * @return {@link String} representation with a list of all collected {@link Violation} instances
+     */
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

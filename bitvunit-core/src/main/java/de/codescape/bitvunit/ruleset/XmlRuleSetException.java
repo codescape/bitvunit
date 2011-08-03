@@ -8,6 +8,13 @@ package de.codescape.bitvunit.ruleset;
  */
 public class XmlRuleSetException extends RuntimeException {
 
+    /**
+     * Constructs a new <code>XmlRuleSetException</code> with a given <code>message</code> and the underlying
+     * <code>cause</code> of that exception.
+     *
+     * @param message message that describes the exception
+     * @param cause   underlying cause for that exception
+     */
     public XmlRuleSetException(String message, Throwable cause) {
         super(message, cause);
     }

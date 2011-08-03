@@ -67,6 +67,11 @@ public class Violation {
         return htmlElement.getPage().getUrl();
     }
 
+    /**
+     * Returns the {@link String} representation of this {@link Violation}.
+     *
+     * @return {@link String} representation of this {@link Violation}
+     */
     @Override
     public String toString() {
         return "Violation of rule " + rule.getName() + "[url=" + getURL() + ", position=" + getPosition() + ", message=" + message + "]";

@@ -56,6 +56,11 @@ public class BasicRuleSet implements RuleSet {
         return violations;
     }
 
+    /**
+     * Returns the name of the rule set and a comma separated list of the names of all contained rules.
+     *
+     * @return name of the rule set and a comma separated list of the names of all contained rules
+     */
     @Override
     public String toString() {
         return getClass().getSimpleName() + "[" + (rules.isEmpty() ? "<Empty RuleSet>" : StringUtils.join(collectRuleNames(), ", ")) + "]";

@@ -16,6 +16,9 @@ import java.io.Writer;
  */
 public class TextReportWriter extends AbstractReportWriter {
 
+    /**
+     * Creates a new {@link TextReportWriter} that writes to console per default.
+     */
     public TextReportWriter() {
         setWriteToFile(false);
     }
