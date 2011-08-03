@@ -80,6 +80,7 @@ public class XmlRuleSetTest {
                     }
                 }
             }
+
             return subClasses;
         }
     }
