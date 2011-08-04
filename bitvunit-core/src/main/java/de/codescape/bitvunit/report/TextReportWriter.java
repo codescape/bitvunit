@@ -13,6 +13,7 @@ import java.io.Writer;
  * Implementation of {@link ReportWriter} that writes text only based reports.
  *
  * @author Stefan Glase
+ * @since 0.5
  */
 public class TextReportWriter extends AbstractReportWriter {
 
