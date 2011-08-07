@@ -16,4 +16,4 @@ target/
 .DS_Store
 
 # BitvUnit
-BitvUnitReport.txt
+BitvUnitReport.*
