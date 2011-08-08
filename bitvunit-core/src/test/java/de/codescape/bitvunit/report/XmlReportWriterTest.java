@@ -1,6 +1,5 @@
 package de.codescape.bitvunit.report;
 
-
 import org.custommonkey.xmlunit.XMLUnit;
 import org.custommonkey.xmlunit.XpathEngine;
 import org.custommonkey.xmlunit.exceptions.XpathException;
@@ -22,7 +21,6 @@ public class XmlReportWriterTest extends AbstractReportWriterTest {
 
         writer.writeReport(someHtmlPage(), someRuleSet(), someViolations());
 
-        assertNotNull(getConsoleOutput());
         validateOutput(getConsoleOutput());
     }
 
@@ -33,11 +31,12 @@ public class XmlReportWriterTest extends AbstractReportWriterTest {
 
         writer.writeReport(someHtmlPage(), someRuleSet(), someViolations());
 
-        assertNotNull(getFileOutput(writer.getOutputFilename()));
         validateOutput(getFileOutput(writer.getOutputFilename()));
     }
 
     private void validateOutput(String xmlString) throws SAXException, IOException, XpathException {
+        assertNotNull(xmlString);
+
         Document xml = XMLUnit.buildControlDocument(xmlString);
         XpathEngine xpath = XMLUnit.newXpathEngine();
 
