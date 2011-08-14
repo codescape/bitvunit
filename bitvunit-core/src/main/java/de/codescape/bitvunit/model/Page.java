@@ -28,7 +28,7 @@ public class Page {
      *
      * @param tagName HTML tag name
      * @param <T>     type of elements
-     * @return List of HTML elements
+     * @return list of HTML elements
      */
     @SuppressWarnings("unchecked")
     private <T extends HtmlElement> List<T> allByTagName(String tagName) {
