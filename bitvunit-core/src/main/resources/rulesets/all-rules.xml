@@ -5,6 +5,7 @@
     <description>Set of all rules currently supported by the framework.</description>
 
     <!-- Forms -->
+    <rule class="de.codescape.bitvunit.rule.forms.FieldsetContainsLegendRule"/>
     <rule class="de.codescape.bitvunit.rule.forms.LabelContainsTextRule"/>
     <rule class="de.codescape.bitvunit.rule.forms.LabelForInputFieldRule"/>
     <rule class="de.codescape.bitvunit.rule.forms.LabelForSelectTagRule"/>

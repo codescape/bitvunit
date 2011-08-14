@@ -274,4 +274,13 @@ public class Page {
         return allByTagName(HtmlAnchor.TAG_NAME);
     }
 
+    /**
+     * Returns all <code>&lt;fieldset /&gt;</code> tags as {@link HtmlFieldSet} instances.
+     *
+     * @return all <code>&lt;fieldset /&gt;</code> tags as {@link HtmlFieldSet} instances
+     */
+    public List<HtmlFieldSet> findAllFieldsetTags() {
+        return allByTagName(HtmlFieldSet.TAG_NAME);
+    }
+
 }
