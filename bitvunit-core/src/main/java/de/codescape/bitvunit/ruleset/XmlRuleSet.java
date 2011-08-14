@@ -16,7 +16,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
  */
 public class XmlRuleSet extends BasicRuleSet implements RuleSet {
 
-    private static DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+    private static final DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 
     /**
      * Constructs a new instance with the given location to the XML document.

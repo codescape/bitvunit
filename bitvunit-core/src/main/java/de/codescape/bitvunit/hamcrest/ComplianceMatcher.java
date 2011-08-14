@@ -28,7 +28,7 @@ import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
  */
 public class ComplianceMatcher<T> extends TypeSafeMatcher<T> {
 
-    private RuleSet ruleSet;
+    private final RuleSet ruleSet;
 
     /**
      * Creates a new {@link ComplianceMatcher} against the provided {@link RuleSet}.

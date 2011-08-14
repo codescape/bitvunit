@@ -8,7 +8,7 @@ package de.codescape.bitvunit.report;
  */
 public class ReportingContext {
 
-    private static ReportingContext instance = new ReportingContext();
+    private static final ReportingContext instance = new ReportingContext();
 
     private ReportWriter reportWriter;
 
