@@ -63,7 +63,7 @@ public class HtmlPageUtilTest {
         assertEquals(EXPECTED_PARAGRAPH, htmlPage.getElementById("greeting").getTextContent());
     }
 
-    private String pageAsString() throws Exception {
+    private String pageAsString() {
         return ClassPathResource.asString(FILE_NAME);
     }
 
