@@ -33,7 +33,7 @@ public class ComplianceMatcher<T> extends TypeSafeMatcher<T> {
     /**
      * Creates a new {@link ComplianceMatcher} against the provided {@link RuleSet}.
      *
-     * @param ruleSet
+     * @param ruleSet the {@link RuleSet} to be used
      */
     public ComplianceMatcher(RuleSet ruleSet) {
         this.ruleSet = ruleSet;
