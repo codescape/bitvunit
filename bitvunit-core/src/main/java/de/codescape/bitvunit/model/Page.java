@@ -264,4 +264,13 @@ public class Page {
         return allByTagName(HtmlObject.TAG_NAME);
     }
 
+    /**
+     * Returns all <code>&lt;a /&gt;</code> tags as {@link HtmlAnchor} instances.
+     *
+     * @return all <code>&lt;a /&gt;</code> tags as {@link HtmlAnchor} instances
+     */
+    public List<HtmlAnchor> findAllAnchorTags() {
+        return allByTagName(HtmlAnchor.TAG_NAME);
+    }
+
 }

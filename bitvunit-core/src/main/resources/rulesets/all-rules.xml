@@ -24,6 +24,9 @@
     <!-- Interactions -->
     <rule class="de.codescape.bitvunit.rule.interactions.AvoidMetaRefreshRule"/>
 
+    <!-- Links -->
+    <rule class="de.codescape.bitvunit.rule.links.AvoidTargetAttributeRule"/>
+
     <!-- Lists -->
     <rule class="de.codescape.bitvunit.rule.lists.DefinitionListContainsItemsRule"/>
     <rule class="de.codescape.bitvunit.rule.lists.OrderedListContainsListItemsRule"/>
