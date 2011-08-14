@@ -9,14 +9,14 @@ import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class AvoidTargetAttributeRuleTest {
+public class AnchorsWithoutTargetAttributeRuleTest {
 
-    private AvoidTargetAttributeRule rule = new AvoidTargetAttributeRule();
+    private AnchorsWithoutTargetAttributeRule rule = new AnchorsWithoutTargetAttributeRule();
 
     @Test
     public void ruleHasAName() throws Exception {
         assertNotNull(rule.getName());
-        assertEquals("AvoidTargetAttribute", rule.getName());
+        assertEquals("AnchorsWithoutTargetAttribute", rule.getName());
     }
 
     @Test

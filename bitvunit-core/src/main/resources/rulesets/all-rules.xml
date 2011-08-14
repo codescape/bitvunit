@@ -25,7 +25,7 @@
     <rule class="de.codescape.bitvunit.rule.interactions.AvoidMetaRefreshRule"/>
 
     <!-- Links -->
-    <rule class="de.codescape.bitvunit.rule.links.AvoidTargetAttributeRule"/>
+    <rule class="de.codescape.bitvunit.rule.links.AnchorsWithoutTargetAttributeRule"/>
 
     <!-- Lists -->
     <rule class="de.codescape.bitvunit.rule.lists.DefinitionListContainsItemsRule"/>
