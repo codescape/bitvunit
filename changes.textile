@@ -19,7 +19,7 @@ h2(release#r05). Release 0.5 (...)
 ** added XmlReportWriter to write XML based reports to console and files
 * improved JavaDoc
 ** added package documentation to all packages
-** added documentation von ReportingContext
+** added documentation of ReportingContext
 
 h2(release#r04). Release 0.4 (2011-07-23)
 
