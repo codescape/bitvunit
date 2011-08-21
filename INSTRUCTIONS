@@ -3,8 +3,8 @@ This file contains a collection of instructions to accomplish different tasks th
 Updating dependency versions
 ----------------------------
 1. Run `mvn versions:display-dependency-updates` to produce a list of all dependencies where a newer versions exists.
-2. Update all POMs to use newer dependency versions where accurate. Release candidates and milestone releases should be used carefully.
-3. Run `mvn verify` to make sure everything works fine with the newer versions of the updated dependencies.
+2. Update POMs to use new dependency versions where accurate. Release candidates and milestone releases should be used carefully.
+3. Run `mvn verify` to make sure everything works fine with the new versions of the dependencies.
 
 
 Releasing a new version
