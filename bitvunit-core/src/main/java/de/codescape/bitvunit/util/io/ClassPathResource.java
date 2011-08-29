@@ -71,7 +71,7 @@ public class ClassPathResource {
      * @return {@link InputStream} to read from the file
      */
     private InputStream asInputStream() {
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(path);
+        InputStream inputStream = ClassLoader.getSystemClassLoader().getResourceAsStream(path);
         if (inputStream == null) {
             throw new RuntimeException("File '" + path + "' was not found.");
         }
