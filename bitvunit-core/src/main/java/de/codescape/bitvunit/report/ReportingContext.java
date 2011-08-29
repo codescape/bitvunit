@@ -1,5 +1,7 @@
 package de.codescape.bitvunit.report;
 
+import de.codescape.bitvunit.util.Assert;
+
 /**
  * Singleton class holding the configured {@link ReportWriter} to write out reports for any accessibility check that is
  * executed by the framework.
@@ -44,6 +46,7 @@ public class ReportingContext {
      * @param reportWriter {@link ReportWriter} to be used
      */
     public static void setReportWriter(ReportWriter reportWriter) {
+        Assert.notNull(reportWriter);
         getInstance().reportWriter = reportWriter;
     }
 
