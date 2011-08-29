@@ -5,8 +5,8 @@ import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
-import static de.codescape.bitvunit.util.HtmlElementUtil.hasNonEmptyAttribute;
-import static de.codescape.bitvunit.util.HtmlLabelUtil.containsLabelForId;
+import static de.codescape.bitvunit.util.html.HtmlElementUtil.hasNonEmptyAttribute;
+import static de.codescape.bitvunit.util.html.HtmlLabelUtil.containsLabelForId;
 
 /**
  * LabelForTextareaRule ensures that every <code>&lt;textarea /&gt;</code> within the given HTML document is associated

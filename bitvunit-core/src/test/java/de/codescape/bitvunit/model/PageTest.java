@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
+import static de.codescape.bitvunit.util.html.HtmlPageUtil.toHtmlPage;
 import static org.junit.Assert.*;
 
 public class PageTest {

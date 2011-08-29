@@ -15,7 +15,7 @@ import java.io.FileReader;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
-import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
+import static de.codescape.bitvunit.util.html.HtmlPageUtil.toHtmlPage;
 
 /**
  * Abstract test class for testing {@link ReportWriter} implementations capturing the console and file output.

@@ -1,4 +1,4 @@
-package de.codescape.bitvunit.util;
+package de.codescape.bitvunit.util.html;
 
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 

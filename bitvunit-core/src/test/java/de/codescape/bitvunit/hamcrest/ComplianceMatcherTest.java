@@ -17,7 +17,7 @@ import java.io.StringReader;
 import java.net.URL;
 
 import static de.codescape.bitvunit.hamcrest.ComplianceMatcher.compliantTo;
-import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
+import static de.codescape.bitvunit.util.html.HtmlPageUtil.toHtmlPage;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.*;

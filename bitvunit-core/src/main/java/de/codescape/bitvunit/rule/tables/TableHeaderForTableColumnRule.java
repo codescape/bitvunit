@@ -7,8 +7,8 @@ import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
-import static de.codescape.bitvunit.util.HtmlTableCellUtil.isDataCell;
-import static de.codescape.bitvunit.util.HtmlTableCellUtil.isHeaderCell;
+import static de.codescape.bitvunit.util.html.HtmlTableCellUtil.isDataCell;
+import static de.codescape.bitvunit.util.html.HtmlTableCellUtil.isHeaderCell;
 
 /**
  * TableHeaderForTableColumnRule ensures that every <code>&lt;table /&gt;</code> within the given HTML document has

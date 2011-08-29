@@ -1,4 +1,4 @@
-package de.codescape.bitvunit.util;
+package de.codescape.bitvunit.util.html;
 
 import com.gargoylesoftware.htmlunit.StringWebResponse;
 import com.gargoylesoftware.htmlunit.WebClient;

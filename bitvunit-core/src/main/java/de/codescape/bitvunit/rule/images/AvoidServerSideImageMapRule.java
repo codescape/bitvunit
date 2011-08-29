@@ -5,7 +5,7 @@ import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
-import static de.codescape.bitvunit.util.HtmlElementUtil.hasAttribute;
+import static de.codescape.bitvunit.util.html.HtmlElementUtil.hasAttribute;
 
 /**
  * AvoidServerSideImageMapRule ensures that there are no server side image maps within the given HTML document because

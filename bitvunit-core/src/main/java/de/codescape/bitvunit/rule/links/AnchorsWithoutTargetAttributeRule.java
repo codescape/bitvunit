@@ -5,7 +5,7 @@ import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
-import static de.codescape.bitvunit.util.HtmlElementUtil.hasAttribute;
+import static de.codescape.bitvunit.util.html.HtmlElementUtil.hasAttribute;
 
 /**
  * AnchorsWithoutTargetAttributeRule ensures that no anchor <code>&lt;a /&gt;</code> tag within the given HTML document

@@ -5,7 +5,7 @@ import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
-import static de.codescape.bitvunit.util.HtmlElementUtil.hasNonEmptyAttribute;
+import static de.codescape.bitvunit.util.html.HtmlElementUtil.hasNonEmptyAttribute;
 
 /**
  * TitleForAcronymTagRule ensures that every acronym that is marked through the <code>&lt;acronym /&gt;</code> element

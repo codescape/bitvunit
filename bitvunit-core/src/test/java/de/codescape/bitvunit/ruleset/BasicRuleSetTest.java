@@ -9,7 +9,7 @@ import org.junit.Test;
 
 import static de.codescape.bitvunit.test.Assertions.assertRules;
 import static de.codescape.bitvunit.test.Assertions.assertViolations;
-import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
+import static de.codescape.bitvunit.util.html.HtmlPageUtil.toHtmlPage;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.mock;

@@ -8,7 +8,7 @@ import org.hamcrest.Factory;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
 
-import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
+import static de.codescape.bitvunit.util.html.HtmlPageUtil.toHtmlPage;
 
 /**
  * Hamcrest matcher to be used to run accessibility checks against a single {@link Rule} or a {@link RuleSet}.
@@ -19,11 +19,11 @@ import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
  * assertThat(supportedType, is(compliantTo(rule)));
  * </code></pre>
  * <p/>
- * Have a look at {@link de.codescape.bitvunit.util.HtmlPageUtil} methods for supported types.
+ * Have a look at {@link de.codescape.bitvunit.util.html.HtmlPageUtil} methods for supported types.
  *
  * @param <T> one of the supported types
  * @author Stefan Glase
- * @see de.codescape.bitvunit.util.HtmlPageUtil
+ * @see de.codescape.bitvunit.util.html.HtmlPageUtil
  * @since 0.4
  */
 public class ComplianceMatcher<T> extends TypeSafeMatcher<T> {
