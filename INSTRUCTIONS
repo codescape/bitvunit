@@ -6,7 +6,6 @@ Updating dependency versions
 2. Update POMs to use new dependency versions where accurate. Release candidates and milestone releases should be used carefully.
 3. Run `mvn verify` to make sure everything works fine with the new versions of the dependencies.
 
-
 Releasing a new version
 -----------------------
 To be documented on next release...
