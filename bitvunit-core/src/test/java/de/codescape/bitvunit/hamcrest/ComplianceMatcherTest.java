@@ -152,7 +152,7 @@ public class ComplianceMatcherTest {
     }
 
     private URL someURL() {
-        return getClass().getClassLoader().getResource("samplePage.html");
+        return getClass().getClassLoader().getResource("sample-page.html");
     }
 
     private InputStream someInputStream() {

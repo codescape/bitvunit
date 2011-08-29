@@ -1,7 +1,6 @@
 package de.codescape.bitvunit.util.html;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import de.codescape.bitvunit.util.html.HtmlPageUtil;
 import de.codescape.bitvunit.util.io.ClassPathResource;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
@@ -17,7 +16,7 @@ import static org.junit.Assert.assertNotNull;
 public class HtmlPageUtilTest {
 
     /* path to the file that is used in this test */
-    private static final String FILE_NAME = "samplePage.html";
+    private static final String FILE_NAME = "sample-page.html";
 
     /* expected title of the HTML page */
     private static final String EXPECTED_TITLE = "Hello World - BitvUnit";

@@ -7,7 +7,7 @@ import static org.junit.Assert.assertNotNull;
 public class ClassPathResourceTest {
 
     private static final String MISSING_RESOURCE = "missing-resource.txt";
-    private static final String EXISTING_RESOURCE = "samplePage.html";
+    private static final String EXISTING_RESOURCE = "sample-page.html";
 
     @Test(expected = RuntimeException.class)
     public void asInputStreamWithMissingResourceThrowsException() throws Exception {
