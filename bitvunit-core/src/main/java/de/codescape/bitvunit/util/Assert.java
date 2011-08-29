@@ -24,7 +24,7 @@ public final class Assert {
 
     /**
      * Verifies that the given object is not <code>null</code> and throws an <code>IllegalArgumentException</code> with
-     * a default message otherwise.
+     * the given message otherwise.
      *
      * @param message message that should be included in case of an error
      * @param object  object that should be checked
