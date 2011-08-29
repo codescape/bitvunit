@@ -6,6 +6,8 @@ import de.codescape.bitvunit.rule.Violation;
 import de.codescape.bitvunit.rule.Violations;
 import de.codescape.bitvunit.ruleset.RuleSet;
 import org.apache.commons.io.IOUtils;
+import org.hamcrest.Description;
+import org.hamcrest.StringDescription;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,8 +20,7 @@ import static de.codescape.bitvunit.hamcrest.ComplianceMatcher.compliantTo;
 import static de.codescape.bitvunit.util.HtmlPageUtil.toHtmlPage;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -129,6 +130,13 @@ public class ComplianceMatcherTest {
             assertThat(new Object(), is(not(compliantTo(unsatisfiedRule))));
             fail();
         } catch (UnsupportedOperationException e) { /* should fail */ }
+    }
+
+    @Test
+    public void describeToContainsTheRuleSetThatIsUsed() throws Exception {
+        Description description = new StringDescription();
+        compliantTo(satisfiedRuleSet).describeTo(description);
+        assertEquals("compliant to " + satisfiedRuleSet.toString(), description.toString());
     }
 
     private String someString() {
