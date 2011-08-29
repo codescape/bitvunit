@@ -1,7 +1,7 @@
 package de.codescape.bitvunit.util;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import de.codescape.bitvunit.util.file.ClassPathResource;
+import de.codescape.bitvunit.util.io.ClassPathResource;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 

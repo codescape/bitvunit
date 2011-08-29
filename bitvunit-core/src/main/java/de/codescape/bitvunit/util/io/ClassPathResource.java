@@ -1,4 +1,4 @@
-package de.codescape.bitvunit.util.file;
+package de.codescape.bitvunit.util.io;
 
 import org.apache.commons.io.IOUtils;
 

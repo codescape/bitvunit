@@ -3,7 +3,7 @@ package de.codescape.bitvunit.report;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.rule.Violations;
 import de.codescape.bitvunit.ruleset.RuleSet;
-import de.codescape.bitvunit.util.file.ClassPathResource;
+import de.codescape.bitvunit.util.io.ClassPathResource;
 
 import java.io.*;
 import java.text.DateFormat;

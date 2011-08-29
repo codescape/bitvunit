@@ -1,7 +1,7 @@
 package de.codescape.bitvunit.ruleset;
 
 import de.codescape.bitvunit.rule.Rule;
-import de.codescape.bitvunit.util.file.ClassPathResource;
+import de.codescape.bitvunit.util.io.ClassPathResource;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
