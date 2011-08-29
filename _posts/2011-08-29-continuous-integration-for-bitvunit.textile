@@ -1,0 +1,12 @@
+---
+layout: post
+title: Continuous Integration for BitvUnit
+---
+
+The public BitvUnit repository hosted at "GitHub":GitHub is now being watched and under continuous integration by a free Jenkins instance sponsored by the "CloudBees":CloudBees support for open source projects! Check out the results of the first (failed) run at "https://codescape.ci.cloudbees.com":BitvUnitCI.
+
+p{text-align:center}. "!/images/cloudbees.png!(Build and tested on CloudBees)":CloudBees
+
+[GitHub]https://github.com/codescape/bitvunit
+[CloudBees]http://www.cloudbees.com
+[BitvUnitCI]https://codescape.ci.cloudbees.com/
