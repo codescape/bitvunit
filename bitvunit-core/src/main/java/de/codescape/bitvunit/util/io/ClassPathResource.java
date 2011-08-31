@@ -15,6 +15,8 @@ public class ClassPathResource {
 
     private final String path;
 
+    private final ClassLoader classLoader;
+
     /**
      * Constructs a new ClassPathResource and checks that that given path to the resource or file is not
      * <code>null</code> or an empty String.
@@ -30,6 +32,27 @@ public class ClassPathResource {
         } else {
             this.path = path;
         }
+        classLoader = getDefaultClassLoader();
+    }
+
+    /**
+     * Returns the default {@link ClassLoader} to resolve resources. First the thread context {@link ClassLoader} will
+     * be accessed and returns but as a fallback the {@link ClassLoader} that loaded the {@link ClassPathResource} class
+     * will be used.
+     *
+     * @return default{@link ClassLoader} to resolve resources
+     */
+    private ClassLoader getDefaultClassLoader() {
+        ClassLoader classLoader = null;
+        try {
+            classLoader = Thread.currentThread().getContextClassLoader();
+        } catch (Throwable ex) {
+            /* okay, so we are falling back to the system class loader...  */
+        }
+        if (classLoader == null) {
+            classLoader = ClassPathResource.class.getClassLoader();
+        }
+        return classLoader;
     }
 
     /**
@@ -71,7 +94,7 @@ public class ClassPathResource {
      * @return {@link InputStream} to read from the file
      */
     private InputStream asInputStream() {
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(path);
+        InputStream inputStream = classLoader.getResourceAsStream(path);
         if (inputStream == null) {
             throw new RuntimeException("File '" + path + "' was not found.");
         }
