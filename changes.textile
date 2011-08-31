@@ -24,6 +24,9 @@ h2(release#r05). Release 0.5 (...)
 * improved JavaDoc
 ** added package documentation to all packages
 ** added documentation of ReportingContext
+* updated dependencies
+** now using htmlunit 2.9
+** now using junit 4.9
 
 h2(release#r04). Release 0.4 (2011-07-23)
 
