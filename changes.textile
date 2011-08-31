@@ -17,6 +17,9 @@ h2(release#r05). Release 0.5 (...)
 ** renamed ConsoleReportWriter to TextReportWriter to reflect that it can also be used to write to files
 ** added functionality to print out the framework version in reports to AbstractReportWriter
 ** added XmlReportWriter to write XML based reports to console and files
+* fixed maven problems
+** due to wrong configuration for resource filtering all-rules.xml ruleset was not provided in the jar
+** dependency versions are now defined only in one place (in the bitvunit-project POM)
 * improved JavaDoc
 ** added package documentation to all packages
 ** added documentation of ReportingContext
