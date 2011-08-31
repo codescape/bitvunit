@@ -37,8 +37,7 @@ public class ClassPathResource {
 
     /**
      * Returns the default {@link ClassLoader} to resolve resources. First the thread context {@link ClassLoader} will
-     * be accessed and returns but as a fallback the {@link ClassLoader} that loaded the {@link ClassPathResource} class
-     * will be used.
+     * be tried but as a fallback the {@link ClassLoader} that loaded the {@link ClassPathResource} class will be used.
      *
      * @return default{@link ClassLoader} to resolve resources
      */
@@ -47,7 +46,7 @@ public class ClassPathResource {
         try {
             classLoader = Thread.currentThread().getContextClassLoader();
         } catch (Throwable ex) {
-            /* okay, so we are falling back to the system class loader...  */
+            /* okay, so we are falling back to the system ClassLoader... */
         }
         if (classLoader == null) {
             classLoader = ClassPathResource.class.getClassLoader();
