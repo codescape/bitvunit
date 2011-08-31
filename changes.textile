@@ -20,6 +20,7 @@ h2(release#r05). Release 0.5 (...)
 * fixed maven problems
 ** due to wrong configuration for resource filtering all-rules.xml ruleset was not provided in the jar
 ** dependency versions are now defined only in one place (in the bitvunit-project POM)
+* added sample project bitvunit-demo to showcase the usage of the framework
 * improved JavaDoc
 ** added package documentation to all packages
 ** added documentation of ReportingContext
