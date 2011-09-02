@@ -53,7 +53,7 @@ public final class Assert {
      * @param string  string that should be checked
      */
     public static void notEmpty(String message, String string) {
-        if (string == null || string.isEmpty()) {
+        if (string == null || string.trim().isEmpty()) {
             throw new IllegalArgumentException(message);
         }
     }
