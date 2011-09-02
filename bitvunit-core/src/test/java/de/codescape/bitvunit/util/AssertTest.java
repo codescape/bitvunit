@@ -31,4 +31,9 @@ public class AssertTest {
         Assert.notEmpty("    ");
     }
 
+    @Test
+    public void notEmptyForNonEmptyTestThrowsNoException() throws Exception {
+        Assert.notEmpty("Hello World");
+    }
+
 }
