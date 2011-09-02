@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.ruleset;
 
 import de.codescape.bitvunit.rule.Rule;
+import de.codescape.bitvunit.util.Assert;
 import de.codescape.bitvunit.util.io.ClassPathResource;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -25,6 +26,7 @@ public class XmlRuleSet extends BasicRuleSet implements RuleSet {
      */
     public XmlRuleSet(String location) {
         super();
+        Assert.notNull("Location to the XML document is required.", location);
         addRulesFromDocument(buildDocument(location));
     }
 

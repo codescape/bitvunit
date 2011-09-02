@@ -1,5 +1,6 @@
 package de.codescape.bitvunit.util.io;
 
+import de.codescape.bitvunit.util.Assert;
 import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
@@ -24,9 +25,7 @@ public class ClassPathResource {
      * @param path the path to the resource or file
      */
     private ClassPathResource(String path) {
-        if (path == null || path.trim().isEmpty()) {
-            throw new IllegalArgumentException("Given path must not be null or empty.");
-        }
+        Assert.notEmpty("Given path must not be null or empty.", path);
         if (path.startsWith("/")) {
             this.path = path.substring(1);
         } else {

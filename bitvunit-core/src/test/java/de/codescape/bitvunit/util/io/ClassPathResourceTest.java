@@ -29,12 +29,12 @@ public class ClassPathResourceTest {
         assertNotNull(ClassPathResource.asString(EXISTING_RESOURCE));
     }
 
-    @Test(expected = RuntimeException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void throwsExceptionForMissingPath() throws Exception {
         ClassPathResource.asString(null);
     }
 
-    @Test(expected = RuntimeException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void throwsExceptionForEmptyPath() throws Exception {
         ClassPathResource.asString("");
     }

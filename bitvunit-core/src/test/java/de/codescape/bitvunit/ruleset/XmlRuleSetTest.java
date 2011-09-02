@@ -42,6 +42,11 @@ public class XmlRuleSetTest {
         new XmlRuleSet("/rulesets/missing-ruleset.xml");
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void noLocationLeadsToIllegalArgumentException() throws Exception {
+        new XmlRuleSet(null);
+    }
+
     /**
      * Utility class to find all implementing sub classes of a given class in a given package. It is used to find all
      * {@link Rule} implementations in this test class.

@@ -46,7 +46,7 @@ public class ReportingContext {
      * @param reportWriter {@link ReportWriter} to be used
      */
     public static void setReportWriter(ReportWriter reportWriter) {
-        Assert.notNull(reportWriter);
+        Assert.notNull("ReportWriter must not be null.", reportWriter);
         getInstance().reportWriter = reportWriter;
     }
 
