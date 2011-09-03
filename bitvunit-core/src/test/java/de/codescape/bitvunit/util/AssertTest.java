@@ -16,6 +16,11 @@ public class AssertTest {
         Assert.notNull(1);
     }
 
+    @Test
+    public void notEmptyForNonEmptyStringThrowsNoException() throws Exception {
+        Assert.notEmpty("Hello World");
+    }
+
     @Test(expected = IllegalArgumentException.class)
     public void notEmptyForNullThrowsIllegalArgumentException() throws Exception {
         Assert.notEmpty(null);
@@ -29,11 +34,6 @@ public class AssertTest {
     @Test(expected = IllegalArgumentException.class)
     public void notEmptyForWhitespacesOnlyThrowsIllegalArgumentException() throws Exception {
         Assert.notEmpty("    ");
-    }
-
-    @Test
-    public void notEmptyForNonEmptyTestThrowsNoException() throws Exception {
-        Assert.notEmpty("Hello World");
     }
 
 }
