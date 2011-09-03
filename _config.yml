@@ -1,11 +1,10 @@
-# urls generated for permalinks
-permalink:  /blog/:year/:month/:day/:title
-# regnerate when files are changed
-auto:       true
-# code highlight with pygments
-pyments:    true
-# start server hosting _site directory
-server:     true
+# jekyll configuration
+# --------------------
+auto: true
+server: true
+permalink: /blog/:year/:month/:day/:title
+pygments: true
 
 # custom configuration
+# --------------------
 url: http://bitvunit.codescape.de
