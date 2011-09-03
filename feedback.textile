@@ -3,6 +3,8 @@ layout: default
 title: Feedback
 ---
 
+You are welcome to leave some feedback, questions or comments here.
+
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'bitvunit';
