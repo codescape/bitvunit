@@ -7,7 +7,7 @@ Below you can find a list of all changes applied to the framework through its di
 
 Hide and show details to releases in clicking on the release you are interested in:
 
-h2(release#r05). Release 0.5 (...)
+h2(release#r05). Release 0.5 (2011-09-03)
 
 * added new rules
 ** AnchorsWithoutTargetAttributeRule

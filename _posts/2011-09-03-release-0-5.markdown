@@ -1,0 +1,8 @@
+---
+layout: post
+title: Releasing BitvUnit 0.5 - Reporting Improvements, Library Updates, Bugfixes
+---
+
+_More information to be added soon._
+
+See the "Change Log":/changes.html#r05 for further details.
