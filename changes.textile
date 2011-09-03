@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Changes
+permalink: changes/index.html
 ---
 
 Below you can find a list of all changes applied to the framework through its different releases. This list will be updated whenever there are new functions or improvements being introduced or known bugs corrected.

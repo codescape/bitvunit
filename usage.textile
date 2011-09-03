@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Usage
+permalink: usage/index.html
 ---
 
 Find out how to use the BitvUnit framework to automate your checks.

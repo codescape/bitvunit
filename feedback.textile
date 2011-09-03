@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Feedback
+permalink: feedback/index.html
 ---
 
 You are welcome to leave some feedback, questions or comments here.

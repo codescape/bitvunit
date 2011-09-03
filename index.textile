@@ -24,10 +24,10 @@ If you want learn more about the framework, these resources might be interesting
     The framework's "Source Code Repository":https://github.com/codescape/bitvunit is hosted on GitHub and can be accessed easily.
   </dd>
 
-  <dt>"!images/icons/blog.png!(Blog)":http://bitvunit.codescape.de/blog.html</dt>
+  <dt>"!images/icons/blog.png!(Blog)":/blog</dt>
   <dd>
     <h3>Blog</h3>
-    Stay informed about the BitvUnit framework with the help of our "Blog":blog.html from time to time.
+    Stay informed about the BitvUnit framework with the help of our "Blog":/blog from time to time.
   </dd>
 
   <dt>"!images/icons/documentation.png!(Documentation)":http://bitvunit.codescape.de</dt>
@@ -45,4 +45,4 @@ h2. Recent Blog Posts
   {% endfor %}
 </ul>
 
-Older posts can be found in our "Blog":blog.html archive.
+Older posts can be found in our "Blog":/blog archive.

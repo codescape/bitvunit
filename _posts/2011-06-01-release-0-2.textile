@@ -75,5 +75,5 @@ public class UsingHamcrestMatchersTest {
 } 
 {% endhighlight %}
 
-See the "Change Log":/changes.html#r02 for further details.
+See the "Change Log":/changes/#r02 for further details.
 

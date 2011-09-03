@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Contribute
+permalink: contribute/index.html
 ---
 
 There are many ways to support this project. Here is an incomplete list of ideas on how to contribute:
@@ -13,6 +14,6 @@ There are many ways to support this project. Here is an incomplete list of ideas
 h2. Contact
 
 If you want to get in contact with me please choose from the following options:
-* Forum: "Feedback":/feedback.html
+* Forum: "Feedback":/feedback
 * Twitter: "caseaplace":http://twitter.com/#!/caseaplace
 * E-Mail: "stefan.glase@googlemail.com":mailto:stefan.glase@googlemail.com

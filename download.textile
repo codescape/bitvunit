@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Download
+permalink: download/index.html
 ---
 
 Please choose your preferred way to download BitvUnit.

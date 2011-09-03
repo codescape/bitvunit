@@ -5,4 +5,4 @@ title: Releasing BitvUnit 0.5 - Reporting Improvements, Library Updates, Bugfixe
 
 _More information to be added soon._
 
-See the "Change Log":/changes.html#r05 for further details.
+See the "Change Log":/changes/#r05 for further details.

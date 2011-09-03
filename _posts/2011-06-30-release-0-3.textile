@@ -21,4 +21,4 @@ This release is the first release that is also available from "Maven Central Rep
     </dependency>
 {% endhighlight %}
 
-See the "Change Log":/changes.html#r03 for further details.
+See the "Change Log":/changes/#r03 for further details.

@@ -58,7 +58,7 @@ Rules checked:
 
 The "ConsoleReportWriter":ConsoleReportWriter currently is the only "ReportWriter":ReportWriter implementation that is shipped with release 0.4.0 of the framework but next versions will support more types of reports.
 
-See the "Change Log":/changes.html#r04 for further details.
+See the "Change Log":/changes/#r04 for further details.
 
 [AllRulesXml]https://github.com/codescape/bitvunit/blob/v0.4.0/bitvunit-core/src/main/resources/rulesets/all-rules.xml
 [ComplianceMatcher]https://github.com/codescape/bitvunit/blob/v0.4.0/bitvunit-core/src/main/java/de/codescape/bitvunit/hamcrest/ComplianceMatcher.java

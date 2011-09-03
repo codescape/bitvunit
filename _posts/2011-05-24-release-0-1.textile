@@ -28,4 +28,4 @@ public class CheckSingleRuleTest {
 }
 {% endhighlight %}
 
-See the "Change Log":/changes.html#r01 for further details.
+See the "Change Log":/changes/#r01 for further details.
