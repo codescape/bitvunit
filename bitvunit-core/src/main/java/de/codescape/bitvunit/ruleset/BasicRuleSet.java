@@ -28,7 +28,6 @@ public class BasicRuleSet implements RuleSet {
      * @param rules optional list of {@link Rule} instances
      */
     public BasicRuleSet(Rule... rules) {
-        super();
         this.rules.addAll(Arrays.asList(rules));
     }
 
