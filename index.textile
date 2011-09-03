@@ -35,6 +35,18 @@ If you want learn more about the framework, these resources might be interesting
     <h3>Documentation</h3>
     The page you are currently viewing holds all relevant "Documentation":/ to the framework.
   </dd>
+
+  <dt>"!images/icons/feedback.png!(Feedback)":/feedback</dt>
+  <dd>
+    <h3>Feedback</h3>
+    For feedback, questions or comments please use the "Feedback":/feedback page.
+  </dd>
+
+  <dt>"!images/icons/continuous-integration.png!(Continuous Integration)":https://codescape.ci.cloudbees.com</dt>
+  <dd>
+    <h3>Continuous Integration</h3>
+    Changes of the framework are checked by a "Continuous Integration":https://codescape.ci.cloudbees.com server.
+  </dd>
 </dl>
 
 h2. Recent Blog Posts
