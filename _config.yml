@@ -6,3 +6,6 @@ auto:       true
 pyments:    true
 # start server hosting _site directory
 server:     true
+
+# custom configuration
+url: http://bitvunit.codescape.de
