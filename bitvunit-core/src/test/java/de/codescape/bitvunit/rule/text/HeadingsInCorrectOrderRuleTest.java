@@ -9,14 +9,14 @@ import static de.codescape.bitvunit.util.html.HtmlPageUtil.toHtmlPage;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class HeadersInCorrectOrderRuleTest {
+public class HeadingsInCorrectOrderRuleTest {
 
-    private HeadersInCorrectOrderRule rule = new HeadersInCorrectOrderRule();
+    private HeadingsInCorrectOrderRule rule = new HeadingsInCorrectOrderRule();
 
     @Test
     public void ruleHasAName() throws Exception {
         assertNotNull(rule.getName());
-        assertEquals("HeadersInCorrectOrder", rule.getName());
+        assertEquals("HeadingsInCorrectOrder", rule.getName());
     }
 
     @Test
