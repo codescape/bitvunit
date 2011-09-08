@@ -11,6 +11,7 @@ Hide and show details to releases in clicking on the release you are interested 
 h2(release#r06). Release 0.6 (_near future_)
 
 * added new rules
+** AlternativeTextForImageButtonRule
 ** HeadingContainsTextRule
 ** TitleForPageRule
 * renamed HeadersInCorrectOrderRule to HeadingsInCorrectOrderRule 
