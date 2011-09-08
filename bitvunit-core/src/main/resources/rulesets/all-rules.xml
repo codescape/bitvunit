@@ -38,6 +38,7 @@
     <rule class="de.codescape.bitvunit.rule.media.AlternativeTextForObjectRule"/>
 
     <!-- Page -->
+    <rule class="de.codescape.bitvunit.rule.page.TitleForPageRule"/>
     <rule class="de.codescape.bitvunit.rule.page.LanguageForHtmlTagRule"/>
 
     <!-- Tables -->

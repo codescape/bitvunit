@@ -283,4 +283,8 @@ public class Page {
         return allByTagName(HtmlFieldSet.TAG_NAME);
     }
 
+    public HtmlTitle findTitleTag() {
+        return (HtmlTitle)htmlPage.getFirstByXPath("/html/head/title[1]");
+    }
+
 }
