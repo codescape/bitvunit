@@ -10,6 +10,8 @@ Hide and show details to releases in clicking on the release you are interested 
 
 h2(release#r06). Release 0.6 (_near future_)
 
+* added new rules
+** TitleForPageRule
 * added a Groovy driven wizard to add new rules to the framework
 
 h2(release#r05). Release 0.5 (2011-09-03)
