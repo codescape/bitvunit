@@ -1,4 +1,4 @@
-package de.codescape.bitvunit.rule.text;
+package de.codescape.bitvunit.rule.page;
 
 import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;

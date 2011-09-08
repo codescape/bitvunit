@@ -1,4 +1,4 @@
-package de.codescape.bitvunit.rule.text;
+package de.codescape.bitvunit.rule.page;
 
 import com.gargoylesoftware.htmlunit.html.HtmlHtml;
 import de.codescape.bitvunit.model.Page;

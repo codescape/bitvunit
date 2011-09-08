@@ -37,6 +37,9 @@
     <rule class="de.codescape.bitvunit.rule.media.AlternativeTextForAppletRule"/>
     <rule class="de.codescape.bitvunit.rule.media.AlternativeTextForObjectRule"/>
 
+    <!-- Page -->
+    <rule class="de.codescape.bitvunit.rule.page.LanguageForHtmlTagRule"/>
+
     <!-- Tables -->
     <rule class="de.codescape.bitvunit.rule.tables.CaptionTextForTableRule"/>
     <rule class="de.codescape.bitvunit.rule.tables.TableHeaderContainsTextRule"/>
@@ -48,7 +51,6 @@
     <rule class="de.codescape.bitvunit.rule.text.AvoidItalicTagRule"/>
     <rule class="de.codescape.bitvunit.rule.text.AvoidMarqueeTextRule"/>
     <rule class="de.codescape.bitvunit.rule.text.HeadersInCorrectOrderRule"/>
-    <rule class="de.codescape.bitvunit.rule.text.LanguageForHtmlTagRule"/>
     <rule class="de.codescape.bitvunit.rule.text.TitleForAbbreviationTagRule"/>
     <rule class="de.codescape.bitvunit.rule.text.TitleForAcronymTagRule"/>
 
