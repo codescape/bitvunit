@@ -283,8 +283,13 @@ public class Page {
         return allByTagName(HtmlFieldSet.TAG_NAME);
     }
 
+    /**
+     * Returns the first <code>&lt;title /&gt;</code> tag as {@link HtmlTitle} instance.
+     *
+     * @return the first <code>&lt;title /&gt;</code> tag as {@link HtmlTitle} instance
+     */
     public HtmlTitle findTitleTag() {
-        return (HtmlTitle)htmlPage.getFirstByXPath("/html/head/title[1]");
+        return (HtmlTitle) htmlPage.getFirstByXPath("/html/head/title[1]");
     }
 
 }
