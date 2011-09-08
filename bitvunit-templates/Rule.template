@@ -1,0 +1,27 @@
+package de.codescape.bitvunit.rule.${category};
+
+import de.codescape.bitvunit.model.Page;
+import de.codescape.bitvunit.rule.AbstractRule;
+import de.codescape.bitvunit.rule.Violations;
+
+/**
+ * TODO add javadoc for ${name}
+ *
+ * @author ${author}
+ * @since ${version}
+ */
+public class ${name} extends AbstractRule {
+
+    private static final String RULE_NAME = "${name - 'Rule'}";
+    
+    @Override
+    public String getName() {
+        return RULE_NAME;
+    }
+    
+    @Override
+    protected void applyTo(Page page, Violations violations) {
+        // TODO provide rule implementation
+    }
+
+}
