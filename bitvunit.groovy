@@ -1,3 +1,4 @@
+#!/usr/bin/env groovy
 /**
  * Script that helps you to create new rules from the scratch. Run the script without any
  * parameters to see the list of supported commands.
