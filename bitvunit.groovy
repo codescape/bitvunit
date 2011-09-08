@@ -31,8 +31,18 @@ if (args[0] == 'create-rule') {
     def testFile = createTest(rule)
     println "Created test at ${testFile}"
 
-    // TODO add new rule to './bitvunit-core/src/main/resources/rulesets/all-rules.xml'
+    addToRuleSet(rule)
+    println "Added new rule to ruleset all-rules.xml"
+
     println 'Done. Happy Coding!'
+}
+
+def addToRuleSet(rule) {
+    def ruleSetFile = new File('./bitvunit-core/src/main/resources/rulesets/all-rules.xml')
+    def content = ruleSetFile.text
+    def categoryString = "<!-- ${rule.category.capitalize()} -->"
+    def ruleNode = "<rule class=\"de.codescape.bitvunit.rule.${rule.category}.${rule.name}\"/>"
+    ruleSetFile.text = content.replace(categoryString, "${categoryString}\n    ${ruleNode}")
 }
 
 def createRule(rule) {
