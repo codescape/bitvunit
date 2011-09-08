@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 /**
- * Script that helps you to create new rules from the scratch. Run the script without any
- * parameters to see the list of supported commands.
+ * Script that helps you to create new rules from the scratch. Run the script without any parameters to see the list of
+ * supported commands.
  *
  * @author Stefan Glase
  * @since 0.6
@@ -59,7 +59,7 @@ def createTest(rule) {
 }
 
 def createFromTemplate(rule, target, templateName) {
-    def file = new File(target)
+    def file = new File(target as String)
     file.createNewFile()
 
     def template = new File("./bitvunit-templates/$templateName").text
@@ -69,7 +69,7 @@ def createFromTemplate(rule, target, templateName) {
 }
 
 def getUserInput(validation = { true }) {
-    def value
+    def value = ''
     while (!value || !validation(value)) {
         value = new Scanner(System.in).nextLine()
         if (!validation(value)) {
@@ -81,12 +81,12 @@ def getUserInput(validation = { true }) {
 
 def getAvailableCategories() {
     def categories = []
-    new File('./bitvunit-core/src/main/java/de/codescape/bitvunit/rule/').eachDir() { dir->
+    new File('./bitvunit-core/src/main/java/de/codescape/bitvunit/rule/').eachDir() { dir ->
         categories << dir.name
     }
     categories
 }
 
 def getNextBitvUnitVersion() {
-    new XmlSlurper().parse(new File('./pom.xml')).version.text().substring(0,3)
+    new XmlSlurper().parse(new File('./pom.xml')).version.text().substring(0, 3)
 }
