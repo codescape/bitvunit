@@ -3,6 +3,54 @@ layout: post
 title: Releasing BitvUnit 0.5 - Reporting Improvements, Library Updates, Bugfixes
 ---
 
-_More information to be added soon._
+This release comes with two new rules ("AnchorsWithoutTargetAttributeRule":AnchorsWithoutTargetAttributeRule, "FieldsetContainsLegendRule":FieldsetContainsLegendRule) that sum up with the existing rules to a total count of *30 rules* now!
+
+h2. Reporting Improvements
+
+The reporting functionality was in the focus of this release. Part of the results is the possibility to write reports either to files or on the console. Aside from the existing ConsoleReportWriter that was renamed to TextReportWriter because it can write to files now, too, there is a XmlReportWriter that returns XML based reports as shown in the following snippet.
+
+{% highlight xml %}
+<?xml version='1.0'?>
+<BitvUnit version='0.5.0'>
+  <Report time='03.09.2011 11:04:36' url='http://bitvunit.codescape.de/some_page.html'/>
+  <Violations>
+    <Violation ruleName='FieldsetContainsLegend' position='2:2'>
+      <Message><![CDATA[This is the first sample message!]]></Message>
+    </Violation>
+    <Violation ruleName='TitleForAbbreviationTag' position='34:52'>
+      <Message><![CDATA[This is the second sample message!]]></Message>
+    </Violation>
+    <Violation ruleName='TitleForAcronymTag' position='90:14'>
+      <Message><![CDATA[This is the third sample message!]]></Message>
+    </Violation>
+  </Violations>
+  <Rules>
+    <Rule name='FieldsetContainsLegend'/>
+    <Rule name='LabelContainsText'/>
+    <Rule name='LabelForInputField'/>
+    <Rule name='LabelForSelectTag'/>
+    <Rule name='LabelForTextarea'/>
+    <Rule name='LabelWithoutFormElement'/>
+    <Rule name='UniqueLabelForFormElement'/>
+    <Rule name='TitleForFrame'/>
+    [...]
+  </Rules>
+</BitvUnit>
+{% endhighlight %}
+
+h2. Library Updates
+
+Between the last release of the BitvUnit framework and the current release two libraries that BitvUnit depends on were updated to a new version. Switching to the lasted version of both libraries did not break any tests and so BitvUnit 0.5 now depends on HtmlUnit 2.9 and JUnit 4.9.
+
+h2. Bugfixes
+
+While the last version of the framework was accidentially shipped without the <code>all-rules.xml</code> prepared ruleset this version now includes the ruleset and the required XSD to validate this ruleset. A patch to the Maven build was made to make it work again.
+
+h2. Feedback wanted
+
+In the main menu a new menu entry tries to gain your attention! It is called "Feedback":/feedback and is waiting for your comments, questions and feedback! I am happy to hear from you and get to know your problems or wishes for the framework.
 
 See the "Change Log":/changes/#r05 for further details.
+
+[AnchorsWithoutTargetAttributeRule]https://github.com/codescape/bitvunit/blob/v0.5.0/bitvunit-core/src/main/java/de/codescape/bitvunit/rule/links/AnchorsWithoutTargetAttributeRule.java
+[FieldsetContainsLegendRule]https://github.com/codescape/bitvunit/blob/v0.5.0/bitvunit-core/src/main/java/de/codescape/bitvunit/rule/forms/FieldsetContainsLegendRule.java
