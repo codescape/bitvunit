@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 /**
- * Script that helps you to create new rules from the scratch. Run the script without any parameters to see the list of
- * supported commands.
+ * Command line script that helps you to create new rules from the scratch. Running the script without any parameters
+ * results in a list of all currently supported commands that can be used.
  *
  * @author Stefan Glase
  * @since 0.6
