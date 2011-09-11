@@ -7,49 +7,49 @@ BitvUnit is an open source accessibility testing framework that makes it easy to
 
 The framework uses "Apache Maven":http://maven.apache.org for its build and dependency management. With the help of "HtmlUnit":http://htmlunit.sourceforge.net the framework inspects HTML pages that are checked against the rules of the framework. It provides adapters for "Hamcrest":http://code.google.com/p/hamcrest matchers because of their expressive syntax.
 
-h2. Further Resources
+h3. Further Resources
 
 If you want learn more about the framework, these resources might be interesting for you:
 
 <dl class="resources">
   <dt>"!images/icons/issue-tracker.png!(Issue Tracker)":https://github.com/codescape/bitvunit/issues</dt>
   <dd>
-    <h3>Issue Tracker</h3>
+    <h4>Issue Tracker</h4>
     Found a bug? Want to request an improvement? The "Issue Tracker":https://github.com/codescape/bitvunit/issues is the right tool for you!
   </dd>
   
   <dt>"!images/icons/source-code.png!(Source Code Repository)":https://github.com/codescape/bitvunit</dt>
   <dd>
-    <h3>Source Code Repository</h3>
+    <h4>Source Code Repository</h4>
     The framework's "Source Code Repository":https://github.com/codescape/bitvunit is hosted on GitHub and can be accessed easily.
   </dd>
 
   <dt>"!images/icons/blog.png!(Blog)":/blog</dt>
   <dd>
-    <h3>Blog</h3>
+    <h4>Blog</h4>
     Stay informed about the BitvUnit framework with the help of our "Blog":/blog from time to time.
   </dd>
 
   <dt>"!images/icons/documentation.png!(Documentation)":http://bitvunit.codescape.de</dt>
   <dd>
-    <h3>Documentation</h3>
+    <h4>Documentation</h4>
     The page you are currently viewing holds all relevant "Documentation":/ to the framework.
   </dd>
 
   <dt>"!images/icons/feedback.png!(Feedback)":/feedback</dt>
   <dd>
-    <h3>Feedback</h3>
+    <h4>Feedback</h4>
     For feedback, questions or comments please use the "Feedback":/feedback page.
   </dd>
 
   <dt>"!images/icons/continuous-integration.png!(Continuous Integration)":https://codescape.ci.cloudbees.com</dt>
   <dd>
-    <h3>Continuous Integration</h3>
+    <h4>Continuous Integration</h4>
     Changes of the framework are checked by a "Continuous Integration":https://codescape.ci.cloudbees.com server.
   </dd>
 </dl>
 
-h2. Recent Blog Posts
+h3. Recent Blog Posts
 
 <ul class="square">
   {% for post in site.posts limit:3 %}

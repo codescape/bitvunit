@@ -5,11 +5,11 @@ title: Releasing BitvUnit 0.2 - New Rules, XML Rule Sets, Hamcrest Matcher
 
 The second release of the framework ships with some very interesting features that make it easier to use the framework for accessibility testing. Continue reading to learn more about these new features. Aside from that the framework now has a total number of 16 rules.
 
-h2. Using XML to define sets of rules
+h3. Using XML to define sets of rules
 
 With the new <code>XmlRuleSet</code> you can now easily put all rules that should be checked together in a single XML document and let the <code>XmlRuleSet</code> class do the rest.
 
-h3. my-rules.xml
+h4. my-rules.xml
 
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
@@ -25,7 +25,7 @@ h3. my-rules.xml
 </ruleset>
 {% endhighlight %}
 
-h3. CheckXmlRuleSetTest.java
+h4. CheckXmlRuleSetTest.java
 
 {% highlight java %}
 package demo;
@@ -48,7 +48,7 @@ public class CheckXmlRuleSetTest {
 }
 {% endhighlight %}
 
-h2. Using Hamcrest matchers
+h3. Using Hamcrest matchers
 
 Another great feature that found its way into this release are the Hamcrest matchers (<code>RuleMatcher</code> and <code>RuleSetMatcher</code>) for verification of compliance to a single rule or a rule set. Using Hamcrest matchers gives a great improvement in readability of your tests.
 

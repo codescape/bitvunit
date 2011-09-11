@@ -6,7 +6,7 @@ permalink: download/index.html
 
 Please choose your preferred way to download BitvUnit.
 
-h2. GitHub Download
+h3. GitHub Download
 
 Download the latest version of the framework from the GitHub download page:
 
@@ -16,7 +16,7 @@ Download the latest version of the framework from the GitHub download page:
 
 You can find previous versions on the "GitHub download page":https://github.com/codescape/bitvunit/downloads.
 
-h2. Maven Repository
+h3. Maven Repository
 
 BitvUnit is available from the "Maven Central Repository":http://repo1.maven.org/maven2/de/codescape/bitvunit/. To use BitvUnit in your Maven project put the following dependency into the <code><dependencies/></code> section of the pom.xml:
 

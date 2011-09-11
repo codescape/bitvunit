@@ -8,7 +8,7 @@ Below you can find a list of all changes applied to the framework through its di
 
 Hide and show details to releases in clicking on the release you are interested in:
 
-h2(release#r06). Release 0.6 (_near future_)
+h3(release#r06). Release 0.6 (_near future_)
 
 * added new rules
 ** AlternativeTextForImageButtonRule
@@ -17,7 +17,7 @@ h2(release#r06). Release 0.6 (_near future_)
 * renamed HeadersInCorrectOrderRule to HeadingsInCorrectOrderRule 
 * added a Groovy driven wizard to add new rules to the framework
 
-h2(release#r05). Release 0.5 (2011-09-03)
+h3(release#r05). Release 0.5 (2011-09-03)
 
 * added new rules
 ** AnchorsWithoutTargetAttributeRule
@@ -38,7 +38,7 @@ h2(release#r05). Release 0.5 (2011-09-03)
 ** now using htmlunit 2.9
 ** now using junit 4.9
 
-h2(release#r04). Release 0.4 (2011-07-23)
+h3(release#r04). Release 0.4 (2011-07-23)
 
 * added new rules
 ** AlternativeTextForObjectRule
@@ -56,7 +56,7 @@ h2(release#r04). Release 0.4 (2011-07-23)
 * added and improved JavaDoc
 * increased test coverage for internal functionality
 
-h2(release#r03). Release 0.3 (2011-06-30)
+h3(release#r03). Release 0.3 (2011-06-30)
 
 * added new rules
 ** AlternativeTextForAppletRule
@@ -74,7 +74,7 @@ h2(release#r03). Release 0.3 (2011-06-30)
 * every violation knows the element that caused the violation
 * availability in Maven Central Repository
 
-h2(release#r02). Release 0.2 (2011-06-01)
+h3(release#r02). Release 0.2 (2011-06-01)
 
 * easier selection of elements with new Page decorator
 * easier creation of violations in rule implementations
@@ -91,7 +91,7 @@ h2(release#r02). Release 0.2 (2011-06-01)
 ** introduced RuleMatcher for verification against a specific Rule
 ** introduced RuleSetMatcher for verification against a RuleSet
 
-h2(release#r01). Release 0.1 (2011-05-24)
+h3(release#r01). Release 0.1 (2011-05-24)
 
 * introduced Rule to check a single HTML page against a single rule
 * introduced RuleSet to check a single HTML page against multiple rules
@@ -113,7 +113,7 @@ h2(release#r01). Release 0.1 (2011-05-24)
     var fragment = $.url().attr('fragment');
     
     // wrap each list in a div
-    $('h2.release + ul')
+    $('h3.release + ul')
       .wrap('<div class="changelog" />');
 
     // hide each div and show the first or the requested
@@ -125,7 +125,7 @@ h2(release#r01). Release 0.1 (2011-05-24)
     }
     
     // add functionality to toggle the visibility
-    $('h2.release')
+    $('h3.release')
       .css('cursor', 'pointer')
       .click(function() { $(this).next('.changelog').slideToggle(); })
       .attr('title', function() { return 'Toggle visibility of details for ' + $(this).text(); });

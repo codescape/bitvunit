@@ -5,7 +5,7 @@ title: Releasing BitvUnit 0.5 - Reporting Improvements, Library Updates, Bugfixe
 
 This release comes with two new rules ("AnchorsWithoutTargetAttributeRule":AnchorsWithoutTargetAttributeRule, "FieldsetContainsLegendRule":FieldsetContainsLegendRule) that sum up with the existing rules to a total count of *30 rules* now!
 
-h2. Reporting Improvements
+h3. Reporting Improvements
 
 The reporting functionality was in the focus of this release. Part of the results is the possibility to write reports either to files or on the console. Aside from the existing ConsoleReportWriter that was renamed to TextReportWriter because it can write to files now, too, there is a XmlReportWriter that returns XML based reports as shown in the following snippet.
 
@@ -38,15 +38,15 @@ The reporting functionality was in the focus of this release. Part of the result
 </BitvUnit>
 {% endhighlight %}
 
-h2. Library Updates
+h3. Library Updates
 
 Between the last release of the BitvUnit framework and the current release two libraries that BitvUnit depends on were updated to a new version. Switching to the lasted version of both libraries did not break any tests and so BitvUnit 0.5 now depends on HtmlUnit 2.9 and JUnit 4.9.
 
-h2. Bugfixes
+h3. Bugfixes
 
 While the last version of the framework was accidentially shipped without the <code>all-rules.xml</code> prepared ruleset this version now includes the ruleset and the required XSD to validate this ruleset. A patch to the Maven build was made to make it work again.
 
-h2. Feedback wanted
+h3. Feedback wanted
 
 In the main menu a new menu entry tries to gain your attention! It is called "Feedback":/feedback and is waiting for your comments, questions and feedback! I am happy to hear from you and get to know your problems or wishes for the framework.
 
