@@ -102,7 +102,7 @@ a:hover { color: #111; }
 ************************************************/
 
 #container {
-  max-width: 800px;
+  max-width: 760px;
   margin: 0 auto; }
 
 #logo {
@@ -133,21 +133,22 @@ a:hover { color: #111; }
 /* Further Resources
 ************************************************/
 
-.resources {
-  margin: 10px 0 20px 0;
-  text-align: center; }
+#content .resources {  margin: 0; }
 
-.resources img {
+#content .resources img {
   width: 64px;
-  height: 64px; }
+  height: 64px;
+  padding: 9px 18px;
+  position: absolute; }
 
-.resources dt, .resources dd { display: inline-block; }
+#content .resources li {
+  list-style: none;
+  width: 49%;
+  min-height: 82px;
+  display: inline-block;
+  margin: 10px 0; }
 
-.resources dt { 
-  width: 10%;
-  text-align: center; }
-
-.resources dd { width: 35%; }
+.resources h4, .resources p { margin: 0 0 0 100px; }
 
 /* Syntax Highlighting
 ************************************************/
@@ -195,12 +196,20 @@ a:hover { color: #111; }
 
 @media screen and (max-width: 800px) {
 
-  .resources { text-align: left; }
-
-  .resources dt { width: 20%; }
-
-  .resources dd { width: 75%; }
-
   .github-ribbon { display: none; }
 
+  #content .resources li { width: 100%; }
+
 }
+
+/* Fixes
+************************************************/
+
+.clearfix:before, .clearfix:after {
+  content: ""; display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }

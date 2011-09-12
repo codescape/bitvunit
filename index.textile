@@ -11,43 +11,43 @@ h3. Further Resources
 
 If you want learn more about the framework, these resources might be interesting for you:
 
-<dl class="resources">
-  <dt>"!images/icons/issue-tracker.png!(Issue Tracker)":https://github.com/codescape/bitvunit/issues</dt>
-  <dd>
+<ul class="resources">
+  <li>
+    "!images/icons/issue-tracker.png!(Issue Tracker)":https://github.com/codescape/bitvunit/issues
     <h4>Issue Tracker</h4>
-    Found a bug? Want to request an improvement? The "Issue Tracker":https://github.com/codescape/bitvunit/issues is the right tool for you!
-  </dd>
+    <p>Found a bug? Want to request an improvement? The "Issue Tracker":https://github.com/codescape/bitvunit/issues is the right tool for you!</p>
+  </li>
   
-  <dt>"!images/icons/source-code.png!(Source Code Repository)":https://github.com/codescape/bitvunit</dt>
-  <dd>
+  <li>
+    "!images/icons/source-code.png!(Source Code Repository)":https://github.com/codescape/bitvunit
     <h4>Source Code Repository</h4>
-    The framework's "Source Code Repository":https://github.com/codescape/bitvunit is hosted on GitHub and can be accessed easily.
-  </dd>
+    <p>The framework's "Source Code Repository":https://github.com/codescape/bitvunit is hosted on GitHub and can be accessed easily.</p>
+  </li>
 
-  <dt>"!images/icons/blog.png!(Blog)":/blog</dt>
-  <dd>
+  <li>
+    "!images/icons/blog.png!(Blog)":/blog
     <h4>Blog</h4>
-    Stay informed about the BitvUnit framework with the help of our "Blog":/blog from time to time.
-  </dd>
+    <p>Stay informed about the BitvUnit framework with the help of our "Blog":/blog from time to time.</p>
+  </li>
 
-  <dt>"!images/icons/documentation.png!(Documentation)":http://bitvunit.codescape.de</dt>
-  <dd>
+  <li>
+    "!images/icons/documentation.png!(Documentation)":http://bitvunit.codescape.de
     <h4>Documentation</h4>
-    The page you are currently viewing holds all relevant "Documentation":/ to the framework.
-  </dd>
+    <p>The page you are currently viewing holds all relevant "Documentation":/ to the framework.</p>
+  </li>
 
-  <dt>"!images/icons/feedback.png!(Feedback)":/feedback</dt>
-  <dd>
+  <li>
+    "!images/icons/feedback.png!(Feedback)":/feedback
     <h4>Feedback</h4>
-    For feedback, questions or comments please use the "Feedback":/feedback page.
-  </dd>
+    <p>For feedback, questions or comments please use the "Feedback":/feedback page.</p>
+  </li>
 
-  <dt>"!images/icons/continuous-integration.png!(Continuous Integration)":https://codescape.ci.cloudbees.com</dt>
-  <dd>
+  <li>
+    "!images/icons/continuous-integration.png!(Continuous Integration)":https://codescape.ci.cloudbees.com
     <h4>Continuous Integration</h4>
-    Changes of the framework are checked by a "Continuous Integration":https://codescape.ci.cloudbees.com server.
-  </dd>
-</dl>
+    <p>Changes of the framework are checked by a "Continuous Integration":https://codescape.ci.cloudbees.com server.</p>
+  </li>
+</ul>
 
 h3. Recent Blog Posts
 
