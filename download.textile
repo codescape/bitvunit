@@ -21,9 +21,9 @@ h3. Maven Repository
 BitvUnit is available from the "Maven Central Repository":http://repo1.maven.org/maven2/de/codescape/bitvunit/. To use BitvUnit in your Maven project put the following dependency into the <code><dependencies/></code> section of the pom.xml:
 
 {% highlight xml %}
-    <dependency>
-      <groupId>de.codescape.bitvunit</groupId>
-      <artifactId>bitvunit-core</artifactId>
-      <version>0.5.0</version>
-    </dependency>
+<dependency>
+    <groupId>de.codescape.bitvunit</groupId>
+    <artifactId>bitvunit-core</artifactId>
+    <version>0.5.0</version>
+</dependency>
 {% endhighlight %}
