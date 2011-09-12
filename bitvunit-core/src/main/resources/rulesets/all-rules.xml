@@ -15,6 +15,7 @@
     <rule class="de.codescape.bitvunit.rule.forms.UniqueLabelForFormElementRule"/>
 
     <!-- Frames -->
+    <rule class="de.codescape.bitvunit.rule.frames.AlternativeTextForInlineFrameRule"/>
     <rule class="de.codescape.bitvunit.rule.frames.TitleForFrameRule"/>
     <rule class="de.codescape.bitvunit.rule.frames.TitleForInlineFrameRule"/>
 
