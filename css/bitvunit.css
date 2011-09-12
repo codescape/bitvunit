@@ -183,7 +183,10 @@ a:hover { color: #111; }
 
 .highlight .c { /* Comment */
   color: #6D9CBE; }
-  
+
+.highlight .c1 { /* Comment.Single */
+  color: #6D9CBE; }
+
 .highlight .cm { /* Comment.Multiline */
   color: #6D9CBE; }
 
