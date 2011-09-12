@@ -85,6 +85,10 @@ a:hover { color: #111; }
 /* Further Resources
 ************************************************/
 
+.resources {
+  margin: 10px 0 20px 0;
+  text-align: center; }
+
 .resources img {
   width: 64px;
   height: 64px; }
@@ -96,8 +100,6 @@ a:hover { color: #111; }
   text-align: center; }
 
 .resources dd { width: 35%; }
-
-.resources { margin: 10px 0 20px 0; }
 
 /* Syntax Highlighting
 ************************************************/
@@ -141,6 +143,8 @@ a:hover { color: #111; }
 ************************************************/
 
 @media screen and (max-width: 800px) {
+
+  .resources { text-align: left; }
 
   .resources dt { width: 20%; }
 
