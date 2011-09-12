@@ -15,5 +15,5 @@ h3. Contact
 
 If you want to get in contact with me please choose from the following options:
 * Forum: "Feedback":/feedback
-* Twitter: "caseaplace":http://twitter.com/#!/caseaplace
+* Twitter: "stefanglase":http://twitter.com/stefanglase
 * E-Mail: "stefan.glase@googlemail.com":mailto:stefan.glase@googlemail.com
