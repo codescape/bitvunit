@@ -1,126 +1,106 @@
-/******************************************************************************
- BitvUnit
- ********/
+/* General
+************************************************/
 
-html {
-  overflow-y: scroll;
-}
+html { overflow-y: scroll; }
  
 body {
   padding: 20px;
-  font: 400 14px/24px 'Open Sans', sans-serif;
-  color: #111;
-}
+  font: normal 14px/24px 'Open Sans', sans-serif;
+  color: #111; }
 
-p {
-  margin: 10px 0;
-}
+p { margin: 10px 0; }
+
+/* Source Code
+************************************************/
 
 pre {
-  padding: 15px;
+  padding: 10px 15px;
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
-  line-height: 1.3em;
-}
+  line-height: 1.5em; }
 
-code {
-  font: 0.85em/1em Monaco,monospace; }
+code { font: 0.85em/1em Monaco,monospace; }
 
-.post-date {
-  font-family: monospace;
-}
+/* Blog Post Dates
+************************************************/
+
+.post-date { font-family: monospace; }
+
+/* Headings
+************************************************/
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 800;
+  font-weight: bold;
   text-shadow: #ccc 1px 1px 1px;
-  margin: 10px 0;
-}
+  margin: 20px 0 10px 0; }
 
-h1 {
-  font-size: 2em;
-}
+h1 { font-size: 2em; }
 
-h2 {
-  font-size: 2em;
-}
+h2 { font-size: 2em; }
 
-h3 {
-  font-size: 1.5em;
-}
+h3 { font-size: 1.5em; }
+
+/* Links
+************************************************/
 
 a {
   color: #007100;
-  text-decoration: none;
-}
-a:hover {
-  color: #111;
-}
+  text-decoration: none; }
+  
+a:hover { color: #111; }
+
+/* Box Layout
+************************************************/
 
 #container {
   max-width: 800px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 #logo {
   text-align: center;
   font-weight: 800;
   text-shadow: #ccc 1px 1px 1px;
-  margin: 20px 0;
-}
-#logo .teaser {
-  font-size: 1.2em;
-}
+  margin: 20px 0; }
+  
+#logo .teaser { font-size: 1.2em; }
 
-#navigation ul {
-  text-align: center;
-}
+#navigation ul { text-align: center; }
 
 #navigation ul li {
   display: inline;
-  padding: 0 5px;
-}
+  padding: 0 5px; }
 
-#content ul {
-  margin: 5px 0 5px 2em;
-}
+#content ul { margin: 5px 0 5px 2em; }
 
-#content ul li {
-  list-style: square;
-}
+#content ul li { list-style: square; }
 
-#disqus_thread ul li {
-  list-style: none;
-}
-
-.resources img {
-  width: 64px;
-  height: 64px;
-}
-
-.resources dt, .resources dd {
-  display: inline-block;
-}
-
-.resources dt { 
-  width: 10%;
-  text-align: center;
-}
-
-.resources dd {
-  width: 35%;
-}
-
-.resources {
-  margin: 10px 0 20px 0;
-}
+#disqus_thread ul li { list-style: none; }
 
 #footer {
   font-size: 0.8em;
   text-align: center;
-  margin: 20px 0;
-}
+  margin: 20px 0; }
 
+/* Further Resources
+************************************************/
+
+.resources img {
+  width: 64px;
+  height: 64px; }
+
+.resources dt, .resources dd { display: inline-block; }
+
+.resources dt { 
+  width: 10%;
+  text-align: center; }
+
+.resources dd { width: 35%; }
+
+.resources { margin: 10px 0 20px 0; }
+
+/* Syntax Highlighting
+************************************************/
 
 .highlight {
   background: #111;
@@ -139,6 +119,9 @@ a:hover {
 .highlight .na { /* Name.Attribute */
   color: #DA4939; }
 
+.highlight .nt { /* Name.Tag */
+  color: #E8BF6A; }
+
 .highlight .nv { /* Name.Variable */
   color: #E8BF6A; }
 
@@ -154,19 +137,15 @@ a:hover {
 .highlight .cm { /* Comment.Multiline */
   color: #6D9CBE; }
 
+/* Media Queries
+************************************************/
 
 @media screen and (max-width: 800px) {
 
-  .resources dt { 
-    width: 20%;
-  }
+  .resources dt { width: 20%; }
 
-  .resources dd {
-    width: 75%;
-  }
+  .resources dd { width: 75%; }
 
-  .github-ribbon {
-    display: none;
-  }
+  .github-ribbon { display: none; }
 
 }

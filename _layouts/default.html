@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="nojs">
 <head>
   <meta charset="utf-8">
+  <title>{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}</title>  
 
-  <title>{{ page.title }} - BitvUnit</title>
-  
+  <meta name="author" content="{{ site.author }}">
+  {% if site.description %}<meta name="description" content="{{ site.description }}">{% endif %}
+  {% if site.keywords %}<meta name="keywords" content="{{ site.keywords }}">{% endif %}
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600" type="text/css">
   <link rel="stylesheet" href="/css/reset.css" />
   <link rel="stylesheet" href="/css/bitvunit.css" />
+
   <link rel="shortcut icon" href="/images/favicon.ico" />
 
   <script src="/js/jquery-1.6.1.min.js"></script>
   <script src="/js/jquery.url.js"></script>
 </head>
+
 <body>
+
   <div id="container">
+
     <div id="header">
+
       <div id="logo">
         <h1>BitvUnit</h1>
         <p class="teaser">Accessibility Testing Framework</p>
       </div>
+
       <div id="navigation">
         <ul>
           <li><a href="/">About</a></li>
@@ -31,6 +41,7 @@
           <li><a href="/feedback">Feedback</a></li>
         </ul>
       </div>
+
     </div>
   
     <div id="content">
@@ -41,6 +52,7 @@
     <div id="footer">
       (( created with <a href="http://jekyllrb.com/">jekyll</a>, <a href="http://pygments.org/">pygments</a>, <a href="http://www.liquidmarkup.org/">Liquid</a>, <a href="http://textile.thresholdstate.com/">Textile</a>, <a href="http://dev.w3.org/html5/spec/">HTML5</a>, <a href="http://www.w3.org/TR/CSS/">CSS3</a> and <a href="http://jquery.com/">jQuery</a>, sources available on <a href="https://github.com/codescape/bitvunit/tree/gh-pages">GitHub</a> ))
     </div>
+
   </div>
 
   <a class="github-ribbon" href="http://github.com/codescape/bitvunit"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://d3nwyuy0nl342s.cloudfront.net/img/abad93f42020b733148435e2cd92ce15c542d320/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub"></a>
