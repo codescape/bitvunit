@@ -10,12 +10,7 @@ There is already a working implementation of ten rules for accessibility testing
 {% highlight java %}
 package demo;
 
-import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import de.codescape.bitvunit.rule.forms.LabelForSelectTagRule;
-import org.junit.Test;
-
-import static org.junit.Assert.assertTrue;
+// imports omitted
 
 public class CheckSingleRuleTest {
 

@@ -30,12 +30,7 @@ h4. CheckXmlRuleSetTest.java
 {% highlight java %}
 package demo;
 
-import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import de.codescape.bitvunit.ruleset.XmlRuleSet;
-import org.junit.Test;
-
-import static org.junit.Assert.assertFalse;
+// imports omitted
 
 public class CheckXmlRuleSetTest {
 
@@ -55,14 +50,7 @@ Another great feature that found its way into this release are the Hamcrest matc
 {% highlight java %}
 package demo;
 
-import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import de.codescape.bitvunit.ruleset.XmlRuleSet;
-import org.junit.Test;
-
-import static de.codescape.bitvunit.hamcrest.RuleSetMatcher.compliantTo;
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+// imports omitted
 
 public class UsingHamcrestMatchersTest {
 
