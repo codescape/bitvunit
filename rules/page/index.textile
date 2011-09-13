@@ -13,7 +13,7 @@ h3. LanguageForHtmlTagRule
     </ul>
 </aside>
 
- LanguageForHtmlTagRule ensures that the given HTML document provides its language information through the <code>lang</code> attribute on the <code><html></code> tag.
+ LanguageForHtmlTagRule ensures that the given HTML document provides its language information through the <code>lang</code> attribute on the <code><html /></code> tag.
 
 h3. TitleForPageRule
 

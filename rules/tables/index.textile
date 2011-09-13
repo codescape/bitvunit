@@ -35,4 +35,4 @@ h3. TableHeaderForTableColumnRule
     </ul>
 </aside>
 
- TableHeaderForTableColumnRule ensures that every <code><table /></code> within the given HTML document has table headers declared by <code><th /></code> for each data cell declared by <code>>td /></code>.
+ TableHeaderForTableColumnRule ensures that every <code><table /></code> within the given HTML document has table headers declared by <code><th /></code> for each data cell declared by <code><td /></code>.
