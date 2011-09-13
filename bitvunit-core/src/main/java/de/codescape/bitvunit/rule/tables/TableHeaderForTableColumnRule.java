@@ -12,7 +12,7 @@ import static de.codescape.bitvunit.util.html.HtmlTableCellUtil.isHeaderCell;
 
 /**
  * TableHeaderForTableColumnRule ensures that every <code>&lt;table /&gt;</code> within the given HTML document has
- * table headers declared by <code>&lt;th /&gt;</code> for each data cell declared by <code>&gt;td /&gt;</code>.
+ * table headers declared by <code>&lt;th /&gt;</code> for each data cell declared by <code>&lt;td /&gt;</code>.
  *
  * @author Stefan Glase
  * @since 0.3
