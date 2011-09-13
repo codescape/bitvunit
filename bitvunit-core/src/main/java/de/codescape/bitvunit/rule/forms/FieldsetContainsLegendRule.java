@@ -7,7 +7,7 @@ import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
 /**
- * FieldsetContainsLegendRule ensures that every <code>%lt;fieldset /&gt;</code> within the given HTML document contains
+ * FieldsetContainsLegendRule ensures that every <code>&lt;fieldset /&gt;</code> within the given HTML document contains
  * a <code>&lt;legend /&gt;</code> tag as the first child element to describe the elements grouped by this fieldset.
  *
  * @author Stefan Glase

@@ -6,7 +6,7 @@ import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
 /**
- * LabelContainsTextRule ensures that every <code>%lt;label /&gt;</code> within the given HTML document contains a
+ * LabelContainsTextRule ensures that every <code>&lt;label /&gt;</code> within the given HTML document contains a
  * textual representation for the given label.
  *
  * @author Stefan Glase
