@@ -112,7 +112,7 @@ def createDocs(path) {
         rulesIndex.text += """\n* "${dir.name.capitalize()}":/rules/${dir.name}"""
 
         // create category index file
-        def categoryIndex = fileFromTemplate("./bitvunit-templates/docs/CategoryIndex.template", [name: dir.name], "${target}/${category}.textile")
+        def categoryIndex = fileFromTemplate("./bitvunit-templates/docs/CategoryIndex.template", [name: dir.name], "${target}/${dir.name}.textile")
         
         dir.eachFileMatch(~/^[A-Z]([A-Za-z])+Rule.java$/) { file ->
             println "Processing file ${file.name}"
@@ -137,7 +137,7 @@ def fileFromTemplate(template, data, filename) {
 
 def extractRuleData(file) {
     // grab the author from the javadoc
-    def author
+    def author = 'unknown'
     file.eachLine { line ->
         if (line.startsWith(' * @author')) {
             author = line - ' * @author'
@@ -145,7 +145,7 @@ def extractRuleData(file) {
     }
 
     // grab the version from the javadoc
-    def version
+    def version = 'unknown'
     file.eachLine { line ->
         if (line.startsWith(' * @since')) {
             version = line - ' * @since'
