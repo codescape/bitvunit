@@ -1,0 +1,40 @@
+---
+layout: default
+title: Tables
+permalink: tables/index.html
+---
+
+Below you can find the documentation for all rules in the category Tables.
+
+h3. CaptionTextForTableRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author: Stefan Glase</li>
+        <li class="version">Since: 0.1</li>
+    </ul>
+</aside>
+
+CaptionTextForTableRule ensures that every <code><table /></code> within the given HTML document provides a title by having a <code><caption>Some title</caption></code> element as the first child element inside the <code><table /></code> declaration.
+
+h3. TableHeaderContainsTextRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author: Stefan Glase</li>
+        <li class="version">Since: 0.2</li>
+    </ul>
+</aside>
+
+TableHeaderContainsTextRule ensures that every <code><th /></code> element within the given HTML document contains text content. Table headers always should always describe a given row or column with text.
+
+h3. TableHeaderForTableColumnRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author: Stefan Glase</li>
+        <li class="version">Since: 0.3</li>
+    </ul>
+</aside>
+
+TableHeaderForTableColumnRule ensures that every <code><table /></code> within the given HTML document has table headers declared by <code><th /></code> for each data cell declared by <code><td /></code>.

@@ -2,7 +2,8 @@
 layout: default
 title: Rules
 ---
-This is a list of all rule categories.
+
+You can find a list of all categories here. Please choose from the list below to see the documentation for all rules in the selected category.
 
 * "Forms":/rules/forms
 * "Frames":/rules/frames

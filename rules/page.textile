@@ -1,0 +1,29 @@
+---
+layout: default
+title: Page
+permalink: page/index.html
+---
+
+Below you can find the documentation for all rules in the category Page.
+
+h3. LanguageForHtmlTagRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author: Stefan Glase</li>
+        <li class="version">Since: 0.2</li>
+    </ul>
+</aside>
+
+LanguageForHtmlTagRule ensures that the given HTML document provides its language information through the <code>lang</code> attribute on the <code><html /></code> tag.
+
+h3. TitleForPageRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author: Stefan Glase</li>
+        <li class="version">Since: 0.6</li>
+    </ul>
+</aside>
+
+TitleForPageRule ensures that there is an non empty title within the inspected HTML document to describe that page.
