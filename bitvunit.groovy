@@ -136,29 +136,43 @@ def fileFromTemplate(template, data, filename) {
 }
 
 def extractRuleData(file) {
-    // grab the author from the javadoc
-    def author = 'unknown'
+    def name = extractRuleName(file)
+    def author = extractRuleAuthor(file)
+    def version = extractRuleVersion(file)
+    def description = extractRuleDescription(file)
+    [name: name, author: author, version: version, description: description]
+}
+
+def extractRuleName(file) {
+    (file.name - '.java').trim()
+}
+
+def extractRuleDescription(file) {
+    def description = ''
     file.eachLine { line ->
-        if (line.startsWith(' * @author')) {
-            author = line - ' * @author'
+        if (line.startsWith(' *') && !(line.startsWith(' * @') || line.startsWith(' */'))) {
+            description += line.replaceAll('&lt;', '<').replaceAll('&gt;','>') - ' *'
         }
     }
+    description?.trim() ?: 'missing'
+}
 
-    // grab the version from the javadoc
-    def version = 'unknown'
+def extractRuleVersion(file) {
+    def version
     file.eachLine { line ->
         if (line.startsWith(' * @since')) {
             version = line - ' * @since'
         }
     }
+    version?.trim() ?: 'unknown'
+}
 
-    // grab the description from the javadoc
-    def description = ''
+def extractRuleAuthor(file) {
+    def author
     file.eachLine { line ->
-        if (line.startsWith(' *') && !(line.contains('@since') || line.contains('@author') || line.startsWith(' */'))) {
-            description += line.replaceAll('&lt;', '<').replaceAll('&gt;','>') - ' *'
+        if (line.startsWith(' * @author')) {
+            author = line - ' * @author'
         }
     }
-
-    [name: (file.name - '.java').trim(), author: author.trim(), version: version.trim(), description: description.trim()]
+    author?.trim() ?: 'unknown'
 }
