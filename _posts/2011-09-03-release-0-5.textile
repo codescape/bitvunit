@@ -33,7 +33,7 @@ The reporting functionality was in the focus of this release. Part of the result
     <Rule name='LabelWithoutFormElement'/>
     <Rule name='UniqueLabelForFormElement'/>
     <Rule name='TitleForFrame'/>
-    [...]
+    <!-- more rules omitted -->
   </Rules>
 </BitvUnit>
 {% endhighlight %}
