@@ -51,7 +51,8 @@ html { overflow-y: scroll; }
  
 body {
   padding: 20px;
-  font: normal 14px/24px 'Open Sans', sans-serif;
+  font: normal 14px 'Open Sans', sans-serif;
+  line-height: 1.8em;
   color: #111; }
 
 p { margin: 10px 0; }
@@ -66,7 +67,7 @@ pre {
   word-wrap: break-word;
   line-height: 1.5em; }
 
-code { font: 0.85em/1em Monaco,monospace; }
+code { font: 0.85em Monaco,monospace; }
 
 /* Blog Post Dates
 ************************************************/
