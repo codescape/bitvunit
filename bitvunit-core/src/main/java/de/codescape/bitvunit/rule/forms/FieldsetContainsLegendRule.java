@@ -7,8 +7,13 @@ import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
 /**
- * FieldsetContainsLegendRule ensures that every <code>&lt;fieldset /&gt;</code> within the given HTML document contains
- * a <code>&lt;legend /&gt;</code> tag as the first child element to describe the elements grouped by this fieldset.
+ * FieldsetContainsLegendRule ensures that every <code>&lt;fieldset /&gt;</code> within the given HTML document
+ * contains a <code>&lt;legend /&gt;</code> tag as the first child element to describe the elements grouped by this
+ * <code>&lt;fieldset /&gt;</code>.
+ * <p/>
+ * A good example for a valid fieldset would look like this:
+ * <pre><code>&lt;fieldset&gt;&lt;legend&gt;personal data&lt;/legend&gt;&lt;!-- form elements here
+ * --&gt;&lt;/fieldset&gt;</code></pre>
  *
  * @author Stefan Glase
  * @since 0.5
