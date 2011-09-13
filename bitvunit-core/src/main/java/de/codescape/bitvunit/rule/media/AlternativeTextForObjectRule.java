@@ -7,8 +7,9 @@ import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
 /**
- * AlternativeTextForObjectRule ensures that every object within the given HTML document provides an alternative textual
- * description to explain the object to everyone who is not able to view and display the object itself.
+ * AlternativeTextForObjectRule ensures that every <code>&lt;object /&gt;</code> within the given HTML document provides
+ * an alternative textual description to explain the <code>&lt;object /&gt;</code> to everyone who is not able to view
+ * and display the <code>&lt;object /&gt;</code> itself.
  *
  * @author Stefan Glase
  * @since 0.4
