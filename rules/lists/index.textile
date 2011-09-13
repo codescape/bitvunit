@@ -1,0 +1,38 @@
+---
+layout: default
+title: Lists
+---
+This is a list of all rules in the category lists.
+
+h3. DefinitionListContainsItemsRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.3</li>
+    </ul>
+</aside>
+
+ DefinitionListContainsItemsRule ensures that every definition list <code><dl /></code> within the given HTML document contains one or more definition terms <code><dt /></code> and definition descriptions <code><dd /></code>.
+
+h3. OrderedListContainsListItemsRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.3</li>
+    </ul>
+</aside>
+
+ OrderedListContainsListItemsRule ensures that every ordered list <code><ol /></code> within the given HTML document contains one or more list items <code><li /></code>.
+
+h3. UnorderedListContainsListItemsRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.3</li>
+    </ul>
+</aside>
+
+ UnorderedListContainsListItemsRule ensures that every ordered list <code><ul /></code> within the given HTML document contains one or more list items <code><li /></code>.

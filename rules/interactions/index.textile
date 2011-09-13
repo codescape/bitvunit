@@ -1,0 +1,16 @@
+---
+layout: default
+title: Interactions
+---
+This is a list of all rules in the category interactions.
+
+h3. AvoidMetaRefreshRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.2</li>
+    </ul>
+</aside>
+
+ AvoidMetaRefreshRule ensures that there is no fixed refresh caused by the <code><meta http-equiv="refresh" content="seconds; URL=target" /></code> tag within the given HTML document. Automatically updating pages may cause significant accessibility problems to people that are disabled or that use technology that hinders normal interactions patterns.

@@ -1,0 +1,93 @@
+---
+layout: default
+title: Text
+---
+This is a list of all rules in the category text.
+
+h3. AvoidBlinkTextRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.1</li>
+    </ul>
+</aside>
+
+ AvoidBlinkTextRule ensures that every <code><blink /></code> element within the given HTML document leads to a violation because the <code><blink /></code> tag result in blinking text that cannot be stopped and it is not defined in any W3C HTML specification.
+
+h3. AvoidBoldTagRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.2</li>
+    </ul>
+</aside>
+
+ AvoidBoldTagRule ensures that every <code><b /></code> element within the given HTML document leads to a violation because the <code><strong /></code> element should be used to outline important text.
+
+h3. AvoidItalicTagRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.2</li>
+    </ul>
+</aside>
+
+ AvoidItalicTagRule ensures that every <code><i /></code> element within the given HTML document leads to a violation because the <code><em /></code> element should be used to outline important text.
+
+h3. AvoidMarqueeTextRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.1</li>
+    </ul>
+</aside>
+
+ AvoidMarqueeTextRule ensures that every <code><marquee /></code> element within the given HTML document leads to a violation because the <code><marquee /></code> results in moving text that cannot be stopped and it is not defined in any W3C HTML specification.
+
+h3. HeadingContainsTextRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.6</li>
+    </ul>
+</aside>
+
+ HeadingContainsTextRule ensures that all headings from <code><h1 /></code> to <code><h6 /></code> within the given HTML document contain some text content.
+
+h3. HeadingsInCorrectOrderRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.2</li>
+    </ul>
+</aside>
+
+ HeadingsInCorrectOrderRule ensures that all headings from <code><h1 /></code> to <code><h6 /></code> within the given HTML document are in correct oder. That means the following rules must be satisfied: The first heading on the given page must be the only one of type <code><h1 /></code>. All other headings may only be one level deeper and all levels higher than the previous heading.
+
+h3. TitleForAbbreviationTagRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.1</li>
+    </ul>
+</aside>
+
+ TitleForAbbreviationTagRule ensures that every abbreviation that is marked through the <code><abbr /></code> element within the given HTML document provides a description of that abbreviation through its <code>title</code> attribute.
+
+h3. TitleForAcronymTagRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.1</li>
+    </ul>
+</aside>
+
+ TitleForAcronymTagRule ensures that every acronym that is marked through the <code><acronym /></code> element within the given HTML document provides a description of that acronym through its <code>title</code> attribute.

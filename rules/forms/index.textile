@@ -1,0 +1,93 @@
+---
+layout: default
+title: Forms
+---
+This is a list of all rules in the category forms.
+
+h3. AlternativeTextForImageButtonRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.6</li>
+    </ul>
+</aside>
+
+ AlternativeTextForImageButtonRule ensures that every image button within the given HTML document provides an alternative text through its <code>alt</code> attribute.
+
+h3. FieldsetContainsLegendRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.5</li>
+    </ul>
+</aside>
+
+ FieldsetContainsLegendRule ensures that every <code><fieldset /></code> within the given HTML document contains a <code><legend /></code> tag as the first child element to describe the elements grouped by this fieldset.
+
+h3. LabelContainsTextRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.1</li>
+    </ul>
+</aside>
+
+ LabelContainsTextRule ensures that every <code><label /></code> within the given HTML document contains a textual representation for the given label.
+
+h3. LabelForInputFieldRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.1</li>
+    </ul>
+</aside>
+
+ LabelForInputFieldRule ensures that every <code><input /></code> field of type <code>text</code> or <code>password</code> within the given HTML document is associated with a <code><label /></code> element that references the <code><input /></code> element through its <code>for</code> attribute.
+
+h3. LabelForSelectTagRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.1</li>
+    </ul>
+</aside>
+
+ LabelForInputFieldRule ensures that every <code><select /></code> tag within the given HTML document is associated with a <code><label /></code> element that references the <code><select /></code> tag through its <code>for</code> attribute.
+
+h3. LabelForTextareaRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.1</li>
+    </ul>
+</aside>
+
+ LabelForTextareaRule ensures that every <code><textarea /></code> within the given HTML document is associated with a <code><label /></code> element that references the <code><textarea /></code> element through its <code>for</code> attribute.
+
+h3. LabelWithoutFormElementRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.3</li>
+    </ul>
+</aside>
+
+ LabelWithoutFormElementRule ensures that every <code><label /></code> tag within the given HTML document is referencing a valid form element. The id of the form element must be equal to the for attribute of the label. Valid form elements are <code><select /></code>, <code><input /></code> and <code><textarea /></code> elements.
+
+h3. UniqueLabelForFormElementRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.3</li>
+    </ul>
+</aside>
+
+ UniqueLabelForFormElementRule ensures that there is never more than one <code><label /></code> with the same value in its <code>for</code> attribute. There should be never be more than one label pointing to a single form element.

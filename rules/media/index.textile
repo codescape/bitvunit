@@ -1,0 +1,27 @@
+---
+layout: default
+title: Media
+---
+This is a list of all rules in the category media.
+
+h3. AlternativeTextForAppletRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.3</li>
+    </ul>
+</aside>
+
+ AlternativeTextForAppletRule ensures that every applet within the given HTML document provides an alternative textual description to explain the applet to everyone who is not able to view and display the applet itself.
+
+h3. AlternativeTextForObjectRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author:  Stefan Glase</li>
+        <li class="version">since Version:  0.4</li>
+    </ul>
+</aside>
+
+ AlternativeTextForObjectRule ensures that every object within the given HTML document provides an alternative textual description to explain the object to everyone who is not able to view and display the object itself.
