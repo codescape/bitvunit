@@ -66,11 +66,7 @@ def createTest(rule) {
 def createFromTemplate(rule, target, templateName) {
     def file = new File(target as String)
     file.createNewFile()
-
-    def template = new File("./bitvunit-templates/$templateName").text
-    def result = new groovy.text.SimpleTemplateEngine().createTemplate(template).make(rule)
-
-    file.text = result.toString()
+    file.text = fromTemplate("./bitvunit-templates/$templateName", rule)
 }
 
 def getUserInput(validation = { true }) {
@@ -121,35 +117,34 @@ def createDocs(path) {
         println "Processing category ${dir.name}"
         docsIndex.text = docsIndex.text + """\n* "${dir.name.capitalize()}":/rules/${dir.name}"""
 
-        // create category directory
-        def categoryDir = new File("${target}/${dir.name}")
-        categoryDir.mkdir()
-
         // create category index file
         def categoryIndex = createCategoryIndex(target, dir.name)
         
         dir.eachFileMatch(~/^[A-Z]([A-Za-z])+Rule.java$/) { file ->
             println "Processing file ${file.name}"
             def rule = extractRuleData(file)
-            def template = new groovy.text.SimpleTemplateEngine().createTemplate(new File("./bitvunit-templates/RuleDoc.template").text)
-            categoryIndex.text = categoryIndex.text + "\n" + template.make(rule).toString()
+            categoryIndex.text = categoryIndex.text + "\n" + fromTemplate("./bitvunit-templates/docs/RuleDoc.template", rule)
         }
     }
 
     target
 }
 
+def fromTemplate(template, data = [:]) {
+    new groovy.text.SimpleTemplateEngine().createTemplate(new File(template).text).make(data).toString()
+}
+
 def createCategoryIndex(target, category) {
-    def file = new File("${target}/${category}/index.textile")
+    def file = new File("${target}/${category}.textile")
     file.createNewFile()
-    file.text = "---\nlayout: default\ntitle: ${category.capitalize()}\n---\nThis is a list of all rules in the category ${category}.\n"
+    file.text = fromTemplate("./bitvunit-templates/docs/CategoryIndex.template", [name: category])
     file
 }
 
 def createDocsIndex(target) {
     def file = new File("${target}/index.textile")
     file.createNewFile()
-    file.text = """---\nlayout: default\ntitle: Rules\n---\nThis is a list of all rule categories.\n"""
+    file.text = fromTemplate("./bitvunit-templates/docs/RulesIndex.template")
     file
 }
 
@@ -178,5 +173,5 @@ def extractRuleData(file) {
         }
     }
 
-    [name: file.name - '.java', author: author, version: version, description: description]
+    [name: (file.name - '.java').trim(), author: author.trim(), version: version.trim(), description: description.trim()]
 }
