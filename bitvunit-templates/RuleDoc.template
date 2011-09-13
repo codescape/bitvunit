@@ -1,0 +1,10 @@
+h3. ${name}
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author: ${author}</li>
+        <li class="version">since Version: ${version}</li>
+    </ul>
+</aside>
+
+${description}
