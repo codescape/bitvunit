@@ -53,20 +53,14 @@ def addToRuleSet(rule) {
 
 def createRule(rule) {
     def target = "./bitvunit-core/src/main/java/de/codescape/bitvunit/rule/${rule.category}/${rule.name}.java"
-    createFromTemplate(rule, target, 'Rule.template')
+    fileFromTemplate('./bitvunit-templates/Rule.template', rule, target)
     target
 }
 
 def createTest(rule) {
     def target = "./bitvunit-core/src/test/java/de/codescape/bitvunit/rule/${rule.category}/${rule.name}Test.java"
-    createFromTemplate(rule, target, 'Test.template')
+    fileFromTemplate('./bitvunit-templates/Test.template', rule, target)
     target
-}
-
-def createFromTemplate(rule, target, templateName) {
-    def file = new File(target as String)
-    file.createNewFile()
-    file.text = fromTemplate("./bitvunit-templates/$templateName", rule)
 }
 
 def getUserInput(validation = { true }) {
@@ -111,14 +105,14 @@ def createDocs(path) {
     docsDir.mkdir()
 
     // create rules index file
-    def docsIndex = createDocsIndex(target)
+    def rulesIndex = fileFromTemplate("./bitvunit-templates/docs/RulesIndex.template", [:], "${target}/index.textile")
 
     new File('./bitvunit-core/src/main/java/de/codescape/bitvunit/rule/').eachDir { dir ->
         println "Processing category ${dir.name}"
-        docsIndex.text = docsIndex.text + """\n* "${dir.name.capitalize()}":/rules/${dir.name}"""
+        rulesIndex.text += """\n* "${dir.name.capitalize()}":/rules/${dir.name}"""
 
         // create category index file
-        def categoryIndex = createCategoryIndex(target, dir.name)
+        def categoryIndex = fileFromTemplate("./bitvunit-templates/docs/CategoryIndex.template", [name: dir.name], "${target}/${category}.textile")
         
         dir.eachFileMatch(~/^[A-Z]([A-Za-z])+Rule.java$/) { file ->
             println "Processing file ${file.name}"
@@ -134,17 +128,10 @@ def fromTemplate(template, data = [:]) {
     new groovy.text.SimpleTemplateEngine().createTemplate(new File(template).text).make(data).toString()
 }
 
-def createCategoryIndex(target, category) {
-    def file = new File("${target}/${category}.textile")
+def fileFromTemplate(template, data, filename) {
+    def file = new File(filename)
     file.createNewFile()
-    file.text = fromTemplate("./bitvunit-templates/docs/CategoryIndex.template", [name: category])
-    file
-}
-
-def createDocsIndex(target) {
-    def file = new File("${target}/index.textile")
-    file.createNewFile()
-    file.text = fromTemplate("./bitvunit-templates/docs/RulesIndex.template")
+    file.text = fromTemplate(template, data)
     file
 }
 
