@@ -15,7 +15,7 @@ h3. AlternativeTextForImageButtonRule
     </ul>
 </aside>
 
-AlternativeTextForImageButtonRule ensures that every image button within the given HTML document provides an alternative text through its <code>alt</code> attribute.
+AlternativeTextForImageButtonRule ensures that every image button created through <code><input type="image" /></code> within the given HTML document provides an alternative text through it's <code>alt</code> attribute. <p/> A good example for a valid image button would look like this: <pre><code><input type="image" src="register.png" alt="Register Account" /></code></pre>
 
 h3. FieldsetContainsLegendRule
 
@@ -26,7 +26,7 @@ h3. FieldsetContainsLegendRule
     </ul>
 </aside>
 
-FieldsetContainsLegendRule ensures that every <code><fieldset /></code> within the given HTML document contains a <code><legend /></code> tag as the first child element to describe the elements grouped by this fieldset.
+FieldsetContainsLegendRule ensures that every <code><fieldset /></code> within the given HTML document contains a <code><legend /></code> tag as the first child element to describe the elements grouped by this <code><fieldset /></code>. <p/> A good example for a valid fieldset would look like this: <pre><code><fieldset><legend>personal data</legend><!-- form elements here --></fieldset></code></pre>
 
 h3. LabelContainsTextRule
 
