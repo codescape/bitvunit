@@ -65,7 +65,10 @@ pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  background: #111;
+  border-radius: 12px;
+  color: #eee; }
 
 code { font: 0.85em Monaco,monospace; }
 
@@ -79,6 +82,7 @@ code { font: 0.85em Monaco,monospace; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+  word-wrap: break-word;
   text-shadow: #ccc 1px 1px 1px;
   margin: 20px 0 10px 0; }
 
