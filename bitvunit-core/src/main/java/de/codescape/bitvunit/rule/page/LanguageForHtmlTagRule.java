@@ -12,7 +12,7 @@ import static de.codescape.bitvunit.util.html.HtmlElementUtil.hasNonEmptyAttribu
  * <code>lang</code> attribute on the <code>&lt;html/&gt;</code> tag.
  * <p/>
  * A valid example of a document in German language would look like this:
- * <pre><code>&lt;html lang="de"&gt;...&lt;/html&gt</code></pre>
+ * <pre><code>&lt;html lang="de"&gt;...&lt;/html&gt;</code></pre>
  *
  * @author Stefan Glase
  * @since 0.2
