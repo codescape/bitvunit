@@ -5,13 +5,13 @@ title: Rules
 
 You can find a list of all categories here. Please choose from the list below to see the documentation for all rules in the selected category.
 
-* "Forms":/rules/forms
-* "Frames":/rules/frames
-* "Images":/rules/images
-* "Interactions":/rules/interactions
-* "Links":/rules/links
-* "Lists":/rules/lists
-* "Media":/rules/media
-* "Page":/rules/page
-* "Tables":/rules/tables
-* "Text":/rules/text
+* "Forms":/rules/forms (8 rules)
+* "Frames":/rules/frames (3 rules)
+* "Images":/rules/images (3 rules)
+* "Interactions":/rules/interactions (1 rule)
+* "Links":/rules/links (1 rule)
+* "Lists":/rules/lists (3 rules)
+* "Media":/rules/media (2 rules)
+* "Page":/rules/page (2 rules)
+* "Tables":/rules/tables (3 rules)
+* "Text":/rules/text (8 rules)
