@@ -15,7 +15,7 @@ h3. AvoidBlinkTextRule
     </ul>
 </aside>
 
-AvoidBlinkTextRule ensures that every <code><blink /></code> element within the given HTML document leads to a violation because the <code><blink /></code> tag result in blinking text that cannot be stopped and it is not defined in any W3C HTML specification.
+AvoidBlinkTextRule ensures that every <code><blink/></code> element within the given HTML document leads to a violation because the <code><blink/></code> tag result in blinking text that cannot be stopped and it is not defined in any W3C HTML specification.
 
 h3. AvoidBoldTagRule
 
@@ -26,7 +26,7 @@ h3. AvoidBoldTagRule
     </ul>
 </aside>
 
-AvoidBoldTagRule ensures that every <code><b /></code> element within the given HTML document leads to a violation because the <code><strong /></code> element should be used to outline important text.
+AvoidBoldTagRule ensures that every <code><b/></code> element within the given HTML document leads to a violation because the <code><strong/></code> element should be used to outline important text.
 
 h3. AvoidItalicTagRule
 
@@ -37,7 +37,7 @@ h3. AvoidItalicTagRule
     </ul>
 </aside>
 
-AvoidItalicTagRule ensures that every <code><i /></code> element within the given HTML document leads to a violation because the <code><em /></code> element should be used to outline important text.
+AvoidItalicTagRule ensures that every <code><i/></code> element within the given HTML document leads to a violation because the <code><em/></code> element should be used to outline important text.
 
 h3. AvoidMarqueeTextRule
 
@@ -48,7 +48,7 @@ h3. AvoidMarqueeTextRule
     </ul>
 </aside>
 
-AvoidMarqueeTextRule ensures that every <code><marquee /></code> element within the given HTML document leads to a violation because the <code><marquee /></code> results in moving text that cannot be stopped and it is not defined in any W3C HTML specification.
+AvoidMarqueeTextRule ensures that every <code><marquee/></code> element within the given HTML document leads to a violation because the <code><marquee/></code> results in moving text that cannot be stopped and it is not defined in any W3C HTML specification.
 
 h3. HeadingContainsTextRule
 
@@ -59,7 +59,7 @@ h3. HeadingContainsTextRule
     </ul>
 </aside>
 
-HeadingContainsTextRule ensures that all headings from <code><h1 /></code> to <code><h6 /></code> within the given HTML document contain some text content.
+HeadingContainsTextRule ensures that all headings from <code><h1/></code> up to <code><h6/></code> within the given HTML document contain some text content in the body of the tag. <p/> A valid heading would look like this: <pre><code><h1>Documentation</h1></code></pre>
 
 h3. HeadingsInCorrectOrderRule
 
@@ -70,7 +70,7 @@ h3. HeadingsInCorrectOrderRule
     </ul>
 </aside>
 
-HeadingsInCorrectOrderRule ensures that all headings from <code><h1 /></code> to <code><h6 /></code> within the given HTML document are in correct oder. That means the following rules must be satisfied: The first heading on the given page must be the only one of type <code><h1 /></code>. All other headings may only be one level deeper and all levels higher than the previous heading.
+HeadingsInCorrectOrderRule ensures that all headings from <code><h1/></code> up to <code><h6/></code> within the given HTML document are in correct oder. That means the following rules must be satisfied: The first heading on the given page must be the only one of type <code><h1/></code>. All other headings may only be one level deeper and all levels higher than the previous heading.
 
 h3. TitleForAbbreviationTagRule
 
@@ -81,7 +81,7 @@ h3. TitleForAbbreviationTagRule
     </ul>
 </aside>
 
-TitleForAbbreviationTagRule ensures that every abbreviation that is marked through the <code><abbr /></code> element within the given HTML document provides a description of that abbreviation through its <code>title</code> attribute.
+TitleForAbbreviationTagRule ensures that every abbreviation that is marked through the <code><abbr/></code> element within the given HTML document provides a description of that abbreviation through it's <code>title</code> attribute.
 
 h3. TitleForAcronymTagRule
 
@@ -92,4 +92,4 @@ h3. TitleForAcronymTagRule
     </ul>
 </aside>
 
-TitleForAcronymTagRule ensures that every acronym that is marked through the <code><acronym /></code> element within the given HTML document provides a description of that acronym through its <code>title</code> attribute.
+TitleForAcronymTagRule ensures that every acronym that is marked through the <code><acronym/></code> element within the given HTML document provides a description of that acronym through it's <code>title</code> attribute.

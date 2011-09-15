@@ -15,4 +15,4 @@ h3. AvoidMetaRefreshRule
     </ul>
 </aside>
 
-AvoidMetaRefreshRule ensures that there is no fixed refresh caused by the <code><meta http-equiv="refresh" content="seconds; URL=target" /></code> tag within the given HTML document. <p/> Automatically updating pages may cause significant accessibility problems to people who are disabled or who use technology that hinders normal interaction patterns.
+AvoidMetaRefreshRule ensures that there is no fixed refresh caused by the <code><meta http-equiv="refresh" content="seconds; URL=target"/></code> tag within the given HTML document. <p/> Automatically updating pages may cause significant accessibility problems to people who are disabled or who use technology that hinders normal interaction patterns.

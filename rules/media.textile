@@ -15,7 +15,7 @@ h3. AlternativeTextForAppletRule
     </ul>
 </aside>
 
-AlternativeTextForAppletRule ensures that every <code><applet /></code> within the given HTML document provides an alternative textual description to explain the <code><applet /></code> to everyone who is not able to view and display the <code><applet /></code> itself.
+AlternativeTextForAppletRule ensures that every <code><applet/></code> within the given HTML document provides an alternative textual description to explain the <code><applet/></code> to everyone who is not able to view and display the <code><applet/></code> itself.
 
 h3. AlternativeTextForObjectRule
 
@@ -26,4 +26,4 @@ h3. AlternativeTextForObjectRule
     </ul>
 </aside>
 
-AlternativeTextForObjectRule ensures that every <code><object /></code> within the given HTML document provides an alternative textual description to explain the <code><object /></code> to everyone who is not able to view and display the <code><object /></code> itself.
+AlternativeTextForObjectRule ensures that every <code><object/></code> within the given HTML document provides an alternative textual description to explain the <code><object/></code> to everyone who is not able to view and display the <code><object/></code> itself.
