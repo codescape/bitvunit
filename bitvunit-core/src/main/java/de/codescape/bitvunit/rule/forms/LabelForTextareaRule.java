@@ -9,9 +9,14 @@ import static de.codescape.bitvunit.util.html.HtmlElementUtil.hasNonEmptyAttribu
 import static de.codescape.bitvunit.util.html.HtmlLabelUtil.containsLabelForId;
 
 /**
- * LabelForTextareaRule ensures that every <code>&lt;textarea /&gt;</code> within the given HTML document is associated
- * with a <code>&lt;label /&gt;</code> element that references the <code>&lt;textarea /&gt;</code> element through its
+ * LabelForTextareaRule ensures that every <code>&lt;textarea/&gt;</code> within the given HTML document is associated
+ * with a <code>&lt;label/&gt;</code> element that references the <code>&lt;textarea/&gt;</code> element through its
  * <code>for</code> attribute.
+ * <p/>
+ * A valid label associated with a textarea element should look like this:
+ * <pre><code>
+ * &lt;label for="comment"&gt;Comment&lt;/label&gt;
+ * &lt;textarea id="comment"&gt;&lt;/textarea&gt;</code></pre>
  *
  * @author Stefan Glase
  * @since 0.1

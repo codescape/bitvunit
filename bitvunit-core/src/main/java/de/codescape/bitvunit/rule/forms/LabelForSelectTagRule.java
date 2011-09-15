@@ -9,9 +9,14 @@ import static de.codescape.bitvunit.util.html.HtmlElementUtil.hasNonEmptyAttribu
 import static de.codescape.bitvunit.util.html.HtmlLabelUtil.containsLabelForId;
 
 /**
- * LabelForInputFieldRule ensures that every <code>&lt;select /&gt;</code> tag within the given HTML document is
- * associated with a <code>&lt;label /&gt;</code> element that references the <code>&lt;select /&gt;</code> tag through
+ * LabelForInputFieldRule ensures that every <code>&lt;select/&gt;</code> tag within the given HTML document is
+ * associated with a <code>&lt;label/&gt;</code> element that references the <code>&lt;select/&gt;</code> tag through
  * its <code>for</code> attribute.
+ * <p/>
+ * A valid label associated with a select element should look like this:
+ * <pre><code>
+ * &lt;label for="gender"&gt;Gender&lt;/label&gt;
+ * &lt;select id="gender"&gt;&lt;option&gt;f&lt;option&gt;&lt;option&gt;m&lt;option&gt;&lt;/select&gt;</code></pre>
  *
  * @author Stefan Glase
  * @since 0.1

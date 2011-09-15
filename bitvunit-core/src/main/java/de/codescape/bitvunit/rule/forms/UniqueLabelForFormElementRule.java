@@ -8,9 +8,9 @@ import de.codescape.bitvunit.rule.Violations;
 import java.util.List;
 
 /**
- * UniqueLabelForFormElementRule ensures that there is never more than one <code>&lt;label /&gt;</code> with the same
- * value in its <code>for</code> attribute. There should be never be more than one label pointing to a single form
- * element.
+ * UniqueLabelForFormElementRule ensures that there is never more than one <code>&lt;label/&gt;</code> with the same
+ * value in its <code>for</code> attribute. There should never be more than one <code>&lt;label/&gt;</code> pointing to
+ * a single form element.
  *
  * @author Stefan Glase
  * @since 0.3

@@ -8,10 +8,10 @@ import de.codescape.bitvunit.rule.Violations;
 import java.util.List;
 
 /**
- * LabelWithoutFormElementRule ensures that every <code>&lt;label /&gt;</code> tag within the given HTML document is
- * referencing a valid form element. The id of the form element must be equal to the for attribute of the label. Valid
- * form elements are <code>&lt;select /&gt;</code>, <code>&lt;input /&gt;</code> and <code>&lt;textarea /&gt;</code>
- * elements.
+ * LabelWithoutFormElementRule ensures that every <code>&lt;label/&gt;</code> tag within the given HTML document is
+ * referencing a valid form element. The <code>id</code> of the form element must be equal to the <code>for</code>
+ * attribute of the label. Valid form elements are <code>&lt;select/&gt;</code>, <code>&lt;input/&gt;</code> and
+ * <code>&lt;textarea/&gt;</code> elements.
  *
  * @author Stefan Glase
  * @since 0.3
