@@ -10,8 +10,8 @@ import de.codescape.bitvunit.rule.Violations;
 import java.util.List;
 
 /**
- * OrderedListContainsListItemsRule ensures that every ordered list <code>&lt;ol /&gt;</code> within the given HTML
- * document contains one or more list items <code>&lt;li /&gt;</code>.
+ * OrderedListContainsListItemsRule ensures that every ordered list <code>&lt;ol/&gt;</code> within the given HTML
+ * document contains one or more list items <code>&lt;li/&gt;</code>.
  *
  * @author Stefan Glase
  * @since 0.3

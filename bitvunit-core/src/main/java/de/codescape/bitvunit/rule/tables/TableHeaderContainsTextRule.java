@@ -6,8 +6,8 @@ import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
 /**
- * TableHeaderContainsTextRule ensures that every <code>&lt;th /&gt;</code> element within the given HTML document
- * contains text content. Table headers always should always describe a given row or column with text.
+ * TableHeaderContainsTextRule ensures that every <code>&lt;th/&gt;</code> element within the given HTML document
+ * contains text content in it's body. Table headers always should describe a given row or column with text.
  *
  * @author Stefan Glase
  * @since 0.2

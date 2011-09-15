@@ -8,7 +8,7 @@ import de.codescape.bitvunit.rule.Violations;
 import static de.codescape.bitvunit.util.html.HtmlElementUtil.hasAttribute;
 
 /**
- * AnchorsWithoutTargetAttributeRule ensures that no anchor <code>&lt;a /&gt;</code> tag within the given HTML document
+ * AnchorsWithoutTargetAttributeRule ensures that no anchor <code>&lt;a/&gt;</code> tag within the given HTML document
  * contains the <code>target</code> attribute that forces a link to open in a specific or new window.
  *
  * @author Stefan Glase

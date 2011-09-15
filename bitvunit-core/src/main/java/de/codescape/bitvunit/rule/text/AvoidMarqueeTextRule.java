@@ -6,8 +6,8 @@ import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
 /**
- * AvoidMarqueeTextRule ensures that every <code>&lt;marquee /&gt;</code> element within the given HTML document leads
- * to a violation because the <code>&lt;marquee /&gt;</code> results in moving text that cannot be stopped and it is not
+ * AvoidMarqueeTextRule ensures that every <code>&lt;marquee/&gt;</code> element within the given HTML document leads
+ * to a violation because the <code>&lt;marquee/&gt;</code> results in moving text that cannot be stopped and it is not
  * defined in any W3C HTML specification.
  *
  * @author Stefan Glase

@@ -6,8 +6,11 @@ import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
 /**
- * HeadingContainsTextRule ensures that all headings from <code>&lt;h1 /&gt;</code> to <code>&lt;h6 /&gt;</code> within
- * the given HTML document contain some text content.
+ * HeadingContainsTextRule ensures that all headings from <code>&lt;h1/&gt;</code> up to <code>&lt;h6/&gt;</code> within
+ * the given HTML document contain some text content in the body of the tag.
+ * <p/>
+ * A valid heading would look like this:
+ * <pre><code>&lt;h1&gt;Documentation&lt;/h1&gt;</code></pre>
  *
  * @author Stefan Glase
  * @since 0.6

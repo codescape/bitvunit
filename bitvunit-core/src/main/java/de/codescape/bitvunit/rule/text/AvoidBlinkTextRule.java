@@ -6,8 +6,8 @@ import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
 /**
- * AvoidBlinkTextRule ensures that every <code>&lt;blink /&gt;</code> element within the given HTML document leads to a
- * violation because the <code>&lt;blink /&gt;</code> tag result in blinking text that cannot be stopped and it is not
+ * AvoidBlinkTextRule ensures that every <code>&lt;blink/&gt;</code> element within the given HTML document leads to a
+ * violation because the <code>&lt;blink/&gt;</code> tag result in blinking text that cannot be stopped and it is not
  * defined in any W3C HTML specification.
  *
  * @author Stefan Glase

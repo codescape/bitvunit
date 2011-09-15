@@ -9,9 +9,9 @@ import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
 /**
- * DefinitionListContainsItemsRule ensures that every definition list <code>&lt;dl /&gt;</code> within the given HTML
- * document contains one or more definition terms <code>&lt;dt /&gt;</code> and definition descriptions <code>&lt;dd
- * /&gt;</code>.
+ * DefinitionListContainsItemsRule ensures that every definition list <code>&lt;dl/&gt;</code> within the given HTML
+ * document contains one or more definition terms <code>&lt;dt/&gt;</code> and definition descriptions
+ * <code>&lt;dd/&gt;</code>.
  *
  * @author Stefan Glase
  * @since 0.3

@@ -8,8 +8,9 @@ import de.codescape.bitvunit.rule.Violations;
 import static de.codescape.bitvunit.util.html.HtmlElementUtil.hasAttribute;
 
 /**
- * AvoidServerSideImageMapRule ensures that there are no server side image maps within the given HTML document because
- * they are inaccessible by users who cannot use a mouse because of some disability.
+ * AvoidServerSideImageMapRule ensures that there are no server side image maps created by the <code>&lt;img
+ * ismap="ismap"/&gt;</code> tag within the given HTML document because they are inaccessible by users who cannot use a
+ * mouse because of some disability.
  *
  * @author Stefan Glase
  * @since 0.4

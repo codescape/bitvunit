@@ -6,9 +6,9 @@ import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
 /**
- * HeadingsInCorrectOrderRule ensures that all headings from <code>&lt;h1 /&gt;</code> to <code>&lt;h6 /&gt;</code>
+ * HeadingsInCorrectOrderRule ensures that all headings from <code>&lt;h1/&gt;</code> up to <code>&lt;h6/&gt;</code>
  * within the given HTML document are in correct oder. That means the following rules must be satisfied: The first
- * heading on the given page must be the only one of type <code>&lt;h1 /&gt;</code>. All other headings may only be one
+ * heading on the given page must be the only one of type <code>&lt;h1/&gt;</code>. All other headings may only be one
  * level deeper and all levels higher than the previous heading.
  *
  * @author Stefan Glase

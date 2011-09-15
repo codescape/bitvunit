@@ -6,9 +6,9 @@ import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
 /**
- * AlternativeTextForInlineFrameRule ensures that every inline frame within the given HTML document provides an
- * alternative textual description to explain the inline frame or a hyperlink to an alternative version of that inline
- * frame.
+ * AlternativeTextForInlineFrameRule ensures that every inline frame marked through <code>&lt;iframe/&gt;</code> within
+ * the given HTML document provides an alternative textual description inside it's body to explain the inline frame or a
+ * hyperlink to an alternative version of that inline frame.
  *
  * @author Stefan Glase
  * @since 0.6

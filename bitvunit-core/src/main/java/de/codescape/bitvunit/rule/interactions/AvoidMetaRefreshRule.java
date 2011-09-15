@@ -7,7 +7,7 @@ import de.codescape.bitvunit.rule.Violations;
 
 /**
  * AvoidMetaRefreshRule ensures that there is no fixed refresh caused by the <code>&lt;meta http-equiv="refresh"
- * content="seconds; URL=target" /&gt;</code> tag within the given HTML document.
+ * content="seconds; URL=target"/&gt;</code> tag within the given HTML document.
  * <p/>
  * Automatically updating pages may cause significant accessibility problems to people who are disabled or who use
  * technology that hinders normal interaction patterns.

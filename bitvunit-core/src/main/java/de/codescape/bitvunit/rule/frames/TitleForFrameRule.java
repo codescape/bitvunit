@@ -8,8 +8,8 @@ import de.codescape.bitvunit.rule.Violations;
 import static de.codescape.bitvunit.util.html.HtmlElementUtil.hasNonEmptyAttribute;
 
 /**
- * TitleForFrameRule ensures that every frame that is marked through the <code>&lt;frame /&gt;</code> element within the
- * given HTML document provides a description of that frame through its <code>title</code> attribute.
+ * TitleForFrameRule ensures that every frame that is marked through the <code>&lt;frame/&gt;</code> element within the
+ * given HTML document provides a description of that frame through it's <code>title</code> attribute.
  *
  * @author Stefan Glase
  * @since 0.3

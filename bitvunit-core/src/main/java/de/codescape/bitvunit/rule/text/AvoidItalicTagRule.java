@@ -6,8 +6,8 @@ import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
 /**
- * AvoidItalicTagRule ensures that every <code>&lt;i /&gt;</code> element within the given HTML document leads to a
- * violation because the <code>&lt;em /&gt;</code> element should be used to outline important text.
+ * AvoidItalicTagRule ensures that every <code>&lt;i/&gt;</code> element within the given HTML document leads to a
+ * violation because the <code>&lt;em/&gt;</code> element should be used to outline important text.
  *
  * @author Stefan Glase
  * @since 0.2

@@ -6,8 +6,9 @@ import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
 /**
- * AlternativeTextForAreaOfImageMapRule ensures that every area of an image map within the given HTML document provides
- * an alternative text through its <code>alt</code> attribute.
+ * AlternativeTextForAreaOfImageMapRule ensures that every area of an image map created by the
+ * <code>&lt;area/&gt;</code> tag within the given HTML document provides an alternative text through its
+ * <code>alt</code> attribute.
  *
  * @author Stefan Glase
  * @since 0.3

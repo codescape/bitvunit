@@ -10,8 +10,8 @@ import de.codescape.bitvunit.rule.Violations;
 import java.util.List;
 
 /**
- * UnorderedListContainsListItemsRule ensures that every ordered list <code>&lt;ul /&gt;</code> within the given HTML
- * document contains one or more list items <code>&lt;li /&gt;</code>.
+ * UnorderedListContainsListItemsRule ensures that every ordered list <code>&lt;ul/&gt;</code> within the given HTML
+ * document contains one or more list items <code>&lt;li/&gt;</code>.
  *
  * @author Stefan Glase
  * @since 0.3

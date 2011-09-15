@@ -6,9 +6,9 @@ import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
 /**
- * CaptionTextForTableRule ensures that every <code>&lt;table /&gt;</code> within the given HTML document provides a
- * title by having a <code>&lt;caption&gt;Some title&lt;/caption&gt;</code> element as the first child element inside
- * the <code>&lt;table /&gt;</code> declaration.
+ * CaptionTextForTableRule ensures that every <code>&lt;table/&gt;</code> within the given HTML document provides a
+ * title by having a <code>&lt;caption&gt;description&lt;/caption&gt;</code> element as the first child element inside
+ * the <code>&lt;table/&gt;</code> declaration.
  *
  * @author Stefan Glase
  * @since 0.1

@@ -6,9 +6,9 @@ import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 
 /**
- * AlternativeTextForAppletRule ensures that every <code>&lt;applet /&gt;</code> within the given HTML document provides
- * an alternative textual description to explain the <code>&lt;applet /&gt;</code> to everyone who is not able to view
- * and display the <code>&lt;applet /&gt;</code> itself.
+ * AlternativeTextForAppletRule ensures that every <code>&lt;applet/&gt;</code> within the given HTML document provides
+ * an alternative textual description to explain the <code>&lt;applet/&gt;</code> to everyone who is not able to view
+ * and display the <code>&lt;applet/&gt;</code> itself.
  *
  * @author Stefan Glase
  * @since 0.3
