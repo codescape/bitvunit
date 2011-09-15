@@ -109,16 +109,19 @@ def createDocs(path) {
 
     new File('./bitvunit-core/src/main/java/de/codescape/bitvunit/rule/').eachDir { dir ->
         println "Processing category ${dir.name}"
-        rulesIndex.text += """\n* "${dir.name.capitalize()}":/rules/${dir.name}"""
 
         // create category index file
         def categoryIndex = fileFromTemplate("./bitvunit-templates/docs/CategoryIndex.template", [name: dir.name], "${target}/${dir.name}.textile")
-        
+
+        def rulesInCategory = 0
         dir.eachFileMatch(~/^[A-Z]([A-Za-z])+Rule.java$/) { file ->
             println "Processing file ${file.name}"
             def rule = extractRuleData(file)
             categoryIndex.text = categoryIndex.text + "\n" + fromTemplate("./bitvunit-templates/docs/RuleDoc.template", rule)
+            rulesInCategory++
         }
+
+        rulesIndex.text += """\n* "${dir.name.capitalize()}":/rules/${dir.name} (${rulesInCategory} ${rulesInCategory > 1 ? 'rules' : 'rule'})"""
     }
 
     target
