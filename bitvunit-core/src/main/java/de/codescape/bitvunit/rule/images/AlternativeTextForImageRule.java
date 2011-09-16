@@ -9,7 +9,7 @@ import static de.codescape.bitvunit.util.html.HtmlElementUtil.hasAttribute;
 
 /**
  * AlternativeTextForImageRule ensures that every image created by the <code>&lt;img/&gt;</code> tag within the given
- * HTML document provides an alternative text through its <code>alt</code> attribute. This rule is already satisfied by
+ * HTML document provides an alternative text through it's <code>alt</code> attribute. This rule is already satisfied by
  * an empty attribute <code>alt=""</code> since this is the encouraged way for images that are used for layout aspects.
  *
  * @author Stefan Glase
