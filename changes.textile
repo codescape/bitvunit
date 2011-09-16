@@ -23,6 +23,7 @@ h3(release#r06). Release 0.6 (_near future_)
 * improvements to documentation website
 ** the website now comes in a much cleaner layout
 ** all rules are listed and documented on the website 
+** apidocs are now available from the usage page
 
 h3(release#r05). Release 0.5 (2011-09-03)
 
