@@ -7,7 +7,7 @@ You can find a list of all categories here. Please choose from the list below to
 
 * "Forms":/rules/forms (8 rules)
 * "Frames":/rules/frames (3 rules)
-* "Images":/rules/images (3 rules)
+* "Images":/rules/images (4 rules)
 * "Interactions":/rules/interactions (1 rule)
 * "Links":/rules/links (1 rule)
 * "Lists":/rules/lists (3 rules)
