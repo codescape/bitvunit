@@ -13,37 +13,37 @@ If you want learn more about the framework, these resources might be interesting
 
 <ul class="resources">
   <li>
-    "!images/icons/issue-tracker.png!(Issue Tracker)":https://github.com/codescape/bitvunit/issues
+    !images/icons/issue-tracker.png(Issue Tracker)!:https://github.com/codescape/bitvunit/issues
     <h4>Issue Tracker</h4>
     <p>Found a bug? Want to request an improvement? The "Issue Tracker":https://github.com/codescape/bitvunit/issues is the right tool for you!</p>
   </li>
   
   <li>
-    "!images/icons/source-code.png!(Source Code Repository)":https://github.com/codescape/bitvunit
+    !images/icons/source-code.png(Source Code Repository)!:https://github.com/codescape/bitvunit
     <h4>Source Code Repository</h4>
     <p>The framework's "Source Code Repository":https://github.com/codescape/bitvunit is hosted on GitHub and can be accessed easily.</p>
   </li>
 
   <li>
-    "!images/icons/blog.png!(Blog)":/blog
+    !images/icons/blog.png(Blog)!:/blog
     <h4>Blog</h4>
     <p>Stay informed about the BitvUnit framework with the help of our "Blog":/blog from time to time.</p>
   </li>
 
   <li>
-    "!images/icons/documentation.png!(Documentation)":http://bitvunit.codescape.de
+    !images/icons/documentation.png(Documentation)!:http://bitvunit.codescape.de
     <h4>Documentation</h4>
     <p>The page you are currently viewing holds all relevant "Documentation":/ to the framework.</p>
   </li>
 
   <li>
-    "!images/icons/feedback.png!(Feedback)":/feedback
+    !images/icons/feedback.png(Feedback)!:/feedback
     <h4>Feedback</h4>
     <p>For feedback, questions or comments please use the "Feedback":/feedback page.</p>
   </li>
 
   <li>
-    "!images/icons/continuous-integration.png!(Continuous Integration)":https://codescape.ci.cloudbees.com
+    !images/icons/continuous-integration.png(Continuous Integration)!:https://codescape.ci.cloudbees.com
     <h4>Continuous Integration</h4>
     <p>Changes of the framework are checked by a "Continuous Integration":https://codescape.ci.cloudbees.com server.</p>
   </li>
