@@ -9,6 +9,7 @@
 def availableCommands = [
     'create-rule': 'Wizard that helps you to create new rules.',
     'generate-docs': 'Target that generates rule documentation from javadoc.',
+    'update-apidocs': 'Generates the html based javadoc for bitvunit-core.',
 ]
 
 if (args.size() != 1 || !(args[0] in availableCommands.keySet())) {
@@ -178,4 +179,30 @@ def extractRuleAuthor(file) {
         }
     }
     author?.trim() ?: 'unknown'
+}
+
+/* update-apidocs */
+
+if (args[0] == 'update-apidocs') {
+    print 'Path to gh-pages: '
+    def path = getUserInput({ new File(it).exists() && it.endsWith('gh-pages') })
+
+    def source = './bitvunit-core/target/apidocs'
+    def target = "${path}/apidocs"
+
+    println 'Generating apidocs...'
+    def goal = 'cmd /c mvn -f ./bitvunit-core/pom.xml javadoc:javadoc'.execute()
+    println goal.text
+
+    def ant = new AntBuilder()
+
+    println "Deleting old apidocs at ${target}..."
+    ant.delete(dir: "${target}", verbose: true)
+
+    println "Moving apidocs to ${target}..."
+    ant.copy(todir: target) {
+        fileset(dir: source)
+    }
+
+    println 'Done.'
 }
