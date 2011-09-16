@@ -26,6 +26,10 @@ public class SampleHamcrestMatchersWithXmlRuleSetTest {
 }
 {% endhighlight %}
 
+h3. API Docs
+
+The latest version of the API docs generated from the Javadoc is constantly updated at the following location: "http://bitvunit.codescape.de/apidocs(API Docs)":http://bitvunit.codescape.de/apidocs
+
 h3. Not enough?
 
 If you know other ways of using the framework that should be documented here please use the "Issue Tracker":https://github.com/codescape/bitvunit/issues on GitHub and explain your way of getting the most out of this framework!
