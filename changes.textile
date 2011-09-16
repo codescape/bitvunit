@@ -13,6 +13,7 @@ h3(release#r06). Release 0.6 (_near future_)
 * added new rules
 ** AlternativeTextForImageButtonRule
 ** AlternativeTextForInlineFrameRule
+** AlternativeTextForLinkedImageRule
 ** HeadingContainsTextRule
 ** TitleForPageRule
 * renamed HeadersInCorrectOrderRule to HeadingsInCorrectOrderRule
