@@ -23,7 +23,7 @@ import static de.codescape.bitvunit.util.html.HtmlElementUtil.hasNonEmptyAttribu
 public class AlternativeTextForLinkedImageRule extends AbstractRule {
 
     private static final String RULE_NAME = "AlternativeTextForLinkedImage";
-    private static final String RULE_MESSAGE = "Linked images should always provide an alternative text through it's alt attribute.""
+    private static final String RULE_MESSAGE = "Linked images should always provide an alternative text through it's alt attribute.";
 
     @Override
     public String getName() {
