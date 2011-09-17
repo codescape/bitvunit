@@ -16,7 +16,7 @@ import de.codescape.bitvunit.rule.Violations;
 public class AlternativeTextForAreaOfImageMapRule extends AbstractRule {
 
     private static final String RULE_NAME = "AlternativeTextForAreaOfImageMap";
-    private static final String RULE_MESSAGE = "Every area of an image map should provide an alternative text through its alt attribute.";
+    private static final String RULE_MESSAGE = "Every area of an image map should provide an alternative text through it's alt attribute.";
 
     @Override
     public String getName() {
