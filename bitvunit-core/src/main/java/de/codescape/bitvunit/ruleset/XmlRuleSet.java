@@ -39,7 +39,7 @@ public class XmlRuleSet extends BasicRuleSet implements RuleSet {
         try {
             return documentBuilderFactory.newDocumentBuilder().parse(ClassPathResource.asInputStream(location));
         } catch (Exception e) {
-            throw new XmlRuleSetException("Could not parse RuleSet from given location.", e);
+            throw new XmlRuleSetException("Could not parse RuleSet from given location '" + location + "'.", e);
         }
     }
 

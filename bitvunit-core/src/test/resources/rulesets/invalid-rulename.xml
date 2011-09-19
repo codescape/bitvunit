@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ruleset xmlns="http://bitvunit.codescape.de/ruleset/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://bitvunit.codescape.de/ruleset/1.0 ../ruleset-schema.xsd">
+
+    <description>Example for a ruleset with an invalid rule name that cannot be instantiated.</description>
+
+    <rule class="de.codescape.bitvunit.rule.InvalidRuleClassName"/>
+
+</ruleset>
