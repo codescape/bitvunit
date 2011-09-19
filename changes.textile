@@ -18,8 +18,9 @@ h3(release#r06). Release 0.6 (_near future_)
 ** TitleForPageRule
 * renamed HeadersInCorrectOrderRule to HeadingsInCorrectOrderRule
 * Groovy console script
-** added a wizard to add new rules to the framework
-** added a wizard to generate rule documentation from javadoc
+** added a goal to set everything up for the implementation of new rules
+** added a goal to generate rule documentation from javadoc
+** added a goal to generate and publish apidocs on the website
 * improvements to documentation website
 ** the website now comes in a much cleaner layout
 ** all rules are listed and documented on the website 
