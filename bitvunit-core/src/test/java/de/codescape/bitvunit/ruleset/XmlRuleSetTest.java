@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static de.codescape.bitvunit.test.Assertions.assertRules;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class XmlRuleSetTest {
 
@@ -37,9 +39,26 @@ public class XmlRuleSetTest {
         return !Modifier.isAbstract(implementingClass.getModifiers());
     }
 
-    @Test(expected = XmlRuleSetException.class)
+    @Test
     public void missingRuleSetLeadsToXmlRuleSetException() throws Exception {
-        new XmlRuleSet("/rulesets/missing-ruleset.xml");
+        String missingLocation = "/rulesets/missing-ruleset.xml";
+        try {
+            new XmlRuleSet(missingLocation);
+            fail();
+        } catch (XmlRuleSetException e) {
+            assertEquals("Could not parse RuleSet from given location '" + missingLocation + "'.", e.getMessage());
+        }
+    }
+
+    @Test
+    public void invalidRuleClassNameLeadsToXmlRuleSetException() throws Exception {
+        String missingRuleName = "de.codescape.bitvunit.rule.InvalidRuleClassName";
+        try {
+            new XmlRuleSet("/rulesets/invalid-rulename.xml");
+            fail();
+        } catch (XmlRuleSetException e) {
+            assertEquals("Could not instantiate rule " + missingRuleName + ".", e.getMessage());
+        }
     }
 
     @Test(expected = IllegalArgumentException.class)
