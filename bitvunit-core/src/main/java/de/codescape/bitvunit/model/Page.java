@@ -36,138 +36,139 @@ public class Page {
     }
 
     /**
-     * Returns all <code>&lt;label /&gt;</code> tags as {@link HtmlLabel} instances.
+     * Returns all <code>&lt;label/&gt;</code> tags as {@link HtmlLabel} instances.
      *
-     * @return all <code>&lt;label /&gt;</code> tags as {@link HtmlLabel} instances
+     * @return all <code>&lt;label/&gt;</code> tags as {@link HtmlLabel} instances
      */
     public List<HtmlLabel> findAllLabelTags() {
         return allByTagName(HtmlLabel.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;input /&gt;</code> tags as {@link HtmlInput} instances.
+     * Returns all <code>&lt;input/&gt;</code> tags as {@link HtmlInput} instances.
      *
-     * @return all <code>&lt;input /&gt;</code> tags as {@link HtmlInput} instances
+     * @return all <code>&lt;input/&gt;</code> tags as {@link HtmlInput} instances
      */
     public List<HtmlInput> findAllInputTags() {
         return allByTagName(HtmlInput.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;select /&gt;</code> tags as {@link HtmlSelect} instances.
+     * Returns all <code>&lt;select/&gt;</code> tags as {@link HtmlSelect} instances.
      *
-     * @return all <code>&lt;select /&gt;</code> tags as {@link HtmlSelect} instances
+     * @return all <code>&lt;select/&gt;</code> tags as {@link HtmlSelect} instances
      */
     public List<HtmlSelect> findAllSelectTags() {
         return allByTagName(HtmlSelect.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;textarea /&gt;</code> tags as {@link HtmlTextArea} instances.
+     * Returns all <code>&lt;textarea/&gt;</code> tags as {@link HtmlTextArea} instances.
      *
-     * @return all <code>&lt;textarea /&gt;</code> tags as {@link HtmlTextArea} instances
+     * @return all <code>&lt;textarea/&gt;</code> tags as {@link HtmlTextArea} instances
      */
     public List<HtmlTextArea> findAllTextareaTags() {
         return allByTagName(HtmlTextArea.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;img /&gt;</code> tags as {@link HtmlImage} instances.
+     * Returns all <code>&lt;img/&gt;</code> tags as {@link HtmlImage} instances.
      *
-     * @return all <code>&lt;img /&gt;</code> tags as {@link HtmlImage} instances
+     * @return all <code>&lt;img/&gt;</code> tags as {@link HtmlImage} instances
      */
     public List<HtmlImage> findAllImageTags() {
         return allByTagName(HtmlImage.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;table /&gt;</code> tags as {@link HtmlTable} instances.
+     * Returns all <code>&lt;table/&gt;</code> tags as {@link HtmlTable} instances.
      *
-     * @return all <code>&lt;table /&gt;</code> tags as {@link HtmlTable} instances
+     * @return all <code>&lt;table/&gt;</code> tags as {@link HtmlTable} instances
      */
     public List<HtmlTable> findAllTableTags() {
         return allByTagName(HtmlTable.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;blink /&gt;</code> tags as {@link HtmlBlink} instances.
+     * Returns all <code>&lt;blink/&gt;</code> tags as {@link HtmlBlink} instances.
      *
-     * @return all <code>&lt;blink /&gt;</code> tags as {@link HtmlBlink} instances
+     * @return all <code>&lt;blink/&gt;</code> tags as {@link HtmlBlink} instances
      */
     public List<HtmlBlink> findAllBlinkTags() {
         return allByTagName(HtmlBlink.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;marquee /&gt;</code> tags as {@link HtmlMarquee} instances.
+     * Returns all <code>&lt;marquee/&gt;</code> tags as {@link HtmlMarquee} instances.
      *
-     * @return all <code>&lt;marquee /&gt;</code> tags as {@link HtmlMarquee} instances
+     * @return all <code>&lt;marquee/&gt;</code> tags as {@link HtmlMarquee} instances
      */
     public List<HtmlMarquee> findAllMarqueeTags() {
         return allByTagName(HtmlMarquee.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;abbr /&gt;</code> tags as {@link HtmlAbbreviated} instances.
+     * Returns all <code>&lt;abbr/&gt;</code> tags as {@link HtmlAbbreviated} instances.
      *
-     * @return all <code>&lt;abbr /&gt;</code> tags as {@link HtmlAbbreviated} instances
+     * @return all <code>&lt;abbr/&gt;</code> tags as {@link HtmlAbbreviated} instances
      */
     public List<HtmlAbbreviated> findAllAbbreviationTags() {
         return allByTagName(HtmlAbbreviated.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;acronym /&gt;</code> tags as {@link HtmlAcronym} instances.
+     * Returns all <code>&lt;acronym/&gt;</code> tags as {@link HtmlAcronym} instances.
      *
-     * @return all <code>&lt;acronym /&gt;</code> tags as {@link HtmlAcronym} instances
+     * @return all <code>&lt;acronym/&gt;</code> tags as {@link HtmlAcronym} instances
      */
     public List<HtmlAcronym> findAllAcronymTags() {
         return allByTagName(HtmlAcronym.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;b /&gt;</code> tags as {@link HtmlBold} instances.
+     * Returns all <code>&lt;b/&gt;</code> tags as {@link HtmlBold} instances.
      *
-     * @return all <code>&lt;b /&gt;</code> tags as {@link HtmlBold} instances
+     * @return all <code>&lt;b/&gt;</code> tags as {@link HtmlBold} instances
      */
     public List<HtmlBold> findAllBoldTags() {
         return allByTagName(HtmlBold.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;i /&gt;</code> tags as {@link HtmlItalic} instances.
+     * Returns all <code>&lt;i/&gt;</code> tags as {@link HtmlItalic} instances.
      *
-     * @return all <code>&lt;i /&gt;</code> tags as {@link HtmlItalic} instances
+     * @return all <code>&lt;i/&gt;</code> tags as {@link HtmlItalic} instances
      */
     public List<HtmlItalic> findAllItalicTags() {
         return allByTagName(HtmlItalic.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;html /&gt;</code> tags as {@link HtmlHtml} instances.
+     * Returns all <code>&lt;html/&gt;</code> tags as {@link HtmlHtml} instances.
      *
-     * @return all <code>&lt;html /&gt;</code> tags as {@link HtmlHtml} instances
+     * @return all <code>&lt;html/&gt;</code> tags as {@link HtmlHtml} instances
      */
     public List<HtmlHtml> findAllHtmlTags() {
         return allByTagName(HtmlHtml.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;th /&gt;</code> tags as {@link HtmlTableCell} instances.
+     * Returns all <code>&lt;th/&gt;</code> tags as {@link HtmlTableCell} instances.
      *
-     * @return all <code>&lt;th /&gt;</code> tags as {@link HtmlTableCell} instances
+     * @return all <code>&lt;th/&gt;</code> tags as {@link HtmlTableCell} instances
      */
     public List<HtmlTableCell> findAllTableHeaders() {
         return allByTagName("th");
     }
 
     /**
-     * Returns all <code>&lt;h1 /&gt;</code>, <code>&lt;h2 /&gt;</code>, <code>&lt;h3 /&gt;</code>, <code>&lt;h4
-     * /&gt;</code>, <code>&lt;h5 /&gt;</code> and <code>&lt;h6 /&gt;</code> tags as {@link HtmlElement} instances.
+     * Returns all <code>&lt;h1/&gt;</code>, <code>&lt;h2/&gt;</code>, <code>&lt;h3/&gt;</code>,
+     * <code>&lt;h4/&gt;</code>, <code>&lt;h5/&gt;</code> and <code>&lt;h6/&gt;</code> tags as {@link HtmlElement}
+     * instances.
      *
-     * @return all <code>&lt;h1 /&gt;</code>, <code>&lt;h2 /&gt;</code>, <code>&lt;h3 /&gt;</code>, <code>&lt;h4
-     *         /&gt;</code>, <code>&lt;h5 /&gt;</code> and <code>&lt;h6 /&gt;</code> tags as {@link HtmlElement}
-     *         instances
+     * @return all <code>&lt;h1/&gt;</code>, <code>&lt;h2/&gt;</code>, <code>&lt;h3/&gt;</code>,
+     *         <code>&lt;h4/&gt;</code>, <code>&lt;h5/&gt;</code> and <code>&lt;h6/&gt;</code> tags as {@link
+     *         HtmlElement} instances
      */
     @SuppressWarnings("unchecked")
     public List<HtmlElement> findAllHeadingTags() {
@@ -175,36 +176,36 @@ public class Page {
     }
 
     /**
-     * Returns all <code>&lt;meta /&gt;</code> tags as {@link HtmlMeta} instances.
+     * Returns all <code>&lt;meta/&gt;</code> tags as {@link HtmlMeta} instances.
      *
-     * @return all <code>&lt;meta /&gt;</code> tags as {@link HtmlMeta} instances
+     * @return all <code>&lt;meta/&gt;</code> tags as {@link HtmlMeta} instances
      */
     public List<HtmlMeta> findAllMetaTags() {
         return allByTagName(HtmlMeta.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;ul /&gt;</code> tags as {@link HtmlUnorderedList} instances.
+     * Returns all <code>&lt;ul/&gt;</code> tags as {@link HtmlUnorderedList} instances.
      *
-     * @return all <code>&lt;ul /&gt;</code> tags as {@link HtmlUnorderedList} instances
+     * @return all <code>&lt;ul/&gt;</code> tags as {@link HtmlUnorderedList} instances
      */
     public List<HtmlUnorderedList> findAllUnorderedLists() {
         return allByTagName(HtmlUnorderedList.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;ol /&gt;</code> tags as {@link HtmlOrderedList} instances.
+     * Returns all <code>&lt;ol/&gt;</code> tags as {@link HtmlOrderedList} instances.
      *
-     * @return all <code>&lt;ol /&gt;</code> tags as {@link HtmlOrderedList} instances
+     * @return all <code>&lt;ol/&gt;</code> tags as {@link HtmlOrderedList} instances
      */
     public List<HtmlOrderedList> findAllOrderedLists() {
         return allByTagName(HtmlOrderedList.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;iframe /&gt;</code> tags as {@link HtmlInlineFrame} instances.
+     * Returns all <code>&lt;iframe/&gt;</code> tags as {@link HtmlInlineFrame} instances.
      *
-     * @return all <code>&lt;iframe /&gt;</code> tags as {@link HtmlInlineFrame} instances
+     * @return all <code>&lt;iframe/&gt;</code> tags as {@link HtmlInlineFrame} instances
      */
     public List<HtmlInlineFrame> findAllInlineFrameTags() {
         return allByTagName(HtmlInlineFrame.TAG_NAME);
@@ -221,72 +222,72 @@ public class Page {
     }
 
     /**
-     * Returns all <code>&lt;frame /&gt;</code> tags as {@link HtmlFrame} instances.
+     * Returns all <code>&lt;frame/&gt;</code> tags as {@link HtmlFrame} instances.
      *
-     * @return all <code>&lt;frame /&gt;</code> tags as {@link HtmlFrame} instances
+     * @return all <code>&lt;frame/&gt;</code> tags as {@link HtmlFrame} instances
      */
     public List<HtmlFrame> findAllFrameTags() {
         return allByTagName(HtmlFrame.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;area /&gt;</code> tags as {@link HtmlArea} instances.
+     * Returns all <code>&lt;area/&gt;</code> tags as {@link HtmlArea} instances.
      *
-     * @return all <code>&lt;area /&gt;</code> tags as {@link HtmlArea} instances
+     * @return all <code>&lt;area/&gt;</code> tags as {@link HtmlArea} instances
      */
     public List<HtmlArea> findAllAreaTags() {
         return allByTagName(HtmlArea.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;applet /&gt;</code> tags as {@link HtmlApplet} instances.
+     * Returns all <code>&lt;applet/&gt;</code> tags as {@link HtmlApplet} instances.
      *
-     * @return all <code>&lt;applet /&gt;</code> tags as {@link HtmlApplet} instances
+     * @return all <code>&lt;applet/&gt;</code> tags as {@link HtmlApplet} instances
      */
     public List<HtmlApplet> findAllAppletTags() {
         return allByTagName(HtmlApplet.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;dl /&gt;</code> tags as {@link HtmlDefinitionList} instances.
+     * Returns all <code>&lt;dl/&gt;</code> tags as {@link HtmlDefinitionList} instances.
      *
-     * @return all <code>&lt;dl /&gt;</code> tags as {@link HtmlDefinitionList} instances
+     * @return all <code>&lt;dl/&gt;</code> tags as {@link HtmlDefinitionList} instances
      */
     public List<HtmlDefinitionList> findAllDefinitionLists() {
         return allByTagName(HtmlDefinitionList.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;object /&gt;</code> tags as {@link HtmlObject} instances.
+     * Returns all <code>&lt;object/&gt;</code> tags as {@link HtmlObject} instances.
      *
-     * @return all <code>&lt;object /&gt;</code> tags as {@link HtmlObject} instances
+     * @return all <code>&lt;object/&gt;</code> tags as {@link HtmlObject} instances
      */
     public List<HtmlObject> findAllObjectTags() {
         return allByTagName(HtmlObject.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;a /&gt;</code> tags as {@link HtmlAnchor} instances.
+     * Returns all <code>&lt;a/&gt;</code> tags as {@link HtmlAnchor} instances.
      *
-     * @return all <code>&lt;a /&gt;</code> tags as {@link HtmlAnchor} instances
+     * @return all <code>&lt;a/&gt;</code> tags as {@link HtmlAnchor} instances
      */
     public List<HtmlAnchor> findAllAnchorTags() {
         return allByTagName(HtmlAnchor.TAG_NAME);
     }
 
     /**
-     * Returns all <code>&lt;fieldset /&gt;</code> tags as {@link HtmlFieldSet} instances.
+     * Returns all <code>&lt;fieldset/&gt;</code> tags as {@link HtmlFieldSet} instances.
      *
-     * @return all <code>&lt;fieldset /&gt;</code> tags as {@link HtmlFieldSet} instances
+     * @return all <code>&lt;fieldset/&gt;</code> tags as {@link HtmlFieldSet} instances
      */
     public List<HtmlFieldSet> findAllFieldsetTags() {
         return allByTagName(HtmlFieldSet.TAG_NAME);
     }
 
     /**
-     * Returns the first <code>&lt;title /&gt;</code> tag as {@link HtmlTitle} instance.
+     * Returns the first <code>&lt;title/&gt;</code> tag as {@link HtmlTitle} instance.
      *
-     * @return the first <code>&lt;title /&gt;</code> tag as {@link HtmlTitle} instance
+     * @return the first <code>&lt;title/&gt;</code> tag as {@link HtmlTitle} instance
      */
     public HtmlTitle findTitleTag() {
         return (HtmlTitle) htmlPage.getFirstByXPath("/html/head/title[1]");

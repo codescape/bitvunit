@@ -8,7 +8,7 @@
  */
 def availableCommands = [
     'create-rule': 'Wizard that helps you to create new rules.',
-    'generate-docs': 'Target that generates rule documentation from javadoc.',
+    'update-ruledocs': 'Target that generates rule documentation from javadoc.',
     'update-apidocs': 'Generates the html based javadoc for bitvunit-core.',
 ]
 
@@ -87,9 +87,9 @@ def getNextBitvUnitVersion() {
     new XmlSlurper().parse(new File('./pom.xml')).version.text().substring(0, 3)
 }
 
-/* generate-docs */
+/* update-ruledocs */
 
-if (args[0] == 'generate-docs') {
+if (args[0] == 'update-ruledocs') {
     print 'Path to gh-pages: '
     def path = getUserInput({ new File(it).exists() && it.endsWith('gh-pages') })
 
@@ -191,7 +191,7 @@ if (args[0] == 'update-apidocs') {
     def target = "${path}/apidocs"
 
     println 'Generating apidocs...'
-    def goal = 'cmd /c mvn -f ./bitvunit-core/pom.xml javadoc:javadoc'.execute()
+    def goal = 'cmd /c mvn -f ./bitvunit-core/pom.xml clean package javadoc:javadoc'.execute()
     println goal.text
 
     def ant = new AntBuilder()
