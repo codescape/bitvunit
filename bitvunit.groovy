@@ -191,7 +191,7 @@ if (args[0] == 'update-apidocs') {
     def target = "${path}/apidocs"
 
     println 'Generating apidocs...'
-    def goal = 'cmd /c mvn -f ./bitvunit-core/pom.xml javadoc:javadoc'.execute()
+    def goal = 'cmd /c mvn -f ./bitvunit-core/pom.xml clean package javadoc:javadoc'.execute()
     println goal.text
 
     def ant = new AntBuilder()
