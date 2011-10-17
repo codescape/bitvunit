@@ -293,4 +293,15 @@ public class Page {
         return (HtmlTitle) htmlPage.getFirstByXPath("/html/head/title[1]");
     }
 
+    /**
+     * Returns all elements with the given attribute name as {@link HtmlElement} instances.
+     *
+     * @param attributeName name of the attribute to filter by
+     * @return all elements with the given attribute name as {@link HtmlElement} instances
+     */
+    @SuppressWarnings("unchecked")
+    public List<HtmlElement> findAllElementsWithAttribute(String attributeName) {
+        return (List<HtmlElement>) htmlPage.getByXPath("//*[@" + attributeName + "]");
+    }
+
 }
