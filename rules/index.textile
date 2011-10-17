@@ -12,6 +12,6 @@ You can find a list of all categories here. Please choose from the list below to
 * "Links":/rules/links (1 rule)
 * "Lists":/rules/lists (3 rules)
 * "Media":/rules/media (2 rules)
-* "Page":/rules/page (2 rules)
+* "Page":/rules/page (3 rules)
 * "Tables":/rules/tables (3 rules)
 * "Text":/rules/text (8 rules)
