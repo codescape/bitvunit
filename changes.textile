@@ -26,6 +26,9 @@ h3(release#r06). Release 0.6 (_near future_)
 ** the website now comes in a much cleaner layout
 ** all rules are listed and documented on the website 
 ** apidocs are now available from the usage page
+* updated dependencies
+** now using commons-io 2.1
+** now using junit 4.10
 
 h3(release#r05). Release 0.5 (2011-09-03)
 
