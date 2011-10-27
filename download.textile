@@ -10,9 +10,9 @@ h3. GitHub Download
 
 Download the latest version of the framework from the GitHub download page:
 
-* "bitvunit-core-0.5.0.jar":https://github.com/downloads/codescape/bitvunit/bitvunit-core-0.5.0.jar
-* "bitvunit-core-0.5.0-sources.jar":https://github.com/downloads/codescape/bitvunit/bitvunit-core-0.5.0-sources.jar
-* "bitvunit-core-0.5.0-javadoc.jar":https://github.com/downloads/codescape/bitvunit/bitvunit-core-0.5.0-javadoc.jar
+* "bitvunit-core-{{bitvunit-version}}.jar":https://github.com/downloads/codescape/bitvunit/bitvunit-core-{{bitvunit-version}}.jar
+* "bitvunit-core-{{bitvunit-version}}-sources.jar":https://github.com/downloads/codescape/bitvunit/bitvunit-core-{{bitvunit-version}}-sources.jar
+* "bitvunit-core-{{bitvunit-version}}-javadoc.jar":https://github.com/downloads/codescape/bitvunit/bitvunit-core-{{bitvunit-version}}-javadoc.jar
 
 You can find previous versions on the "GitHub download page":https://github.com/codescape/bitvunit/downloads.
 
@@ -24,6 +24,6 @@ BitvUnit is available from the "Maven Central Repository":http://repo1.maven.org
 <dependency>
     <groupId>de.codescape.bitvunit</groupId>
     <artifactId>bitvunit-core</artifactId>
-    <version>0.5.0</version>
+    <version>{{bitvunit-version}}</version>
 </dependency>
 {% endhighlight %}
