@@ -57,6 +57,13 @@ body {
 
 p { margin: 10px 0; }
 
+strong, b { 
+  background: #eee;
+  border-radius: 5px;
+  padding: 0 5px;
+  font-weight: bold;
+}
+
 /* Source Code
 ************************************************/
 

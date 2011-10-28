@@ -1,0 +1,38 @@
+---
+layout: post
+title: Releasing BitvUnit 0.6 - Rule Development, Website Improvements, Library Updates
+---
+
+The next release of BitvUnit is out in the wild and it brings you six new rules available to analyze your website or web application! In total there are *36 rules* being shipped with the framework itself. You can find the new rules in the "Change Log":ChangeLog.
+
+h3. Rule Development
+
+To speed up the development process for new rules there is a new Groovy console script waiting to be used that provides a wizard to generate all required artifacts to add a new rule. See how it works in the following snipped from my console:
+
+{% highlight text %}
+> groovy bitvunit.groovy create-rule
+Author name: Stefan Glase
+Rule name: MySampleRule
+Rule category [forms, frames, images, interactions, links, lists, media, page, tables, text]: page
+Created rule at ./bitvunit-core/src/main/java/de/codescape/bitvunit/rule/page/MySampleRule.java
+Created test at ./bitvunit-core/src/test/java/de/codescape/bitvunit/rule/page/MySampleRuleTest.java
+Added new rule to ruleset all-rules.xml
+Done. Happy Coding!
+{% endhighlight %}
+
+That makes it dead simple to implement a new rule in a fork of the "BitvUnit Repository":BitvUnitRepository and when it is finished and tested you can easily commit it back to your Git repository and open a pull request to promote that rule into the framework.
+
+There are two more possible goals supported by the Groovy script. You can update the "Rule section":/rules/ on the documentation website with the single command `groovy bitvunit.groovy update-ruledocs` and on top of that the provided "API Docs":/apidocs can be refreshed, too, in the same way with `groovy bitvunit.groovy update-apidocs`.
+
+h3. Website Improvements
+
+As announced in the last post the website now comes in a much cleaner layout. With the help of the Groovy script it is now possible to present all "Rules":/rules implemented in the framework and the complete API Docs on the website. The API Docs are available from the "Usage":/usage page.
+
+h3. Library Updates
+
+The current release of the framework now depends on the latest version of Commons IO 2.1 and the update test library JUnit 4.10. The testsuite still shows that all functionality still works as intended. If there are any problems "Feedback":/feedback is always welcome!
+
+See the "Change Log":ChangeLog for further details.
+
+[ChangeLog]/changes/#r06
+[BitvUnitRepository]https://github.com/codescape/bitvunit
