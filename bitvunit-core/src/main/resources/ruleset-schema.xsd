@@ -4,6 +4,11 @@
            attributeFormDefault="unqualified">
 
     <xs:element name="ruleset">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Root element of the XML document that contains a list of rule elements that shall be used.
+            </xs:documentation>
+        </xs:annotation>
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="description" minOccurs="0" maxOccurs="1"/>
@@ -12,9 +17,20 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="description" type="xs:string"/>
+    <xs:element name="description" type="xs:string">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Optional element that contains a description of the document and it's contained rules.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
 
     <xs:element name="rule">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Element that describes a rule through the full qualified class name of the rule.
+            </xs:documentation>
+        </xs:annotation>
         <xs:complexType>
             <xs:attribute name="class" type="xs:NMTOKEN" use="required"/>
         </xs:complexType>
