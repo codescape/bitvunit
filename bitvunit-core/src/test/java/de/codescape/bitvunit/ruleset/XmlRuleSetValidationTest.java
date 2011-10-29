@@ -21,6 +21,11 @@ public class XmlRuleSetValidationTest {
         assertValidDocument("/rulesets/all-rules.xml", "ruleset-schema.xsd");
     }
 
+    /**
+     * Assertion that is valid if the given XSD document can be validated.
+     *
+     * @param schemaDocument the XSD document to be validated
+     */
     private void assertValidSchema(String schemaDocument) {
         Validator validator = new Validator();
         validator.addSchemaSource(new StreamSource(ClassPathResource.asInputStream(schemaDocument)));
