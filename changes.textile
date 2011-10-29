@@ -11,8 +11,8 @@ Hide and show details to releases in clicking on the release you are interested 
 h3(release#r07). Release 0.7 (_near future_)
 
 * increased test coverage
-** added test for XSD schema validation
-** added test for XSD schema for XML based ruleset definitions
+** testing validity of XSD schema document <code>ruleset-schema.xsd</code>
+** testing validity of XML document <code>/rulesets/all-rules.xml</code>
 
 h3(release#r06). Release 0.6 (2011-10-27)
 
