@@ -5,8 +5,10 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.model.Page;
 
 /**
- * Base class to all implementations of the {@link Rule} interface. It provides convenience methods to create new {@link
- * Violation} instances within the implementation of a {@link Rule} and allows to apply a {@link Rule} to a given {@link
+ * Base class to all implementations of the {@link Rule} interface. It provides convenience methods to create new
+ * {@link
+ * Violation} instances within the implementation of a {@link Rule} and allows to apply a {@link Rule} to a given
+ * {@link
  * HtmlPage} object.
  *
  * @author Stefan Glase
@@ -43,6 +45,11 @@ public abstract class AbstractRule implements Rule {
         return new Violation(this, htmlElement, message);
     }
 
+    /**
+     * Returns the {@link String} representation of a common {@link Rule} implementation.
+     *
+     * @return {@link String} representation of a common {@link Rule} implementation
+     */
     @Override
     public String toString() {
         return getClass().getSimpleName() + "[name=" + getName() + "]";
