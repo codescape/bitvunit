@@ -22,7 +22,7 @@ Done. Happy Coding!
 
 That makes it dead simple to implement a new rule in a fork of the "BitvUnit Repository":BitvUnitRepository and when it is finished and tested you can easily commit it back to your Git repository and open a pull request to promote that rule into the framework.
 
-There are two more possible goals supported by the Groovy script. You can update the "Rule section":/rules/ on the documentation website with the single command `groovy bitvunit.groovy update-ruledocs` and on top of that the provided "API Docs":/apidocs can be refreshed, too, in the same way with `groovy bitvunit.groovy update-apidocs`.
+There are two more possible goals supported by the Groovy script. You can update the "Rule section":/rules/ on the documentation website with the single command <code>groovy bitvunit.groovy update-ruledocs</code> and on top of that the provided "API Docs":/apidocs can be refreshed, too, in the same way with <code>groovy bitvunit.groovy update-apidocs</code>.
 
 h3. Website Improvements
 
@@ -30,7 +30,7 @@ As announced in the last post the website now comes in a much cleaner layout. Wi
 
 h3. Library Updates
 
-The current release of the framework now depends on the latest version of Commons IO 2.1 and the update test library JUnit 4.10. The testsuite still shows that all functionality still works as intended. If there are any problems "Feedback":/feedback is always welcome!
+The current release of the framework now depends on the latest version of Commons IO 2.1 and the updated test library JUnit 4.10. The testsuite still shows that all functionality is still working as intended. If there are any problems "Feedback":/feedback is always welcome!
 
 See the "Change Log":ChangeLog for further details.
 
