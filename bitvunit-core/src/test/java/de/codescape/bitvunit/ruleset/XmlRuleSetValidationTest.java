@@ -27,8 +27,7 @@ public class XmlRuleSetValidationTest {
      * @param schemaDocument the XSD document to be validated
      */
     private void assertValidSchema(String schemaDocument) {
-        Validator validator = new Validator();
-        validator.addSchemaSource(new StreamSource(ClassPathResource.asInputStream(schemaDocument)));
+        Validator validator = createValidatorForSchema(schemaDocument);
         assertTrue(validator.isSchemaValid());
     }
 
@@ -40,10 +39,14 @@ public class XmlRuleSetValidationTest {
      * @throws SAXException
      */
     private void assertValidDocument(String xmlDocument, String schemaDocument) throws SAXException {
+        Validator validator = createValidatorForSchema(schemaDocument);
+        assertTrue(validator.isInstanceValid(new StreamSource(ClassPathResource.asInputStream(xmlDocument))));
+    }
+
+    private Validator createValidatorForSchema(String schemaDocument) {
         Validator validator = new Validator();
         validator.addSchemaSource(new StreamSource(ClassPathResource.asInputStream(schemaDocument)));
-        StreamSource xmlInstance = new StreamSource(ClassPathResource.asInputStream(xmlDocument));
-        assertTrue(validator.isInstanceValid(xmlInstance));
+        return validator;
     }
 
 }
