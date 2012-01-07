@@ -19,6 +19,18 @@ public class AbstractRuleTest {
         assertEquals(Priority.NORMAL, new SpecificRule("SomeRuleName").getPriority());
     }
 
+    @Test
+    public void priorityOfARuleCanBeConfiguredExternally() throws Exception {
+        SpecificRule rule = new SpecificRule("MyRule");
+        assertEquals(Priority.NORMAL, rule.getPriority());
+
+        rule.setPriority(Priority.HIGH);
+        assertEquals(Priority.HIGH, rule.getPriority());
+
+        rule.setPriority(Priority.LOW);
+        assertEquals(Priority.LOW, rule.getPriority());
+    }
+
     private class SpecificRule extends AbstractRule {
 
         private final String name;

@@ -1,5 +1,6 @@
 package de.codescape.bitvunit.ruleset;
 
+import de.codescape.bitvunit.rule.Priority;
 import de.codescape.bitvunit.rule.Rule;
 import org.junit.Test;
 
@@ -14,10 +15,36 @@ import static org.junit.Assert.fail;
 
 public class XmlRuleSetTest {
 
+    private static final String RULESET_ALL_RULES_XML = "/rulesets/all-rules.xml";
+
     @Test
     public void creationOfRuleSetAllRulesFindsAllRules() throws Exception {
-        RuleSet ruleSet = new XmlRuleSet("/rulesets/all-rules.xml");
+        RuleSet ruleSet = new XmlRuleSet(RULESET_ALL_RULES_XML);
         assertRules(ruleSet, countAllNonAbstractNonInnerClassesImplementingRuleInterface());
+    }
+
+    @Test
+    public void creationOfRuleSetWithoutRulePrioritiesShouldConfigureAllRulesWithNormalPriority() {
+        RuleSet ruleSet = new XmlRuleSet(RULESET_ALL_RULES_XML);
+        for (Rule rule : ruleSet.getRules()) {
+            assertEquals(Priority.NORMAL, rule.getPriority());
+        }
+    }
+
+    @Test
+    public void creationOfRuleSetWithRulePrioritiesShouldConfigureRulesAccordingly() {
+        RuleSet ruleSet = new XmlRuleSet("/rulesets/with-priorities.xml");
+        for (Rule rule : ruleSet.getRules()) {
+            if (rule.getName().equals("AlternativeTextForImage")) {
+                assertEquals(Priority.NORMAL, rule.getPriority());
+            } else if (rule.getName().equals("AlternativeTextForLinkedImage")) {
+                assertEquals(Priority.HIGH, rule.getPriority());
+            } else if (rule.getName().equals("AlternativeTextForAreaOfImageMap")) {
+                assertEquals(Priority.LOW, rule.getPriority());
+            } else {
+                fail("Unexpected rule name: " + rule.getName());
+            }
+        }
     }
 
     private int countAllNonAbstractNonInnerClassesImplementingRuleInterface() {

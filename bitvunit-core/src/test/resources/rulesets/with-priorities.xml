@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ruleset xmlns="http://bitvunit.codescape.de/ruleset/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://bitvunit.codescape.de/ruleset/1.0 ../../../main/resources/ruleset-schema.xsd">
+
+    <description>Example for a ruleset with rules with a supplied priority.</description>
+
+    <rule class="de.codescape.bitvunit.rule.images.AlternativeTextForImageRule" priority="normal"/>
+    <rule class="de.codescape.bitvunit.rule.images.AlternativeTextForLinkedImageRule" priority="high"/>
+    <rule class="de.codescape.bitvunit.rule.images.AlternativeTextForAreaOfImageMapRule" priority="low"/>
+
+</ruleset>

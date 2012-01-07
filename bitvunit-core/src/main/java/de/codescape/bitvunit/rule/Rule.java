@@ -25,4 +25,18 @@ public interface Rule {
      */
     Violations applyTo(HtmlPage htmlPage);
 
+    /**
+     * Returns the {@link Priority} for that rule.
+     *
+     * @return {@link Priority} for that rule
+     */
+    Priority getPriority();
+
+    /**
+     * Sets the {@link Priority} for that rule.
+     *
+     * @param priority {@link Priority} for that rule
+     */
+    void setPriority(Priority priority);
+
 }

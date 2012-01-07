@@ -1,5 +1,6 @@
 package de.codescape.bitvunit.ruleset;
 
+import de.codescape.bitvunit.rule.Priority;
 import de.codescape.bitvunit.rule.Rule;
 import de.codescape.bitvunit.rule.Violations;
 import de.codescape.bitvunit.rule.text.AvoidBlinkTextRule;
@@ -10,8 +11,7 @@ import org.junit.Test;
 import static de.codescape.bitvunit.test.Assertions.assertRules;
 import static de.codescape.bitvunit.test.Assertions.assertViolations;
 import static de.codescape.bitvunit.util.html.HtmlPageUtil.toHtmlPage;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -81,9 +81,35 @@ public class BasicRuleSetTest {
         assertEquals(expectedString, ruleSet.toString());
     }
 
+    @Test
+    public void getRulesShouldReturnRulesWithTheirConfiguredPriority() throws Exception {
+        ruleSet.addRule(createRuleWithNameAndPriority("HighPriorityRule", Priority.HIGH));
+        ruleSet.addRule(createRuleWithNameAndPriority("NormalPriorityRule", Priority.NORMAL));
+        ruleSet.addRule(createRuleWithNameAndPriority("LowPriorityRule", Priority.LOW));
+
+        assertEquals(3, ruleSet.getRules().size());
+        for (Rule rule : ruleSet.getRules()) {
+            if (rule.getName().equals("HighPriorityRule")) {
+                assertEquals(Priority.HIGH, rule.getPriority());
+            } else if (rule.getName().equals("NormalPriorityRule")) {
+                assertEquals(Priority.NORMAL, rule.getPriority());
+            } else if (rule.getName().equals("LowPriorityRule")) {
+                assertEquals(Priority.LOW, rule.getPriority());
+            } else {
+                fail("Rule with unexpected name: " + rule.getName());
+            }
+        }
+    }
+
     private Rule createRuleWithName(String ruleName) {
         Rule mockedRule = mock(Rule.class);
         when(mockedRule.getName()).thenReturn(ruleName);
+        return mockedRule;
+    }
+
+    private Rule createRuleWithNameAndPriority(String ruleName, Priority priority) {
+        Rule mockedRule = createRuleWithName(ruleName);
+        when(mockedRule.getPriority()).thenReturn(priority);
         return mockedRule;
     }
 

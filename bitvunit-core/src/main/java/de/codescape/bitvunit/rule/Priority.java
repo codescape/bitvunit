@@ -9,7 +9,7 @@ package de.codescape.bitvunit.rule;
  */
 public enum Priority {
 
-    NORMAL;
+    LOW, NORMAL, HIGH;
 
     @Override
     public String toString() {

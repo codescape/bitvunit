@@ -1,5 +1,6 @@
 package de.codescape.bitvunit.ruleset;
 
+import de.codescape.bitvunit.rule.Priority;
 import de.codescape.bitvunit.rule.Rule;
 import de.codescape.bitvunit.util.Assert;
 import de.codescape.bitvunit.util.io.ClassPathResource;
@@ -44,15 +45,30 @@ public class XmlRuleSet extends BasicRuleSet implements RuleSet {
     }
 
     /**
-     * Walks through the {@link Document} and tries to instantiate and add a {@link Rule} instance for every listed rule
-     * to the rules contained in this {@link RuleSet}.
+     * Walks through the {@link Document} and tries to instantiate and add a {@link Rule} instance for every listed
+     * rule to the rules contained in this {@link RuleSet}.
      *
      * @param document {@link Document} to read the rules from
      */
     private void addRulesFromDocument(Document document) {
         NodeList ruleNodes = document.getElementsByTagName("rule");
         for (int i = 0; i < ruleNodes.getLength(); i++) {
-            addRule(extractClassAttributeFromNode(ruleNodes.item(i)));
+            addRule(extractClassAttributeFromNode(ruleNodes.item(i)), extractPriorityAttributeFromNode(ruleNodes.item(i)));
+        }
+    }
+
+    /**
+     * Gets the priority String from the {@link Node} representing a single rule element in the XML file.
+     *
+     * @param node {@link Node} that is can optionally contain an attribute <code>priority</code>
+     * @return {@link Priority} value according to the value of the attribute; defaults to {@link Priority#NORMAL}
+     */
+    private Priority extractPriorityAttributeFromNode(Node node) {
+        Node priorityAttribute = node.getAttributes().getNamedItem("priority");
+        if (priorityAttribute == null) {
+            return Priority.NORMAL;
+        } else {
+            return Priority.valueOf(priorityAttribute.getTextContent().toUpperCase());
         }
     }
 
@@ -69,16 +85,20 @@ public class XmlRuleSet extends BasicRuleSet implements RuleSet {
 
     /**
      * Instantiates and adds an instance of a {@link Rule} with the given class name to the list of rules contained in
-     * this {@link RuleSet}.
+     * this {@link RuleSet} and configures the {@link Priority} accordingly.
      *
      * @param className class name of the {@link Rule} to be added
+     * @param priority  priority of the {@link Rule} to be added
      */
-    private void addRule(String className) {
+    private void addRule(String className, Priority priority) {
+        Rule rule;
         try {
-            addRule((Rule) Class.forName(className).newInstance());
+            rule = (Rule) Class.forName(className).newInstance();
         } catch (Exception e) {
             throw new XmlRuleSetException("Could not instantiate rule " + className + ".", e);
         }
+        rule.setPriority(priority);
+        addRule(rule);
     }
 
 }

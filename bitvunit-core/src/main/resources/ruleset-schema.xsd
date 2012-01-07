@@ -33,7 +33,19 @@
         </xs:annotation>
         <xs:complexType>
             <xs:attribute name="class" type="xs:NMTOKEN" use="required"/>
+            <xs:attribute name="priority" type="priority" use="optional"/>
         </xs:complexType>
     </xs:element>
+
+    <xs:simpleType name="priority">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Type that lists all supported priorities that can be configured for a rule.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="low|normal|high"/>
+        </xs:restriction>
+    </xs:simpleType>
 
 </xs:schema>

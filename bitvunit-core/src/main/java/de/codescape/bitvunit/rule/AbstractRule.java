@@ -13,6 +13,8 @@ import de.codescape.bitvunit.model.Page;
  */
 public abstract class AbstractRule implements Rule {
 
+    private Priority priority = Priority.NORMAL;
+
     @Override
     public abstract String getName();
 
@@ -53,13 +55,14 @@ public abstract class AbstractRule implements Rule {
         return getClass().getSimpleName() + "[name=" + getName() + ", priority=" + getPriority() + "]";
     }
 
-    /**
-     * Returns the {@link Priority} for the specific {@link Rule} implementation.
-     *
-     * @return {@link Priority} for the specific {@link Rule} implementation
-     */
+    @Override
     public Priority getPriority() {
-        return Priority.NORMAL;
+        return priority;
+    }
+
+    @Override
+    public void setPriority(Priority priority) {
+        this.priority = priority;
     }
 
 }
