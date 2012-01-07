@@ -40,9 +40,26 @@ public class XmlReportWriterTest extends AbstractReportWriterTest {
         Document xml = XMLUnit.buildControlDocument(xmlString);
         XpathEngine xpath = XMLUnit.newXpathEngine();
 
+        shouldContainReportNode(xml, xpath);
+        shouldListAllViolations(xml, xpath);
+        shouldListAllRules(xml, xpath);
+        shouldListPriorityForEveryRule(xml, xpath);
+    }
+
+    private void shouldContainReportNode(Document xml, XpathEngine xpath) throws XpathException {
         assertEquals(1, xpath.getMatchingNodes("//BitvUnit/Report", xml).getLength());
+    }
+
+    private void shouldListAllViolations(Document xml, XpathEngine xpath) throws XpathException {
         assertEquals(someViolations().size(), xpath.getMatchingNodes("//BitvUnit/Violations/Violation", xml).getLength());
+    }
+
+    private void shouldListAllRules(Document xml, XpathEngine xpath) throws XpathException {
         assertEquals(someRuleSet().getRules().size(), xpath.getMatchingNodes("//BitvUnit/Rules/Rule", xml).getLength());
+    }
+
+    private void shouldListPriorityForEveryRule(Document xml, XpathEngine xpath) throws XpathException {
+        assertEquals(someRuleSet().getRules().size(), xpath.getMatchingNodes("//BitvUnit/Rules/Rule[@priority]", xml).getLength());
     }
 
 }

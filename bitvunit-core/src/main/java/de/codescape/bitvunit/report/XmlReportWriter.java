@@ -78,7 +78,7 @@ public class XmlReportWriter extends AbstractReportWriter {
     private void printRules(RuleSet ruleSet, PrintWriter out) {
         out.println("<Rules>");
         for (Rule rule : ruleSet.getRules()) {
-            out.println("<Rule name='" + rule.getName() + "'/>");
+            out.println("<Rule name='" + rule.getName() + "' priority='" + rule.getPriority() + "'/>");
         }
         out.println("</Rules>");
     }
