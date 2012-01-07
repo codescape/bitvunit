@@ -10,6 +10,13 @@ Hide and show details to releases in clicking on the release you are interested 
 
 h3(release#r07). Release 0.7 (_near future_)
 
+* added priority concept to rules
+** rules have a default priority <code>NORMAL</code>
+** rules can be promoted to priority <code>HIGH</code> or demoted to priority <code>LOW</code> individually
+* improved XML based configuration
+** the priority of every rule listed in a XML based ruleset can be configured
+* improved reporting functionality
+** <code>TextReportWriter</code> and <code>XmlReportWriter</code> list the priority for every rule
 * increased test coverage
 ** testing validity of XSD schema document <code>ruleset-schema.xsd</code>
 ** testing validity of XML document <code>/rulesets/all-rules.xml</code>
