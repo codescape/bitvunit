@@ -6,10 +6,8 @@ import de.codescape.bitvunit.model.Page;
 
 /**
  * Base class to all implementations of the {@link Rule} interface. It provides convenience methods to create new
- * {@link
- * Violation} instances within the implementation of a {@link Rule} and allows to apply a {@link Rule} to a given
- * {@link
- * HtmlPage} object.
+ * {@link Violation} instances within the implementation of a {@link Rule} and allows to apply a {@link Rule} to a
+ * given {@link HtmlPage} object.
  *
  * @author Stefan Glase
  */
@@ -53,6 +51,15 @@ public abstract class AbstractRule implements Rule {
     @Override
     public String toString() {
         return getClass().getSimpleName() + "[name=" + getName() + "]";
+    }
+
+    /**
+     * Returns the {@link Priority} for the specific {@link Rule} implementation.
+     *
+     * @return {@link Priority} for the specific {@link Rule} implementation
+     */
+    public Priority getPriority() {
+        return Priority.NORMAL;
     }
 
 }

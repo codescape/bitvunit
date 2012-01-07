@@ -14,9 +14,14 @@ public class AbstractRuleTest {
         assertEquals(expectedToString, new SpecificRule(specificRule).toString());
     }
 
+    @Test
+    public void getPriorityShouldReturnNormalIfNotOverridden() throws Exception {
+        assertEquals(Priority.NORMAL, new SpecificRule("SomeRuleName").getPriority());
+    }
+
     private class SpecificRule extends AbstractRule {
 
-        private String name;
+        private final String name;
 
         private SpecificRule(String name) {
             this.name = name;
