@@ -50,7 +50,7 @@ public abstract class AbstractRule implements Rule {
      */
     @Override
     public String toString() {
-        return getClass().getSimpleName() + "[name=" + getName() + "]";
+        return getClass().getSimpleName() + "[name=" + getName() + ", priority=" + getPriority() + "]";
     }
 
     /**

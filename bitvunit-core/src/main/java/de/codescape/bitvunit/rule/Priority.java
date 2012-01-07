@@ -1,11 +1,19 @@
 package de.codescape.bitvunit.rule;
 
 /**
- * TODO add documentation to enum and it's values
+ * Rules can run under different priorities. For example this enables the user to set a threshold on specific amount of
+ * violations with different weighting.
  *
  * @author Stefan Glase
  * @since 0.7
  */
 public enum Priority {
-    NORMAL
+
+    NORMAL;
+
+    @Override
+    public String toString() {
+        return name().toLowerCase();
+    }
+
 }

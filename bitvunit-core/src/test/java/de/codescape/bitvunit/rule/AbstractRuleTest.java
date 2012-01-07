@@ -10,7 +10,7 @@ public class AbstractRuleTest {
     @Test
     public void toStringReturnsReadableStringRepresentation() throws Exception {
         String specificRule = "MyRuleName";
-        String expectedToString = "SpecificRule[name=" + specificRule + "]";
+        String expectedToString = "SpecificRule[name=" + specificRule + ", priority=normal]";
         assertEquals(expectedToString, new SpecificRule(specificRule).toString());
     }
 
