@@ -1,6 +1,5 @@
 package de.codescape.bitvunit.rule.media;
 
-
 import com.gargoylesoftware.htmlunit.html.HtmlObject;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
