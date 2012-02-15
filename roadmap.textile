@@ -1,0 +1,7 @@
+---
+layout: default
+title: Roadmap
+permalink: roadmap/index.html
+---
+
+This page will collect our roadmap towards new versions of the framework.
