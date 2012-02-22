@@ -13,12 +13,3 @@ Releasing a new version
 3. Verify the results and run `mvn release:perform` if everyhting is looking fine.
 4. Login at https://oss.sonatype.org and verify the generated artifacts in the `Staging Repository` are okay.
 5. `Close` the Build in the `Staging Repository` and then `Release` the new version to Maven Central.
-
-Implementing new rules
-----------------------
-1. Run the wizard with the command `groovy bitvunit.groovy create-rule` from the root folder of the project. (Groovy required)
-2. Enter your full name so that it appears in the JavaDoc of the newly created rule.
-3. Enter an informative name for your new rule. Valid names start with an uppercase letter, contain only characters and end with `Rule`.
-4. Choose from one of the existing rule categories. Creating new categories is not allowed by the wizard.
-5. Implement the tests. The two already existing test cases are not a limit and you can create more if required.
-6. Implement the new rule and make sure all unit tests are passing.
