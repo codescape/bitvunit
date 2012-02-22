@@ -22,6 +22,8 @@ h3(release#r07). Release 0.7 (_near future_)
 ** testing validity of XML document <code>/rulesets/all-rules.xml</code>
 * improvements to documentation
 ** added documentation to XSD schema document <code>ruleset-schema.xsd</code>
+* updated dependencies
+** now using org.mockito:mockito-all:1.9.0
 
 h3(release#r06). Release 0.6 (2011-10-27)
 
@@ -42,8 +44,8 @@ h3(release#r06). Release 0.6 (2011-10-27)
 ** all rules are listed and documented on the website 
 ** apidocs are now available from the usage page
 * updated dependencies
-** now using commons-io 2.1
-** now using junit 4.10
+** now using commons-io:commons-io:2.1
+** now using junit:junit:4.10
 
 h3(release#r05). Release 0.5 (2011-09-03)
 
@@ -63,8 +65,8 @@ h3(release#r05). Release 0.5 (2011-09-03)
 ** added package documentation to all packages
 ** added documentation of ReportingContext
 * updated dependencies
-** now using htmlunit 2.9
-** now using junit 4.9
+** now using net.sourceforge.htmlunit:htmlunit:2.9
+** now using junit:junit:4.9
 
 h3(release#r04). Release 0.4 (2011-07-23)
 
