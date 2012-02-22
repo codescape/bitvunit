@@ -6,7 +6,8 @@ BitvUnit is an open source accessibility testing framework that makes it easy to
 To build the latest version of the framework just checkout the sources and run `mvn install` on your local machine and it will create and install the latest version of the framework to your local maven repository.
 
 ### Implement new rule
-To implement a new rule we advise you to use to Groovy based wizard. The following steps describe the necessary steps:
+To implement a new rule we advise you to use to Groovy based wizard. The following steps describe the path to implement a new rule:
+
 1. Run the wizard with the command `groovy bitvunit.groovy create-rule` from the root folder of the project. (Groovy required)
 2. Enter your full name so that it appears in the JavaDoc of the newly created rule.
 3. Enter an informative name for your new rule. Valid names start with an uppercase letter, contain only characters and end with `Rule`.
