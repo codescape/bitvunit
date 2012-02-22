@@ -6,6 +6,7 @@ target/
 *.iml
 *.ipr
 *.iws
+*.log
 
 # Eclipse
 .classpath
