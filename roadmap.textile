@@ -5,3 +5,5 @@ permalink: roadmap/index.html
 ---
 
 This page will collect our roadmap towards new versions of the framework.
+
+* provide preconfigured set of rules for accessibility testing against standards (e.g. BITV)

@@ -23,6 +23,7 @@ h3(release#r07). Release 0.7 (_near future_)
 ** testing validity of XML document <code>/rulesets/all-rules.xml</code>
 * improvements to documentation
 ** added documentation to XSD schema document <code>ruleset-schema.xsd</code>
+** better apidocs provided by doclava doclet for JavaDoc
 * improvements to bitvunit-demo project
 ** show usage in combination with WebDriver
 ** show usage in combination with HtmlUnit
