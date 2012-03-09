@@ -10,6 +10,7 @@ Hide and show details to releases in clicking on the release you are interested 
 
 h3(release#r07). Release 0.7 (_near future_)
 
+* added support for Selenium WebDriver
 * added priority concept to rules
 ** rules have a default priority <code>NORMAL</code>
 ** rules can be promoted to priority <code>HIGH</code> or demoted to priority <code>LOW</code> individually
@@ -22,6 +23,10 @@ h3(release#r07). Release 0.7 (_near future_)
 ** testing validity of XML document <code>/rulesets/all-rules.xml</code>
 * improvements to documentation
 ** added documentation to XSD schema document <code>ruleset-schema.xsd</code>
+* improvements to bitvunit-demo project
+** show usage in combination with WebDriver
+** show usage in combination with HtmlUnit
+** show usage in combination with simple URLs
 * updated dependencies
 ** now using org.mockito:mockito-all:1.9.0
 
