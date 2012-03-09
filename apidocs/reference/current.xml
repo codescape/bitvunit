@@ -1,0 +1,3027 @@
+<api>
+<package name="de.codescape.bitvunit.hamcrest"
+>
+<class name="ComplianceMatcher"
+ extends="org.hamcrest.TypeSafeMatcher"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ComplianceMatcher"
+ type="de.codescape.bitvunit.hamcrest.ComplianceMatcher"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="ruleSet" type="de.codescape.bitvunit.ruleset.RuleSet">
+</parameter>
+</constructor>
+<method name="compliantTo"
+ return="org.hamcrest.Matcher&lt;T&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="rule" type="de.codescape.bitvunit.rule.Rule">
+</parameter>
+</method>
+<method name="compliantTo"
+ return="org.hamcrest.Matcher&lt;T&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="ruleSet" type="de.codescape.bitvunit.ruleset.RuleSet">
+</parameter>
+</method>
+<method name="describeTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="description" type="org.hamcrest.Description">
+</parameter>
+</method>
+<method name="matchesSafely"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="item" type="T">
+</parameter>
+</method>
+</class>
+</package>
+<package name="de.codescape.bitvunit.model"
+>
+<class name="Page"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Page"
+ type="de.codescape.bitvunit.model.Page"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="htmlPage" type="com.gargoylesoftware.htmlunit.html.HtmlPage">
+</parameter>
+</constructor>
+<method name="findAllAbbreviationTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlAbbreviated&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllAcronymTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlAcronym&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllAnchorTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlAnchor&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllAppletTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlApplet&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllAreaTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlArea&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllBlinkTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlBlink&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllBoldTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlBold&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllDefinitionLists"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlDefinitionList&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllElementsWithAttribute"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlElement&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="attributeName" type="java.lang.String">
+</parameter>
+</method>
+<method name="findAllFieldsetTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlFieldSet&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllFrameTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlFrame&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllHeadingTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlElement&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllHtmlTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlHtml&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllImageTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlImage&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllInlineFrameTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlInlineFrame&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllInputTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlInput&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllItalicTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlItalic&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllLabelTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlLabel&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllMarqueeTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlMarquee&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllMetaTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlMeta&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllObjectTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlObject&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllOrderedLists"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlOrderedList&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllSelectTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlSelect&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllTableHeaders"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlTableCell&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllTableTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlTable&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllTextareaTags"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlTextArea&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findAllUnorderedLists"
+ return="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlUnorderedList&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="findHtmlElementById"
+ return="com.gargoylesoftware.htmlunit.html.HtmlElement"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="elementId" type="java.lang.String">
+</parameter>
+</method>
+<method name="findTitleTag"
+ return="com.gargoylesoftware.htmlunit.html.HtmlTitle"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="de.codescape.bitvunit.report"
+>
+<class name="AbstractReportWriter"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="de.codescape.bitvunit.report.ReportWriter">
+</implements>
+<constructor name="AbstractReportWriter"
+ type="de.codescape.bitvunit.report.AbstractReportWriter"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getBitvUnitVersion"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="getFormattedDate"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="getOutputFilename"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="setWriteToFile"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="writeToFile" type="boolean">
+</parameter>
+</method>
+<method name="writeReport"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="htmlPage" type="com.gargoylesoftware.htmlunit.html.HtmlPage">
+</parameter>
+<parameter name="ruleSet" type="de.codescape.bitvunit.ruleset.RuleSet">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="writeReport"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="writer" type="java.io.Writer">
+</parameter>
+<parameter name="htmlPage" type="com.gargoylesoftware.htmlunit.html.HtmlPage">
+</parameter>
+<parameter name="ruleSet" type="de.codescape.bitvunit.ruleset.RuleSet">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<field name="DEFAULT_FILENAME"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;BitvUnitReport&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<interface name="ReportWriter"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="writeReport"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="htmlPage" type="com.gargoylesoftware.htmlunit.html.HtmlPage">
+</parameter>
+<parameter name="ruleSet" type="de.codescape.bitvunit.ruleset.RuleSet">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+</interface>
+<class name="ReportingContext"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getReportWriter"
+ return="de.codescape.bitvunit.report.ReportWriter"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setReportWriter"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="reportWriter" type="de.codescape.bitvunit.report.ReportWriter">
+</parameter>
+</method>
+</class>
+<class name="TextReportWriter"
+ extends="de.codescape.bitvunit.report.AbstractReportWriter"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="TextReportWriter"
+ type="de.codescape.bitvunit.report.TextReportWriter"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getOutputFilename"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="writeReport"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="writer" type="java.io.Writer">
+</parameter>
+<parameter name="htmlPage" type="com.gargoylesoftware.htmlunit.html.HtmlPage">
+</parameter>
+<parameter name="ruleSet" type="de.codescape.bitvunit.ruleset.RuleSet">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+</class>
+<class name="XmlReportWriter"
+ extends="de.codescape.bitvunit.report.AbstractReportWriter"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="XmlReportWriter"
+ type="de.codescape.bitvunit.report.XmlReportWriter"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getOutputFilename"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="writeReport"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="writer" type="java.io.Writer">
+</parameter>
+<parameter name="htmlPage" type="com.gargoylesoftware.htmlunit.html.HtmlPage">
+</parameter>
+<parameter name="ruleSet" type="de.codescape.bitvunit.ruleset.RuleSet">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+</class>
+</package>
+<package name="de.codescape.bitvunit.rule"
+>
+<class name="AbstractRule"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="de.codescape.bitvunit.rule.Rule">
+</implements>
+<constructor name="AbstractRule"
+ type="de.codescape.bitvunit.rule.AbstractRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="de.codescape.bitvunit.rule.Violations"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="htmlPage" type="com.gargoylesoftware.htmlunit.html.HtmlPage">
+</parameter>
+</method>
+<method name="applyTo"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="createViolation"
+ return="de.codescape.bitvunit.rule.Violation"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="htmlElement" type="com.gargoylesoftware.htmlunit.html.HtmlElement">
+</parameter>
+<parameter name="message" type="java.lang.String">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPriority"
+ return="de.codescape.bitvunit.rule.Priority"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setPriority"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="priority" type="de.codescape.bitvunit.rule.Priority">
+</parameter>
+</method>
+</class>
+<class name="Priority"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="de.codescape.bitvunit.rule.Priority"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="de.codescape.bitvunit.rule.Priority[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<interface name="Rule"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="applyTo"
+ return="de.codescape.bitvunit.rule.Violations"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="htmlPage" type="com.gargoylesoftware.htmlunit.html.HtmlPage">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPriority"
+ return="de.codescape.bitvunit.rule.Priority"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setPriority"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="priority" type="de.codescape.bitvunit.rule.Priority">
+</parameter>
+</method>
+</interface>
+<class name="Violation"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Violation"
+ type="de.codescape.bitvunit.rule.Violation"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="rule" type="de.codescape.bitvunit.rule.Rule">
+</parameter>
+<parameter name="htmlElement" type="com.gargoylesoftware.htmlunit.html.HtmlElement">
+</parameter>
+<parameter name="message" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="getMessage"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPosition"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRule"
+ return="de.codescape.bitvunit.rule.Rule"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getURL"
+ return="java.net.URL"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="Violations"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Violations"
+ type="de.codescape.bitvunit.rule.Violations"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="add"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="violation" type="de.codescape.bitvunit.rule.Violation">
+</parameter>
+</method>
+<method name="addAll"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="asList"
+ return="java.util.List&lt;de.codescape.bitvunit.rule.Violation&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="hasViolations"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="size"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="de.codescape.bitvunit.rule.forms"
+>
+<class name="AlternativeTextForImageButtonRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AlternativeTextForImageButtonRule"
+ type="de.codescape.bitvunit.rule.forms.AlternativeTextForImageButtonRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="FieldsetContainsLegendRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="FieldsetContainsLegendRule"
+ type="de.codescape.bitvunit.rule.forms.FieldsetContainsLegendRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="LabelContainsTextRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="LabelContainsTextRule"
+ type="de.codescape.bitvunit.rule.forms.LabelContainsTextRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="LabelForInputFieldRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="LabelForInputFieldRule"
+ type="de.codescape.bitvunit.rule.forms.LabelForInputFieldRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="LabelForSelectTagRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="LabelForSelectTagRule"
+ type="de.codescape.bitvunit.rule.forms.LabelForSelectTagRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="LabelForTextareaRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="LabelForTextareaRule"
+ type="de.codescape.bitvunit.rule.forms.LabelForTextareaRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="LabelWithoutFormElementRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="LabelWithoutFormElementRule"
+ type="de.codescape.bitvunit.rule.forms.LabelWithoutFormElementRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="UniqueLabelForFormElementRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="UniqueLabelForFormElementRule"
+ type="de.codescape.bitvunit.rule.forms.UniqueLabelForFormElementRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="de.codescape.bitvunit.rule.frames"
+>
+<class name="AlternativeTextForInlineFrameRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AlternativeTextForInlineFrameRule"
+ type="de.codescape.bitvunit.rule.frames.AlternativeTextForInlineFrameRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="TitleForFrameRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="TitleForFrameRule"
+ type="de.codescape.bitvunit.rule.frames.TitleForFrameRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="TitleForInlineFrameRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="TitleForInlineFrameRule"
+ type="de.codescape.bitvunit.rule.frames.TitleForInlineFrameRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="de.codescape.bitvunit.rule.images"
+>
+<class name="AlternativeTextForAreaOfImageMapRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AlternativeTextForAreaOfImageMapRule"
+ type="de.codescape.bitvunit.rule.images.AlternativeTextForAreaOfImageMapRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="AlternativeTextForImageRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AlternativeTextForImageRule"
+ type="de.codescape.bitvunit.rule.images.AlternativeTextForImageRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="AlternativeTextForLinkedImageRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AlternativeTextForLinkedImageRule"
+ type="de.codescape.bitvunit.rule.images.AlternativeTextForLinkedImageRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="AvoidServerSideImageMapRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AvoidServerSideImageMapRule"
+ type="de.codescape.bitvunit.rule.images.AvoidServerSideImageMapRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="de.codescape.bitvunit.rule.interactions"
+>
+<class name="AvoidMetaRefreshRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AvoidMetaRefreshRule"
+ type="de.codescape.bitvunit.rule.interactions.AvoidMetaRefreshRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="de.codescape.bitvunit.rule.links"
+>
+<class name="AnchorsWithoutTargetAttributeRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AnchorsWithoutTargetAttributeRule"
+ type="de.codescape.bitvunit.rule.links.AnchorsWithoutTargetAttributeRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="de.codescape.bitvunit.rule.lists"
+>
+<class name="DefinitionListContainsItemsRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="DefinitionListContainsItemsRule"
+ type="de.codescape.bitvunit.rule.lists.DefinitionListContainsItemsRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="OrderedListContainsListItemsRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="OrderedListContainsListItemsRule"
+ type="de.codescape.bitvunit.rule.lists.OrderedListContainsListItemsRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="UnorderedListContainsListItemsRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="UnorderedListContainsListItemsRule"
+ type="de.codescape.bitvunit.rule.lists.UnorderedListContainsListItemsRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="de.codescape.bitvunit.rule.media"
+>
+<class name="AlternativeTextForAppletRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AlternativeTextForAppletRule"
+ type="de.codescape.bitvunit.rule.media.AlternativeTextForAppletRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="AlternativeTextForObjectRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AlternativeTextForObjectRule"
+ type="de.codescape.bitvunit.rule.media.AlternativeTextForObjectRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="de.codescape.bitvunit.rule.page"
+>
+<class name="AvoidAbstractRoleRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AvoidAbstractRoleRule"
+ type="de.codescape.bitvunit.rule.page.AvoidAbstractRoleRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="LanguageForHtmlTagRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="LanguageForHtmlTagRule"
+ type="de.codescape.bitvunit.rule.page.LanguageForHtmlTagRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="TitleForPageRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="TitleForPageRule"
+ type="de.codescape.bitvunit.rule.page.TitleForPageRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="de.codescape.bitvunit.rule.tables"
+>
+<class name="CaptionTextForTableRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="CaptionTextForTableRule"
+ type="de.codescape.bitvunit.rule.tables.CaptionTextForTableRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="TableHeaderContainsTextRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="TableHeaderContainsTextRule"
+ type="de.codescape.bitvunit.rule.tables.TableHeaderContainsTextRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="TableHeaderForTableColumnRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="TableHeaderForTableColumnRule"
+ type="de.codescape.bitvunit.rule.tables.TableHeaderForTableColumnRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="de.codescape.bitvunit.rule.text"
+>
+<class name="AvoidBlinkTextRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AvoidBlinkTextRule"
+ type="de.codescape.bitvunit.rule.text.AvoidBlinkTextRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="AvoidBoldTagRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AvoidBoldTagRule"
+ type="de.codescape.bitvunit.rule.text.AvoidBoldTagRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="AvoidItalicTagRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AvoidItalicTagRule"
+ type="de.codescape.bitvunit.rule.text.AvoidItalicTagRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="AvoidMarqueeTextRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AvoidMarqueeTextRule"
+ type="de.codescape.bitvunit.rule.text.AvoidMarqueeTextRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="HeadingContainsTextRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="HeadingContainsTextRule"
+ type="de.codescape.bitvunit.rule.text.HeadingContainsTextRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="HeadingsInCorrectOrderRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="HeadingsInCorrectOrderRule"
+ type="de.codescape.bitvunit.rule.text.HeadingsInCorrectOrderRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="TitleForAbbreviationTagRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="TitleForAbbreviationTagRule"
+ type="de.codescape.bitvunit.rule.text.TitleForAbbreviationTagRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="TitleForAcronymTagRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="TitleForAcronymTagRule"
+ type="de.codescape.bitvunit.rule.text.TitleForAcronymTagRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="de.codescape.bitvunit.ruleset"
+>
+<class name="BasicRuleSet"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="de.codescape.bitvunit.ruleset.RuleSet">
+</implements>
+<constructor name="BasicRuleSet"
+ type="de.codescape.bitvunit.ruleset.BasicRuleSet"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="rules" type="de.codescape.bitvunit.rule.Rule...">
+</parameter>
+</constructor>
+<method name="addRule"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="rule" type="de.codescape.bitvunit.rule.Rule">
+</parameter>
+</method>
+<method name="applyTo"
+ return="de.codescape.bitvunit.rule.Violations"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="htmlPage" type="com.gargoylesoftware.htmlunit.html.HtmlPage">
+</parameter>
+</method>
+<method name="getRules"
+ return="java.util.List&lt;de.codescape.bitvunit.rule.Rule&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<interface name="RuleSet"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="applyTo"
+ return="de.codescape.bitvunit.rule.Violations"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="htmlPage" type="com.gargoylesoftware.htmlunit.html.HtmlPage">
+</parameter>
+</method>
+<method name="getRules"
+ return="java.util.List&lt;de.codescape.bitvunit.rule.Rule&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<class name="XmlRuleSet"
+ extends="de.codescape.bitvunit.ruleset.BasicRuleSet"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="de.codescape.bitvunit.ruleset.RuleSet">
+</implements>
+<constructor name="XmlRuleSet"
+ type="de.codescape.bitvunit.ruleset.XmlRuleSet"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="location" type="java.lang.String">
+</parameter>
+</constructor>
+</class>
+<class name="XmlRuleSetException"
+ extends="java.lang.RuntimeException"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="XmlRuleSetException"
+ type="de.codescape.bitvunit.ruleset.XmlRuleSetException"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="message" type="java.lang.String">
+</parameter>
+<parameter name="cause" type="java.lang.Throwable">
+</parameter>
+</constructor>
+</class>
+</package>
+<package name="de.codescape.bitvunit.util"
+>
+<class name="Assert"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="notEmpty"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="string" type="java.lang.String">
+</parameter>
+</method>
+<method name="notEmpty"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="message" type="java.lang.String">
+</parameter>
+<parameter name="string" type="java.lang.String">
+</parameter>
+</method>
+<method name="notNull"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="object" type="java.lang.Object">
+</parameter>
+</method>
+<method name="notNull"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="message" type="java.lang.String">
+</parameter>
+<parameter name="object" type="java.lang.Object">
+</parameter>
+</method>
+</class>
+</package>
+<package name="de.codescape.bitvunit.util.html"
+>
+<class name="HtmlElementUtil"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="hasAttribute"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="element" type="com.gargoylesoftware.htmlunit.html.HtmlElement">
+</parameter>
+<parameter name="attributeName" type="java.lang.String">
+</parameter>
+</method>
+<method name="hasNonEmptyAttribute"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="element" type="com.gargoylesoftware.htmlunit.html.HtmlElement">
+</parameter>
+<parameter name="attributeName" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class name="HtmlLabelUtil"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="containsLabelForId"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="labels" type="java.util.List&lt;com.gargoylesoftware.htmlunit.html.HtmlLabel&gt;">
+</parameter>
+<parameter name="id" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class name="HtmlPageUtil"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="toHtmlPage"
+ return="com.gargoylesoftware.htmlunit.html.HtmlPage"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="T">
+</parameter>
+</method>
+<method name="toHtmlPage"
+ return="com.gargoylesoftware.htmlunit.html.HtmlPage"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="inputStream" type="java.io.InputStream">
+</parameter>
+</method>
+<method name="toHtmlPage"
+ return="com.gargoylesoftware.htmlunit.html.HtmlPage"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="reader" type="java.io.Reader">
+</parameter>
+</method>
+<method name="toHtmlPage"
+ return="com.gargoylesoftware.htmlunit.html.HtmlPage"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="string" type="java.lang.String">
+</parameter>
+</method>
+<method name="toHtmlPage"
+ return="com.gargoylesoftware.htmlunit.html.HtmlPage"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="url" type="java.net.URL">
+</parameter>
+</method>
+<method name="toHtmlPage"
+ return="com.gargoylesoftware.htmlunit.html.HtmlPage"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="webDriver" type="org.openqa.selenium.WebDriver">
+</parameter>
+</method>
+</class>
+<class name="HtmlTableCellUtil"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="isDataCell"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="cell" type="com.gargoylesoftware.htmlunit.html.HtmlTableCell">
+</parameter>
+</method>
+<method name="isHeaderCell"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="cell" type="com.gargoylesoftware.htmlunit.html.HtmlTableCell">
+</parameter>
+</method>
+</class>
+</package>
+<package name="de.codescape.bitvunit.util.io"
+>
+<class name="ClassPathResource"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="asInputStream"
+ return="java.io.InputStream"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="path" type="java.lang.String">
+</parameter>
+</method>
+<method name="asString"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="path" type="java.lang.String">
+</parameter>
+</method>
+</class>
+</package>
+</api>

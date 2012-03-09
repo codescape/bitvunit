@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico" />
+<title>
+
+  AbstractRule
+
+
+| BitvUnit Core
+
+</title>
+<link href="../../../../../assets/android-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
+<script src="../../../../../assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="../../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../../../../../assets/android-developer-docs.js" type="text/javascript"></script>
+<script src="../../../../../assets/prettify.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("../../../../", "../../../../../assets/");
+</script>
+<script src="../../../../../assets/android-developer-reference.js" type="text/javascript"></script>
+<script src="../../../../../assets/navtree_data.js" type="text/javascript"></script>
+<script src="../../../../../assets/customizations.js" type="text/javascript"></script>
+<noscript>
+  <style type="text/css">
+    html,body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="">
+
+<div id="header">
+    <div id="headerLeft">
+    
+      <span id="masthead-title">BitvUnit Core</span>
+    
+    </div>
+    <div id="headerRight">
+      
+  <div id="search" >
+      <div id="searchForm">
+          <form accept-charset="utf-8" class="gsc-search-box" 
+                onsubmit="return submit_search()">
+            <table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody>
+                <tr>
+                  <td class="gsc-input">
+                    <input id="search_autocomplete" class="gsc-input" type="text" size="33" autocomplete="off"
+                      title="search developer docs" name="q"
+                      value="search developer docs"
+                      onFocus="search_focus_changed(this, true)"
+                      onBlur="search_focus_changed(this, false)"
+                      onkeydown="return search_changed(event, true, '../../../../')"
+                      onkeyup="return search_changed(event, false, '../../../../')" />
+                  <div id="search_filtered_div" class="no-display">
+                      <table id="search_filtered" cellspacing=0>
+                      </table>
+                  </div>
+                  </td>
+                  <td class="gsc-search-button">
+                    <input type="submit" value="Search" title="search" id="search-button" class="gsc-search-button" />
+                  </td>
+                  <td class="gsc-clear-button">
+                    <div title="clear results" class="gsc-clear-button">&nbsp;</div>
+                  </td>
+                </tr></tbody>
+              </table>
+          </form>
+      </div><!-- searchForm -->
+  </div><!-- search -->
+      
+    </div>
+</div><!-- header -->
+
+
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="swapper">
+        <div id="nav-panels">
+          <div id="resize-packages-nav">
+            <div id="packages-nav">
+              <div id="index-links"><nobr>
+                <a href="../../../../packages.html"  >Package Index</a> | 
+                <a href="../../../../classes.html" >Class Index</a></nobr>
+              </div>
+              <ul>
+                
+    <li class="api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/hamcrest/package-summary.html">de.codescape.bitvunit.hamcrest</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/model/package-summary.html">de.codescape.bitvunit.model</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/report/package-summary.html">de.codescape.bitvunit.report</a></li>
+    <li class="selected api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/rule/package-summary.html">de.codescape.bitvunit.rule</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/rule/forms/package-summary.html">de.codescape.bitvunit.rule.forms</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/rule/frames/package-summary.html">de.codescape.bitvunit.rule.frames</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/rule/images/package-summary.html">de.codescape.bitvunit.rule.images</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/rule/interactions/package-summary.html">de.codescape.bitvunit.rule.interactions</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/rule/links/package-summary.html">de.codescape.bitvunit.rule.links</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/rule/lists/package-summary.html">de.codescape.bitvunit.rule.lists</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/rule/media/package-summary.html">de.codescape.bitvunit.rule.media</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/rule/page/package-summary.html">de.codescape.bitvunit.rule.page</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/rule/tables/package-summary.html">de.codescape.bitvunit.rule.tables</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/rule/text/package-summary.html">de.codescape.bitvunit.rule.text</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/ruleset/package-summary.html">de.codescape.bitvunit.ruleset</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/util/package-summary.html">de.codescape.bitvunit.util</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/util/html/package-summary.html">de.codescape.bitvunit.util.html</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../de/codescape/bitvunit/util/io/package-summary.html">de.codescape.bitvunit.util.io</a></li>
+              </ul><br/>
+            </div> <!-- end packages -->
+          </div> <!-- end resize-packages -->
+          <div id="classes-nav">
+            <ul>
+              
+    <li><h2>Interfaces</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../de/codescape/bitvunit/rule/Rule.html">Rule</a></li>
+      </ul>
+    </li>
+              
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="selected api apilevel-"><a href="../../../../de/codescape/bitvunit/rule/AbstractRule.html">AbstractRule</a></li>
+          <li class="api apilevel-"><a href="../../../../de/codescape/bitvunit/rule/Violation.html">Violation</a></li>
+          <li class="api apilevel-"><a href="../../../../de/codescape/bitvunit/rule/Violations.html">Violations</a></li>
+      </ul>
+    </li>
+              
+              
+    <li><h2>Enums</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../de/codescape/bitvunit/rule/Priority.html">Priority</a></li>
+      </ul>
+    </li>
+              
+              
+            </ul><br/>
+          </div><!-- end classes -->
+        </div><!-- end nav-panels -->
+        <div id="nav-tree" style="display:none">
+          <div id="index-links"><nobr>
+            <a href="../../../../packages.html"  >Package Index</a> | 
+            <a href="../../../../classes.html" >Class Index</a></nobr>
+          </div>
+        </div><!-- end nav-tree -->
+      </div><!-- end swapper -->
+    </div> <!-- end side-nav -->
+    <script>
+      if (!isMobile) {
+        $("<a href='#' id='nav-swap' onclick='swapNav();return false;' style='font-size:10px;line-height:9px;margin-left:1em;text-decoration:none;'><span id='tree-link'>Use Tree Navigation</span><span id='panel-link' style='display:none'>Use Panel Navigation</span></a>").appendTo("#side-nav");
+        chooseDefaultNav();
+        if ($("#nav-tree").is(':visible')) {
+          init_default_navtree("../../../../");
+        } else {
+          addLoadEvent(function() {
+            scrollIntoView("packages-nav");
+            scrollIntoView("classes-nav");
+          });
+        }
+        $("#swapper").css({borderBottom:"2px solid #aaa"});
+      } else {
+        swapNav(); // tree view should be used on mobile
+      }
+    </script>
+
+
+
+<div class="g-unit" id="doc-content">
+
+<div id="api-info-block">
+
+
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+Summary:
+
+
+
+
+
+
+
+
+
+  <a href="#pubctors">Ctors</a>
+  
+
+
+
+  &#124; <a href="#pubmethods">Methods</a>
+  
+
+
+  &#124; <a href="#promethods">Protected Methods</a>
+  
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+<div class="api-level">
+  
+
+
+  
+  
+
+</div>
+</div><!-- end api-info-block -->
+
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<div id="jd-header">
+    public
+     
+     
+    abstract
+    class
+<h1>AbstractRule</h1>
+
+
+
+  
+    extends <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a><br/>
+  
+  
+  
+
+  
+  
+      implements 
+      
+        <a href="../../../../de/codescape/bitvunit/rule/Rule.html">Rule</a> 
+      
+  
+  
+
+
+</div><!-- end header -->
+
+<div id="naMessage"></div>
+
+<div id="jd-content" class="api apilevel-">
+<table class="jd-inheritance-table">
+
+
+    <tr>
+         	
+        <td colspan="2" class="jd-inheritance-class-cell"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a></td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+         	
+        <td colspan="1" class="jd-inheritance-class-cell">de.codescape.bitvunit.rule.AbstractRule</td>
+    </tr>
+    
+
+</table>
+
+
+
+
+<table class="jd-sumtable jd-sumtable-subclasses"><tr><td colspan="12" style="border:none;margin:0;padding:0;">
+
+  <a href="#" onclick="return toggleInherited(this, null)" id="subclasses-direct" class="jd-expando-trigger closed"
+          ><img id="subclasses-direct-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>Known Direct Subclasses
+
+  <div id="subclasses-direct">
+      <div id="subclasses-direct-list"
+              class="jd-inheritedlinks"
+              
+              >
+          
+            
+            
+              
+                <a href="../../../../de/codescape/bitvunit/rule/media/AlternativeTextForAppletRule.html">AlternativeTextForAppletRule</a>,
+              
+              
+            
+              
+                <a href="../../../../de/codescape/bitvunit/rule/images/AlternativeTextForAreaOfImageMapRule.html">AlternativeTextForAreaOfImageMapRule</a>,
+              
+              
+            
+              
+                <a href="../../../../de/codescape/bitvunit/rule/forms/AlternativeTextForImageButtonRule.html">AlternativeTextForImageButtonRule</a>,
+              
+              
+            
+              
+                <a href="../../../../de/codescape/bitvunit/rule/images/AlternativeTextForImageRule.html">AlternativeTextForImageRule</a>,
+              
+              
+            
+              
+                <a href="../../../../de/codescape/bitvunit/rule/frames/AlternativeTextForInlineFrameRule.html">AlternativeTextForInlineFrameRule</a>,
+              
+              
+            
+              
+                <a href="../../../../de/codescape/bitvunit/rule/images/AlternativeTextForLinkedImageRule.html">AlternativeTextForLinkedImageRule</a>,
+              
+              
+            
+              
+                <a href="../../../../de/codescape/bitvunit/rule/media/AlternativeTextForObjectRule.html">AlternativeTextForObjectRule</a>,
+              
+              
+            
+              
+                <a href="../../../../de/codescape/bitvunit/rule/links/AnchorsWithoutTargetAttributeRule.html">AnchorsWithoutTargetAttributeRule</a>,
+              
+              
+            
+              
+                <a href="../../../../de/codescape/bitvunit/rule/page/AvoidAbstractRoleRule.html">AvoidAbstractRoleRule</a>,
+              
+              
+            
+              
+                <a href="../../../../de/codescape/bitvunit/rule/text/AvoidBlinkTextRule.html">AvoidBlinkTextRule</a>,
+              
+              
+            
+              
+                <a href="../../../../de/codescape/bitvunit/rule/text/AvoidBoldTagRule.html">AvoidBoldTagRule</a>,
+              
+              
+            
+              
+                <a href="../../../../de/codescape/bitvunit/rule/text/AvoidItalicTagRule.html">AvoidItalicTagRule</a>,
+              
+              
+            
+              
+                <a href="../../../../de/codescape/bitvunit/rule/text/AvoidMarqueeTextRule.html">AvoidMarqueeTextRule</a>,
+              
+              
+            
+              
+                <a href="../../../../de/codescape/bitvunit/rule/interactions/AvoidMetaRefreshRule.html">AvoidMetaRefreshRule</a>,
+              
+              
+            
+              
+                <a href="../../../../de/codescape/bitvunit/rule/images/AvoidServerSideImageMapRule.html">AvoidServerSideImageMapRule</a>,
+              
+              and
+                <a href="#" onclick="return toggleInherited(document.getElementById('subclasses-direct', null))">21 others.</a>
+              
+            
+          
+      </div>
+      <div id="subclasses-direct-summary"
+              style="display: none;"
+              >
+  <table class="jd-sumtable-expando">
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/media/AlternativeTextForAppletRule.html">AlternativeTextForAppletRule</a></td>
+              <td class="jd-descrcol" width="100%">AlternativeTextForAppletRule ensures that every <code>&lt;applet/&gt;</code> within the given HTML document provides
+ an alternative textual description to explain the <code>&lt;applet/&gt;</code> to everyone who is not able to view
+ and display the <code>&lt;applet/&gt;</code> itself.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/images/AlternativeTextForAreaOfImageMapRule.html">AlternativeTextForAreaOfImageMapRule</a></td>
+              <td class="jd-descrcol" width="100%">AlternativeTextForAreaOfImageMapRule ensures that every area of an image map created by the
+ <code>&lt;area/&gt;</code> tag within the given HTML document provides an alternative text through its
+ <code>alt</code> attribute.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/forms/AlternativeTextForImageButtonRule.html">AlternativeTextForImageButtonRule</a></td>
+              <td class="jd-descrcol" width="100%">AlternativeTextForImageButtonRule ensures that every image button created through <code>&lt;input
+ type="image"/&gt;</code> within the given HTML document provides an alternative text through it's <code>alt</code>
+ attribute.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/images/AlternativeTextForImageRule.html">AlternativeTextForImageRule</a></td>
+              <td class="jd-descrcol" width="100%">AlternativeTextForImageRule ensures that every image created by the <code>&lt;img/&gt;</code> tag within the given
+ HTML document provides an alternative text through it's <code>alt</code> attribute.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/frames/AlternativeTextForInlineFrameRule.html">AlternativeTextForInlineFrameRule</a></td>
+              <td class="jd-descrcol" width="100%">AlternativeTextForInlineFrameRule ensures that every inline frame marked through <code>&lt;iframe/&gt;</code> within
+ the given HTML document provides an alternative textual description inside it's body to explain the inline frame or a
+ hyperlink to an alternative version of that inline frame.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/images/AlternativeTextForLinkedImageRule.html">AlternativeTextForLinkedImageRule</a></td>
+              <td class="jd-descrcol" width="100%">AlternativeTextForLinkedImageRule ensures that every image created by the <code>&lt;img/&gt;</code> tag within the
+ given HTML document that is part of a hyperlink created by the <code>&lt;a/&gt;</code> tag provides a non empty
+ alternative text through it's <code>alt</code> attribute.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/media/AlternativeTextForObjectRule.html">AlternativeTextForObjectRule</a></td>
+              <td class="jd-descrcol" width="100%">AlternativeTextForObjectRule ensures that every <code>&lt;object/&gt;</code> within the given HTML document provides
+ an alternative textual description to explain the <code>&lt;object/&gt;</code> to everyone who is not able to view
+ and display the <code>&lt;object/&gt;</code> itself.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/links/AnchorsWithoutTargetAttributeRule.html">AnchorsWithoutTargetAttributeRule</a></td>
+              <td class="jd-descrcol" width="100%">AnchorsWithoutTargetAttributeRule ensures that no anchor <code>&lt;a/&gt;</code> tag within the given HTML document
+ contains the <code>target</code> attribute that forces a link to open in a specific or new window.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/page/AvoidAbstractRoleRule.html">AvoidAbstractRoleRule</a></td>
+              <td class="jd-descrcol" width="100%">AvoidAbstractRoleRule ensures that no abstract roles that are part of the Accessible Rich Internet Applications
+ (WAI-ARIA) 1.0 document are used within the current HTML page.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/text/AvoidBlinkTextRule.html">AvoidBlinkTextRule</a></td>
+              <td class="jd-descrcol" width="100%">AvoidBlinkTextRule ensures that every <code>&lt;blink/&gt;</code> element within the given HTML document leads to a
+ violation because the <code>&lt;blink/&gt;</code> tag result in blinking text that cannot be stopped and it is not
+ defined in any W3C HTML specification.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/text/AvoidBoldTagRule.html">AvoidBoldTagRule</a></td>
+              <td class="jd-descrcol" width="100%">AvoidBoldTagRule ensures that every <code>&lt;b/&gt;</code> element within the given HTML document leads to a
+ violation because the <code>&lt;strong/&gt;</code> element should be used to outline important text.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/text/AvoidItalicTagRule.html">AvoidItalicTagRule</a></td>
+              <td class="jd-descrcol" width="100%">AvoidItalicTagRule ensures that every <code>&lt;i/&gt;</code> element within the given HTML document leads to a
+ violation because the <code>&lt;em/&gt;</code> element should be used to outline important text.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/text/AvoidMarqueeTextRule.html">AvoidMarqueeTextRule</a></td>
+              <td class="jd-descrcol" width="100%">AvoidMarqueeTextRule ensures that every <code>&lt;marquee/&gt;</code> element within the given HTML document leads
+ to a violation because the <code>&lt;marquee/&gt;</code> results in moving text that cannot be stopped and it is not
+ defined in any W3C HTML specification.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/interactions/AvoidMetaRefreshRule.html">AvoidMetaRefreshRule</a></td>
+              <td class="jd-descrcol" width="100%">AvoidMetaRefreshRule ensures that there is no fixed refresh caused by the <code>&lt;meta http-equiv="refresh"
+ content="seconds; URL=target"/&gt;</code> tag within the given HTML document.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/images/AvoidServerSideImageMapRule.html">AvoidServerSideImageMapRule</a></td>
+              <td class="jd-descrcol" width="100%">AvoidServerSideImageMapRule ensures that there are no server side image maps created by the <code>&lt;img
+ ismap="ismap"/&gt;</code> tag within the given HTML document because they are inaccessible by users who cannot use a
+ mouse because of some disability.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/tables/CaptionTextForTableRule.html">CaptionTextForTableRule</a></td>
+              <td class="jd-descrcol" width="100%">CaptionTextForTableRule ensures that every <code>&lt;table/&gt;</code> within the given HTML document provides a
+ title by having a <code>&lt;caption&gt;description&lt;/caption&gt;</code> element as the first child element inside
+ the <code>&lt;table/&gt;</code> declaration.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/lists/DefinitionListContainsItemsRule.html">DefinitionListContainsItemsRule</a></td>
+              <td class="jd-descrcol" width="100%">DefinitionListContainsItemsRule ensures that every definition list <code>&lt;dl/&gt;</code> within the given HTML
+ document contains one or more definition terms <code>&lt;dt/&gt;</code> and definition descriptions
+ <code>&lt;dd/&gt;</code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/forms/FieldsetContainsLegendRule.html">FieldsetContainsLegendRule</a></td>
+              <td class="jd-descrcol" width="100%">FieldsetContainsLegendRule ensures that every <code>&lt;fieldset/&gt;</code> within the given HTML document contains
+ a <code>&lt;legend/&gt;</code> tag as the first child element to describe the elements grouped by this
+ <code>&lt;fieldset/&gt;</code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/text/HeadingContainsTextRule.html">HeadingContainsTextRule</a></td>
+              <td class="jd-descrcol" width="100%">HeadingContainsTextRule ensures that all headings from <code>&lt;h1/&gt;</code> up to <code>&lt;h6/&gt;</code> within
+ the given HTML document contain some text content in the body of the tag.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/text/HeadingsInCorrectOrderRule.html">HeadingsInCorrectOrderRule</a></td>
+              <td class="jd-descrcol" width="100%">HeadingsInCorrectOrderRule ensures that all headings from <code>&lt;h1/&gt;</code> up to <code>&lt;h6/&gt;</code>
+ within the given HTML document are in correct oder.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/forms/LabelContainsTextRule.html">LabelContainsTextRule</a></td>
+              <td class="jd-descrcol" width="100%">LabelContainsTextRule ensures that every <code>&lt;label/&gt;</code> within the given HTML document contains a
+ textual representation for the given label.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/forms/LabelForInputFieldRule.html">LabelForInputFieldRule</a></td>
+              <td class="jd-descrcol" width="100%">LabelForInputFieldRule ensures that every <code>&lt;input/&gt;</code> field of type <code>text</code> or
+ <code>password</code> within the given HTML document is associated with a <code>&lt;label/&gt;</code> element that
+ references the <code>&lt;input/&gt;</code> element through its <code>for</code> attribute.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/forms/LabelForSelectTagRule.html">LabelForSelectTagRule</a></td>
+              <td class="jd-descrcol" width="100%">LabelForInputFieldRule ensures that every <code>&lt;select/&gt;</code> tag within the given HTML document is
+ associated with a <code>&lt;label/&gt;</code> element that references the <code>&lt;select/&gt;</code> tag through
+ its <code>for</code> attribute.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/forms/LabelForTextareaRule.html">LabelForTextareaRule</a></td>
+              <td class="jd-descrcol" width="100%">LabelForTextareaRule ensures that every <code>&lt;textarea/&gt;</code> within the given HTML document is associated
+ with a <code>&lt;label/&gt;</code> element that references the <code>&lt;textarea/&gt;</code> element through its
+ <code>for</code> attribute.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/forms/LabelWithoutFormElementRule.html">LabelWithoutFormElementRule</a></td>
+              <td class="jd-descrcol" width="100%">LabelWithoutFormElementRule ensures that every <code>&lt;label/&gt;</code> tag within the given HTML document is
+ referencing a valid form element.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/page/LanguageForHtmlTagRule.html">LanguageForHtmlTagRule</a></td>
+              <td class="jd-descrcol" width="100%">LanguageForHtmlTagRule ensures that the given HTML document provides it's language information through the
+ <code>lang</code> attribute on the <code>&lt;html/&gt;</code> tag.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/lists/OrderedListContainsListItemsRule.html">OrderedListContainsListItemsRule</a></td>
+              <td class="jd-descrcol" width="100%">OrderedListContainsListItemsRule ensures that every ordered list <code>&lt;ol/&gt;</code> within the given HTML
+ document contains one or more list items <code>&lt;li/&gt;</code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/tables/TableHeaderContainsTextRule.html">TableHeaderContainsTextRule</a></td>
+              <td class="jd-descrcol" width="100%">TableHeaderContainsTextRule ensures that every <code>&lt;th/&gt;</code> element within the given HTML document
+ contains text content in it's body.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/tables/TableHeaderForTableColumnRule.html">TableHeaderForTableColumnRule</a></td>
+              <td class="jd-descrcol" width="100%">TableHeaderForTableColumnRule ensures that every <code>&lt;table/&gt;</code> within the given HTML document has
+ table headers declared by <code>&lt;th/&gt;</code> for each data cell declared by the <code>&lt;td/&gt;</code> tag.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/text/TitleForAbbreviationTagRule.html">TitleForAbbreviationTagRule</a></td>
+              <td class="jd-descrcol" width="100%">TitleForAbbreviationTagRule ensures that every abbreviation that is marked through the <code>&lt;abbr/&gt;</code>
+ element within the given HTML document provides a description of that abbreviation through it's <code>title</code>
+ attribute.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/text/TitleForAcronymTagRule.html">TitleForAcronymTagRule</a></td>
+              <td class="jd-descrcol" width="100%">TitleForAcronymTagRule ensures that every acronym that is marked through the <code>&lt;acronym/&gt;</code> element
+ within the given HTML document provides a description of that acronym through it's <code>title</code> attribute.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/frames/TitleForFrameRule.html">TitleForFrameRule</a></td>
+              <td class="jd-descrcol" width="100%">TitleForFrameRule ensures that every frame that is marked through the <code>&lt;frame/&gt;</code> element within the
+ given HTML document provides a description of that frame through it's <code>title</code> attribute.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/frames/TitleForInlineFrameRule.html">TitleForInlineFrameRule</a></td>
+              <td class="jd-descrcol" width="100%">TitleForInlineFrameRule ensures that every inline frame that is marked through the <code>&lt;iframe/&gt;</code>
+ element within the given HTML document provides a description of that inline frame through it's <code>title</code>
+ attribute.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/page/TitleForPageRule.html">TitleForPageRule</a></td>
+              <td class="jd-descrcol" width="100%">TitleForPageRule ensures that the document has a non empty title defined by the <code>&lt;title/&gt;</code> tag to
+ describe that page.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/forms/UniqueLabelForFormElementRule.html">UniqueLabelForFormElementRule</a></td>
+              <td class="jd-descrcol" width="100%">UniqueLabelForFormElementRule ensures that there is never more than one <code>&lt;label/&gt;</code> with the same
+ value in its <code>for</code> attribute.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../de/codescape/bitvunit/rule/lists/UnorderedListContainsListItemsRule.html">UnorderedListContainsListItemsRule</a></td>
+              <td class="jd-descrcol" width="100%">UnorderedListContainsListItemsRule ensures that every ordered list <code>&lt;ul/&gt;</code> within the given HTML
+ document contains one or more list items <code>&lt;li/&gt;</code>.&nbsp;</td>
+          </tr>
+  </table>
+      </div>
+  </div>
+</td></tr></table>
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Class Overview</h2>
+<p>Base class to all implementations of the <code><a href="../../../../de/codescape/bitvunit/rule/Rule.html">Rule</a></code> interface. It provides convenience methods to create new
+ <code><a href="../../../../de/codescape/bitvunit/rule/Violation.html">Violation</a></code> instances within the implementation of a <code><a href="../../../../de/codescape/bitvunit/rule/Rule.html">Rule</a></code> and allows to apply a <code><a href="../../../../de/codescape/bitvunit/rule/Rule.html">Rule</a></code> to a
+ given HtmlPage object.</p>
+
+
+
+
+
+</div><!-- jd-descr -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Summary</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="jd-sumtable"><tr><th colspan="12">Public Constructors</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            </nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../de/codescape/bitvunit/rule/AbstractRule.html#AbstractRule()">AbstractRule</a></span>()</nobr>
+        
+  </td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="jd-sumtable"><tr><th colspan="12">Public Methods</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            <a href="../../../../de/codescape/bitvunit/rule/Violations.html">Violations</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../de/codescape/bitvunit/rule/AbstractRule.html#applyTo(com.gargoylesoftware.htmlunit.html.HtmlPage)">applyTo</a></span>(HtmlPage htmlPage)</nobr>
+        
+        <div class="jd-descrdiv">Applies that rule to the given HtmlPage and returns all <code><a href="../../../../de/codescape/bitvunit/rule/Violations.html">Violations</a></code> of that rule.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../de/codescape/bitvunit/rule/AbstractRule.html#getName()">getName</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns the name of that rule.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../de/codescape/bitvunit/rule/Priority.html">Priority</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../de/codescape/bitvunit/rule/AbstractRule.html#getPriority()">getPriority</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns the <code><a href="../../../../de/codescape/bitvunit/rule/Priority.html">Priority</a></code> for that rule.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../de/codescape/bitvunit/rule/AbstractRule.html#setPriority(de.codescape.bitvunit.rule.Priority)">setPriority</a></span>(<a href="../../../../de/codescape/bitvunit/rule/Priority.html">Priority</a> priority)</nobr>
+        
+        <div class="jd-descrdiv">Sets the <code><a href="../../../../de/codescape/bitvunit/rule/Priority.html">Priority</a></code> for that rule.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../de/codescape/bitvunit/rule/AbstractRule.html#toString()">toString</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns the String representation of a common <code><a href="../../../../de/codescape/bitvunit/rule/Rule.html">Rule</a></code> implementation.</div>
+  
+  </td></tr>
+
+
+
+</table>
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="promethods" class="jd-sumtable"><tr><th colspan="12">Protected Methods</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../de/codescape/bitvunit/rule/AbstractRule.html#applyTo(de.codescape.bitvunit.model.Page, de.codescape.bitvunit.rule.Violations)">applyTo</a></span>(<a href="../../../../de/codescape/bitvunit/model/Page.html">Page</a> page, <a href="../../../../de/codescape/bitvunit/rule/Violations.html">Violations</a> violations)</nobr>
+        
+        <div class="jd-descrdiv">Internal method to apply that rule to a given Page which provides some convenience methods to allocate tags.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../de/codescape/bitvunit/rule/Violation.html">Violation</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../de/codescape/bitvunit/rule/AbstractRule.html#createViolation(com.gargoylesoftware.htmlunit.html.HtmlElement, java.lang.String)">createViolation</a></span>(HtmlElement htmlElement, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)</nobr>
+        
+        <div class="jd-descrdiv">Creates a new violation for that rule with the line number of the violating element in the given page and a
+ message that describes the violation in detail.</div>
+  
+  </td></tr>
+
+
+
+</table>
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Methods</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-java.lang.Object-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a>
+
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">clone</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">equals</span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">finalize</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">getClass</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            int</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">hashCode</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">notify</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">notifyAll</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">toString</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>(long arg0)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-de.codescape.bitvunit.rule.Rule" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-de.codescape.bitvunit.rule.Rule-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../de/codescape/bitvunit/rule/Rule.html">de.codescape.bitvunit.rule.Rule</a>
+
+<div id="inherited-methods-de.codescape.bitvunit.rule.Rule">
+  <div id="inherited-methods-de.codescape.bitvunit.rule.Rule-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-de.codescape.bitvunit.rule.Rule-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            <a href="../../../../de/codescape/bitvunit/rule/Violations.html">Violations</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../de/codescape/bitvunit/rule/Rule.html#applyTo(com.gargoylesoftware.htmlunit.html.HtmlPage)">applyTo</a></span>(HtmlPage htmlPage)</nobr>
+        
+        <div class="jd-descrdiv">Applies that rule to the given HtmlPage and returns all <code><a href="../../../../de/codescape/bitvunit/rule/Violations.html">Violations</a></code> of that rule.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../de/codescape/bitvunit/rule/Rule.html#getName()">getName</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns the name of that rule.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            <a href="../../../../de/codescape/bitvunit/rule/Priority.html">Priority</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../de/codescape/bitvunit/rule/Rule.html#getPriority()">getPriority</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns the <code><a href="../../../../de/codescape/bitvunit/rule/Priority.html">Priority</a></code> for that rule.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../de/codescape/bitvunit/rule/Rule.html#setPriority(de.codescape.bitvunit.rule.Priority)">setPriority</a></span>(<a href="../../../../de/codescape/bitvunit/rule/Priority.html">Priority</a> priority)</nobr>
+        
+        <div class="jd-descrdiv">Sets the <code><a href="../../../../de/codescape/bitvunit/rule/Priority.html">Priority</a></code> for that rule.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
+
+
+</div><!-- jd-descr (summary) -->
+
+<!-- Details -->
+
+
+
+
+
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- Fields -->
+
+
+<!-- Public ctors -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<h2>Public Constructors</h2>
+
+
+
+<A NAME="AbstractRule()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        
+      </span>
+      <span class="sympad">AbstractRule</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2>Public Methods</h2>
+
+
+
+<A NAME="applyTo(com.gargoylesoftware.htmlunit.html.HtmlPage)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+        final 
+         
+         
+        <a href="../../../../de/codescape/bitvunit/rule/Violations.html">Violations</a>
+      </span>
+      <span class="sympad">applyTo</span>
+      <span class="normal">(HtmlPage htmlPage)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Applies that rule to the given HtmlPage and returns all <code><a href="../../../../de/codescape/bitvunit/rule/Violations.html">Violations</a></code> of that rule.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>htmlPage</td>
+          <td>HtmlPage under test</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>all <code><a href="../../../../de/codescape/bitvunit/rule/Violations.html">Violations</a></code> of that rule
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getName()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getName</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns the name of that rule.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>name of that rule
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getPriority()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../de/codescape/bitvunit/rule/Priority.html">Priority</a>
+      </span>
+      <span class="sympad">getPriority</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns the <code><a href="../../../../de/codescape/bitvunit/rule/Priority.html">Priority</a></code> for that rule.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li><code><a href="../../../../de/codescape/bitvunit/rule/Priority.html">Priority</a></code> for that rule
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="setPriority(de.codescape.bitvunit.rule.Priority)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setPriority</span>
+      <span class="normal">(<a href="../../../../de/codescape/bitvunit/rule/Priority.html">Priority</a> priority)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Sets the <code><a href="../../../../de/codescape/bitvunit/rule/Priority.html">Priority</a></code> for that rule.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>priority</td>
+          <td><code><a href="../../../../de/codescape/bitvunit/rule/Priority.html">Priority</a></code> for that rule
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="toString()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">toString</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns the String representation of a common <code><a href="../../../../de/codescape/bitvunit/rule/Rule.html">Rule</a></code> implementation.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>String representation of a common <code><a href="../../../../de/codescape/bitvunit/rule/Rule.html">Rule</a></code> implementation
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+<h2>Protected Methods</h2>
+
+
+
+<A NAME="applyTo(de.codescape.bitvunit.model.Page, de.codescape.bitvunit.rule.Violations)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">applyTo</span>
+      <span class="normal">(<a href="../../../../de/codescape/bitvunit/model/Page.html">Page</a> page, <a href="../../../../de/codescape/bitvunit/rule/Violations.html">Violations</a> violations)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Internal method to apply that rule to a given Page which provides some convenience methods to allocate tags.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>page</td>
+          <td>page under test</td>
+        </tr>
+        <tr>
+          <th>violations</td>
+          <td>list of violations
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createViolation(com.gargoylesoftware.htmlunit.html.HtmlElement, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+         
+         
+         
+        <a href="../../../../de/codescape/bitvunit/rule/Violation.html">Violation</a>
+      </span>
+      <span class="sympad">createViolation</span>
+      <span class="normal">(HtmlElement htmlElement, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Creates a new violation for that rule with the line number of the violating element in the given page and a
+ message that describes the violation in detail.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>htmlElement</td>
+          <td>the HtmlElement where the violation occurs</td>
+        </tr>
+        <tr>
+          <th>message</td>
+          <td>description of the violation</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>new violation to be added to the list of violations
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+<A NAME="navbar_top"></A>
+
+<div id="footer">
+Generated by <a href="http://code.google.com/p/doclava/">Doclava</a>.
+</div> <!-- end footer -->
+
+</div> <!-- jd-content -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize android-developer-docs.js */
+</script>
+
+</body>
+</html>
