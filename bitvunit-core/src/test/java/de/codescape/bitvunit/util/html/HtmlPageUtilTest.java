@@ -4,6 +4,8 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.util.io.ClassPathResource;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 import java.io.InputStream;
 import java.io.Reader;
@@ -46,8 +48,32 @@ public class HtmlPageUtilTest {
 
     @Test
     public void createValidHtmlPageFromURL() throws Exception {
-        URL url = getClass().getClassLoader().getResource(FILE_NAME);
-        assertCorrectHtmlPage(HtmlPageUtil.toHtmlPage(url));
+        assertCorrectHtmlPage(HtmlPageUtil.toHtmlPage(createURL()));
+    }
+
+    @Test
+    public void createValidHtmlPageFromURLAsObject() throws Exception {
+        assertCorrectHtmlPage(HtmlPageUtil.toHtmlPage((Object) createURL()));
+    }
+
+    private URL createURL() {
+        return getClass().getClassLoader().getResource(FILE_NAME);
+    }
+
+    @Test
+    public void createValidHtmlPageFromSeleniumWebDriver() throws Exception {
+        assertCorrectHtmlPage(HtmlPageUtil.toHtmlPage(createWebDriver()));
+    }
+
+    @Test
+    public void createValidHtmlPageFromSeleniumWebDriverAsObject() throws Exception {
+        assertCorrectHtmlPage(HtmlPageUtil.toHtmlPage((Object) createWebDriver()));
+    }
+
+    private WebDriver createWebDriver() {
+        WebDriver webDriver = new HtmlUnitDriver();
+        webDriver.navigate().to(getClass().getClassLoader().getResource(FILE_NAME));
+        return webDriver;
     }
 
     @Test(expected = UnsupportedOperationException.class)
@@ -60,7 +86,7 @@ public class HtmlPageUtilTest {
         assertEquals(EXPECTED_TITLE, htmlPage.getTitleText());
 
         assertNotNull(htmlPage.getElementById(PARAGRAPH_ID));
-        assertEquals(EXPECTED_PARAGRAPH, htmlPage.getElementById("greeting").getTextContent());
+        assertEquals(EXPECTED_PARAGRAPH, htmlPage.getElementById("greeting").getTextContent().trim());
     }
 
     private String pageAsString() {

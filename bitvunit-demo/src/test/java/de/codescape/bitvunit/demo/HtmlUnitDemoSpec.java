@@ -1,0 +1,31 @@
+package de.codescape.bitvunit.demo;
+
+import com.gargoylesoftware.htmlunit.WebClient;
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import org.junit.Test;
+
+import static de.codescape.bitvunit.hamcrest.ComplianceMatcher.compliantTo;
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
+
+/**
+ * This test demonstrates testing for accessibility with HtmlUnit.
+ *
+ * @author Stefan Glase
+ * @since 0.7
+ */
+public class HtmlUnitDemoSpec extends AbstractBaseSpec {
+
+    @Test
+    public void test() throws Exception {
+        // Create a HtmlUnit WebClient instance
+        WebClient webClient = new WebClient();
+
+        // navigate to a page or interact with a page
+        HtmlPage page = webClient.getPage(urlForPage("index.html"));
+
+        // assert accessibility
+        assertThat(page, is(compliantTo(ALL_RULES)));
+    }
+
+}

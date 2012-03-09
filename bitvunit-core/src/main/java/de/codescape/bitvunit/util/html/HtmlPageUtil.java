@@ -5,6 +5,7 @@ import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HTMLParser;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import org.apache.commons.io.IOUtils;
+import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,8 +32,7 @@ public final class HtmlPageUtil {
     public static HtmlPage toHtmlPage(String string) {
         try {
             URL url = new URL("http://bitvunit.codescape.de/some_page.html");
-            StringWebResponse response = new StringWebResponse(string, url);
-            return HTMLParser.parseHtml(response, new WebClient().getCurrentWindow());
+            return HTMLParser.parseHtml(new StringWebResponse(string, url), new WebClient().getCurrentWindow());
         } catch (IOException e) {
             throw new RuntimeException("Error creating HtmlPage from String.", e);
         }
@@ -81,10 +81,28 @@ public final class HtmlPageUtil {
     }
 
     /**
+     * Create a {@link HtmlPage} from a given {@link WebDriver} that has been navigated to a HTML page.
+     *
+     * @param webDriver {@link WebDriver} that has been navigated to a HTML page
+     * @return {@link HtmlPage} for the {@link WebDriver}
+     */
+    public static HtmlPage toHtmlPage(WebDriver webDriver) {
+        try {
+            return HTMLParser.parseHtml(
+                    new StringWebResponse(webDriver.getPageSource(), new URL(webDriver.getCurrentUrl())),
+                    new WebClient().getCurrentWindow()
+            );
+        } catch (IOException e) {
+            throw new RuntimeException("Error creating HtmlPage from WebDriver.", e);
+        }
+    }
+
+    /**
      * Creates a {@link HtmlPage} from the given <code>item</code> if it is of one of the supported types.
      * <p/>
-     * <b>Supported types:</b> <ul> <li>com.gargoylesoftware.htmlunit.html.HtmlPage</li> <li>java.io.InputStream</li>
-     * <li>java.io.Reader</li> <li>java.lang.String</li> <li>java.net.URL</li> </ul>
+     * <b>Supported types:</b>
+     * <ul> <li>com.gargoylesoftware.htmlunit.html.HtmlPage</li> <li>java.io.InputStream</li> <li>java.io.Reader</li>
+     * <li>java.lang.String</li> <li>java.net.URL</li><li>org.openqa.selenium.WebDriver</li> </ul>
      *
      * @param item item that should be transformed into a {@link HtmlPage}
      * @param <T>  type of the item that should be transformed
@@ -105,6 +123,9 @@ public final class HtmlPageUtil {
         }
         if (item instanceof InputStream) {
             return toHtmlPage((InputStream) item);
+        }
+        if (item instanceof WebDriver) {
+            return toHtmlPage((WebDriver) item);
         }
         throw new UnsupportedOperationException("Unable to create HtmlPage from " + item.getClass() + ".");
     }
