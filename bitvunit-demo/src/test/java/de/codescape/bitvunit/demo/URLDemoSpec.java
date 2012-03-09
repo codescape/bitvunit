@@ -18,7 +18,11 @@ public class URLDemoSpec extends AbstractBaseSpec {
 
     @Test
     public void testingAccessibilityWithSimpleURL() throws Exception {
-        assertThat(new URL(urlForPage("index.html")), is(compliantTo(ALL_RULES)));
+        // create a URL
+        URL url = new URL(urlForPage("index.html"));
+
+        // assert accessibility
+        assertThat(url, is(compliantTo(ALL_RULES)));
     }
 
 }

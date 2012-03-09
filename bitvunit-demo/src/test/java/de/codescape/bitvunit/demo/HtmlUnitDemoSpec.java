@@ -18,7 +18,7 @@ public class HtmlUnitDemoSpec extends AbstractBaseSpec {
 
     @Test
     public void testingAccessibilityWithHtmlUnit() throws Exception {
-        // Create a HtmlUnit WebClient instance
+        // create a HtmlUnit WebClient instance
         WebClient webClient = new WebClient();
 
         // navigate to a page or interact with a page
