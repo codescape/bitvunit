@@ -17,7 +17,7 @@ import static org.junit.Assert.assertThat;
 public class URLDemoSpec extends AbstractBaseSpec {
 
     @Test
-    public void documentationIndexPageShouldBeCompliantToAllRules() throws Exception {
+    public void testingAccessibilityWithSimpleURL() throws Exception {
         assertThat(new URL(urlForPage("index.html")), is(compliantTo(ALL_RULES)));
     }
 

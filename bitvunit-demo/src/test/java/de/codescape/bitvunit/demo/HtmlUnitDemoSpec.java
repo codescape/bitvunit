@@ -17,7 +17,7 @@ import static org.junit.Assert.assertThat;
 public class HtmlUnitDemoSpec extends AbstractBaseSpec {
 
     @Test
-    public void test() throws Exception {
+    public void testingAccessibilityWithHtmlUnit() throws Exception {
         // Create a HtmlUnit WebClient instance
         WebClient webClient = new WebClient();
 
