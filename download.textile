@@ -14,11 +14,11 @@ Download the latest version of the framework from the GitHub download page:
 * "bitvunit-core-{{ site.bitvunit-version }}-sources.jar":http://repo1.maven.org/maven2/de/codescape/bitvunit/bitvunit-core/{{ site.bitvunit-version }}/bitvunit-core-{{ site.bitvunit-version }}-sources.jar
 * "bitvunit-core-{{ site.bitvunit-version }}-javadoc.jar":http://repo1.maven.org/maven2/de/codescape/bitvunit/bitvunit-core/{{ site.bitvunit-version }}/bitvunit-core-{{ site.bitvunit-version }}-javadoc.jar
 
-You can find previous versions on the "GitHub download page":https://github.com/codescape/bitvunit/downloads.
+You can find previous versions on the "Maven Central Repository":http://repo1.maven.org/maven2/de/codescape/bitvunit/.
 
 h3. Maven Repository
 
-BitvUnit is available from the "Maven Central Repository":http://repo1.maven.org/maven2/de/codescape/bitvunit/. To use BitvUnit in your Maven project put the following dependency into the <code><dependencies/></code> section of the pom.xml:
+BitvUnit is available from the "Maven Central Repository":http://repo1.maven.org/maven2/de/codescape/bitvunit/. To use BitvUnit in your Maven project put the following dependency into the <code><dependencies/></code> section of your project pom.xml:
 
 {% highlight xml %}
 <dependency>
