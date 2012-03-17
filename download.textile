@@ -10,9 +10,9 @@ h3. GitHub Download
 
 Download the latest version of the framework from the GitHub download page:
 
-* "bitvunit-core-{{ site.bitvunit-version }}.jar":https://github.com/downloads/codescape/bitvunit/bitvunit-core-{{ site.bitvunit-version }}.jar
-* "bitvunit-core-{{ site.bitvunit-version }}-sources.jar":https://github.com/downloads/codescape/bitvunit/bitvunit-core-{{ site.bitvunit-version }}-sources.jar
-* "bitvunit-core-{{ site.bitvunit-version }}-javadoc.jar":https://github.com/downloads/codescape/bitvunit/bitvunit-core-{{ site.bitvunit-version }}-javadoc.jar
+* "bitvunit-core-{{ site.bitvunit-version }}.jar":http://repo1.maven.org/maven2/de/codescape/bitvunit/bitvunit-core/{{ site.bitvunit-version }}/bitvunit-core-{{ site.bitvunit-version }}.jar
+* "bitvunit-core-{{ site.bitvunit-version }}-sources.jar":http://repo1.maven.org/maven2/de/codescape/bitvunit/bitvunit-core/{{ site.bitvunit-version }}/bitvunit-core-{{ site.bitvunit-version }}-sources.jar
+* "bitvunit-core-{{ site.bitvunit-version }}-javadoc.jar":http://repo1.maven.org/maven2/de/codescape/bitvunit/bitvunit-core/{{ site.bitvunit-version }}/bitvunit-core-{{ site.bitvunit-version }}-javadoc.jar
 
 You can find previous versions on the "GitHub download page":https://github.com/codescape/bitvunit/downloads.
 

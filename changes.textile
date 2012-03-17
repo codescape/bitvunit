@@ -8,7 +8,7 @@ Below you can find a list of all changes applied to the framework through its di
 
 Hide and show details to releases in clicking on the release you are interested in:
 
-h3(release#r07). Release 0.7 (_near future_)
+h3(release#r07). Release 0.7 (2012-03-17)
 
 * added support for Selenium WebDriver
 * added priority concept to rules
