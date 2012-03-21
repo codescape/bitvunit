@@ -1,0 +1,13 @@
+---
+layout: post
+title: Releasing BitvUnit 0.7 - Demo Project, Priorities Concept, Selenium WebDriver Support
+---
+
+I am happy to announce the next version of BitvUnit! A new concept of priorities has been added and will be integrated deeper in the upcoming versions. You can then set thresholds that will make a test run fail or not fail depending on the amount of violations against the given rules in that priority level.
+
+To help new users get started with the framework the demo project was improved and has been changed to a web project with own pages and tests against these pages. Have a look at the source code of the updated "bitvunit-demo":BitvUnitDemo project to find out more.
+
+More details about changes in this version can be found in the "Change Log":ChangeLog.
+
+[ChangeLog]/changes/#r07
+[BitvUnitDemo]https://github.com/codescape/bitvunit/tree/master/bitvunit-demo
