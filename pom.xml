@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
 
     <name>BitvUnit Project</name>
-    <description>Accessibility Testing Framework</description>
+    <description>Accessibility Testing Library</description>
     <url>http://bitvunit.codescape.de</url>
 
     <modules>

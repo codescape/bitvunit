@@ -5,7 +5,7 @@ import de.codescape.bitvunit.rule.Violations;
 import de.codescape.bitvunit.ruleset.RuleSet;
 
 /**
- * Common interface for any class that writes out reports for this framework.
+ * Common interface for any class that writes out reports for this library.
  *
  * @author Stefan Glase
  */

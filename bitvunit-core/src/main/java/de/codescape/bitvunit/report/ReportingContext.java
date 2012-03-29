@@ -4,7 +4,7 @@ import de.codescape.bitvunit.util.Assert;
 
 /**
  * Singleton class holding the configured {@link ReportWriter} to write out reports for any accessibility check that is
- * executed by the framework.
+ * executed by the library.
  *
  * @author Stefan Glase
  */

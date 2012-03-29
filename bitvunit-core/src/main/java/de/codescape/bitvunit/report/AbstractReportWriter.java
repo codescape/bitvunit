@@ -81,9 +81,9 @@ public abstract class AbstractReportWriter implements ReportWriter {
     }
 
     /**
-     * Returns the version of the BitvUnit framework in use.
+     * Returns the version of the BitvUnit library in use.
      *
-     * @return version of the BitvUnit framework in use
+     * @return version of the BitvUnit library in use
      */
     protected String getBitvUnitVersion() {
         return ClassPathResource.asString(VERSION_FILE);

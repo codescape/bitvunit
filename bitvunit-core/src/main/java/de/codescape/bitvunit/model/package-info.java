@@ -1,4 +1,4 @@
 /**
- * Provides internal model classes to be used in the framework.
+ * Provides internal model classes to be used in the library.
  */
 package de.codescape.bitvunit.model;

@@ -12,7 +12,7 @@
     <packaging>jar</packaging>
 
     <name>BitvUnit Core</name>
-    <description>Accessibility Testing Framework</description>
+    <description>Accessibility Testing Library</description>
     <url>http://bitvunit.codescape.de</url>
 
     <build>

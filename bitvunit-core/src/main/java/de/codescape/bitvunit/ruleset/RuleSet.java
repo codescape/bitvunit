@@ -7,7 +7,7 @@ import de.codescape.bitvunit.rule.Violations;
 import java.util.List;
 
 /**
- * Interface that must be implemented by all rule sets that should be checked with this framework. You should always
+ * Interface that must be implemented by all rule sets that should be checked with this library. You should always
  * extend {@link BasicRuleSet} which gives you some convenience functionality instead of implementing this interface
  * directly.
  *

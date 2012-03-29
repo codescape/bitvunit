@@ -12,7 +12,7 @@
     <packaging>war</packaging>
 
     <name>BitvUnit Demo</name>
-    <description>Accessibility Testing Framework</description>
+    <description>Accessibility Testing Library</description>
     <url>http://bitvunit.codescape.de</url>
 
     <properties>

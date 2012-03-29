@@ -8,7 +8,7 @@ import static org.junit.Assert.assertTrue;
 public class TextReportWriterTest extends AbstractReportWriterTest {
 
     @Test
-    public void shouldBeAbleToGetFrameworkVersion() throws Exception {
+    public void shouldBeAbleToGetLibraryVersion() throws Exception {
         assertNotNull(new TextReportWriter().getBitvUnitVersion());
     }
 
