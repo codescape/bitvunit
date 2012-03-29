@@ -7,7 +7,7 @@ BitvUnit is now available in the "Central Maven Repository":CentralMavenReposito
 
 h3. Feedback wanted
 
-I want to use this blog post to send a *thank you* to everyone giving the framework a try in the past or in the future! I am always happy to receive some feedback - be it bugs or requests for new features or rules! 
+I want to use this blog post to send a *thank you* to everyone giving the library a try in the past or in the future! I am always happy to receive some feedback - be it bugs or requests for new features or rules! 
 
 [CentralMavenRepository]http://repo1.maven.org/maven2/de/codescape/bitvunit/
 [SonatypeNexus]https://oss.sonatype.org/index.html

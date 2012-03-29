@@ -3,13 +3,13 @@ layout: post
 title: Releasing BitvUnit 0.4 - Input Sources, Hamcrest Integration, Reporting
 ---
 
-This release is focused on infrastructure to ease the use and integration of the project. But still two new rules made it into the framework with this release and so there is a total number of 28 rules now. Have a look at the "all-rules.xml":AllRulesXml file to get an impression. 
+This release is focused on infrastructure to ease the use and integration of the project. But still two new rules made it into the library with this release and so there is a total number of 28 rules now. Have a look at the "all-rules.xml":AllRulesXml file to get an impression. 
 
 h3. Supported Input Sources
 
-With this release BitvUnit supports five different types of input to check against the framework's rules and verify for accessibility compliance. 
+With this release BitvUnit supports five different types of input to check against the library's rules and verify for accessibility compliance. 
 
-Aside from it's native support for <code>com.gargoylesoftware.htmlunit.html.HtmlPage</code> instances to be checked you can now use the HtmlPageUtil class to read HTML code from <code>java.io.InputStream</code> or <code>java.io.Reader</code> instances. Other options are simple Java <code>java.lang.String</code> instances that contain the HTML code to be checked or <code>java.net.URL</code> instances pointing to an resource (e.g. online available HTML pages) that should be checked with the framework.
+Aside from it's native support for <code>com.gargoylesoftware.htmlunit.html.HtmlPage</code> instances to be checked you can now use the HtmlPageUtil class to read HTML code from <code>java.io.InputStream</code> or <code>java.io.Reader</code> instances. Other options are simple Java <code>java.lang.String</code> instances that contain the HTML code to be checked or <code>java.net.URL</code> instances pointing to an resource (e.g. online available HTML pages) that should be checked with the library.
 
 h3. Hamcrest Integration
 
@@ -56,7 +56,7 @@ Rules checked:
 [..]
 {% endhighlight %}
 
-The "ConsoleReportWriter":ConsoleReportWriter currently is the only "ReportWriter":ReportWriter implementation that is shipped with release 0.4.0 of the framework but next versions will support more types of reports.
+The "ConsoleReportWriter":ConsoleReportWriter currently is the only "ReportWriter":ReportWriter implementation that is shipped with release 0.4.0 of the library but next versions will support more types of reports.
 
 See the "Change Log":/changes/#r04 for further details.
 

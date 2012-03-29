@@ -3,13 +3,13 @@ layout: default
 title: About
 ---
 
-BitvUnit is an open source accessibility testing framework that makes it easy to automate accessibility checking for pages and applications that run in a web browser. BitvUnit is free, open source software licensed under the "Apache License, Version 2.0":http://www.apache.org/licenses/LICENSE-2.0.html.
+BitvUnit is an open source accessibility testing library that makes it easy to automate accessibility checking for pages and applications that run in a web browser. BitvUnit is free, open source software licensed under the "Apache License, Version 2.0":http://www.apache.org/licenses/LICENSE-2.0.html.
 
-The framework uses "Apache Maven":http://maven.apache.org for its build and dependency management. With the help of "HtmlUnit":http://htmlunit.sourceforge.net the framework inspects HTML pages that are checked against the rules of the framework. It provides adapters for "Hamcrest":http://code.google.com/p/hamcrest matchers because of their expressive syntax.
+The library uses "Apache Maven":http://maven.apache.org for its build and dependency management. With the help of "HtmlUnit":http://htmlunit.sourceforge.net the library inspects HTML pages that are checked against the rules of the library. It provides adapters for "Hamcrest":http://code.google.com/p/hamcrest matchers because of their expressive syntax.
 
 h3. Further Resources
 
-If you want learn more about the framework, these resources might be interesting for you:
+If you want learn more about the library, these resources might be interesting for you:
 
 <ul class="resources">
   <li>
@@ -21,19 +21,19 @@ If you want learn more about the framework, these resources might be interesting
   <li>
     !images/icons/source-code.png(Source Code Repository)!:https://github.com/codescape/bitvunit
     <h4>Source Code Repository</h4>
-    <p>The framework's "Source Code Repository":https://github.com/codescape/bitvunit is hosted on GitHub and can be accessed easily.</p>
+    <p>The library's "Source Code Repository":https://github.com/codescape/bitvunit is hosted on GitHub and can be accessed easily.</p>
   </li>
 
   <li>
     !images/icons/blog.png(Blog)!:/blog
     <h4>Blog</h4>
-    <p>Stay informed about the BitvUnit framework with the help of our "Blog":/blog from time to time.</p>
+    <p>Stay informed about the BitvUnit library with the help of our "Blog":/blog from time to time.</p>
   </li>
 
   <li>
     !images/icons/documentation.png(Documentation)!:http://bitvunit.codescape.de
     <h4>Documentation</h4>
-    <p>The page you are currently viewing holds all relevant "Documentation":/ to the framework.</p>
+    <p>The page you are currently viewing holds all relevant "Documentation":/ to the library.</p>
   </li>
 
   <li>
@@ -45,7 +45,7 @@ If you want learn more about the framework, these resources might be interesting
   <li>
     !images/icons/continuous-integration.png(Continuous Integration)!:https://codescape.ci.cloudbees.com
     <h4>Continuous Integration</h4>
-    <p>Changes of the framework are checked by a "Continuous Integration":https://codescape.ci.cloudbees.com server.</p>
+    <p>Changes of the library are checked by a "Continuous Integration":https://codescape.ci.cloudbees.com server.</p>
   </li>
 </ul>
 

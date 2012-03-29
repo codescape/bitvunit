@@ -4,7 +4,7 @@ title: Changes
 permalink: changes/index.html
 ---
 
-Below you can find a list of all changes applied to the framework through its different releases. This list will be updated whenever there are new functions or improvements being introduced or known bugs corrected.
+Below you can find a list of all changes applied to the library through its different releases. This list will be updated whenever there are new functions or improvements being introduced or known bugs corrected.
 
 Hide and show details to releases in clicking on the release you are interested in:
 
@@ -61,12 +61,12 @@ h3(release#r05). Release 0.5 (2011-09-03)
 * improved reporting functionality
 ** added functionality to write report results to files and to console
 ** renamed ConsoleReportWriter to TextReportWriter to reflect that it can also be used to write to files
-** added functionality to print out the framework version in reports to AbstractReportWriter
+** added functionality to print out the library version in reports to AbstractReportWriter
 ** added XmlReportWriter to write XML based reports to console and files
 * fixed maven problems
 ** due to wrong configuration for resource filtering all-rules.xml ruleset was not provided in the jar
 ** dependency versions are now defined only in one place (in the bitvunit-project POM)
-* added sample project bitvunit-demo to showcase the usage of the framework
+* added sample project bitvunit-demo to showcase the usage of the library
 * improved JavaDoc
 ** added package documentation to all packages
 ** added documentation of ReportingContext
@@ -106,7 +106,7 @@ h3(release#r03). Release 0.3 (2011-06-30)
 ** UniqueLabelForFormElementRule
 ** UnorderedListContainsListItemsRule
 * fixed invalid filename of class XmlRuleSetException
-* added license information to the framework
+* added license information to the library
 * every violation knows the element that caused the violation
 * availability in Maven Central Repository
 

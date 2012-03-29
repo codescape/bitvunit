@@ -4,11 +4,11 @@ title: Usage
 permalink: usage/index.html
 ---
 
-Find out how to use the BitvUnit framework to automate your checks.
+Find out how to use the BitvUnit library to automate your checks.
 
 h3. Sample (with Hamcrest matchers and XmlRuleSet)
 
-The following sample demonstrates already a bunch of features that are coming with the BitvUnit framework. The sample shows how to check against a set of rules defined in a XML document with the use of the provided Hamcrest matchers to verify accessibility compliance.
+The following sample demonstrates already a bunch of features that are coming with the BitvUnit library. The sample shows how to check against a set of rules defined in a XML document with the use of the provided Hamcrest matchers to verify accessibility compliance.
 
 {% highlight java %}
 package demo;
@@ -32,4 +32,4 @@ The latest version of the API docs generated from the Javadoc is constantly upda
 
 h3. Not enough?
 
-If you know other ways of using the framework that should be documented here please use the "Issue Tracker":https://github.com/codescape/bitvunit/issues on GitHub and explain your way of getting the most out of this framework!
+If you know other ways of using the library that should be documented here please use the "Issue Tracker":https://github.com/codescape/bitvunit/issues on GitHub and explain your way of getting the most out of this library!

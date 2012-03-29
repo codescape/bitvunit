@@ -4,7 +4,7 @@ title: Roadmap
 permalink: roadmap/index.html
 ---
 
-This page will collect our roadmap towards new versions of the framework.
+This page will collect our roadmap towards new versions of the library.
 
 * implement more rules to verify accessibility
 * provide preconfigured set of rules for accessibility testing against standards (e.g. BITV)

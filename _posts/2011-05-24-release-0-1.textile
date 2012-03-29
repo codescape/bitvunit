@@ -3,7 +3,7 @@ layout: post
 title: Releasing BitvUnit 0.1 - Initial Release
 ---
 
-Two days before I started to work on the framework and I am happy to annouce a first version of the framework to the public.
+Two days before I started to work on the library and I am happy to annouce a first version of the library to the public.
 
 There is already a working implementation of ten rules for accessibility testing. These rules can be applied to a given page to report violations or put together into a set of rules (<code>RuleSet</code>) that can also be applied to a given page to report violations.
 
