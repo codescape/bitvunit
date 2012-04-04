@@ -57,4 +57,4 @@ h3. Recent Blog Posts
   {% endfor %}
 </ul>
 
-Older posts can be found in our "Blog":/blog archive.
+Browse through older posts in the "Blog":/blog archive.
