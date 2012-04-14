@@ -10,6 +10,8 @@ Hide and show details to releases in clicking on the release you are interested 
 
 h3(release#r08). Release 0.8 (_soon_)
 
+* added new rules
+** SelectFieldWithValidOptionRule
 * updated dependencies
 ** updated commons-io from version 2.1 to 2.2
 
