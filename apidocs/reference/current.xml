@@ -1320,6 +1320,49 @@
 >
 </method>
 </class>
+<class name="SelectFieldWithValidOptionRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="SelectFieldWithValidOptionRule"
+ type="de.codescape.bitvunit.rule.forms.SelectFieldWithValidOptionRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
 <class name="UniqueLabelForFormElementRule"
  extends="de.codescape.bitvunit.rule.AbstractRule"
  abstract="false"

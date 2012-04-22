@@ -5,7 +5,7 @@ title: Rules
 
 You can find a list of all categories here. Please choose from the list below to see the documentation for all rules in the selected category.
 
-* "Forms":/rules/forms (8 rules)
+* "Forms":/rules/forms (9 rules)
 * "Frames":/rules/frames (3 rules)
 * "Images":/rules/images (4 rules)
 * "Interactions":/rules/interactions (1 rule)

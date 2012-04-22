@@ -26,7 +26,7 @@ h3. FieldsetContainsLegendRule
     </ul>
 </aside>
 
-FieldsetContainsLegendRule ensures that every <code><fieldset/></code> within the given HTML document contains a <code><legend/></code> tag as the first child element to describe the elements grouped by this <code><fieldset/></code>. <p/> A good example for a valid fieldset would look like this: <pre><code><fieldset><legend>legend text</legend><!-- ... --></fieldset></code></pre>
+FieldsetContainsLegendRule ensures that every <code><fieldset/></code> within the given HTML document contains a <code><legend/></code> tag as the first child element to describe the elements grouped by this <code><fieldset/></code>. <p/> A good example for a valid fieldset would look like this: <pre><code> <fieldset>   <legend>legend text</legend>   <!-- ... --> </fieldset></code></pre>
 
 h3. LabelContainsTextRule
 
@@ -59,7 +59,7 @@ h3. LabelForSelectTagRule
     </ul>
 </aside>
 
-LabelForInputFieldRule ensures that every <code><select/></code> tag within the given HTML document is associated with a <code><label/></code> element that references the <code><select/></code> tag through its <code>for</code> attribute. <p/> A valid label associated with a select element should look like this: <pre><code> <label for="gender">Gender</label> <select id="gender"><option>f<option><option>m<option></select></code></pre>
+LabelForInputFieldRule ensures that every <code><select/></code> tag within the given HTML document is associated with a <code><label/></code> element that references the <code><select/></code> tag through its <code>for</code> attribute. <p/> A valid label associated with a select element should look like this: <pre><code> <label for="gender">Gender</label> <select id="gender">   <option>f<option>   <option>m<option> </select></code></pre>
 
 h3. LabelForTextareaRule
 
@@ -82,6 +82,17 @@ h3. LabelWithoutFormElementRule
 </aside>
 
 LabelWithoutFormElementRule ensures that every <code><label/></code> tag within the given HTML document is referencing a valid form element. The <code>id</code> of the form element must be equal to the <code>for</code> attribute of the label. Valid form elements are <code><select/></code>, <code><input/></code> and <code><textarea/></code> elements.
+
+h3. SelectFieldWithValidOptionRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author: Stefan Glase</li>
+        <li class="version">Since: 0.8</li>
+    </ul>
+</aside>
+
+SelectFieldWithValidOptionRule ensures that every <code><select/></code> element contains minimum one enabled option and that the first possible option is not disabled. <p/> A good example for a valid select field looks like this: <pre><code> <select id="gender">   <option>female<option>   <option>male<option> </select></code></pre>
 
 h3. UniqueLabelForFormElementRule
 

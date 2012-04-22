@@ -55,7 +55,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico" />
 <title>
 
-  FieldsetContainsLegendRule
+  SelectFieldWithValidOptionRule
 
 
 | BitvUnit Core
@@ -188,13 +188,13 @@
     <li><h2>Classes</h2>
       <ul>
           <li class="api apilevel-"><a href="../../../../../de/codescape/bitvunit/rule/forms/AlternativeTextForImageButtonRule.html">AlternativeTextForImageButtonRule</a></li>
-          <li class="selected api apilevel-"><a href="../../../../../de/codescape/bitvunit/rule/forms/FieldsetContainsLegendRule.html">FieldsetContainsLegendRule</a></li>
+          <li class="api apilevel-"><a href="../../../../../de/codescape/bitvunit/rule/forms/FieldsetContainsLegendRule.html">FieldsetContainsLegendRule</a></li>
           <li class="api apilevel-"><a href="../../../../../de/codescape/bitvunit/rule/forms/LabelContainsTextRule.html">LabelContainsTextRule</a></li>
           <li class="api apilevel-"><a href="../../../../../de/codescape/bitvunit/rule/forms/LabelForInputFieldRule.html">LabelForInputFieldRule</a></li>
           <li class="api apilevel-"><a href="../../../../../de/codescape/bitvunit/rule/forms/LabelForSelectTagRule.html">LabelForSelectTagRule</a></li>
           <li class="api apilevel-"><a href="../../../../../de/codescape/bitvunit/rule/forms/LabelForTextareaRule.html">LabelForTextareaRule</a></li>
           <li class="api apilevel-"><a href="../../../../../de/codescape/bitvunit/rule/forms/LabelWithoutFormElementRule.html">LabelWithoutFormElementRule</a></li>
-          <li class="api apilevel-"><a href="../../../../../de/codescape/bitvunit/rule/forms/SelectFieldWithValidOptionRule.html">SelectFieldWithValidOptionRule</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../de/codescape/bitvunit/rule/forms/SelectFieldWithValidOptionRule.html">SelectFieldWithValidOptionRule</a></li>
           <li class="api apilevel-"><a href="../../../../../de/codescape/bitvunit/rule/forms/UniqueLabelForFormElementRule.html">UniqueLabelForFormElementRule</a></li>
       </ul>
     </li>
@@ -310,7 +310,7 @@ Summary:
      
     
     class
-<h1>FieldsetContainsLegendRule</h1>
+<h1>SelectFieldWithValidOptionRule</h1>
 
 
 
@@ -357,7 +357,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">de.codescape.bitvunit.rule.forms.FieldsetContainsLegendRule</td>
+        <td colspan="1" class="jd-inheritance-class-cell">de.codescape.bitvunit.rule.forms.SelectFieldWithValidOptionRule</td>
     </tr>
     
 
@@ -373,16 +373,15 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>FieldsetContainsLegendRule ensures that every <code>&lt;fieldset/&gt;</code> within the given HTML document contains
- a <code>&lt;legend/&gt;</code> tag as the first child element to describe the elements grouped by this
- <code>&lt;fieldset/&gt;</code>.
+<p>SelectFieldWithValidOptionRule ensures that every <code>&lt;select/&gt;</code> element contains minimum one enabled
+ option and that the first possible option is not disabled.
  <p/>
- A good example for a valid fieldset would look like this:
+ A good example for a valid select field looks like this:
  <pre><code>
- &lt;fieldset&gt;
-   &lt;legend&gt;legend text&lt;/legend&gt;
-   &lt;!-- ... --&gt;
- &lt;/fieldset&gt;</code></pre></p>
+ &lt;select id="gender"&gt;
+   &lt;option&gt;female&lt;option&gt;
+   &lt;option&gt;male&lt;option&gt;
+ &lt;/select&gt;</code></pre></p>
 
 
 
@@ -448,7 +447,7 @@ Summary:
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../de/codescape/bitvunit/rule/forms/FieldsetContainsLegendRule.html#FieldsetContainsLegendRule()">FieldsetContainsLegendRule</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../de/codescape/bitvunit/rule/forms/SelectFieldWithValidOptionRule.html#SelectFieldWithValidOptionRule()">SelectFieldWithValidOptionRule</a></span>()</nobr>
         
   </td></tr>
 
@@ -477,7 +476,7 @@ Summary:
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../de/codescape/bitvunit/rule/forms/FieldsetContainsLegendRule.html#getName()">getName</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../de/codescape/bitvunit/rule/forms/SelectFieldWithValidOptionRule.html#getName()">getName</a></span>()</nobr>
         
         <div class="jd-descrdiv">Returns the name of that rule.</div>
   
@@ -506,7 +505,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../de/codescape/bitvunit/rule/forms/FieldsetContainsLegendRule.html#applyTo(de.codescape.bitvunit.model.Page, de.codescape.bitvunit.rule.Violations)">applyTo</a></span>(<a href="../../../../../de/codescape/bitvunit/model/Page.html">Page</a> page, <a href="../../../../../de/codescape/bitvunit/rule/Violations.html">Violations</a> violations)</nobr>
+        <span class="sympad"><a href="../../../../../de/codescape/bitvunit/rule/forms/SelectFieldWithValidOptionRule.html#applyTo(de.codescape.bitvunit.model.Page, de.codescape.bitvunit.rule.Violations)">applyTo</a></span>(<a href="../../../../../de/codescape/bitvunit/model/Page.html">Page</a> page, <a href="../../../../../de/codescape/bitvunit/rule/Violations.html">Violations</a> violations)</nobr>
         
         <div class="jd-descrdiv">Internal method to apply that rule to a given Page which provides some convenience methods to allocate tags.</div>
   
@@ -1012,7 +1011,7 @@ From interface
 
 
 
-<A NAME="FieldsetContainsLegendRule()"></A>
+<A NAME="SelectFieldWithValidOptionRule()"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1024,7 +1023,7 @@ From interface
          
         
       </span>
-      <span class="sympad">FieldsetContainsLegendRule</span>
+      <span class="sympad">SelectFieldWithValidOptionRule</span>
       <span class="normal">()</span>
     </h4>
       <div class="api-level">
