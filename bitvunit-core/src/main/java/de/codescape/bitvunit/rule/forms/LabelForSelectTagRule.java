@@ -16,7 +16,10 @@ import static de.codescape.bitvunit.util.html.HtmlLabelUtil.containsLabelForId;
  * A valid label associated with a select element should look like this:
  * <pre><code>
  * &lt;label for="gender"&gt;Gender&lt;/label&gt;
- * &lt;select id="gender"&gt;&lt;option&gt;f&lt;option&gt;&lt;option&gt;m&lt;option&gt;&lt;/select&gt;</code></pre>
+ * &lt;select id="gender"&gt;
+ *   &lt;option&gt;f&lt;option&gt;
+ *   &lt;option&gt;m&lt;option&gt;
+ * &lt;/select&gt;</code></pre>
  *
  * @author Stefan Glase
  * @since 0.1

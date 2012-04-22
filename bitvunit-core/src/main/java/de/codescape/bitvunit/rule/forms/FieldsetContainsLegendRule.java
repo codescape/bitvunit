@@ -12,7 +12,11 @@ import de.codescape.bitvunit.rule.Violations;
  * <code>&lt;fieldset/&gt;</code>.
  * <p/>
  * A good example for a valid fieldset would look like this:
- * <pre><code>&lt;fieldset&gt;&lt;legend&gt;legend text&lt;/legend&gt;&lt;!-- ... --&gt;&lt;/fieldset&gt;</code></pre>
+ * <pre><code>
+ * &lt;fieldset&gt;
+ *   &lt;legend&gt;legend text&lt;/legend&gt;
+ *   &lt;!-- ... --&gt;
+ * &lt;/fieldset&gt;</code></pre>
  *
  * @author Stefan Glase
  * @since 0.5
