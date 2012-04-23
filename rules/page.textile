@@ -15,7 +15,8 @@ h3. AvoidAbstractRoleRule
     </ul>
 </aside>
 
-AvoidAbstractRoleRule ensures that no abstract roles that are part of the Accessible Rich Internet Applications (WAI-ARIA) 1.0 document are used within the current HTML page.
+AvoidAbstractRoleRule ensures that no abstract roles that are part of the Accessible Rich Internet Applications
+ (WAI-ARIA) 1.0 document are used within the current HTML page.
 
 h3. LanguageForHtmlTagRule
 
@@ -26,7 +27,11 @@ h3. LanguageForHtmlTagRule
     </ul>
 </aside>
 
-LanguageForHtmlTagRule ensures that the given HTML document provides it's language information through the <code>lang</code> attribute on the <code><html/></code> tag. <p/> A valid example of a document in German language would look like this: <pre><code><html lang="de">...</html></code></pre>
+LanguageForHtmlTagRule ensures that the given HTML document provides it's language information through the
+ <code>lang</code> attribute on the <code><html/></code> tag.
+ <p/>
+ A valid example of a document in German language would look like this:
+ <pre><code><html lang="de">...</html></code></pre>
 
 h3. TitleForPageRule
 
@@ -37,4 +42,9 @@ h3. TitleForPageRule
     </ul>
 </aside>
 
-TitleForPageRule ensures that the document has a non empty title defined by the <code><title/></code> tag to describe that page. This rule is satisfied by a <code><title/></code> tag that contains minimum one readable character inside it's body. <p/> A good example would look like this: <pre><code><title>BitvUnit - User Manual</title></code></pre>
+TitleForPageRule ensures that the document has a non empty title defined by the <code><title/></code> tag to
+ describe that page. This rule is satisfied by a <code><title/></code> tag that contains minimum one readable
+ character inside it's body.
+ <p/>
+ A good example would look like this:
+ <pre><code><title>BitvUnit - User Manual</title></code></pre>

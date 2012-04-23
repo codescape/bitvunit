@@ -15,7 +15,12 @@ h3. AlternativeTextForImageButtonRule
     </ul>
 </aside>
 
-AlternativeTextForImageButtonRule ensures that every image button created through <code><input type="image"/></code> within the given HTML document provides an alternative text through it's <code>alt</code> attribute. <p/> A good example for a valid image button would look like this: <pre><code><input type="image" src="register.png" alt="Register Account"/></code></pre>
+AlternativeTextForImageButtonRule ensures that every image button created through <code><input
+ type="image"/></code> within the given HTML document provides an alternative text through it's <code>alt</code>
+ attribute.
+ <p/>
+ A good example for a valid image button would look like this:
+ <pre><code><input type="image" src="register.png" alt="Register Account"/></code></pre>
 
 h3. FieldsetContainsLegendRule
 
@@ -26,7 +31,16 @@ h3. FieldsetContainsLegendRule
     </ul>
 </aside>
 
-FieldsetContainsLegendRule ensures that every <code><fieldset/></code> within the given HTML document contains a <code><legend/></code> tag as the first child element to describe the elements grouped by this <code><fieldset/></code>. <p/> A good example for a valid fieldset would look like this: <pre><code> <fieldset>   <legend>legend text</legend>   <!-- ... --> </fieldset></code></pre>
+FieldsetContainsLegendRule ensures that every <code><fieldset/></code> within the given HTML document contains
+ a <code><legend/></code> tag as the first child element to describe the elements grouped by this
+ <code><fieldset/></code>.
+ <p/>
+ A good example for a valid fieldset would look like this:
+ <pre><code>
+ <fieldset>
+   <legend>legend text</legend>
+   <!-- ... -->
+ </fieldset></code></pre>
 
 h3. LabelContainsTextRule
 
@@ -37,7 +51,11 @@ h3. LabelContainsTextRule
     </ul>
 </aside>
 
-LabelContainsTextRule ensures that every <code><label/></code> within the given HTML document contains a textual representation for the given label.  <p/> A valid label should look like this: <pre><code><label for="element-id">Username</label></code></pre>
+LabelContainsTextRule ensures that every <code><label/></code> within the given HTML document contains a
+ textual representation for the given label.
+  <p/>
+ A valid label should look like this:
+ <pre><code><label for="element-id">Username</label></code></pre>
 
 h3. LabelForInputFieldRule
 
@@ -48,7 +66,14 @@ h3. LabelForInputFieldRule
     </ul>
 </aside>
 
-LabelForInputFieldRule ensures that every <code><input/></code> field of type <code>text</code> or <code>password</code> within the given HTML document is associated with a <code><label/></code> element that references the <code><input/></code> element through its <code>for</code> attribute. <p/> A valid label associated with an input element should look like this: <pre><code> <label for="username">Username</label> <input type="text" id="username"/></code></pre>
+LabelForInputFieldRule ensures that every <code><input/></code> field of type <code>text</code> or
+ <code>password</code> within the given HTML document is associated with a <code><label/></code> element that
+ references the <code><input/></code> element through its <code>for</code> attribute.
+ <p/>
+ A valid label associated with an input element should look like this:
+ <pre><code>
+ <label for="username">Username</label>
+ <input type="text" id="username"/></code></pre>
 
 h3. LabelForSelectTagRule
 
@@ -59,7 +84,17 @@ h3. LabelForSelectTagRule
     </ul>
 </aside>
 
-LabelForInputFieldRule ensures that every <code><select/></code> tag within the given HTML document is associated with a <code><label/></code> element that references the <code><select/></code> tag through its <code>for</code> attribute. <p/> A valid label associated with a select element should look like this: <pre><code> <label for="gender">Gender</label> <select id="gender">   <option>f<option>   <option>m<option> </select></code></pre>
+LabelForInputFieldRule ensures that every <code><select/></code> tag within the given HTML document is
+ associated with a <code><label/></code> element that references the <code><select/></code> tag through
+ its <code>for</code> attribute.
+ <p/>
+ A valid label associated with a select element should look like this:
+ <pre><code>
+ <label for="gender">Gender</label>
+ <select id="gender">
+   <option>f<option>
+   <option>m<option>
+ </select></code></pre>
 
 h3. LabelForTextareaRule
 
@@ -70,7 +105,14 @@ h3. LabelForTextareaRule
     </ul>
 </aside>
 
-LabelForTextareaRule ensures that every <code><textarea/></code> within the given HTML document is associated with a <code><label/></code> element that references the <code><textarea/></code> element through its <code>for</code> attribute. <p/> A valid label associated with a textarea element should look like this: <pre><code> <label for="comment">Comment</label> <textarea id="comment"></textarea></code></pre>
+LabelForTextareaRule ensures that every <code><textarea/></code> within the given HTML document is associated
+ with a <code><label/></code> element that references the <code><textarea/></code> element through its
+ <code>for</code> attribute.
+ <p/>
+ A valid label associated with a textarea element should look like this:
+ <pre><code>
+ <label for="comment">Comment</label>
+ <textarea id="comment"></textarea></code></pre>
 
 h3. LabelWithoutFormElementRule
 
@@ -81,7 +123,10 @@ h3. LabelWithoutFormElementRule
     </ul>
 </aside>
 
-LabelWithoutFormElementRule ensures that every <code><label/></code> tag within the given HTML document is referencing a valid form element. The <code>id</code> of the form element must be equal to the <code>for</code> attribute of the label. Valid form elements are <code><select/></code>, <code><input/></code> and <code><textarea/></code> elements.
+LabelWithoutFormElementRule ensures that every <code><label/></code> tag within the given HTML document is
+ referencing a valid form element. The <code>id</code> of the form element must be equal to the <code>for</code>
+ attribute of the label. Valid form elements are <code><select/></code>, <code><input/></code> and
+ <code><textarea/></code> elements.
 
 h3. SelectFieldWithValidOptionRule
 
@@ -92,7 +137,15 @@ h3. SelectFieldWithValidOptionRule
     </ul>
 </aside>
 
-SelectFieldWithValidOptionRule ensures that every <code><select/></code> element contains minimum one enabled option and that the first possible option is not disabled. <p/> A good example for a valid select field looks like this: <pre><code> <select id="gender">   <option>female<option>   <option>male<option> </select></code></pre>
+SelectFieldWithValidOptionRule ensures that every <code><select/></code> element contains minimum one enabled
+ option and that the first possible option is not disabled.
+ <p/>
+ A good example for a valid select field looks like this:
+ <pre><code>
+ <select id="gender">
+   <option>female<option>
+   <option>male<option>
+ </select></code></pre>
 
 h3. UniqueLabelForFormElementRule
 
@@ -103,4 +156,6 @@ h3. UniqueLabelForFormElementRule
     </ul>
 </aside>
 
-UniqueLabelForFormElementRule ensures that there is never more than one <code><label/></code> with the same value in its <code>for</code> attribute. There should never be more than one <code><label/></code> pointing to a single form element.
+UniqueLabelForFormElementRule ensures that there is never more than one <code><label/></code> with the same
+ value in its <code>for</code> attribute. There should never be more than one <code><label/></code> pointing to
+ a single form element.

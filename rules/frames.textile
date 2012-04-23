@@ -15,7 +15,9 @@ h3. AlternativeTextForInlineFrameRule
     </ul>
 </aside>
 
-AlternativeTextForInlineFrameRule ensures that every inline frame marked through <code><iframe/></code> within the given HTML document provides an alternative textual description inside it's body to explain the inline frame or a hyperlink to an alternative version of that inline frame.
+AlternativeTextForInlineFrameRule ensures that every inline frame marked through <code><iframe/></code> within
+ the given HTML document provides an alternative textual description inside it's body to explain the inline frame or a
+ hyperlink to an alternative version of that inline frame.
 
 h3. TitleForFrameRule
 
@@ -26,7 +28,8 @@ h3. TitleForFrameRule
     </ul>
 </aside>
 
-TitleForFrameRule ensures that every frame that is marked through the <code><frame/></code> element within the given HTML document provides a description of that frame through it's <code>title</code> attribute.
+TitleForFrameRule ensures that every frame that is marked through the <code><frame/></code> element within the
+ given HTML document provides a description of that frame through it's <code>title</code> attribute.
 
 h3. TitleForInlineFrameRule
 
@@ -37,4 +40,6 @@ h3. TitleForInlineFrameRule
     </ul>
 </aside>
 
-TitleForInlineFrameRule ensures that every inline frame that is marked through the <code><iframe/></code> element within the given HTML document provides a description of that inline frame through it's <code>title</code> attribute.
+TitleForInlineFrameRule ensures that every inline frame that is marked through the <code><iframe/></code>
+ element within the given HTML document provides a description of that inline frame through it's <code>title</code>
+ attribute.
