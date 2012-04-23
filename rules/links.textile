@@ -15,5 +15,4 @@ h3. AnchorsWithoutTargetAttributeRule
     </ul>
 </aside>
 
-AnchorsWithoutTargetAttributeRule ensures that no anchor <code><a/></code> tag within the given HTML document
- contains the <code>target</code> attribute that forces a link to open in a specific or new window.
+AnchorsWithoutTargetAttributeRule ensures that no anchor <code><a/></code> tag within the given HTML document contains the <code>target</code> attribute that forces a link to open in a specific or new window.

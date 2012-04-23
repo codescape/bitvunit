@@ -15,9 +15,7 @@ h3. AlternativeTextForAreaOfImageMapRule
     </ul>
 </aside>
 
-AlternativeTextForAreaOfImageMapRule ensures that every area of an image map created by the
- <code><area/></code> tag within the given HTML document provides an alternative text through its
- <code>alt</code> attribute.
+AlternativeTextForAreaOfImageMapRule ensures that every area of an image map created by the <code><area/></code> tag within the given HTML document provides an alternative text through its <code>alt</code> attribute.
 
 h3. AlternativeTextForImageRule
 
@@ -28,9 +26,7 @@ h3. AlternativeTextForImageRule
     </ul>
 </aside>
 
-AlternativeTextForImageRule ensures that every image created by the <code><img/></code> tag within the given
- HTML document provides an alternative text through it's <code>alt</code> attribute. This rule is already satisfied by
- an empty attribute <code>alt=""</code> since this is the encouraged way for images that are used for layout aspects.
+AlternativeTextForImageRule ensures that every image created by the <code><img/></code> tag within the given HTML document provides an alternative text through it's <code>alt</code> attribute. This rule is already satisfied by an empty attribute <code>alt=""</code> since this is the encouraged way for images that are used for layout aspects.
 
 h3. AlternativeTextForLinkedImageRule
 
@@ -41,12 +37,7 @@ h3. AlternativeTextForLinkedImageRule
     </ul>
 </aside>
 
-AlternativeTextForLinkedImageRule ensures that every image created by the <code><img/></code> tag within the
- given HTML document that is part of a hyperlink created by the <code><a/></code> tag provides a non empty
- alternative text through it's <code>alt</code> attribute.
- <p/>
- A good example for a valid linked image should look like this:
- <pre><code><a href="contact.html"><img src="image.gif" alt="Contact me"/></a></code></pre>
+AlternativeTextForLinkedImageRule ensures that every image created by the <code><img/></code> tag within the given HTML document that is part of a hyperlink created by the <code><a/></code> tag provides a non empty alternative text through it's <code>alt</code> attribute. <p/> A good example for a valid linked image should look like this: <pre><code><a href="contact.html"><img src="image.gif" alt="Contact me"/></a></code></pre>
 
 h3. AvoidServerSideImageMapRule
 
@@ -57,6 +48,4 @@ h3. AvoidServerSideImageMapRule
     </ul>
 </aside>
 
-AvoidServerSideImageMapRule ensures that there are no server side image maps created by the <code><img
- ismap="ismap"/></code> tag within the given HTML document because they are inaccessible by users who cannot use a
- mouse because of some disability.
+AvoidServerSideImageMapRule ensures that there are no server side image maps created by the <code><img ismap="ismap"/></code> tag within the given HTML document because they are inaccessible by users who cannot use a mouse because of some disability.

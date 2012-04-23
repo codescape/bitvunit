@@ -15,9 +15,7 @@ h3. CaptionTextForTableRule
     </ul>
 </aside>
 
-CaptionTextForTableRule ensures that every <code><table/></code> within the given HTML document provides a
- title by having a <code><caption>description</caption></code> element as the first child element inside
- the <code><table/></code> declaration.
+CaptionTextForTableRule ensures that every <code><table/></code> within the given HTML document provides a title by having a <code><caption>description</caption></code> element as the first child element inside the <code><table/></code> declaration.
 
 h3. TableHeaderContainsTextRule
 
@@ -28,8 +26,7 @@ h3. TableHeaderContainsTextRule
     </ul>
 </aside>
 
-TableHeaderContainsTextRule ensures that every <code><th/></code> element within the given HTML document
- contains text content in it's body. Table headers always should describe a given row or column with text.
+TableHeaderContainsTextRule ensures that every <code><th/></code> element within the given HTML document contains text content in it's body. Table headers always should describe a given row or column with text.
 
 h3. TableHeaderForTableColumnRule
 
@@ -40,5 +37,4 @@ h3. TableHeaderForTableColumnRule
     </ul>
 </aside>
 
-TableHeaderForTableColumnRule ensures that every <code><table/></code> within the given HTML document has
- table headers declared by <code><th/></code> for each data cell declared by the <code><td/></code> tag.
+TableHeaderForTableColumnRule ensures that every <code><table/></code> within the given HTML document has table headers declared by <code><th/></code> for each data cell declared by the <code><td/></code> tag.

@@ -15,9 +15,7 @@ h3. DefinitionListContainsItemsRule
     </ul>
 </aside>
 
-DefinitionListContainsItemsRule ensures that every definition list <code><dl/></code> within the given HTML
- document contains one or more definition terms <code><dt/></code> and definition descriptions
- <code><dd/></code>.
+DefinitionListContainsItemsRule ensures that every definition list <code><dl/></code> within the given HTML document contains one or more definition terms <code><dt/></code> and definition descriptions <code><dd/></code>.
 
 h3. OrderedListContainsListItemsRule
 
@@ -28,8 +26,7 @@ h3. OrderedListContainsListItemsRule
     </ul>
 </aside>
 
-OrderedListContainsListItemsRule ensures that every ordered list <code><ol/></code> within the given HTML
- document contains one or more list items <code><li/></code>.
+OrderedListContainsListItemsRule ensures that every ordered list <code><ol/></code> within the given HTML document contains one or more list items <code><li/></code>.
 
 h3. UnorderedListContainsListItemsRule
 
@@ -40,5 +37,4 @@ h3. UnorderedListContainsListItemsRule
     </ul>
 </aside>
 
-UnorderedListContainsListItemsRule ensures that every ordered list <code><ul/></code> within the given HTML
- document contains one or more list items <code><li/></code>.
+UnorderedListContainsListItemsRule ensures that every ordered list <code><ul/></code> within the given HTML document contains one or more list items <code><li/></code>.
