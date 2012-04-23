@@ -155,7 +155,7 @@ def extractRuleDescription(file) {
     def description = ''
     file.eachLine { line ->
         if (line.startsWith(' *') && !(line.startsWith(' * @') || line.startsWith(' */'))) {
-            description += line.replaceAll('&lt;', '<').replaceAll('&gt;','>') - ' *'
+            description += line.replaceAll('&lt;', '<').replaceAll('&gt;','>') - ' *' + '\n'
         }
     }
     description?.trim() ?: 'missing'
