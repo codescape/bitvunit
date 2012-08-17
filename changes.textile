@@ -15,7 +15,8 @@ h3(release#r08). Release 0.8 (_soon_)
 * updated dependencies
 ** updated commons-io from version 2.1 to 2.4
 ** updated selenium from version 2.20.0 to 2.25.0
-** updated hamcrest-core from version 1.2.1
+** updated hamcrest-core from version 1.2.1 to 1.3
+** updated htmlunit from version 2.9 to 2.10
 
 h3(release#r07). Release 0.7 (2012-03-17)
 
