@@ -21,7 +21,7 @@ public class ${name} extends AbstractRule {
     
     @Override
     protected void applyTo(Page page, Violations violations) {
-        // TODO provide rule implementation
+        // TODO implement rule here
     }
 
 }
