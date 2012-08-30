@@ -21,6 +21,7 @@
     <rule class="de.codescape.bitvunit.rule.frames.TitleForInlineFrameRule"/>
 
     <!-- Images -->
+    <rule class="de.codescape.bitvunit.rule.images.AvoidBorderAttributeForImageRule"/>
     <rule class="de.codescape.bitvunit.rule.images.AlternativeTextForLinkedImageRule"/>
     <rule class="de.codescape.bitvunit.rule.images.AlternativeTextForAreaOfImageMapRule"/>
     <rule class="de.codescape.bitvunit.rule.images.AlternativeTextForImageRule"/>
@@ -38,6 +39,7 @@
     <rule class="de.codescape.bitvunit.rule.lists.UnorderedListContainsListItemsRule"/>
 
     <!-- Media -->
+    <rule class="de.codescape.bitvunit.rule.media.AvoidAppletTagRule"/>
     <rule class="de.codescape.bitvunit.rule.media.AlternativeTextForAppletRule"/>
     <rule class="de.codescape.bitvunit.rule.media.AlternativeTextForObjectRule"/>
 
