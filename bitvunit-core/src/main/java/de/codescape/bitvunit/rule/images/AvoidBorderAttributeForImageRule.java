@@ -6,8 +6,6 @@ import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
 import de.codescape.bitvunit.util.html.HtmlElementUtil;
 
-import java.util.List;
-
 /**
  * AvoidBorderAttributeForImageRule ensures that no image on the current page under test uses the <code>border</code>
  * attribute to assign a border to itself which is deprecated since HTML 4.01 and should be done through cascading style

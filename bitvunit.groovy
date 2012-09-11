@@ -7,9 +7,9 @@
  * @since 0.6
  */
 def availableCommands = [
-    'create-rule': 'Wizard that helps you to create new rules.',
-    'update-ruledocs': 'Target that generates rule documentation from javadoc.',
-    'update-apidocs': 'Generates the html based javadoc for bitvunit-core.',
+        'create-rule': 'Wizard that helps you to create new rules.',
+        'update-ruledocs': 'Target that generates rule documentation from javadoc.',
+        'update-apidocs': 'Generates the html based javadoc for bitvunit-core.',
 ]
 
 if (args.size() != 1 || !(args[0] in availableCommands.keySet())) {
@@ -155,7 +155,7 @@ def extractRuleDescription(file) {
     def description = ''
     file.eachLine { line ->
         if (line.startsWith(' *') && !(line.startsWith(' * @') || line.startsWith(' */'))) {
-            description += line.replaceAll('&lt;', '<').replaceAll('&gt;','>') - ' *'
+            description += line.replaceAll('&lt;', '<').replaceAll('&gt;', '>') - ' *'
         }
     }
     description?.trim() ?: 'missing'
