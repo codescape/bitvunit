@@ -7,6 +7,8 @@ BitvUnit is an open source accessibility testing library that makes it easy to a
 
 To build the latest version of the library just checkout the sources and run `mvn install` on your local machine and it will create and install the latest version of the library to your local maven repository.
 
+[![Build Status](https://travis-ci.org/codescape/bitvunit.png)](https://travis-ci.org/codescape/bitvunit)
+
 ### Implement new rules
 
 To implement a new rule you can run the Groovy based wizard with the command `groovy bitvunit.groovy create-rule` from the root folder of the project. It prompts for your full name to be listed in the JavaDoc and the name for your new rule. Valid names must start with an uppercase letter, contain only characters and end with the word `Rule`.
