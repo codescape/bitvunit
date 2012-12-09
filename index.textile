@@ -43,9 +43,9 @@ If you want learn more about the library, these resources might be interesting f
   </li>
 
   <li>
-    !images/icons/continuous-integration.png(Continuous Integration)!:https://codescape.ci.cloudbees.com
+    !images/icons/continuous-integration.png(Continuous Integration)!:https://travis-ci.org/codescape/bitvunit
     <h4>Continuous Integration</h4>
-    <p>Changes of the library are checked by a "Continuous Integration":https://codescape.ci.cloudbees.com server.</p>
+    <p>Changes of the library are checked by the "Travis CI":https://travis-ci.org/codescape/bitvunit server.</p>
   </li>
 </ul>
 
