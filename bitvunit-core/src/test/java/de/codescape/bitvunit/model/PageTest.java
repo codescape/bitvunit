@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.model;
 
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
+import com.gargoylesoftware.htmlunit.html.HtmlTitle;
 import org.junit.Test;
 
 import java.util.List;
@@ -9,6 +10,8 @@ import static de.codescape.bitvunit.util.html.HtmlPageUtil.toHtmlPage;
 import static org.junit.Assert.*;
 
 public class PageTest {
+
+    public static final String EXPECTED_TITLE = "Expected Title";
 
     @Test
     public void findAllHeadingTagsReturnsHeadingsOfEveryLevel() throws Exception {
@@ -28,6 +31,14 @@ public class PageTest {
             }
             assertTrue(found);
         }
+    }
+
+    @Test
+    public void findTitleTagShouldReturnTheCorrectTitle() {
+        String content = "<html><head><title>" + EXPECTED_TITLE + "</title><body></body></html>";
+        HtmlTitle titleTag = new Page(toHtmlPage(content)).findTitleTag();
+        assertNotNull(titleTag);
+        assertEquals(EXPECTED_TITLE, titleTag.getTextContent());
     }
 
 }
