@@ -46,7 +46,7 @@ public class HtmlElementUtilTest {
     }
 
     private HtmlElement createHtmlElement(String element) {
-        return toHtmlPage("<html><body>" + element + "</body></html>").getBody().getChildElements().iterator().next();
+        return toHtmlPage("<html><body>" + element + "</body></html>").getBody().getHtmlElementDescendants().iterator().next();
     }
 
 }

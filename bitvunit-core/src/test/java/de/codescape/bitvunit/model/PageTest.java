@@ -41,4 +41,11 @@ public class PageTest {
         assertEquals(EXPECTED_TITLE, titleTag.getTextContent());
     }
 
+    @Test
+    public void findHtmlElementByIdShouldReturnNullForNoElementWithGivenId() {
+        String content = "<html><body></body></html>";
+        Page page = new Page(toHtmlPage(content));
+        assertNull(page.findHtmlElementById("missingId"));
+    }
+
 }

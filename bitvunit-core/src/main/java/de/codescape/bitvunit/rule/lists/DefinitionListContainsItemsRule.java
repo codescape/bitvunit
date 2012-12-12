@@ -1,9 +1,9 @@
 package de.codescape.bitvunit.rule.lists;
 
+import com.gargoylesoftware.htmlunit.html.DomElement;
 import com.gargoylesoftware.htmlunit.html.HtmlDefinitionDescription;
 import com.gargoylesoftware.htmlunit.html.HtmlDefinitionList;
 import com.gargoylesoftware.htmlunit.html.HtmlDefinitionTerm;
-import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
@@ -36,7 +36,7 @@ public class DefinitionListContainsItemsRule extends AbstractRule {
     }
 
     private boolean containsDefinitionTermsOrDescription(HtmlDefinitionList definitionList) {
-        for (HtmlElement childElement : definitionList.getChildElements()) {
+        for (DomElement childElement : definitionList.getChildElements()) {
             if (childElement instanceof HtmlDefinitionTerm || childElement instanceof HtmlDefinitionDescription) {
                 return true;
             }

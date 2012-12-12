@@ -1,6 +1,6 @@
 package de.codescape.bitvunit.rule.lists;
 
-import com.gargoylesoftware.htmlunit.html.HtmlElement;
+import com.gargoylesoftware.htmlunit.html.DomElement;
 import com.gargoylesoftware.htmlunit.html.HtmlListItem;
 import com.gargoylesoftware.htmlunit.html.HtmlOrderedList;
 import de.codescape.bitvunit.model.Page;
@@ -37,7 +37,7 @@ public class OrderedListContainsListItemsRule extends AbstractRule {
     }
 
     private boolean listHasOneOrMoreListItems(HtmlOrderedList list) {
-        for (HtmlElement childElement : list.getChildElements()) {
+        for (DomElement childElement : list.getChildElements()) {
             if (HtmlListItem.TAG_NAME.equals(childElement.getTagName())) {
                 return true;
             }

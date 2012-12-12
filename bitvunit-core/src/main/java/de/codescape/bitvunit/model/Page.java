@@ -1,5 +1,6 @@
 package de.codescape.bitvunit.model;
 
+import com.gargoylesoftware.htmlunit.ElementNotFoundException;
 import com.gargoylesoftware.htmlunit.html.*;
 
 import java.util.List;
@@ -24,14 +25,14 @@ public class Page {
     }
 
     /**
-     * Returns all elements of the given HTML tag name as subtypes of {@link HtmlElement}.
+     * Returns all elements of the given HTML tag name as subtypes of {@link DomElement}.
      *
      * @param tagName HTML tag name
      * @param <T>     type of elements
-     * @return list of HTML elements
+     * @return list of DOM elements
      */
     @SuppressWarnings("unchecked")
-    private <T extends HtmlElement> List<T> allByTagName(String tagName) {
+    private <T extends DomElement> List<T> allByTagName(String tagName) {
         return (List<T>) htmlPage.getElementsByTagName(tagName);
     }
 
@@ -218,7 +219,11 @@ public class Page {
      * @return {@link HtmlElement} with the given id
      */
     public HtmlElement findHtmlElementById(String elementId) {
-        return htmlPage.getElementById(elementId);
+        try {
+            return htmlPage.getHtmlElementById(elementId);
+        } catch (ElementNotFoundException e) {
+            return null;
+        }
     }
 
     /**
