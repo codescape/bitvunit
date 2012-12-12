@@ -48,9 +48,14 @@
     </scm>
 
     <issueManagement>
-        <system>github</system>
+        <system>GitHub</system>
         <url>https://github.com/codescape/bitvunit/issues</url>
     </issueManagement>
+
+    <ciManagement>
+        <system>Travis CI</system>
+        <url>https://travis-ci.org/codescape/bitvunit</url>
+    </ciManagement>
 
     <licenses>
         <license>
