@@ -48,4 +48,14 @@ public class PageTest {
         assertNull(page.findHtmlElementById("missingId"));
     }
 
+    @Test
+    public void findAllElementsWithAttributeShouldFindElementsWithAGivenAttributeName() {
+        String content = "<html><body>" +
+                "<div class=\"demo\">first element with attribute</div>" +
+                "<span class=\"demo\">second element with attribute</span>" +
+                "</body></html>";
+        Page page = new Page(toHtmlPage(content));
+        assertEquals(2, page.findAllElementsWithAttribute("class").size());
+    }
+
 }
