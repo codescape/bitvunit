@@ -29,6 +29,7 @@ public final class Assert {
      * @param objects objects that should be checked
      */
     public static void notNull(Object... objects) {
+        notNull((Object) objects);
         for (Object object : objects) {
             notNull(object);
         }
