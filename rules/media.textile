@@ -27,3 +27,14 @@ h3. AlternativeTextForObjectRule
 </aside>
 
 AlternativeTextForObjectRule ensures that every <code><object/></code> within the given HTML document provides an alternative textual description to explain the <code><object/></code> to everyone who is not able to view and display the <code><object/></code> itself.
+
+h3. AvoidAppletTagRule
+
+<aside class="rule-meta">
+    <ul>
+        <li class="author">Author: Stefan Glase</li>
+        <li class="version">Since: 0.8</li>
+    </ul>
+</aside>
+
+AvoidAppletTagRule ensures that there are no <code><applet /></code> tags used on the page under test. This tag is not supported since HTML 5 and should be replaced by that <code><object /></code> tag.

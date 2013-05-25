@@ -29,7 +29,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="rule" type="de.codescape.bitvunit.rule.Rule">
+<parameter name="ruleSet" type="de.codescape.bitvunit.ruleset.RuleSet">
 </parameter>
 </method>
 <method name="compliantTo"
@@ -42,7 +42,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="ruleSet" type="de.codescape.bitvunit.ruleset.RuleSet">
+<parameter name="rule" type="de.codescape.bitvunit.rule.Rule">
 </parameter>
 </method>
 <method name="describeTo"
@@ -405,6 +405,17 @@
 <parameter name="elementId" type="java.lang.String">
 </parameter>
 </method>
+<method name="findHtmlTag"
+ return="com.gargoylesoftware.htmlunit.html.HtmlElement"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="findTitleTag"
  return="com.gargoylesoftware.htmlunit.html.HtmlTitle"
  abstract="false"
@@ -744,6 +755,8 @@
  visibility="protected"
 >
 <parameter name="htmlElement" type="com.gargoylesoftware.htmlunit.html.HtmlElement">
+</parameter>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
 </parameter>
 <parameter name="message" type="java.lang.String">
 </parameter>
@@ -1670,6 +1683,49 @@
 >
 </method>
 </class>
+<class name="AvoidBorderAttributeForImageRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AvoidBorderAttributeForImageRule"
+ type="de.codescape.bitvunit.rule.images.AvoidBorderAttributeForImageRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
 <class name="AvoidServerSideImageMapRule"
  extends="de.codescape.bitvunit.rule.AbstractRule"
  abstract="false"
@@ -1993,6 +2049,49 @@
 >
 <constructor name="AlternativeTextForObjectRule"
  type="de.codescape.bitvunit.rule.media.AlternativeTextForObjectRule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="applyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="de.codescape.bitvunit.model.Page">
+</parameter>
+<parameter name="violations" type="de.codescape.bitvunit.rule.Violations">
+</parameter>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="AvoidAppletTagRule"
+ extends="de.codescape.bitvunit.rule.AbstractRule"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AvoidAppletTagRule"
+ type="de.codescape.bitvunit.rule.media.AvoidAppletTagRule"
  static="false"
  final="false"
  deprecated="not deprecated"
@@ -2834,6 +2933,19 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<parameter name="objects" type="java.lang.Object...">
+</parameter>
+</method>
+<method name="notNull"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
 <parameter name="message" type="java.lang.String">
 </parameter>
 <parameter name="object" type="java.lang.Object">
@@ -2924,7 +3036,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="item" type="T">
+<parameter name="string" type="java.lang.String">
 </parameter>
 </method>
 <method name="toHtmlPage"
@@ -2963,19 +3075,6 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="string" type="java.lang.String">
-</parameter>
-</method>
-<method name="toHtmlPage"
- return="com.gargoylesoftware.htmlunit.html.HtmlPage"
- abstract="false"
- native="false"
- synchronized="false"
- static="true"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
 <parameter name="url" type="java.net.URL">
 </parameter>
 </method>
@@ -2990,6 +3089,19 @@
  visibility="public"
 >
 <parameter name="webDriver" type="org.openqa.selenium.WebDriver">
+</parameter>
+</method>
+<method name="toHtmlPage"
+ return="com.gargoylesoftware.htmlunit.html.HtmlPage"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="T">
 </parameter>
 </method>
 </class>

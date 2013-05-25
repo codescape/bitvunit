@@ -7,11 +7,11 @@ You can find a list of all categories here. Please choose from the list below to
 
 * "Forms":/rules/forms (9 rules)
 * "Frames":/rules/frames (3 rules)
-* "Images":/rules/images (4 rules)
+* "Images":/rules/images (5 rules)
 * "Interactions":/rules/interactions (1 rule)
 * "Links":/rules/links (1 rule)
 * "Lists":/rules/lists (3 rules)
-* "Media":/rules/media (2 rules)
+* "Media":/rules/media (3 rules)
 * "Page":/rules/page (3 rules)
 * "Tables":/rules/tables (3 rules)
 * "Text":/rules/text (8 rules)

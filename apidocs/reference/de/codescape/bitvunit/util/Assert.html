@@ -48,10 +48,12 @@
 
 
 
-
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="description" content="Javadoc API documentation for BitvUnit Core." />
+
 <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico" />
 <title>
 
@@ -61,16 +63,16 @@
 | BitvUnit Core
 
 </title>
-<link href="../../../../../assets/android-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />
 <link href="../../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
 <script src="../../../../../assets/search_autocomplete.js" type="text/javascript"></script>
 <script src="../../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
-<script src="../../../../../assets/android-developer-docs.js" type="text/javascript"></script>
+<script src="../../../../../assets/doclava-developer-docs.js" type="text/javascript"></script>
 <script src="../../../../../assets/prettify.js" type="text/javascript"></script>
 <script type="text/javascript">
   setToRoot("../../../../", "../../../../../assets/");
 </script>
-<script src="../../../../../assets/android-developer-reference.js" type="text/javascript"></script>
+<script src="../../../../../assets/doclava-developer-reference.js" type="text/javascript"></script>
 <script src="../../../../../assets/navtree_data.js" type="text/javascript"></script>
 <script src="../../../../../assets/customizations.js" type="text/javascript"></script>
 <noscript>
@@ -240,6 +242,7 @@
 
 
 <div class="sum-details-links">
+
 
 Summary:
 
@@ -439,10 +442,10 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../de/codescape/bitvunit/util/Assert.html#notNull(java.lang.Object)">notNull</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> object)</nobr>
+        <span class="sympad"><a href="../../../../de/codescape/bitvunit/util/Assert.html#notNull(java.lang.String, java.lang.Object)">notNull</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> object)</nobr>
         
         <div class="jd-descrdiv">Verifies that the given object is not <code>null</code> and throws an <code>IllegalArgumentException</code> with
- a default message otherwise.</div>
+ the given message otherwise.</div>
   
   </td></tr>
 
@@ -458,10 +461,29 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../de/codescape/bitvunit/util/Assert.html#notNull(java.lang.String, java.lang.Object)">notNull</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> object)</nobr>
+        <span class="sympad"><a href="../../../../de/codescape/bitvunit/util/Assert.html#notNull(java.lang.Object...)">notNull</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object...</a> objects)</nobr>
+        
+        <div class="jd-descrdiv">Verifies that the given list of objects does not contain a single element that is <code>null</code> and throws an
+ <code>IllegalArgumentException</code> with a default message otherwise.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../de/codescape/bitvunit/util/Assert.html#notNull(java.lang.Object)">notNull</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> object)</nobr>
         
         <div class="jd-descrdiv">Verifies that the given object is not <code>null</code> and throws an <code>IllegalArgumentException</code> with
- the given message otherwise.</div>
+ a default message otherwise.</div>
   
   </td></tr>
 
@@ -655,7 +677,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0)</nobr>
+        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
         
   </td></tr>
 
@@ -671,7 +693,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
+        <span class="sympad">wait</span>(long arg0)</nobr>
         
   </td></tr>
 
@@ -812,48 +834,6 @@ From class
 </div>
 
 
-<A NAME="notNull(java.lang.Object)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">notNull</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> object)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Verifies that the given object is not <code>null</code> and throws an <code>IllegalArgumentException</code> with
- a default message otherwise.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>object</td>
-          <td>object that should be checked
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
 <A NAME="notNull(java.lang.String, java.lang.Object)"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -900,6 +880,90 @@ From class
 </div>
 
 
+<A NAME="notNull(java.lang.Object...)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">notNull</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object...</a> objects)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Verifies that the given list of objects does not contain a single element that is <code>null</code> and throws an
+ <code>IllegalArgumentException</code> with a default message otherwise.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>objects</td>
+          <td>objects that should be checked
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="notNull(java.lang.Object)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">notNull</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> object)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Verifies that the given object is not <code>null</code> and throws an <code>IllegalArgumentException</code> with
+ a default message otherwise.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>object</td>
+          <td>object that should be checked
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
 
 
 
@@ -921,7 +985,7 @@ Generated by <a href="http://code.google.com/p/doclava/">Doclava</a>.
 </div> <!-- end body-content --> 
 
 <script type="text/javascript">
-init(); /* initialize android-developer-docs.js */
+init(); /* initialize doclava-developer-docs.js */
 </script>
 
 </body>
