@@ -26,6 +26,6 @@ Run `mvn versions:display-dependency-updates` to produce a list of all dependenc
 
 ### Releasing a new version
 
-First run `mvn clean test` and verify that all test are running. After a sucessful build run `mvn release:prepare` and set the release version (e.g.: 0.5.0), the SCM tag (e.g.: v0.5.0) and the development version (e.g.: 0.6.0-SNAPSHOT).
+First run `mvn clean verify` and check that all test are running. After a successful build run `mvn release:prepare` and set the release version (e.g.: 0.5.0), the SCM tag (e.g.: v0.5.0) and the development version (e.g.: 0.6.0-SNAPSHOT).
 
 Verify the results and run `mvn release:perform` if everything is looking fine. Login at https://oss.sonatype.org and verify that the generated artifacts in the `Staging Repository` are okay. `Close` the Build in the `Staging Repository` and then `Release` the new version to Maven Central.
