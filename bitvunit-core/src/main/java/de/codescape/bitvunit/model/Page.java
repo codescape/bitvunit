@@ -295,7 +295,7 @@ public class Page {
      * @return the first <code>&lt;title/&gt;</code> tag as {@link HtmlTitle} instance
      */
     public HtmlTitle findTitleTag() {
-        return (HtmlTitle) htmlPage.getFirstByXPath("/html/head/title[1]");
+        return htmlPage.getFirstByXPath("/html/head/title[1]");
     }
 
     /**
