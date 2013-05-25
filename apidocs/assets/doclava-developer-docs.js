@@ -4,7 +4,7 @@ var devdocNav;
 var sidenav;
 var content;
 var HEADER_HEIGHT = -1;
-var cookie_namespace = 'android_developer';
+var cookie_namespace = 'doclava_developer';
 var NAV_PREF_TREE = "tree";
 var NAV_PREF_PANELS = "panels";
 var nav_pref;
@@ -152,7 +152,7 @@ function init() {
   devdocNav = $("#devdoc-nav");
 
   var cookiePath = getSection() + "_";
-  
+
   if (!isMobile) {
     $("#resize-packages-nav").resizable({handles: "s", resize: function(e, ui) { resizePackagesHeight(); } });
     $(".side-nav-resizable").resizable({handles: "e", resize: function(e, ui) { resizeWidth(); } });
@@ -174,78 +174,6 @@ function init() {
     tryPopulateResourcesNav();
     highlightNav(location.href);
   }
-}
-
-function tryPopulateResourcesNav() {
-  var sampleList = $('#devdoc-nav-sample-list');
-  var articleList = $('#devdoc-nav-article-list');
-  var tutorialList = $('#devdoc-nav-tutorial-list');
-  var topicList = $('#devdoc-nav-topic-list');
-
-  if (!topicList.length || !ANDROID_TAGS || !ANDROID_RESOURCES)
-    return;
-
-  var topics = [];
-  for (var topic in ANDROID_TAGS['topic']) {
-    topics.push({name:topic,title:ANDROID_TAGS['topic'][topic]});
-  }
-  topics.sort(function(x,y){ return (x.title < y.title) ? -1 : 1; });
-  for (var i = 0; i < topics.length; i++) {
-    topicList.append(
-        $('<li>').append(
-          $('<a>')
-            .attr('href', toRoot + "../resources/browser.html?tag=" + topics[i].name)
-            .append($('<span>')
-              .addClass('en')
-              .html(topics[i].title)
-            )
-          )
-        );
-  }
-
-  var _renderResourceList = function(tag, listNode) {
-    var resources = [];
-    var tags;
-    var resource;
-    var i, j;
-    for (i = 0; i < ANDROID_RESOURCES.length; i++) {
-      resource = ANDROID_RESOURCES[i];
-      tags = resource.tags || [];
-      var hasTag = false;
-      for (j = 0; j < tags.length; j++)
-        if (tags[j] == tag) {
-          hasTag = true;
-          break;
-        }
-      if (!hasTag)
-        continue;
-      resources.push(resource);
-    }
-    //resources.sort(function(x,y){ return (x.title.en < y.title.en) ? -1 : 1; });
-    for (i = 0; i < resources.length; i++) {
-      resource = resources[i];
-      var listItemNode = $('<li>').append(
-          $('<a>')
-            .attr('href', toRoot + "../resources/" + resource.path)
-            .append($('<span>')
-              .addClass('en')
-              .html(resource.title.en)
-            )
-          );
-      tags = resource.tags || [];
-      for (j = 0; j < tags.length; j++) {
-        if (tags[j] == 'new') {
-          listItemNode.get(0).innerHTML += '&nbsp;<span class="new">new!</span>';
-          break;
-        }
-      }
-      listNode.append(listItemNode);
-    }
-  };
-
-  _renderResourceList('sample', sampleList);
-  _renderResourceList('article', articleList);
-  _renderResourceList('tutorial', tutorialList);
 }
 
 function highlightNav(fullPageName) {

@@ -37,7 +37,7 @@ h3. LabelContainsTextRule
     </ul>
 </aside>
 
-LabelContainsTextRule ensures that every <code><label/></code> within the given HTML document contains a textual representation for the given label.  <p/> A valid label should look like this: <pre><code><label for="element-id">Username</label></code></pre>
+LabelContainsTextRule ensures that every <code><label/></code> within the given HTML document contains a textual representation for the given label. <p/> A valid label should look like this: <pre><code><label for="element-id">Username</label></code></pre>
 
 h3. LabelForInputFieldRule
 
