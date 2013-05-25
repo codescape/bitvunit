@@ -27,7 +27,7 @@ public class AlternativeTextForAppletRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlApplet applet : page.findAllAppletTags()) {
             if (applet.getTextContent() == null || applet.getTextContent().trim().isEmpty()) {
-                violations.add(createViolation(applet, RULE_MESSAGE));
+                violations.add(createViolation(applet, page, RULE_MESSAGE));
             }
         }
     }

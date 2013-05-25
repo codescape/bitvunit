@@ -26,7 +26,7 @@ public class AvoidMarqueeTextRule extends AbstractRule {
     @Override
     protected void applyTo(Page page, Violations violations) {
         for (HtmlMarquee marquee : page.findAllMarqueeTags()) {
-            violations.add(createViolation(marquee, RULE_MESSAGE));
+            violations.add(createViolation(marquee, page, RULE_MESSAGE));
         }
     }
 

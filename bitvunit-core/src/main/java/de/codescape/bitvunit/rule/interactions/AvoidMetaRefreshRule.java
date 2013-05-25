@@ -29,7 +29,7 @@ public class AvoidMetaRefreshRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlMeta metaTag : page.findAllMetaTags()) {
             if ("refresh".equalsIgnoreCase(metaTag.getHttpEquivAttribute())) {
-                violations.add(createViolation(metaTag, RULE_MESSAGE));
+                violations.add(createViolation(metaTag, page, RULE_MESSAGE));
             }
         }
     }

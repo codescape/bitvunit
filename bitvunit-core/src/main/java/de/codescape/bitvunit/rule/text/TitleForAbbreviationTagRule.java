@@ -29,7 +29,7 @@ public class TitleForAbbreviationTagRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlAbbreviated abbr : page.findAllAbbreviationTags()) {
             if (!hasNonEmptyAttribute(abbr, "title")) {
-                violations.add(createViolation(abbr, RULE_MESSAGE));
+                violations.add(createViolation(abbr, page, RULE_MESSAGE));
             }
         }
     }

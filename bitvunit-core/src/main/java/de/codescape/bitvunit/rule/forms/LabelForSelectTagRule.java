@@ -38,7 +38,7 @@ public class LabelForSelectTagRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlSelect select : page.findAllSelectTags()) {
             if (hasNonEmptyAttribute(select, "id") && !containsLabelForId(page.findAllLabelTags(), select.getId())) {
-                violations.add(createViolation(select, RULE_MESSAGE));
+                violations.add(createViolation(select, page, RULE_MESSAGE));
             }
         }
     }

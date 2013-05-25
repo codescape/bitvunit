@@ -35,7 +35,7 @@ public class AlternativeTextForLinkedImageRule extends AbstractRule {
         List<HtmlImage> images = page.findAllImageTags();
         for (HtmlImage image : images) {
             if (isLinkedImage(image) && !hasNonEmptyAttribute(image, "alt")) {
-                violations.add(createViolation(image, RULE_MESSAGE));
+                violations.add(createViolation(image, page, RULE_MESSAGE));
             }
         }
     }

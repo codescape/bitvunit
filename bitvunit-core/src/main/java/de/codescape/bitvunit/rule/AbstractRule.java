@@ -37,11 +37,13 @@ public abstract class AbstractRule implements Rule {
      * Creates a new violation for that rule with the line number of the violating element in the given page and a
      * message that describes the violation in detail.
      *
-     * @param htmlElement the {@link HtmlElement} where the violation occurs
-     * @param message     description of the violation
-     * @return new violation to be added to the list of violations
+     * @param htmlElement the {@link com.gargoylesoftware.htmlunit.html.HtmlElement} where the violation occurs
+     * @param page        the page where the violation occurs
+     * @param message     description of the violation  @return new violation to be added to the list of violations
      */
-    protected Violation createViolation(HtmlElement htmlElement, String message) {
+    protected Violation createViolation(HtmlElement htmlElement, Page page, String message) {
+        if (htmlElement == null)
+            htmlElement = page.findHtmlTag();
         return new Violation(this, htmlElement, message);
     }
 

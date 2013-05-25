@@ -31,7 +31,7 @@ public class LabelWithoutFormElementRule extends AbstractRule {
         List<HtmlLabel> labels = page.findAllLabelTags();
         for (HtmlLabel label : labels) {
             if (!associatedFormElementExists(page, label.getForAttribute())) {
-                violations.add(createViolation(label, RULE_MESSAGE));
+                violations.add(createViolation(label, page, RULE_MESSAGE));
             }
         }
     }

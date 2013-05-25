@@ -28,7 +28,7 @@ public class AnchorsWithoutTargetAttributeRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlAnchor anchor : page.findAllAnchorTags()) {
             if (hasAttribute(anchor, "target")) {
-                violations.add(createViolation(anchor, RULE_MESSAGE));
+                violations.add(createViolation(anchor, page, RULE_MESSAGE));
             }
         }
     }

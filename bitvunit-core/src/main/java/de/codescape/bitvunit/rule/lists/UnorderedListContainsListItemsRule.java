@@ -31,7 +31,7 @@ public class UnorderedListContainsListItemsRule extends AbstractRule {
         List<HtmlUnorderedList> unorderedLists = page.findAllUnorderedLists();
         for (HtmlUnorderedList unorderedList : unorderedLists) {
             if (!listHasOneOrMoreListItems(unorderedList)) {
-                violations.add(createViolation(unorderedList, RULE_MESSAGE));
+                violations.add(createViolation(unorderedList, page, RULE_MESSAGE));
             }
         }
     }

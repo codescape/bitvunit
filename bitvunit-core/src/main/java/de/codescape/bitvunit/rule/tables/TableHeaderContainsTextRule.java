@@ -26,7 +26,7 @@ public class TableHeaderContainsTextRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlTableCell cell : page.findAllTableHeaders()) {
             if (cell.getTextContent() == null || cell.getTextContent().isEmpty()) {
-                violations.add(createViolation(cell, RULE_MESSAGE));
+                violations.add(createViolation(cell, page, RULE_MESSAGE));
             }
         }
     }

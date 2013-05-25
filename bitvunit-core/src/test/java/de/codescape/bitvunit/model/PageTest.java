@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.model;
 
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
+import com.gargoylesoftware.htmlunit.html.HtmlHtml;
 import com.gargoylesoftware.htmlunit.html.HtmlTitle;
 import org.junit.Test;
 
@@ -56,6 +57,13 @@ public class PageTest {
                 "</body></html>";
         Page page = new Page(toHtmlPage(content));
         assertEquals(2, page.findAllElementsWithAttribute("class").size());
+    }
+
+    @Test
+    public void findHtmlTagShouldReturnTheRootHtmlElement() {
+        String content = "<html></html>";
+        Page page = new Page(toHtmlPage(content));
+        assertEquals(HtmlHtml.class, page.findHtmlTag().getClass());
     }
 
 }

@@ -8,19 +8,19 @@ import static org.junit.Assert.assertEquals;
 public class AbstractRuleTest {
 
     @Test
-    public void toStringReturnsReadableStringRepresentation() throws Exception {
+    public void toStringReturnsReadableStringRepresentation() {
         String specificRule = "MyRuleName";
         String expectedToString = "SpecificRule[name=" + specificRule + ", priority=normal]";
         assertEquals(expectedToString, new SpecificRule(specificRule).toString());
     }
 
     @Test
-    public void getPriorityShouldReturnNormalIfNotOverridden() throws Exception {
+    public void getPriorityShouldReturnNormalIfNotOverridden() {
         assertEquals(Priority.NORMAL, new SpecificRule("SomeRuleName").getPriority());
     }
 
     @Test
-    public void priorityOfARuleCanBeConfiguredExternally() throws Exception {
+    public void priorityOfARuleCanBeConfiguredExternally() {
         SpecificRule rule = new SpecificRule("MyRule");
         assertEquals(Priority.NORMAL, rule.getPriority());
 

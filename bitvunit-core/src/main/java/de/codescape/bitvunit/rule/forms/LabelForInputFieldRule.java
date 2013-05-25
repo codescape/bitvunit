@@ -35,7 +35,7 @@ public class LabelForInputFieldRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlInput input : page.findAllInputTags()) {
             if (hasNonEmptyAttribute(input, "id") && isTextOrPasswordField(input) && !containsLabelForId(page.findAllLabelTags(), input.getId())) {
-                violations.add(createViolation(input, RULE_MESSAGE));
+                violations.add(createViolation(input, page, RULE_MESSAGE));
             }
         }
     }

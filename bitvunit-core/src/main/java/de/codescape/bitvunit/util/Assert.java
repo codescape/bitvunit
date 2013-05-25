@@ -23,6 +23,18 @@ public final class Assert {
     }
 
     /**
+     * Verifies that the given list of objects does not contain a single element that is <code>null</code> and throws an
+     * <code>IllegalArgumentException</code> with a default message otherwise.
+     *
+     * @param objects objects that should be checked
+     */
+    public static void notNull(Object... objects) {
+        for (Object object : objects) {
+            notNull(object);
+        }
+    }
+
+    /**
      * Verifies that the given object is not <code>null</code> and throws an <code>IllegalArgumentException</code> with
      * the given message otherwise.
      *

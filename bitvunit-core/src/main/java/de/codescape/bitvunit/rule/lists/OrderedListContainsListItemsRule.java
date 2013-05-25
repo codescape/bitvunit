@@ -31,7 +31,7 @@ public class OrderedListContainsListItemsRule extends AbstractRule {
         List<HtmlOrderedList> orderedLists = page.findAllOrderedLists();
         for (HtmlOrderedList orderedList : orderedLists) {
             if (!listHasOneOrMoreListItems(orderedList)) {
-                violations.add(createViolation(orderedList, RULE_MESSAGE));
+                violations.add(createViolation(orderedList, page, RULE_MESSAGE));
             }
         }
     }

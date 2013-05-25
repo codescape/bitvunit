@@ -25,7 +25,7 @@ public class AvoidBoldTagRule extends AbstractRule {
     @Override
     protected void applyTo(Page page, Violations violations) {
         for (HtmlBold bold : page.findAllBoldTags()) {
-            violations.add(createViolation(bold, RULE_MESSAGE));
+            violations.add(createViolation(bold, page, RULE_MESSAGE));
         }
     }
 

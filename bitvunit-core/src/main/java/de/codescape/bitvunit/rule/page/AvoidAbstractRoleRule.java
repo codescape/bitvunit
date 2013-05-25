@@ -34,7 +34,7 @@ public class AvoidAbstractRoleRule extends AbstractRule {
         for (HtmlElement element : elements) {
             String roleValue = element.getAttribute("role");
             if (roleValue != null && !roleValue.isEmpty() && ABSTRACT_ROLES.contains(roleValue)) {
-                violations.add(createViolation(element, RULE_MESSAGE));
+                violations.add(createViolation(element, page, RULE_MESSAGE));
             }
         }
     }

@@ -31,13 +31,13 @@ public class TableHeaderForTableColumnRule extends AbstractRule {
     @Override
     protected void applyTo(Page page, Violations violations) {
         for (HtmlTable table : page.findAllTableTags()) {
-            applyTo(table, violations);
+            applyTo(table, page, violations);
         }
     }
 
-    private void applyTo(HtmlTable table, Violations violations) {
+    private void applyTo(HtmlTable table, Page page, Violations violations) {
         if (table.getRowCount() < 2) {
-            violations.add(createViolation(table, RULE_MESSAGE_SINGLE_ROW));
+            violations.add(createViolation(table, page, RULE_MESSAGE_SINGLE_ROW));
         } else {
             HtmlTableRow firstRow = table.getRow(0);
             HtmlTableRow secondRow = table.getRow(1);
@@ -45,7 +45,7 @@ public class TableHeaderForTableColumnRule extends AbstractRule {
             int index = 0;
             for (HtmlTableCell secondRowCell : secondRow.getCells()) {
                 if (isDataCell(secondRowCell) && !isHeaderCell(firstRow.getCell(index))) {
-                    violations.add(createViolation(secondRowCell, RULE_MESSAGE));
+                    violations.add(createViolation(secondRowCell, page, RULE_MESSAGE));
                 }
                 index++;
             }

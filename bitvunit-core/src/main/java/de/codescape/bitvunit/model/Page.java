@@ -309,4 +309,13 @@ public class Page {
         return (List<HtmlElement>) htmlPage.getByXPath("//*[@" + attributeName + "]");
     }
 
+    /**
+     * Returns the whole document enclosing <code>&lt;html/&gt;</code> tag.
+     *
+     * @return the whole document enclosing <code>&lt;html/&gt;</code> tag
+     */
+    public HtmlElement findHtmlTag() {
+        return htmlPage.getDocumentElement();
+    }
+
 }

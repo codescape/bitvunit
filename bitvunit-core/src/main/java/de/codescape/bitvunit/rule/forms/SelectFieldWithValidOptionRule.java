@@ -38,10 +38,10 @@ public class SelectFieldWithValidOptionRule extends AbstractRule {
         for (HtmlSelect select : page.findAllSelectTags()) {
             List<HtmlOption> options = select.getOptions();
             if (options.isEmpty()) {
-                violations.add(createViolation(select, RULE_MESSAGE_MINIMUM_ONE_OPTION));
+                violations.add(createViolation(select, page, RULE_MESSAGE_MINIMUM_ONE_OPTION));
             } else {
                 if (options.get(0).hasAttribute("disabled")) {
-                    violations.add(createViolation(select, RULE_MESSAGE_FIRST_OPTION_ENABLED));
+                    violations.add(createViolation(select, page, RULE_MESSAGE_FIRST_OPTION_ENABLED));
                 }
             }
         }

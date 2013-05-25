@@ -25,8 +25,23 @@ public class ViolationTest {
 
     @Test
     public void violationKnowsTheMessage() throws Exception {
-        String expectedMessage = "Some wise words.";
+        String expectedMessage = someMessage();
         assertEquals(expectedMessage, new Violation(someRule(), someElement(), expectedMessage).getMessage());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void creatingViolationShouldFailWithoutRuleReference() {
+        new Violation(null, someElement(), someMessage());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void creatingViolationShouldFailWithoutElementReference() {
+        new Violation(someRule(), null, someMessage());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void creatingViolationShouldFailWithoutMessage() {
+        new Violation(someRule(), someElement(), null);
     }
 
     private Rule someRule() {
@@ -42,6 +57,10 @@ public class ViolationTest {
 
     private HtmlElement someElement() {
         return mock(HtmlElement.class);
+    }
+
+    private String someMessage() {
+        return "Some wise words.";
     }
 
 }

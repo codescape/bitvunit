@@ -31,34 +31,34 @@ public class HeadingsInCorrectOrderRule extends AbstractRule {
         HtmlElement lastHeading = null;
         for (HtmlElement currentHeading : page.findAllHeadingTags()) {
             if (lastHeading == null) {
-                checkFirstHeading(violations, currentHeading);
+                checkFirstHeading(violations, currentHeading, page);
             } else {
-                checkAllOtherHeadings(violations, lastHeading, currentHeading);
+                checkAllOtherHeadings(violations, lastHeading, currentHeading, page);
             }
             lastHeading = currentHeading;
         }
     }
 
-    private void checkAllOtherHeadings(Violations violations, HtmlElement lastHeading, HtmlElement currentHeading) {
-        checkOnlyOneLevelOneHeadingAllowed(violations, currentHeading);
-        checkNoSkippingOfLevelsAllowed(violations, lastHeading, currentHeading);
+    private void checkAllOtherHeadings(Violations violations, HtmlElement lastHeading, HtmlElement currentHeading, Page page) {
+        checkOnlyOneLevelOneHeadingAllowed(violations, currentHeading, page);
+        checkNoSkippingOfLevelsAllowed(violations, lastHeading, currentHeading, page);
     }
 
-    private void checkNoSkippingOfLevelsAllowed(Violations violations, HtmlElement lastHeading, HtmlElement currentHeading) {
+    private void checkNoSkippingOfLevelsAllowed(Violations violations, HtmlElement lastHeading, HtmlElement currentHeading, Page page) {
         if (headingLevel(currentHeading) > headingLevel(lastHeading) + 1) {
-            violations.add(createViolation(currentHeading, RULE_MESSAGE_SKIPPING));
+            violations.add(createViolation(currentHeading, page, RULE_MESSAGE_SKIPPING));
         }
     }
 
-    private void checkOnlyOneLevelOneHeadingAllowed(Violations violations, HtmlElement currentHeading) {
+    private void checkOnlyOneLevelOneHeadingAllowed(Violations violations, HtmlElement currentHeading, Page page) {
         if (headingLevel(currentHeading) == 1) {
-            violations.add(createViolation(currentHeading, RULE_MESSAGE_MULTIPLE_H1));
+            violations.add(createViolation(currentHeading, page, RULE_MESSAGE_MULTIPLE_H1));
         }
     }
 
-    private void checkFirstHeading(Violations violations, HtmlElement currentHeading) {
+    private void checkFirstHeading(Violations violations, HtmlElement currentHeading, Page page) {
         if (headingLevel(currentHeading) != 1) {
-            violations.add(createViolation(currentHeading, RULE_MESSAGE_FIRST_H1));
+            violations.add(createViolation(currentHeading, page, RULE_MESSAGE_FIRST_H1));
         }
     }
 

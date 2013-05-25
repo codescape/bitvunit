@@ -27,7 +27,7 @@ public class AlternativeTextForObjectRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlObject object : page.findAllObjectTags()) {
             if (object.getTextContent() == null || object.getTextContent().isEmpty()) {
-                violations.add(createViolation(object, RULE_MESSAGE));
+                violations.add(createViolation(object, page, RULE_MESSAGE));
             }
         }
     }

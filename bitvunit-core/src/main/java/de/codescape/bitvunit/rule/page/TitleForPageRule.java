@@ -30,7 +30,7 @@ public class TitleForPageRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         HtmlTitle title = page.findTitleTag();
         if (title == null || title.getTextContent().trim().isEmpty()) {
-            violations.add(createViolation(title, RULE_MESSAGE));
+            violations.add(createViolation(title, page, RULE_MESSAGE));
         }
     }
 

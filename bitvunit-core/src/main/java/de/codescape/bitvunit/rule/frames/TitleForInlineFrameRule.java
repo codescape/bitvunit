@@ -29,7 +29,7 @@ public class TitleForInlineFrameRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlInlineFrame inlineFrame : page.findAllInlineFrameTags()) {
             if (!hasNonEmptyAttribute(inlineFrame, "title")) {
-                violations.add(createViolation(inlineFrame, RULE_MESSAGE));
+                violations.add(createViolation(inlineFrame, page, RULE_MESSAGE));
             }
         }
     }

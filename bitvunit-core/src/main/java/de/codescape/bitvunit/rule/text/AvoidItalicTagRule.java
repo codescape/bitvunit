@@ -25,7 +25,7 @@ public class AvoidItalicTagRule extends AbstractRule {
     @Override
     protected void applyTo(Page page, Violations violations) {
         for (HtmlItalic italic : page.findAllItalicTags()) {
-            violations.add(createViolation(italic, RULE_MESSAGE));
+            violations.add(createViolation(italic, page, RULE_MESSAGE));
         }
     }
 

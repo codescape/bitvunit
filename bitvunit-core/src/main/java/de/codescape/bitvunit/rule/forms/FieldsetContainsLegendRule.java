@@ -35,7 +35,7 @@ public class FieldsetContainsLegendRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlFieldSet fieldSet : page.findAllFieldsetTags()) {
             if (!(fieldSet.getFirstChild() instanceof HtmlLegend)) {
-                violations.add(createViolation(fieldSet, RULE_MESSAGE));
+                violations.add(createViolation(fieldSet, page, RULE_MESSAGE));
             }
         }
     }

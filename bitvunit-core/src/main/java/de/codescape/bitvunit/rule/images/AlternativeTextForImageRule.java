@@ -28,13 +28,13 @@ public class AlternativeTextForImageRule extends AbstractRule {
     @Override
     protected void applyTo(Page page, Violations violations) {
         for (HtmlImage image : page.findAllImageTags()) {
-            validateImage(image, violations);
+            validateImage(image, page, violations);
         }
     }
 
-    private void validateImage(HtmlImage image, Violations violations) {
+    private void validateImage(HtmlImage image, Page page, Violations violations) {
         if (!hasAttribute(image, "alt")) {
-            violations.add(createViolation(image, RULE_MESSAGE));
+            violations.add(createViolation(image, page, RULE_MESSAGE));
         }
     }
 

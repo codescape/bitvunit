@@ -4,6 +4,8 @@ import com.gargoylesoftware.htmlunit.html.HtmlElement;
 
 import java.net.URL;
 
+import static de.codescape.bitvunit.util.Assert.notNull;
+
 /**
  * Every violation of a {@link Rule} should result in a {@link Violation} pointing to the {@link Rule} that was violated
  * providing a message explaining the problem in detail and the code in question.
@@ -26,6 +28,7 @@ public class Violation {
      */
     public Violation(Rule rule, HtmlElement htmlElement, String message) {
         super();
+        notNull(rule, htmlElement, message);
         this.rule = rule;
         this.htmlElement = htmlElement;
         this.message = message;

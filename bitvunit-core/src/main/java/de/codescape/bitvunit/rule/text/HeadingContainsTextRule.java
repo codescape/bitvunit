@@ -29,7 +29,7 @@ public class HeadingContainsTextRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlElement header : page.findAllHeadingTags()) {
             if (header.getTextContent().trim().isEmpty()) {
-                violations.add(createViolation(header, RULE_MESSAGE));
+                violations.add(createViolation(header, page, RULE_MESSAGE));
             }
         }
     }

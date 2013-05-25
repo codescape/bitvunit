@@ -25,7 +25,7 @@ public class AvoidAppletTagRule extends AbstractRule {
     @Override
     protected void applyTo(Page page, Violations violations) {
         for (HtmlApplet applet : page.findAllAppletTags()) {
-            violations.add(createViolation(applet, RULE_MESSAGE));
+            violations.add(createViolation(applet, page, RULE_MESSAGE));
         }
     }
 

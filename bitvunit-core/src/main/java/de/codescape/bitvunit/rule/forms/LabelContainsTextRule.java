@@ -28,13 +28,13 @@ public class LabelContainsTextRule extends AbstractRule {
     @Override
     protected void applyTo(Page page, Violations violations) {
         for (HtmlLabel label : page.findAllLabelTags()) {
-            validateLabel(label, violations);
+            validateLabel(label, page, violations);
         }
     }
 
-    private void validateLabel(HtmlLabel label, Violations violations) {
+    private void validateLabel(HtmlLabel label, Page page, Violations violations) {
         if (label.getTextContent() == null || label.getTextContent().isEmpty()) {
-            violations.add(createViolation(label, RULE_MESSAGE));
+            violations.add(createViolation(label, page, RULE_MESSAGE));
         }
     }
 

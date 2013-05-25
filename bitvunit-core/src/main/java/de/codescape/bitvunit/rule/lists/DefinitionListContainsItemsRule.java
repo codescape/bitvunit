@@ -30,7 +30,7 @@ public class DefinitionListContainsItemsRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlDefinitionList definitionList : page.findAllDefinitionLists()) {
             if (!containsDefinitionTermsOrDescription(definitionList)) {
-                violations.add(createViolation(definitionList, RULE_MESSAGE));
+                violations.add(createViolation(definitionList, page, RULE_MESSAGE));
             }
         }
     }

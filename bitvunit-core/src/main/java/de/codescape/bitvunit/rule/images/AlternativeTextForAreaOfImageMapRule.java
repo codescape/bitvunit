@@ -27,7 +27,7 @@ public class AlternativeTextForAreaOfImageMapRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlArea area : page.findAllAreaTags()) {
             if (area.getAltAttribute() == null || area.getAltAttribute().isEmpty()) {
-                violations.add(createViolation(area, RULE_MESSAGE));
+                violations.add(createViolation(area, page, RULE_MESSAGE));
             }
         }
     }

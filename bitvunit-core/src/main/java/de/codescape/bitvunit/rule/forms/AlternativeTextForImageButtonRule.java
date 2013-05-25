@@ -32,7 +32,7 @@ public class AlternativeTextForImageButtonRule extends AbstractRule {
     protected void applyTo(Page page, Violations violations) {
         for (HtmlInput input : page.findAllInputTags()) {
             if (isImageButton(input) && !hasNonEmptyAttribute(input, "alt")) {
-                violations.add(createViolation(input, RULE_MESSAGE));
+                violations.add(createViolation(input, page, RULE_MESSAGE));
             }
         }
     }
