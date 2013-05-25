@@ -8,10 +8,6 @@ Below you can find a list of all changes applied to the library through its diff
 
 Hide and show details to releases in clicking on the release you are interested in:
 
-h3(release#r09). Release 0.9 (_who knows?_)
-
-_nothing yet_
-
 h3(release#r08). Release 0.8 (2013-05-25)
 
 * added new rules
