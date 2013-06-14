@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.hamcrest;
 
 import de.codescape.bitvunit.rule.Rule;
+import de.codescape.bitvunit.rule.Violations;
 import de.codescape.bitvunit.ruleset.BasicRuleSet;
 import de.codescape.bitvunit.ruleset.RuleSet;
 import org.hamcrest.Description;
@@ -29,6 +30,7 @@ import static de.codescape.bitvunit.util.html.HtmlPageUtil.toHtmlPage;
 public class ComplianceMatcher<T> extends TypeSafeMatcher<T> {
 
     private final RuleSet ruleSet;
+    private Violations violations;
 
     /**
      * Creates a new {@link ComplianceMatcher} against the provided {@link RuleSet}.
@@ -41,12 +43,18 @@ public class ComplianceMatcher<T> extends TypeSafeMatcher<T> {
 
     @Override
     protected boolean matchesSafely(T item) {
-        return !ruleSet.applyTo(toHtmlPage(item)).hasViolations();
+        violations = ruleSet.applyTo(toHtmlPage(item));
+        return !violations.hasViolations();
     }
 
     @Override
     public void describeTo(Description description) {
         description.appendText("compliant to ").appendText(ruleSet.toString());
+    }
+
+    @Override
+    protected void describeMismatchSafely(T item, Description mismatchDescription) {
+        mismatchDescription.appendText(violations.toString());
     }
 
     /**
