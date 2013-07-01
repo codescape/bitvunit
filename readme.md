@@ -1,6 +1,6 @@
 # BitvUnit [![Build Status](https://travis-ci.org/codescape/bitvunit.png?branch=master)](https://travis-ci.org/codescape/bitvunit)
 
-BitvUnit is an open source accessibility testing library that makes it easy to automate accessibility checking for pages and applications that run in a web browser. Read more about it in the official documentation available at http://bitvunit.codescape.de!
+BitvUnit is an open source accessibility testing library that makes it easy to automate accessibility checking for pages and applications that run in your browser. Read more about it in the official documentation available at http://bitvunit.codescape.de!
 
 ## Getting started
 
@@ -8,11 +8,11 @@ Visit the website under http://bitvunit.codescape.de and find out how to downloa
 
 ## Contributing
 
-This section holds information that helps developers to contribute to BitvUnit and add functionality, build the software or do some housekeeping.
+BitvUnit is open source and every contribution is welcome! This section holds information that helps you to contribute to BitvUnit and add functionality, build the software or do some housekeeping.
 
 ### Build latest version
 
-To build the latest version of the library checkout the sources and run `mvn install` on your local machine. This will create and install the latest version of the library to your local maven repository.
+To build the latest version of the library checkout the sources and run `mvn clean install` on your local machine. This will create and install the latest version of the library to your local maven repository.
 
 ### Implement new rules
 
