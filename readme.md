@@ -2,6 +2,8 @@
 
 BitvUnit is an open source accessibility testing library that makes it easy to automate accessibility checking for pages and applications that run in your browser. It integrates well with Selenium Webdriver and HtmlUnit and provides Hamcrest matchers.
 
+BitvUnit is free, open source software licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
+
 ## Getting started
 
 BitvUnit is available from the [Maven Central Repository](http://repo1.maven.org/maven2/de/codescape/bitvunit/). To include and use this library from your Maven project put the following dependency into the `<dependencies/>` section of your project `pom.xml` and you are already set up to get started:
