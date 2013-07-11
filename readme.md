@@ -12,7 +12,7 @@ BitvUnit is available from the [Maven Central Repository](http://repo1.maven.org
         <version>0.8.0</version>
     </dependency>
 
-Inside your test you can use the Hamcrest matcher to verify your website against the rules provided by the library or tgether with your own rules.
+Inside your test you can use the Hamcrest matcher to verify your website against the rules provided by the library or in combination with your own rules.
 
     @Test
     public void checkBitvUnitHomepageAgainstAllRules() {
