@@ -34,7 +34,7 @@ BitvUnit is open source and every kind of contribution is welcome!
 
 ## Development
 
-Adding functionality, building the software or doing some housekeeping should be easily to keep this library
+Adding functionality, building the software or doing some housekeeping should be easy. So here is a list of common tasks and how to perform them:
 
 ### Build latest version
 
