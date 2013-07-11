@@ -1,14 +1,40 @@
 # BitvUnit [![Build Status](https://travis-ci.org/codescape/bitvunit.png?branch=master)](https://travis-ci.org/codescape/bitvunit)
 
-BitvUnit is an open source accessibility testing library that makes it easy to automate accessibility checking for pages and applications that run in your browser. Read more about it in the official documentation available at http://bitvunit.codescape.de!
+BitvUnit is an open source accessibility testing library that makes it easy to automate accessibility checking for pages and applications that run in your browser. It integrates well with Selenium Webdriver and HtmlUnit and provides Hamcrest matchers.
 
 ## Getting started
 
-Visit the website under http://bitvunit.codescape.de and find out how to download or reference from your project and implement tests runs in your application.
+BitvUnit is available from the [Maven Central Repository](http://repo1.maven.org/maven2/de/codescape/bitvunit/). To include and use this library from your Maven project put the following dependency into the `<dependencies/>` section of your project `pom.xml` and you are already set up to get started:
+
+    <dependency>
+        <groupId>de.codescape.bitvunit</groupId>
+        <artifactId>bitvunit-core</artifactId>
+        <version>0.8.0</version>
+    </dependency>
+
+Inside your test you can use the Hamcrest matcher to verify your website against the rules provided by the library or tgether with your own rules.
+
+    @Test
+    public void checkBitvUnitHomepageAgainstAllRules() {
+        HtmlPage pageUnderTest = new WebClient().getPage("http://bitvunit.codescape.de");
+        assertThat(pageUnderTest, is(compliantTo(new XmlRuleSet("/rulesets/all-rules.xml"))));
+    }
 
 ## Contributing
 
-BitvUnit is open source and every contribution is welcome! This section holds information that helps you to contribute to BitvUnit and add functionality, build the software or do some housekeeping.
+There are many ways to support this project. Here is an incomplete list of ways how to contribute:
+
+* fork the project and contribute your code (e.g. new rules) with a pull request
+* raise an issue for new rules or improvements of the library
+* contact me and tell me about your experiences with the library
+* write a blog post, send a tweet or promote this project
+* use the library for your project and tell others about it
+
+BitvUnit is open source and every kind of contribution is welcome!
+
+## Development
+
+Adding functionality, building the software or doing some housekeeping should be easily to keep this library
 
 ### Build latest version
 
