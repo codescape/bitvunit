@@ -1,6 +1,0 @@
----
-layout: post
-title: Documentation is online
----
-
-I am happy to announce that the initial version of the documentation is online right now. In the next days I will be adding some documentation to help you getting started with the library in your project.

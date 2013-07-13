@@ -1,8 +1,0 @@
----
-layout: post
-title: New Website Layout
----
-
-This website now comes with a much cleaner and more readable layout which displays nicely on your mobile phone or tablet pc because a documentation page for an accessibility testing library should be as accessible as possible, too!
-
-Please direct any issues or feedback to the "Feedback":/feedback page or create a ticket in the "Issue Tracker":https://github.com/codescape/bitvunit/issues.
