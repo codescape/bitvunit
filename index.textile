@@ -25,12 +25,6 @@ If you want learn more about the library, these resources might be interesting f
   </li>
 
   <li>
-    !images/icons/blog.png(Blog)!:/blog
-    <h4>Blog</h4>
-    <p>Stay informed about the BitvUnit library with the help of our "Blog":/blog from time to time.</p>
-  </li>
-
-  <li>
     !images/icons/documentation.png(Documentation)!:http://bitvunit.codescape.de
     <h4>Documentation</h4>
     <p>The page you are currently viewing holds all relevant "Documentation":/ to the library.</p>
