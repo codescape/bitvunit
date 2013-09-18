@@ -123,6 +123,11 @@
                     <version>2.12</version>
                 </plugin>
                 <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-pmd-plugin</artifactId>
+                    <version>3.0.1</version>
+                </plugin>
+                <plugin>
                     <groupId>org.mortbay.jetty</groupId>
                     <artifactId>jetty-maven-plugin</artifactId>
                     <version>8.1.3.v20120416</version>
@@ -180,6 +185,24 @@
                     <!-- Apple's JVM sometimes requires more memory -->
                     <additionalJOption>-J-Xmx1024m</additionalJOption>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <configuration>
+                    <targetJdk>${maven.compiler.target}</targetJdk>
+                    <failurePriority>4</failurePriority>
+                    <verbose>true</verbose>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>check</goal>
+                            <goal>cpd-check</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
