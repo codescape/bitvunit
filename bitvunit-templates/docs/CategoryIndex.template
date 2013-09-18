@@ -1,7 +1,0 @@
----
-layout: default
-title: ${name.capitalize()}
-permalink: ${name}/index.html
----
-
-Below you can find the documentation for all rules in the category ${name.capitalize()}.
