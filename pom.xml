@@ -222,7 +222,8 @@
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
-                <version>4.3</version>
+                <version>4.2.2</version>
+                <!-- http://stackoverflow.com/questions/17497600/java-jar-libraries-methods-conflict -->
             </dependency>
             <dependency>
                 <groupId>org.hamcrest</groupId>
