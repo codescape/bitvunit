@@ -1,11 +1,11 @@
 Changelog for BitvUnit
 ======================
 
-# Release 0.9 (????-??-??)
+## Release 0.9 (????-??-??)
 
 to be continued...
 
-# Release 0.8 (2013-05-25)
+## Release 0.8 (2013-05-25)
 
 * added new rules
 	* AvoidAppletTagRule
@@ -25,7 +25,7 @@ to be continued...
 	* now using xmlunit:xmlunit:1.4
 * improved templates with better implementation instructions
 
-# Release 0.7 (2012-03-17)
+## Release 0.7 (2012-03-17)
 
 * added support for Selenium WebDriver
 * added priority concept to rules
@@ -48,7 +48,7 @@ to be continued...
 * updated dependencies
 	* now using org.mockito:mockito-all:1.9.0
 
-# Release 0.6 (2011-10-27)
+## Release 0.6 (2011-10-27)
 
 * added new rules
 	* AlternativeTextForImageButtonRule
@@ -70,7 +70,7 @@ to be continued...
 	* now using commons-io:commons-io:2.1
 	* now using junit:junit:4.10
 
-# Release 0.5 (2011-09-03)
+## Release 0.5 (2011-09-03)
 
 * added new rules
 	* AnchorsWithoutTargetAttributeRule
@@ -91,7 +91,7 @@ to be continued...
 	* now using net.sourceforge.htmlunit:htmlunit:2.9
 	* now using junit:junit:4.9
 
-# Release 0.4 (2011-07-23)
+## Release 0.4 (2011-07-23)
 
 * added new rules
 	* AlternativeTextForObjectRule
@@ -109,7 +109,7 @@ to be continued...
 * added and improved JavaDoc
 * increased test coverage for internal functionality
 
-# Release 0.3 (2011-06-30)
+## Release 0.3 (2011-06-30)
 
 * added new rules
 	* AlternativeTextForAppletRule
@@ -127,7 +127,7 @@ to be continued...
 * every violation knows the element that caused the violation
 * availability in Maven Central Repository
 
-# Release 0.2 (2011-06-01)
+## Release 0.2 (2011-06-01)
 
 * easier selection of elements with new Page decorator
 * easier creation of violations in rule implementations
@@ -144,7 +144,7 @@ to be continued...
 	* introduced RuleMatcher for verification against a specific Rule
 	* introduced RuleSetMatcher for verification against a RuleSet
 
-# Release 0.1 (2011-05-24)
+## Release 0.1 (2011-05-24)
 
 * introduced Rule to check a single HTML page against a single rule
 * introduced RuleSet to check a single HTML page against multiple rules
