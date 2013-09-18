@@ -41,11 +41,11 @@ public class ClassPathResource {
      * @return default{@link ClassLoader} to resolve resources
      */
     private ClassLoader getDefaultClassLoader() {
-        ClassLoader classLoader = null;
+        ClassLoader classLoader;
         try {
             classLoader = Thread.currentThread().getContextClassLoader();
         } catch (Throwable ex) {
-            /* okay, so we are falling back to the system ClassLoader... */
+            classLoader = null;
         }
         if (classLoader == null) {
             classLoader = ClassPathResource.class.getClassLoader();
