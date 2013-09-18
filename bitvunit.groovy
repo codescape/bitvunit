@@ -29,7 +29,7 @@ if (args[0] == 'create-rule') {
     def name = getUserInput({ it && it ==~ '^[A-Z]([A-Za-z])+Rule$' })
 
     print "Rule category ${getAvailableCategories()}: "
-    def category = getUserInput({ it in getAvailableCategories()})
+    def category = getUserInput({ it in getAvailableCategories() })
 
     def rule = ['author': author, 'name': name, 'category': category, 'version': getNextBitvUnitVersion()]
 
@@ -88,4 +88,15 @@ def getAvailableCategories() {
 
 def getNextBitvUnitVersion() {
     new XmlSlurper().parse(new File('./pom.xml')).version.text().substring(0, 3)
+}
+
+def fromTemplate(template, data = [:]) {
+    new groovy.text.SimpleTemplateEngine().createTemplate(new File(template).text).make(data).toString()
+}
+
+def fileFromTemplate(template, data, filename) {
+    def file = new File(filename)
+    file.createNewFile()
+    file.text = fromTemplate(template, data)
+    file
 }
