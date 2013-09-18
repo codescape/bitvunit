@@ -42,7 +42,7 @@ public class LabelWithoutFormElementRule extends AbstractRule {
     }
 
     private boolean isFormElement(HtmlElement element) {
-        return (element instanceof HtmlInput || element instanceof HtmlSelect || element instanceof HtmlTextArea);
+        return element instanceof HtmlInput || element instanceof HtmlSelect || element instanceof HtmlTextArea;
     }
 
 }
