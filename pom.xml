@@ -20,7 +20,7 @@
 
     <modules>
         <module>bitvunit-core</module>
-        <module>bitvunit-demo</module>
+        <module>bitvunit-samples</module>
         <module>bitvunit-cli</module>
     </modules>
 
