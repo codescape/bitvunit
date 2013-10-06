@@ -57,13 +57,13 @@ def addToRuleSet(rule) {
 
 def createRule(rule) {
     def target = "./bitvunit-core/src/main/java/de/codescape/bitvunit/rule/${rule.category}/${rule.name}.java"
-    fileFromTemplate('./bitvunit-templates/Rule.template', rule, target)
+    fileFromTemplate('./bitvunit-cli/src/main/resources/templates/Rule.template', rule, target)
     target
 }
 
 def createTest(rule) {
     def target = "./bitvunit-core/src/test/java/de/codescape/bitvunit/rule/${rule.category}/${rule.name}Test.java"
-    fileFromTemplate('./bitvunit-templates/Test.template', rule, target)
+    fileFromTemplate('./bitvunit-cli/src/main/resources/templates/Test.template', rule, target)
     target
 }
 

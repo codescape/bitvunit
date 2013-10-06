@@ -21,6 +21,7 @@
     <modules>
         <module>bitvunit-core</module>
         <module>bitvunit-demo</module>
+        <module>bitvunit-cli</module>
     </modules>
 
     <prerequisites>
