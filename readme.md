@@ -22,7 +22,7 @@ Inside your test you can use the Hamcrest matcher to verify your website against
         assertThat(pageUnderTest, is(compliantTo(new XmlRuleSet("/rulesets/all-rules.xml"))));
     }
 
-To learn about other ways of using BitvUnit in your project have a look at the tests inside the `bitvunit-samples` project that are written to show other ways of testing against the rules of this library.
+To learn about other ways of using BitvUnit have a look at the tests inside the `bitvunit-samples` project that are written to show other ways of testing against the rules of this library.
 
 ## Contributing
 
