@@ -1,4 +1,7 @@
 #!/usr/bin/env groovy
+
+import groovy.text.SimpleTemplateEngine
+
 /**
  * Command line script that helps you to create new rules from the scratch. Running the script without any parameters
  * results in a list of all currently supported commands that can be used.
@@ -91,7 +94,7 @@ def getNextBitvUnitVersion() {
 }
 
 def fromTemplate(template, data = [:]) {
-    new groovy.text.SimpleTemplateEngine().createTemplate(new File(template).text).make(data).toString()
+    new SimpleTemplateEngine().createTemplate(new File(template).text).make(data).toString()
 }
 
 def fileFromTemplate(template, data, filename) {
