@@ -14,7 +14,7 @@ import static org.junit.Assert.assertThat;
  * @author Stefan Glase
  * @since 0.7
  */
-public class WebDriverDemoSpec extends AbstractBaseSpec {
+public class WebDriverSampleSpec extends AbstractBaseSpec {
 
     @Test
     public void testingAccessibilityWithSeleniumWebDriver() throws Exception {

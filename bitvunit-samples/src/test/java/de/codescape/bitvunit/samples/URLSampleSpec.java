@@ -14,7 +14,7 @@ import static org.junit.Assert.assertThat;
  * @author Stefan Glase
  * @since 0.7
  */
-public class URLDemoSpec extends AbstractBaseSpec {
+public class URLSampleSpec extends AbstractBaseSpec {
 
     @Test
     public void testingAccessibilityWithSimpleURL() throws Exception {

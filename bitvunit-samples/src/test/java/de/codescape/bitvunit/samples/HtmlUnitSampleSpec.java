@@ -14,7 +14,7 @@ import static org.junit.Assert.assertThat;
  * @author Stefan Glase
  * @since 0.7
  */
-public class HtmlUnitDemoSpec extends AbstractBaseSpec {
+public class HtmlUnitSampleSpec extends AbstractBaseSpec {
 
     @Test
     public void testingAccessibilityWithHtmlUnit() throws Exception {
