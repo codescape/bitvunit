@@ -1,4 +1,4 @@
-package de.codescape.bitvunit.demo;
+package de.codescape.bitvunit.samples;
 
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;

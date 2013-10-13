@@ -1,4 +1,4 @@
-package de.codescape.bitvunit.demo;
+package de.codescape.bitvunit.samples;
 
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;

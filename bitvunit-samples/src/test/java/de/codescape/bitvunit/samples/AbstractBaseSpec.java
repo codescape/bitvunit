@@ -1,4 +1,4 @@
-package de.codescape.bitvunit.demo;
+package de.codescape.bitvunit.samples;
 
 import de.codescape.bitvunit.ruleset.RuleSet;
 import de.codescape.bitvunit.ruleset.XmlRuleSet;
