@@ -3,14 +3,12 @@
 import groovy.text.SimpleTemplateEngine
 
 /**
- * Command line script that helps you to create new rules from the scratch. Running the script without any parameters
- * results in a list of all currently supported commands that can be used.
+ * Command line script that allows to create new rules from the scratch. Running the script without any parameters
+ * results in a list of all currently supported commands available.
  *
  * @author Stefan Glase
  * @since 0.6
  */
-
-/* command line parsing */
 
 def availableCommands = [
         'create-rule': 'Wizard that helps you to create new rules.',
@@ -21,8 +19,6 @@ if (args.size() != 1 || !(args[0] in availableCommands.keySet())) {
     availableCommands.each { println "\t${it.key}\t${it.value}" }
     System.exit 1
 }
-
-/* create-rule */
 
 if (args[0] == 'create-rule') {
     print 'Author name: '
@@ -47,8 +43,6 @@ if (args[0] == 'create-rule') {
 
     println 'Done. Happy Coding!'
 }
-
-/* helper methods */
 
 def addToRuleSet(rule) {
     def ruleSetFile = new File('./bitvunit-core/src/main/resources/rulesets/all-rules.xml')
