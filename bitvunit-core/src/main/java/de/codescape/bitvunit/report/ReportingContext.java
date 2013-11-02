@@ -19,7 +19,7 @@ public class ReportingContext {
      */
     private ReportingContext() {
         super();
-        reportWriter = new TextReportWriter();
+        reportWriter = new VoidReportWriter();
     }
 
     /**

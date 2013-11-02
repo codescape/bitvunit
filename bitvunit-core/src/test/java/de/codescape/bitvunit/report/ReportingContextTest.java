@@ -21,6 +21,11 @@ public class ReportingContextTest {
     }
 
     @Test
+    public void defaultReportWriterIsVoidReportWriter() {
+        assertEquals(VoidReportWriter.class, ReportingContext.getReportWriter().getClass());
+    }
+
+    @Test
     public void currentReportWriterCanBeChanged() throws Exception {
         ReportWriter newReportWriter = new XmlReportWriter();
         ReportingContext.setReportWriter(newReportWriter);
