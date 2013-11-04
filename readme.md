@@ -40,11 +40,11 @@ BitvUnit is open source and every kind of contribution is welcome!
 
 Adding functionality, building the software or doing some housekeeping should be easy. So here is a list of common tasks and how to perform them:
 
-### Build latest version
+### Building the project
 
 To build the latest version of the library checkout the sources and run `mvn clean install` on your local machine. This will create and install the latest version of the library to your local maven repository.
 
-### Implement new rules
+### Implementing new rules
 
 To implement a new rule you can run the Groovy based wizard with the command `groovy bitvunit.groovy create-rule` from the root folder of the project. It prompts for your full name to be listed in the JavaDoc and the name for your new rule. Valid names must start with an uppercase letter, contain only characters and end with the word `Rule`.
 
