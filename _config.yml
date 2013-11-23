@@ -12,4 +12,4 @@ url: http://bitvunit.codescape.de
 author: Stefan Glase
 description: 'BitvUnit is an open source accessibility testing library that makes it easy to automate accessibility checking for pages and applications that run in a web browser.'
 keywords: 'bitvunit, accessibility, barrierefreiheit, java, bitv, wcag, testing, library'
-bitvunit-version: 0.8.0
+bitvunit-version: 0.9.0
