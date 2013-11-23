@@ -1,9 +1,24 @@
 Changelog for BitvUnit
 ----------------------
 
-### Release 0.9 (????-??-??)
+### Release 0.10 (????-??-??)
 
-to be continued...
+* _to be continued_
+
+### Release 0.9 (2013-11-23)
+
+* Hamcrest Matcher returns violations in case of errors
+* documentation
+	* improved readme for the starting page on GitHub
+	* downsizing website for easier maintainability
+* infrastructure
+	* added continuous integration against Oracle JDK 7 and OpenJDK 6 and 7
+	* added verification of source code with PMD
+	* updated all plugin versions
+* updated dependencies
+	* now usng org.seleniumhq.selenium:selenium-api:2.35.0
+	* now usng org.seleniumhq.selenium:selenium-htmlunit-driver:2.35.0
+	* now using xmlunit:xmlunit:1.5
 
 ### Release 0.8 (2013-05-25)
 
