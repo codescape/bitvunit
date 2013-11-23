@@ -290,6 +290,15 @@ public class Page {
     }
 
     /**
+     * Return all <code>$lt;basefont/&gt;</code> tags as {@link HtmlBaseFont} instances.
+     *
+     * @return all <code>$lt;basefont/&gt;</code> tags as {@link HtmlBaseFont} instances
+     */
+    public List<HtmlBaseFont> findAllBasefontTags() {
+        return allByTagName(HtmlBaseFont.TAG_NAME);
+    }
+
+    /**
      * Returns the first <code>&lt;title/&gt;</code> tag as {@link HtmlTitle} instance.
      *
      * @return the first <code>&lt;title/&gt;</code> tag as {@link HtmlTitle} instance
