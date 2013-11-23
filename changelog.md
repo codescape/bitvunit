@@ -16,8 +16,8 @@ Changelog for BitvUnit
 	* added verification of source code with PMD
 	* updated all plugin versions
 * updated dependencies
-	* now usng org.seleniumhq.selenium:selenium-api:2.35.0
-	* now usng org.seleniumhq.selenium:selenium-htmlunit-driver:2.35.0
+	* now using org.seleniumhq.selenium:selenium-api:2.35.0
+	* now using org.seleniumhq.selenium:selenium-htmlunit-driver:2.35.0
 	* now using xmlunit:xmlunit:1.5
 
 ### Release 0.8 (2013-05-25)
@@ -33,8 +33,8 @@ Changelog for BitvUnit
 	* now using travis ci instead of jenkins for continuous integration
 * updated dependencies
 	* now using commons-io:commons-io:2.4
-	* now usng org.seleniumhq.selenium:selenium-api:2.33.0
-	* now usng org.seleniumhq.selenium:selenium-htmlunit-driver:2.33.0
+	* now using org.seleniumhq.selenium:selenium-api:2.33.0
+	* now using org.seleniumhq.selenium:selenium-htmlunit-driver:2.33.0
 	* now using org.hamcrest:hamcrest-core:1.3
 	* now using net.sourceforge.htmlunit:htmlunit:2.12
 	* now using xmlunit:xmlunit:1.4
