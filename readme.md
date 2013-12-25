@@ -12,6 +12,7 @@ BitvUnit is available from the [Maven Central Repository](http://repo1.maven.org
         <groupId>de.codescape.bitvunit</groupId>
         <artifactId>bitvunit-core</artifactId>
         <version>0.9.0</version>
+        <scope>test</scope>
     </dependency>
 
 Inside your test you can use the Hamcrest matcher to verify your website against the rules provided by the library or in combination with your own rules.
