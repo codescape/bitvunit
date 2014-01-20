@@ -4,6 +4,7 @@ import de.codescape.bitvunit.rule.Rule;
 import de.codescape.bitvunit.rule.Violations;
 import de.codescape.bitvunit.ruleset.BasicRuleSet;
 import de.codescape.bitvunit.ruleset.RuleSet;
+import de.codescape.bitvunit.util.Assert;
 import org.hamcrest.Description;
 import org.hamcrest.Factory;
 import org.hamcrest.Matcher;
@@ -54,6 +55,7 @@ public class ComplianceMatcher<T> extends TypeSafeMatcher<T> {
 
     @Override
     protected void describeMismatchSafely(T item, Description mismatchDescription) {
+        Assert.notNull("Call matches method before.",violations);
         mismatchDescription.appendText(violations.toString());
     }
 

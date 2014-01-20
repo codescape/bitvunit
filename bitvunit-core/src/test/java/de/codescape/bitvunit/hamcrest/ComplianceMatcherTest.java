@@ -139,6 +139,11 @@ public class ComplianceMatcherTest {
         assertEquals("compliant to " + satisfiedRuleSet.toString(), description.toString());
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void callToDescribeMismatchDoesNotThrowNullPointerException() throws Exception {
+        compliantTo(satisfiedRuleSet).describeMismatch(somePage(), new StringDescription());
+    }
+
     private String someString() {
         return "<html><body><p>Hello Hamcrest!</p></body></html>";
     }
