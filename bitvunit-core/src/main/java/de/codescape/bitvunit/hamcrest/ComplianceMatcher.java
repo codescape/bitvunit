@@ -4,12 +4,12 @@ import de.codescape.bitvunit.rule.Rule;
 import de.codescape.bitvunit.rule.Violations;
 import de.codescape.bitvunit.ruleset.BasicRuleSet;
 import de.codescape.bitvunit.ruleset.RuleSet;
-import de.codescape.bitvunit.util.Assert;
 import org.hamcrest.Description;
 import org.hamcrest.Factory;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
 
+import static de.codescape.bitvunit.util.Assert.notNull;
 import static de.codescape.bitvunit.util.html.HtmlPageUtil.toHtmlPage;
 
 /**
@@ -55,7 +55,7 @@ public class ComplianceMatcher<T> extends TypeSafeMatcher<T> {
 
     @Override
     protected void describeMismatchSafely(T item, Description mismatchDescription) {
-        Assert.notNull("Call matches method before.",violations);
+        notNull("Method may only be called after preceding call to matches method.", violations);
         mismatchDescription.appendText(violations.toString());
     }
 
