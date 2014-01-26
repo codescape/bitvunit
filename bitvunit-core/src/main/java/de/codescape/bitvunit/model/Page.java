@@ -2,6 +2,7 @@ package de.codescape.bitvunit.model;
 
 import com.gargoylesoftware.htmlunit.ElementNotFoundException;
 import com.gargoylesoftware.htmlunit.html.*;
+import org.w3c.dom.DocumentType;
 
 import java.util.List;
 
@@ -334,6 +335,15 @@ public class Page {
      */
     public HtmlElement findHtmlTag() {
         return htmlPage.getDocumentElement();
+    }
+
+    /**
+     * Returns the document type of the page.
+     *
+     * @return the document type of the page
+     */
+    public DocumentType getDoctype() {
+        return htmlPage.getDoctype();
     }
 
 }
