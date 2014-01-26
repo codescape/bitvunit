@@ -54,6 +54,7 @@
     <rule class="de.codescape.bitvunit.rule.tables.TableHeaderForTableColumnRule"/>
 
     <!-- Text -->
+    <rule class="de.codescape.bitvunit.rule.text.AvoidCenterTagRule"/>
     <rule class="de.codescape.bitvunit.rule.text.AvoidBasefontTagRule"/>
     <rule class="de.codescape.bitvunit.rule.text.HeadingContainsTextRule"/>
     <rule class="de.codescape.bitvunit.rule.text.AvoidBlinkTextRule"/>

@@ -168,8 +168,8 @@ public class Page {
      * instances.
      *
      * @return all <code>&lt;h1/&gt;</code>, <code>&lt;h2/&gt;</code>, <code>&lt;h3/&gt;</code>,
-     *         <code>&lt;h4/&gt;</code>, <code>&lt;h5/&gt;</code> and <code>&lt;h6/&gt;</code> tags as {@link
-     *         HtmlElement} instances
+     * <code>&lt;h4/&gt;</code>, <code>&lt;h5/&gt;</code> and <code>&lt;h6/&gt;</code> tags as {@link
+     * HtmlElement} instances
      */
     @SuppressWarnings("unchecked")
     public List<HtmlElement> findAllHeadingTags() {
@@ -296,6 +296,15 @@ public class Page {
      */
     public List<HtmlBaseFont> findAllBasefontTags() {
         return allByTagName(HtmlBaseFont.TAG_NAME);
+    }
+
+    /**
+     * Returns all <code>&lt;center/&gt;</code> tags as {@link HtmlCenter} instances.
+     *
+     * @return all <code>&lt;center/&gt;</code> tags as {@link HtmlCenter} instances
+     */
+    public List<HtmlCenter> findAllCenterTags() {
+        return allByTagName(HtmlCenter.TAG_NAME);
     }
 
     /**
