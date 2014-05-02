@@ -8,6 +8,7 @@ Changelog for BitvUnit
 	* added new rule AvoidBasefontTagRule
 	* added new rule AvoidCenterTagRule
 	* added new rule AvoidFontTagRule
+	* added new rule AvoidFrameTagRule
 	* added new rule AvoidTeletypeTagRule
 	* improve rule LabelForInputFieldRule to validate new HTML 5 input types
 * infrastructure
