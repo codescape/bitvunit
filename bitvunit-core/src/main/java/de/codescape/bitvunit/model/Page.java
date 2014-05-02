@@ -355,4 +355,13 @@ public class Page {
         return allByTagName(HtmlFont.TAG_NAME);
     }
 
+    /**
+     * Returns all <code>&lt;tt/&gt;</code> tags as {@link HtmlTeletype} instances.
+     *
+     * @return all <code>&lt;tt/&gt;</code> tags as {@link HtmlTeletype} instances
+     */
+    public List<HtmlTeletype> findAllTeletypeTags() {
+        return allByTagName(HtmlTeletype.TAG_NAME);
+    }
+
 }

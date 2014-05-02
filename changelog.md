@@ -7,6 +7,7 @@ Changelog for BitvUnit
 	* added new rule DoctypeForPageRule
 	* added new rule AvoidCenterTagRule
 	* added new rule AvoidBasefontTagRule
+	* added new rule AvoidFontTagRule
 	* improve rule LabelForInputFieldRule to validate new HTML 5 input types
 * infrastructure
 	* continuous integration against Oracle JDK 8 and Oracle JDK 7
