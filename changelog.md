@@ -7,10 +7,12 @@ Changelog for BitvUnit
 	* added new rule DoctypeForPageRule
 	* added new rule AvoidCenterTagRule
 	* added new rule AvoidBasefontTagRule
+	* improve rule LabelForInputFieldRule to validate new HTML 5 input types
 * infrastructure
 	* continuous integration against Oracle JDK 8 and Oracle JDK 7
 	* faster build not generating javadoc on every build but only for releases
 	* building against Java 7 instead of Java 6 language level
+	* use Java 7 features where appropriate
 * updated dependencies
 	* now using org.seleniumhq:selenium-api:2.41.0
 	* now using org.seleniumhq:selenium-htmlunit-driver:2.41.0
