@@ -34,7 +34,9 @@ public class LabelForInputFieldRule extends AbstractRule {
     @Override
     protected void applyTo(Page page, Violations violations) {
         for (HtmlInput input : page.findAllInputTags()) {
-            if (hasNonEmptyAttribute(input, "id") && isTextOrPasswordField(input) && !containsLabelForId(page.findAllLabelTags(), input.getId())) {
+            if (hasNonEmptyAttribute(input, "id")
+                    && isTextOrPasswordField(input)
+                    && !containsLabelForId(page.findAllLabelTags(), input.getId())) {
                 violations.add(createViolation(input, page, RULE_MESSAGE));
             }
         }
@@ -42,7 +44,11 @@ public class LabelForInputFieldRule extends AbstractRule {
 
     private boolean isTextOrPasswordField(HtmlInput input) {
         String type = input.getTypeAttribute();
-        return type != null && (type.equals("text") || type.equals("password"));
+        return type != null
+                && !type.equals("submit")
+                && !type.equals("reset")
+                && !type.equals("hidden")
+                && !type.equals("button");
     }
 
 }

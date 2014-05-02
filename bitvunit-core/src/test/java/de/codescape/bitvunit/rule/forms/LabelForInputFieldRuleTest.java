@@ -19,39 +19,118 @@ public class LabelForInputFieldRuleTest {
         assertEquals("LabelForInputField", rule.getName());
     }
 
-    @Test
-    public void inputTextFieldWithAssociatedLabel() throws Exception {
-        String content = "<html><body><form><label for=\"firstname\">Firstname</label><input type=\"text\" id=\"firstname\" /></form></body></html>";
-        Violations violations = rule.applyTo(toHtmlPage(content));
-        assertNoViolations(violations);
-    }
+    // button
 
     @Test
-    public void inputTextFieldWithMissingLabel() throws Exception {
-        String content = "<html><body><form><input type=\"text\" id=\"firstname\" /></form></body></html>";
-        Violations violations = rule.applyTo(toHtmlPage(content));
-        assertViolations(violations, rule, 1);
+    public void inputTypeButtonShouldNotRequireLabel() {
+        shouldNotRequireLabelForInputType("button");
     }
 
-    @Test
-    public void inputHiddenFieldWithMissingLabel() throws Exception {
-        String content = "<html><body><form><input type=\"hidden\" id=\"firstname\" /></form></body></html>";
-        Violations violations = rule.applyTo(toHtmlPage(content));
-        assertNoViolations(violations);
-    }
+    // checkbox
 
     @Test
-    public void inputPasswordFieldWithMissingLabel() throws Exception {
-        String content = "<html><body><form><input type=\"password\" id=\"password\" /></form></body></html>";
-        Violations violations = rule.applyTo(toHtmlPage(content));
-        assertViolations(violations, rule, 1);
+    public void inputTypeCheckboxShouldRequireLabel() {
+        String inputType = "checkbox";
+        shouldRequireLabelForInputType(inputType);
+        shouldAcceptLabelForInputType(inputType);
     }
 
+    // color
+
     @Test
-    public void inputPasswordFieldWithAssociatedLabel() throws Exception {
-        String content = "<html><body><form><label for=\"password\">Password</label><input type=\"password\" id=\"password\" /></form></body></html>";
-        Violations violations = rule.applyTo(toHtmlPage(content));
-        assertNoViolations(violations);
+    public void inputTypeColorShouldRequireLabel() {
+        String inputType = "color";
+        shouldRequireLabelForInputType(inputType);
+        shouldAcceptLabelForInputType(inputType);
+    }
+
+    // date
+
+    @Test
+    public void inputTypeDateShouldRequireLabel() {
+        String inputType = "date";
+        shouldRequireLabelForInputType(inputType);
+        shouldAcceptLabelForInputType(inputType);
+    }
+
+    // file
+
+    @Test
+    public void inputTypeFileShouldRequireLabel() {
+        String inputType = "file";
+        shouldRequireLabelForInputType(inputType);
+        shouldAcceptLabelForInputType(inputType);
+    }
+
+    // hidden
+
+
+    @Test
+    public void inputTypeHiddenShouldNotRequireLabel() {
+        shouldNotRequireLabelForInputType("hidden");
+    }
+
+    // password
+
+    @Test
+    public void inputTypePasswordShouldRequireLabel() {
+        String inputType = "password";
+        shouldRequireLabelForInputType(inputType);
+        shouldAcceptLabelForInputType(inputType);
+    }
+
+    // radio
+
+    @Test
+    public void inputTypeRadioShouldRequireLabel() {
+        String inputType = "radio";
+        shouldRequireLabelForInputType(inputType);
+        shouldAcceptLabelForInputType(inputType);
+    }
+
+    // reset
+
+    @Test
+    public void inputTypeResetShouldNotRequireLabel() {
+        shouldNotRequireLabelForInputType("reset");
+    }
+
+    // submit
+
+    @Test
+    public void inputTypeSubmitShouldNotRequireLabel() {
+        shouldNotRequireLabelForInputType("submit");
+    }
+
+    // text
+
+    @Test
+    public void inputTypeTextShouldRequireLabel() {
+        String inputType = "text";
+        shouldRequireLabelForInputType(inputType);
+        shouldAcceptLabelForInputType(inputType);
+    }
+
+    private void shouldNotRequireLabelForInputType(String inputType) {
+        String content = "<html><body><form>" +
+                "   <input type=\"" + inputType + "\" id=\"" + inputType + "\">" +
+                "</form></body></html>";
+        assertNoViolations(rule.applyTo(toHtmlPage(content)));
+    }
+
+    private void shouldRequireLabelForInputType(String inputType) {
+        String content = "<html><body><form>" +
+                "   <input type=\"" + inputType + "\" id=\"" + inputType + "\">" +
+                "</form></body></html>";
+        assertViolations(rule.applyTo(toHtmlPage(content)), rule, 1);
+    }
+
+    private void shouldAcceptLabelForInputType(String inputType) {
+        String validContent = "<html><body><form>" +
+                "   <label for=\"" + inputType + "\">" + inputType + "</label>" +
+                "   <input type=\"" + inputType + "\" id=\"" + inputType + "\">" +
+                "</form></body></html>";
+        assertNoViolations(rule.applyTo(toHtmlPage(validContent)));
     }
 
 }
