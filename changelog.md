@@ -3,7 +3,19 @@ Changelog for BitvUnit
 
 ### Release 0.10 (????-??-??)
 
-* _to be continued_
+* rules
+	* added new rule DoctypeForPageRule
+	* added new rule AvoidCenterTagRule
+	* added new rule AvoidBasefontTagRule
+* infrastructure
+	* continuous integration against Oracle JDK 8 and Oracle JDK 7
+	* faster build not generating javadoc on every build but only for releases
+	* building against Java 7 instead of Java 6 language level
+* updated dependencies
+	* now using org.seleniumhq:selenium-api:2.41.0
+	* now using org.seleniumhq:selenium-htmlunit-driver:2.41.0
+	* now using net.sourceforge.htmlunit:htmlunit:2.14
+	* now using org.apache.httpcomponents:httpclient:4.3.3
 
 ### Release 0.9 (2013-11-23)
 
