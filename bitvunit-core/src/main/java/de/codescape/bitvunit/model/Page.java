@@ -346,4 +346,13 @@ public class Page {
         return htmlPage.getDoctype();
     }
 
+    /**
+     * Returns all <code>&lt;font/&gt;</code> tags as {@link HtmlFont} instances.
+     *
+     * @return all <code>&lt;font/&gt;</code> tags as {@link HtmlFont} instances
+     */
+    public List<HtmlFont> findAllFontTags() {
+        return allByTagName(HtmlFont.TAG_NAME);
+    }
+
 }
