@@ -2,8 +2,9 @@ package de.codescape.bitvunit.rule.text;
 
 import com.gargoylesoftware.htmlunit.html.HtmlBaseFont;
 import de.codescape.bitvunit.model.Page;
-import de.codescape.bitvunit.rule.AbstractRule;
-import de.codescape.bitvunit.rule.Violations;
+import de.codescape.bitvunit.rule.AvoidElementRule;
+
+import java.util.List;
 
 /**
  * AvoidBasefontTagRule ensures that every <code>&lt;basefont/&gt;</code> element in the given HTML document leads to a
@@ -12,7 +13,7 @@ import de.codescape.bitvunit.rule.Violations;
  * @author Stefan Glase
  * @since 0.10
  */
-public class AvoidBasefontTagRule extends AbstractRule {
+public class AvoidBasefontTagRule extends AvoidElementRule<HtmlBaseFont> {
 
     private static final String RULE_NAME = "AvoidBasefontTag";
     private static final String RULE_MESSAGE = "The <basefont /> tag is marked as deprecated and should not be used.";
@@ -23,10 +24,13 @@ public class AvoidBasefontTagRule extends AbstractRule {
     }
 
     @Override
-    protected void applyTo(Page page, Violations violations) {
-        for (HtmlBaseFont baseFont : page.findAllBasefontTags()) {
-            violations.add(createViolation(baseFont, page, RULE_MESSAGE));
-        }
+    protected String getMessage() {
+        return RULE_MESSAGE;
+    }
+
+    @Override
+    protected List<HtmlBaseFont> violatingElements(Page page) {
+        return page.findAllBasefontTags();
     }
 
 }

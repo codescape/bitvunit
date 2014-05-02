@@ -2,8 +2,9 @@ package de.codescape.bitvunit.rule.text;
 
 import com.gargoylesoftware.htmlunit.html.HtmlBold;
 import de.codescape.bitvunit.model.Page;
-import de.codescape.bitvunit.rule.AbstractRule;
-import de.codescape.bitvunit.rule.Violations;
+import de.codescape.bitvunit.rule.AvoidElementRule;
+
+import java.util.List;
 
 /**
  * AvoidBoldTagRule ensures that every <code>&lt;b/&gt;</code> element within the given HTML document leads to a
@@ -12,7 +13,7 @@ import de.codescape.bitvunit.rule.Violations;
  * @author Stefan Glase
  * @since 0.2
  */
-public class AvoidBoldTagRule extends AbstractRule {
+public class AvoidBoldTagRule extends AvoidElementRule<HtmlBold> {
 
     private static final String RULE_NAME = "AvoidBoldTag";
     private static final String RULE_MESSAGE = "The <b /> element should not be used because <strong /> is a more semantic way to outline text.";
@@ -23,10 +24,13 @@ public class AvoidBoldTagRule extends AbstractRule {
     }
 
     @Override
-    protected void applyTo(Page page, Violations violations) {
-        for (HtmlBold bold : page.findAllBoldTags()) {
-            violations.add(createViolation(bold, page, RULE_MESSAGE));
-        }
+    protected String getMessage() {
+        return RULE_MESSAGE;
+    }
+
+    @Override
+    protected List<HtmlBold> violatingElements(Page page) {
+        return page.findAllBoldTags();
     }
 
 }

@@ -2,8 +2,9 @@ package de.codescape.bitvunit.rule.text;
 
 import com.gargoylesoftware.htmlunit.html.HtmlBlink;
 import de.codescape.bitvunit.model.Page;
-import de.codescape.bitvunit.rule.AbstractRule;
-import de.codescape.bitvunit.rule.Violations;
+import de.codescape.bitvunit.rule.AvoidElementRule;
+
+import java.util.List;
 
 /**
  * AvoidBlinkTextRule ensures that every <code>&lt;blink/&gt;</code> element within the given HTML document leads to a
@@ -13,7 +14,7 @@ import de.codescape.bitvunit.rule.Violations;
  * @author Stefan Glase
  * @since 0.1
  */
-public class AvoidBlinkTextRule extends AbstractRule {
+public class AvoidBlinkTextRule extends AvoidElementRule<HtmlBlink> {
 
     private static final String RULE_NAME = "AvoidBlinkText";
     private static final String RULE_MESSAGE = "The <blink /> element is not defined in any W3C HTML specification and should not be used.";
@@ -24,10 +25,13 @@ public class AvoidBlinkTextRule extends AbstractRule {
     }
 
     @Override
-    protected void applyTo(Page page, Violations violations) {
-        for (HtmlBlink blink : page.findAllBlinkTags()) {
-            violations.add(createViolation(blink, page, RULE_MESSAGE));
-        }
+    protected String getMessage() {
+        return RULE_MESSAGE;
+    }
+
+    @Override
+    protected List<HtmlBlink> violatingElements(Page page) {
+        return page.findAllBlinkTags();
     }
 
 }

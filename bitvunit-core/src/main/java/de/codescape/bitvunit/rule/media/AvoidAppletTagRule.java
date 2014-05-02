@@ -2,8 +2,9 @@ package de.codescape.bitvunit.rule.media;
 
 import com.gargoylesoftware.htmlunit.html.HtmlApplet;
 import de.codescape.bitvunit.model.Page;
-import de.codescape.bitvunit.rule.AbstractRule;
-import de.codescape.bitvunit.rule.Violations;
+import de.codescape.bitvunit.rule.AvoidElementRule;
+
+import java.util.List;
 
 /**
  * AvoidAppletTagRule ensures that there are no <code>&lt;applet /&gt;</code> tags used on the page under test. This tag
@@ -12,7 +13,7 @@ import de.codescape.bitvunit.rule.Violations;
  * @author Stefan Glase
  * @since 0.8
  */
-public class AvoidAppletTagRule extends AbstractRule {
+public class AvoidAppletTagRule extends AvoidElementRule<HtmlApplet> {
 
     private static final String RULE_NAME = "AvoidAppletTag";
     private static final String RULE_MESSAGE = "The <applet> tag is not supported since HTML 5 and the <object> tag should be used instead.";
@@ -23,10 +24,13 @@ public class AvoidAppletTagRule extends AbstractRule {
     }
 
     @Override
-    protected void applyTo(Page page, Violations violations) {
-        for (HtmlApplet applet : page.findAllAppletTags()) {
-            violations.add(createViolation(applet, page, RULE_MESSAGE));
-        }
+    protected String getMessage() {
+        return RULE_MESSAGE;
+    }
+
+    @Override
+    protected List<HtmlApplet> violatingElements(Page page) {
+        return page.findAllAppletTags();
     }
 
 }

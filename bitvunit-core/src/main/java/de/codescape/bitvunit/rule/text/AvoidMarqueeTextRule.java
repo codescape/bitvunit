@@ -2,8 +2,9 @@ package de.codescape.bitvunit.rule.text;
 
 import com.gargoylesoftware.htmlunit.html.HtmlMarquee;
 import de.codescape.bitvunit.model.Page;
-import de.codescape.bitvunit.rule.AbstractRule;
-import de.codescape.bitvunit.rule.Violations;
+import de.codescape.bitvunit.rule.AvoidElementRule;
+
+import java.util.List;
 
 /**
  * AvoidMarqueeTextRule ensures that every <code>&lt;marquee/&gt;</code> element within the given HTML document leads
@@ -13,7 +14,7 @@ import de.codescape.bitvunit.rule.Violations;
  * @author Stefan Glase
  * @since 0.1
  */
-public class AvoidMarqueeTextRule extends AbstractRule {
+public class AvoidMarqueeTextRule extends AvoidElementRule<HtmlMarquee> {
 
     private static final String RULE_NAME = "AvoidMarqueeText";
     private static final String RULE_MESSAGE = "The <marquee /> element is not defined in any W3C HTML specification and should not be used.";
@@ -24,10 +25,13 @@ public class AvoidMarqueeTextRule extends AbstractRule {
     }
 
     @Override
-    protected void applyTo(Page page, Violations violations) {
-        for (HtmlMarquee marquee : page.findAllMarqueeTags()) {
-            violations.add(createViolation(marquee, page, RULE_MESSAGE));
-        }
+    protected String getMessage() {
+        return RULE_MESSAGE;
+    }
+
+    @Override
+    protected List<HtmlMarquee> violatingElements(Page page) {
+        return page.findAllMarqueeTags();
     }
 
 }
