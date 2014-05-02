@@ -7,8 +7,11 @@ import de.codescape.bitvunit.util.io.ClassPathResource;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 
 /**
  * Implementation of a {@link RuleSet} that is backed by a XML document declaring the list of rules to be applied.
@@ -39,7 +42,7 @@ public class XmlRuleSet extends BasicRuleSet implements RuleSet {
     private Document buildDocument(String location) {
         try {
             return documentBuilderFactory.newDocumentBuilder().parse(ClassPathResource.asInputStream(location));
-        } catch (Exception e) {
+        } catch (ParserConfigurationException | SAXException | IOException | RuntimeException e) {
             throw new XmlRuleSetException("Could not parse RuleSet from given location '" + location + "'.", e);
         }
     }
@@ -64,12 +67,8 @@ public class XmlRuleSet extends BasicRuleSet implements RuleSet {
      * @return {@link Priority} value according to the value of the attribute; defaults to {@link Priority#NORMAL}
      */
     private Priority extractPriorityAttributeFromNode(Node node) {
-        Node priorityAttribute = node.getAttributes().getNamedItem("priority");
-        if (priorityAttribute == null) {
-            return Priority.NORMAL;
-        } else {
-            return Priority.valueOf(priorityAttribute.getTextContent().toUpperCase());
-        }
+        Node priority = node.getAttributes().getNamedItem("priority");
+        return priority == null ? Priority.NORMAL : Priority.valueOf(priority.getTextContent().toUpperCase());
     }
 
     /**
@@ -94,7 +93,7 @@ public class XmlRuleSet extends BasicRuleSet implements RuleSet {
         Rule rule;
         try {
             rule = (Rule) Class.forName(className).newInstance();
-        } catch (Exception e) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
             throw new XmlRuleSetException("Could not instantiate rule " + className + ".", e);
         }
         rule.setPriority(priority);
