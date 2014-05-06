@@ -74,4 +74,4 @@ Verify the results and run `mvn release:perform` if everything is looking fine. 
 
 ### Documenting changes
 
-Any changes applied to the library should be documented in the changelog markdown document on the root level of the project. Please make sure to add all changes that are worth mentioning to the changelog.md document.
+Any changes applied to the library should be documented in the changelog markdown document on the root level of the project. Please make sure to add all changes that are worth mentioning to the [changelog.md](/changelog.md) file.
