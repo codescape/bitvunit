@@ -13,6 +13,7 @@ BitvUnit is free, open source software licensed under the [Apache License, Versi
     * [Implementing new rules](#implementing-new-rules)
     * [Updating dependency versions](#updating-dependency-versions)
     * [Releasing a new version](#releasing-a-new-version)
+    * [Documenting changes](#documenting-changes)
  
 ## Getting started
 
@@ -70,3 +71,7 @@ Run `mvn versions:display-dependency-updates` to produce a list of all dependenc
 To release a new version the the Central Maven Repository first run `mvn clean verify` and check that all test are running. After a successful build run `mvn release:prepare` and set the release version (e.g.: 0.5.0), the SCM tag (e.g.: v0.5.0) and the development version (e.g.: 0.6.0-SNAPSHOT).
 
 Verify the results and run `mvn release:perform` if everything is looking fine. Login at https://oss.sonatype.org and verify that the generated artifacts in the `Staging Repository` are correct. `Close` the build in the `Staging Repository` and you are ready to `Release` the new version to the Maven Central Repository.
+
+### Documenting changes
+
+Any changes applied to the library should be documented in the changelog markdown document on the root level of the project. Please make sure to add all changes that are worth mentioning to the changelog.md document.
