@@ -40,6 +40,7 @@ public abstract class AbstractRule implements Rule {
      * @param htmlElement the {@link com.gargoylesoftware.htmlunit.html.HtmlElement} where the violation occurs
      * @param page        the page where the violation occurs
      * @param message     description of the violation  @return new violation to be added to the list of violations
+     * @return Violation describing the error
      */
     protected Violation createViolation(HtmlElement htmlElement, Page page, String message) {
         if (htmlElement == null)

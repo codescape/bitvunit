@@ -11,7 +11,7 @@ import static de.codescape.bitvunit.util.html.HtmlElementUtil.hasNonEmptyAttribu
  * AlternativeTextForImageButtonRule ensures that every image button created through <code>&lt;input
  * type="image"/&gt;</code> within the given HTML document provides an alternative text through it's <code>alt</code>
  * attribute.
- * <p/>
+ * <p>
  * A good example for a valid image button would look like this:
  * <pre><code>&lt;input type="image" src="register.png" alt="Register Account"/&gt;</code></pre>
  *

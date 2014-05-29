@@ -13,7 +13,7 @@ import static de.codescape.bitvunit.util.html.HtmlElementUtil.hasNonEmptyAttribu
  * AlternativeTextForLinkedImageRule ensures that every image created by the <code>&lt;img/&gt;</code> tag within the
  * given HTML document that is part of a hyperlink created by the <code>&lt;a/&gt;</code> tag provides a non empty
  * alternative text through it's <code>alt</code> attribute.
- * <p/>
+ * <p>
  * A good example for a valid linked image should look like this:
  * <pre><code>&lt;a href="contact.html"&gt;&lt;img src="image.gif" alt="Contact me"/&gt;&lt;/a&gt;</code></pre>
  *

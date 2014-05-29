@@ -7,7 +7,7 @@ import de.codescape.bitvunit.rule.Violations;
 /**
  * DoctypeForPageRule ensures that every page includes a <code>&lt;!DOCTYPE /&gt;</code> element to support rendering
  * and validation of this page by browsers and other viewers or interpreters.
- * <p/>
+ * <p>
  * Known issue: Instances of WebDriver do not know about the DOCTYPE of the original document. So this rule cannot be
  * applied successfully.
  *

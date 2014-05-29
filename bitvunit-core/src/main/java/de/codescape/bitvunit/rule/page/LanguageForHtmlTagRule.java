@@ -10,7 +10,7 @@ import static de.codescape.bitvunit.util.html.HtmlElementUtil.hasNonEmptyAttribu
 /**
  * LanguageForHtmlTagRule ensures that the given HTML document provides it's language information through the
  * <code>lang</code> attribute on the <code>&lt;html/&gt;</code> tag.
- * <p/>
+ * <p>
  * A valid example of a document in German language would look like this:
  * <pre><code>&lt;html lang="de"&gt;...&lt;/html&gt;</code></pre>
  *

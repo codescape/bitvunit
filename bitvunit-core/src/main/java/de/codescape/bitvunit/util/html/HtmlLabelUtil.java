@@ -21,7 +21,7 @@ public final class HtmlLabelUtil {
      *
      * @param labels list of all labels
      * @param id     id for which a label should exist
-     * @return <true>true</true> if a label referencing the given id is found, otherwise <code>false</code>
+     * @return <code>true</code> if a label referencing the given id is found, otherwise <code>false</code>
      */
     public static boolean containsLabelForId(List<HtmlLabel> labels, String id) {
         for (HtmlLabel label : labels) {

@@ -12,7 +12,7 @@ import static de.codescape.bitvunit.util.html.HtmlLabelUtil.containsLabelForId;
  * LabelForInputFieldRule ensures that every <code>&lt;select/&gt;</code> tag within the given HTML document is
  * associated with a <code>&lt;label/&gt;</code> element that references the <code>&lt;select/&gt;</code> tag through
  * its <code>for</code> attribute.
- * <p/>
+ * <p>
  * A valid label associated with a select element should look like this:
  * <pre><code>
  * &lt;label for="gender"&gt;Gender&lt;/label&gt;

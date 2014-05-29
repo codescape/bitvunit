@@ -9,7 +9,7 @@ import de.codescape.bitvunit.rule.Violations;
  * TitleForPageRule ensures that the document has a non empty title defined by the <code>&lt;title/&gt;</code> tag to
  * describe that page. This rule is satisfied by a <code>&lt;title/&gt;</code> tag that contains minimum one readable
  * character inside it's body.
- * <p/>
+ * <p>
  * A good example would look like this:
  * <pre><code>&lt;title&gt;BitvUnit - User Manual&lt;/title&gt;</code></pre>
  *

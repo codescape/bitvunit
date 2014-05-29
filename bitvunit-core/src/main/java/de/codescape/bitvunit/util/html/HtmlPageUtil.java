@@ -99,7 +99,7 @@ public final class HtmlPageUtil {
 
     /**
      * Creates a {@link HtmlPage} from the given <code>item</code> if it is of one of the supported types.
-     * <p/>
+     * <p>
      * <b>Supported types:</b>
      * <ul> <li>com.gargoylesoftware.htmlunit.html.HtmlPage</li> <li>java.io.InputStream</li> <li>java.io.Reader</li>
      * <li>java.lang.String</li> <li>java.net.URL</li><li>org.openqa.selenium.WebDriver</li> </ul>

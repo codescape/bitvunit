@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * SelectFieldWithValidOptionRule ensures that every <code>&lt;select/&gt;</code> element contains minimum one enabled
  * option and that the first possible option is not disabled.
- * <p/>
+ * <p>
  * A good example for a valid select field looks like this:
  * <pre><code>
  * &lt;select id="gender"&gt;
