@@ -17,7 +17,7 @@ Changelog for BitvUnit
 	* building against Java 7 instead of Java 6 language level
 	* use Java 7 features where appropriate
 * documentation
-    * whole javadoc has be reviewed and is now standards compliant
+    * javadoc is fixed so that it can be generated with latest maven-javadoc-plugin
 * updated dependencies
 	* now using org.seleniumhq:selenium-api:2.41.0
 	* now using org.seleniumhq:selenium-htmlunit-driver:2.41.0
