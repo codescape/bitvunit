@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.net.URL;
 
 import static de.codescape.bitvunit.hamcrest.ComplianceMatcher.compliantTo;
+import static de.codescape.bitvunit.ruleset.AllRules.allRules;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -22,7 +23,7 @@ public class URLSampleSpec extends AbstractBaseSpec {
         URL url = new URL(urlForPage("index.html"));
 
         // assert accessibility
-        assertThat(url, is(compliantTo(ALL_RULES)));
+        assertThat(url, is(compliantTo(allRules())));
     }
 
 }

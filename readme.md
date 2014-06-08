@@ -31,7 +31,7 @@ Inside your test you can use the Hamcrest matcher to verify your website against
     @Test
     public void checkBitvUnitHomepageAgainstAllRules() {
         HtmlPage pageUnderTest = new WebClient().getPage("http://bitvunit.codescape.de");
-        assertThat(pageUnderTest, is(compliantTo(new XmlRuleSet("/rulesets/all-rules.xml"))));
+        assertThat(pageUnderTest, is(compliantTo(allRules())));
     }
 
 To learn about other ways of using BitvUnit have a look at the tests inside the `bitvunit-samples` project that are written to show other ways of testing against the rules of this library.

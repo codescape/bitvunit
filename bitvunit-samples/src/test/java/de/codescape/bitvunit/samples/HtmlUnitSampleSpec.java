@@ -5,6 +5,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import org.junit.Test;
 
 import static de.codescape.bitvunit.hamcrest.ComplianceMatcher.compliantTo;
+import static de.codescape.bitvunit.ruleset.AllRules.allRules;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -25,7 +26,7 @@ public class HtmlUnitSampleSpec extends AbstractBaseSpec {
         HtmlPage page = webClient.getPage(urlForPage("index.html"));
 
         // assert accessibility
-        assertThat(page, is(compliantTo(ALL_RULES)));
+        assertThat(page, is(compliantTo(allRules())));
     }
 
 }

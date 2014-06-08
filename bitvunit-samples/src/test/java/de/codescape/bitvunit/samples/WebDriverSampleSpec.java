@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 import static de.codescape.bitvunit.hamcrest.ComplianceMatcher.compliantTo;
+import static de.codescape.bitvunit.ruleset.AllRules.allRules;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -25,7 +26,7 @@ public class WebDriverSampleSpec extends AbstractBaseSpec {
         driver.navigate().to(urlForPage("index.html"));
 
         // assert accessibility
-        assertThat(driver, is(compliantTo(ALL_RULES)));
+        assertThat(driver, is(compliantTo(allRules())));
     }
 
 }

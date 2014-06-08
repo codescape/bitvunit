@@ -16,8 +16,6 @@ import java.util.Properties;
  */
 public abstract class AbstractBaseSpec {
 
-    protected static final RuleSet ALL_RULES = new XmlRuleSet("/rulesets/all-rules.xml");
-
     private static final String CONFIGURATION_FILE = "test.properties";
 
     private final Properties properties = new Properties();
