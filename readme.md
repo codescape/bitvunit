@@ -22,7 +22,7 @@ BitvUnit is available from the [Maven Central Repository](http://repo1.maven.org
     <dependency>
         <groupId>de.codescape.bitvunit</groupId>
         <artifactId>bitvunit-core</artifactId>
-        <version>0.10.0</version>
+        <version>0.11</version>
         <scope>test</scope>
     </dependency>
 
