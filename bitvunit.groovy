@@ -21,16 +21,11 @@ if (args.size() != 1 || !(args[0] in availableCommands.keySet())) {
 }
 
 if (args[0] == 'create-rule') {
-    print 'Author name: '
-    def author = getUserInput({ it })
+    def author = getUserInput('Author name: ', { it })
+    def name = getUserInput('Rule name [must end with Rule]: ', { it && it ==~ '^[A-Z]([A-Za-z])+Rule$' })
+    def category = getUserInput("Rule category ${getAvailableCategories()}: ", { it in availableCategories })
 
-    print 'Rule name: '
-    def name = getUserInput({ it && it ==~ '^[A-Z]([A-Za-z])+Rule$' })
-
-    print "Rule category ${getAvailableCategories()}: "
-    def category = getUserInput({ it in getAvailableCategories() })
-
-    def rule = ['author': author, 'name': name, 'category': category, 'version': getNextBitvUnitVersion()]
+    def rule = ['author': author, 'name': name, 'category': category, 'version': nextBitvUnitVersion]
 
     def ruleFile = createRule(rule)
     println "Created rule at ${ruleFile}"
@@ -64,7 +59,8 @@ def createTest(rule) {
     target
 }
 
-def getUserInput(validation = { true }) {
+def getUserInput(text, validation = { true }) {
+    print text
     def value = ''
     while (!value || !validation(value)) {
         value = new Scanner(System.in).nextLine()
