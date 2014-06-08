@@ -4,7 +4,7 @@ package de.codescape.bitvunit.ruleset;
  * Simple abstraction to check against all rules that are currently configured in /rulesets/all-rules.xml.
  *
  * @author Stefan Glase
- * @since 0.11
+ * @since 0.12
  */
 public class AllRules extends XmlRuleSet {
 
