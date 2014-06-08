@@ -1,7 +1,11 @@
 Changelog for BitvUnit
 ----------------------
 
-### Release 0.10 (????-??-??)
+### Release 0.11 (????-??-??)
+
+* tbd
+
+### Release 0.10 (2014-06-08)
 
 * rules
 	* added new rule DoctypeForPageRule
