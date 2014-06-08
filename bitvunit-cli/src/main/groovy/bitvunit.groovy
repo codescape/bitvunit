@@ -85,7 +85,7 @@ def getAvailableCategories() {
 
 def getNextBitvUnitVersion() {
     String version = new XmlSlurper().parse(new File('./pom.xml')).version.text()
-    version.substring(0, version.lastIndexOf('.'))
+    version.substring(0, version.lastIndexOf('-'))
 }
 
 def fromTemplate(template, data = [:]) {
