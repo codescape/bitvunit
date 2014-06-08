@@ -1,9 +1,14 @@
 Changelog for BitvUnit
 ----------------------
 
-### Release 0.11 (????-??-??)
+### Release 0.11 (2014-06-06)
 
-* tbd
+* updated dependencies
+	* net.sourceforge.htmlunit:htmlunit:2.15
+	* org.apache.httpcomponents:httpclient:4.3.4
+	* org.codehaus.groovy:groovy-all:2.3.2
+	* org.seleniumhq.selenium:selenium-api:2.42.2
+	* org.seleniumhq.selenium:selenium-htmlunit-driver:2.42.2
 
 ### Release 0.10 (2014-06-08)
 
