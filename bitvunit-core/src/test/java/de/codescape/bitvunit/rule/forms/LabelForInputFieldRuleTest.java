@@ -1,6 +1,5 @@
 package de.codescape.bitvunit.rule.forms;
 
-import de.codescape.bitvunit.rule.Violations;
 import org.junit.Test;
 
 import static de.codescape.bitvunit.test.Assertions.assertNoViolations;
