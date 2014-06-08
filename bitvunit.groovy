@@ -84,13 +84,9 @@ def getNextBitvUnitVersion() {
     version.substring(0, version.lastIndexOf('-'))
 }
 
-def fromTemplate(template, data = [:]) {
-    new SimpleTemplateEngine().createTemplate(new File(template).text).make(data).toString()
-}
-
 def fileFromTemplate(template, data, filename) {
     def file = new File(filename)
     file.createNewFile()
-    file.text = fromTemplate(template, data)
+    file.text = new SimpleTemplateEngine().createTemplate(new File(template).text).make(data).toString()
     file
 }
