@@ -3,7 +3,7 @@ Changelog for BitvUnit
 
 ### Release 0.12 (????-??-??)
 
-* tbd
+* added AllRules class and allRules factory to ease testing against all configured rules
 
 ### Release 0.11 (2014-06-08)
 
