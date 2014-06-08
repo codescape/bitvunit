@@ -16,6 +16,7 @@ Changelog for BitvUnit
 	* faster build not generating javadoc on every build but only for releases
 	* building against Java 7 instead of Java 6 language level
 	* use Java 7 features where appropriate
+	* fixed release specific configuration for maven-release-plugin
 * documentation
     * javadoc is fixed so that it can be generated with latest maven-javadoc-plugin
 * updated dependencies
