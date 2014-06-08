@@ -58,13 +58,13 @@ To build the latest version of the library checkout the sources and run `mvn cle
 
 ### Implementing new rules
 
-To implement a new rule you can run the Groovy based wizard with the command `groovy bitvunit.groovy create-rule` from the root folder of the project. It prompts for your full name to be listed in the JavaDoc and the name for your new rule. Valid names must start with an uppercase letter, contain only characters and end with the word `Rule`.
+To implement a new rule you can run the Groovy based wizard with the command `groovy bitvunit create-rule` from the root folder of the project. It prompts for your full name to be listed in the JavaDoc and the name for your new rule. Valid names must start with an uppercase letter, contain only characters and end with the word `Rule`.
 
 After that you can choose from one of the existing rule categories and the wizard will set everything up. You are ready to implement the test cases and the rule itself!
 
 ### Updating dependency versions
 
-Run `mvn versions:display-dependency-updates` to produce a list of all dependencies where a newer versions exists. Update POMs to use new dependency versions where accurate. Release candidates and milestone releases should be used carefully. After that run `mvn verify` to make sure everything works fine with the new versions of the dependencies.
+Run `mvn versions:display-dependency-updates` to produce a list of all dependencies where a newer versions exists. Update POMs to use new dependency versions where accurate. Release candidates and milestone releases should be used carefully. After that run `mvn clean verify` to make sure everything works fine with the new versions of the dependencies.
 
 ### Releasing a new version
 
