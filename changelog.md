@@ -1,7 +1,11 @@
 Changelog for BitvUnit
 ----------------------
 
-### Release 0.11 (2014-06-06)
+### Release 0.12 (????-??-??)
+
+* tbd
+
+### Release 0.11 (2014-06-08)
 
 * updated dependencies
 	* net.sourceforge.htmlunit:htmlunit:2.15
