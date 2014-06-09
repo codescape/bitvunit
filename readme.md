@@ -81,6 +81,16 @@ To release a new version the the Central Maven Repository first run `mvn clean v
 
 Verify the results and run `mvn release:perform` if everything is looking fine. The nexus-staging-maven-plugin will do the rest and close the release in the Sonatype OSSRH and synchronization to Maven Central will pick up the new version.
 
+The complete process to bring out a new release currently includes:
+
+* `mvn clean verify` to check that all tests are running
+* update [changelog.md](/changelog.md) and update release information and date
+* update [readme.md](/readme.md) and update version number in maven coordinates
+* update version number in _config.yml in the gh-pages branch
+* `mvn release:clean release:prepare` to prepare the release
+* `mvn release:perform` to deploy to sonatype and close release
+* `git clean -f` to remove all .backup files created during release process
+
 ### Documenting changes
 
 Any changes applied to the library should be documented in the changelog markdown document on the root level of the project. Please make sure to add all changes that are worth mentioning to the [changelog.md](/changelog.md) file.
