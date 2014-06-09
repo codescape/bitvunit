@@ -2,32 +2,43 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- maven coordinates -->
     <groupId>de.codescape.bitvunit</groupId>
     <artifactId>bitvunit-project</artifactId>
     <version>0.12-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <!-- project metadata -->
     <name>BitvUnit Project</name>
     <description>Accessibility Testing Library</description>
     <url>http://bitvunit.codescape.de</url>
 
+    <!-- multi-module settings -->
     <modules>
         <module>bitvunit-core</module>
         <module>bitvunit-samples</module>
     </modules>
 
+    <!-- minimum maven version -->
     <prerequisites>
         <maven>3.2.0</maven>
     </prerequisites>
 
+    <!-- project settings -->
     <properties>
+        <!-- java language level -->
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
+
+        <!-- source encoding -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!-- library versions -->
         <selenium.version>2.42.0</selenium.version>
     </properties>
 
+    <!-- contributors -->
     <developers>
         <developer>
             <id>codescape</id>
@@ -36,6 +47,7 @@
         </developer>
     </developers>
 
+    <!-- source code management -->
     <scm>
         <connection>scm:git:git@github.com:codescape/bitvunit.git</connection>
         <developerConnection>scm:git:git@github.com:codescape/bitvunit.git</developerConnection>
@@ -43,16 +55,19 @@
         <tag>HEAD</tag>
     </scm>
 
+    <!-- bug tracker -->
     <issueManagement>
         <system>GitHub</system>
         <url>https://github.com/codescape/bitvunit/issues</url>
     </issueManagement>
 
+    <!-- continuous integration environment -->
     <ciManagement>
         <system>Travis CI</system>
         <url>https://travis-ci.org/codescape/bitvunit</url>
     </ciManagement>
 
+    <!-- release and snapshot repository -->
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
@@ -64,6 +79,7 @@
         </repository>
     </distributionManagement>
 
+    <!-- project license -->
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -73,6 +89,7 @@
     </licenses>
 
     <build>
+        <!-- plugin versions for all submodules -->
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -151,9 +168,9 @@
                     <version>2.4</version>
                 </plugin>
                 <plugin>
-                    <groupId>org.mortbay.jetty</groupId>
+                    <groupId>org.eclipse.jetty</groupId>
                     <artifactId>jetty-maven-plugin</artifactId>
-                    <version>8.1.13.v20130916</version>
+                    <version>9.2.0.v20140526</version>
                 </plugin>
                 <plugin>
                     <groupId>org.sonatype.plugins</groupId>
@@ -163,6 +180,7 @@
             </plugins>
         </pluginManagement>
         <plugins>
+            <!-- release configuration for maven central -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
@@ -175,6 +193,7 @@
                     <tagNameFormat>v@{project.version}</tagNameFormat>
                 </configuration>
             </plugin>
+            <!-- static code analysis with pmd -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
@@ -193,6 +212,7 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- sonatype plugin for closing releases -->
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -203,18 +223,10 @@
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <!-- TODO: fix some issues with parallel execution in the reporting tests first 
-                <configuration>
-                    <parallel>classes</parallel>
-                    <useUnlimitedThreads>true</useUnlimitedThreads>
-                </configuration>-->
-            </plugin>
         </plugins>
     </build>
 
+    <!-- dependency versions for all submodules -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -286,10 +298,12 @@
     </dependencyManagement>
 
     <profiles>
+        <!-- profile activated and used by maven-release-plugin -->
         <profile>
             <id>release</id>
             <build>
                 <plugins>
+                    <!-- sign all artifacts with gpg plugin -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
@@ -303,6 +317,7 @@
                             </execution>
                         </executions>
                     </plugin>
+                    <!-- create source jars for all artifacts -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
@@ -315,6 +330,7 @@
                             </execution>
                         </executions>
                     </plugin>
+                    <!-- create javadoc jars for all artifacts -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
