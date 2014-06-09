@@ -62,6 +62,15 @@ To implement a new rule you can run the Groovy based wizard with the command `gr
 
 After that you can choose from one of the existing rule categories and the wizard will set everything up. You are ready to implement the test cases and the rule itself!
 
+    > groovy bitvunit create-rule
+    Author name: Stefan Glase
+    Rule name [must end with Rule]: FooRule
+    Rule category [forms, frames, images, interactions, links, lists, media, page, tables, text]: page
+    Created rule at ./bitvunit-core/src/main/java/de/codescape/bitvunit/rule/page/FooRule.java
+    Created test at ./bitvunit-core/src/test/java/de/codescape/bitvunit/rule/page/FooRuleTest.java
+    Added new rule to ruleset all-rules.xml
+    Done. Happy Coding!
+
 ### Updating dependency versions
 
 Run `mvn versions:display-dependency-updates` to produce a list of all dependencies where a newer versions exists. Update POMs to use new dependency versions where accurate. Release candidates and milestone releases should be used carefully. After that run `mvn clean verify` to make sure everything works fine with the new versions of the dependencies.
