@@ -20,7 +20,7 @@ public class SampleHamcrestMatchersWithXmlRuleSetTest {
     @Test
     public void checkBitvUnitHomepage() throws Exception {
         HtmlPage pageUnderTest = new WebClient().getPage("http://bitvunit.codescape.de");
-        assertThat(pageUnderTest, is(compliantTo(new XmlRuleSet("/rulesets/all-rules.xml"))));
+        assertThat(pageUnderTest, is(compliantTo(allRules())));
     }
 
 }
