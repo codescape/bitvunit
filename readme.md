@@ -36,6 +36,16 @@ Inside your test you can use the Hamcrest matcher to verify your website against
 
 To learn about other ways of using BitvUnit have a look at the tests inside the `bitvunit-samples` project that are written to show other ways of testing against the rules of this library.
 
+### Configuring applied rule set
+
+There are two supported ways to configure the set of rules that shall be applied to verify accessibility. The statement typically looks like this:
+
+    assertThat(pageUnderTest, is(compliantTo(rulesToApply)));
+
+The matcher `compliantTo()` accepts instances of type `Rule` and `RuleSet`. As you usually want to assert against multiple rules you will need to supply that matcher with a configured `RuleSet` instance.
+
+TODO: describe ways of creating the RuleSet instance
+
 ## Contributing
 
 There are many ways to support this project. Here is an incomplete list of ways how to contribute:
