@@ -45,7 +45,56 @@ There are two supported ways to configure the set of rules that shall be applied
 
 The matcher `compliantTo()` accepts instances of type `Rule` and `RuleSet`. As you usually want to assert against multiple rules you will need to supply that matcher with a configured `RuleSet` instance.
 
-> TODO describe both ways (xml and code) to create the RuleSet instance
+You can either do that directly in your code or declare the rules to be used inside a xml document. 
+
+#### Create rule set based on code
+
+To create a rule set based on code you can use the class `BasicRuleSet` and create a new instance of it or extend it with a custom class. The following snippet shows how to create the rule set and use it in an assertion.
+
+    @Test
+    public void shouldVerifyAgainstCustomRuleSetCreatedByCode() {
+        assertThat(driver, is(compliantTo(ruleSetBasedOnCode())));
+    }
+
+    private BasicRuleSet ruleSetBasedOnCode() {
+        return new BasicRuleSet(
+                new LabelContainsTextRule(),
+                new LabelForInputFieldRule(),
+                new LabelForSelectTagRule(),
+                new LabelForTextareaRule(),
+                new LabelWithoutFormElementRule(),
+                new UniqueLabelForFormElementRule());
+    }
+
+#### Create rule set based on XML
+
+To create a rule set based on XML you create an instance of `XmlRuleSet` and supply it with the XML document to be used as the source. The following snippet shows how to create the rule set and use it in an assertion.
+
+    @Test
+    public void shouldVerifyAgainstCustomRuleSetCreatedByXml() {
+        assertThat(driver, is(compliantTo(ruleSetBasedOnXml())));
+    }
+
+    private RuleSet ruleSetBasedOnXml() {
+        return new XmlRuleSet("rulesets/label-rules.xml");
+    }
+
+The XML document looks similar to this and conforms to the XSD document shipped with the library:
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <ruleset xmlns="http://bitvunit.codescape.de/ruleset/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://bitvunit.codescape.de/ruleset/1.0 ../ruleset-schema.xsd">
+    
+        <description>Set of all rules used to demo custom rule sets.</description>
+    
+        <rule class="de.codescape.bitvunit.rule.forms.LabelContainsTextRule"/>
+        <rule class="de.codescape.bitvunit.rule.forms.LabelForInputFieldRule"/>
+        <rule class="de.codescape.bitvunit.rule.forms.LabelForSelectTagRule"/>
+        <rule class="de.codescape.bitvunit.rule.forms.LabelForTextareaRule"/>
+        <rule class="de.codescape.bitvunit.rule.forms.LabelWithoutFormElementRule"/>
+        <rule class="de.codescape.bitvunit.rule.forms.UniqueLabelForFormElementRule"/>
+    
+    </ruleset>
 
 ## Contributing
 

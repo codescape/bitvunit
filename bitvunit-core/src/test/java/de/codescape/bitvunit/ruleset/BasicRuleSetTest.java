@@ -37,6 +37,12 @@ public class BasicRuleSetTest {
     }
 
     @Test
+    public void withRulesShouldAddRulesToRuleSet() throws Exception {
+        ruleSet.withRule(new AvoidBlinkTextRule()).withRule(new AvoidMarqueeTextRule());
+        assertRules(ruleSet, 2);
+    }
+
+    @Test
     public void applyToReturnsViolationsOfAllRules() throws Exception {
         AvoidBlinkTextRule firstRule = new AvoidBlinkTextRule();
         ruleSet.addRule(firstRule);

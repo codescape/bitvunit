@@ -1,7 +1,8 @@
-package de.codescape.bitvunit.samples;
+package de.codescape.bitvunit.samples.compatibility;
 
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import de.codescape.bitvunit.samples.AbstractBaseSpec;
 import org.junit.Test;
 
 import static de.codescape.bitvunit.hamcrest.ComplianceMatcher.compliantTo;

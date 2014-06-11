@@ -40,6 +40,17 @@ public class BasicRuleSet implements RuleSet {
         rules.add(rule);
     }
 
+    /**
+     * Adds the given {@link Rule} to that rule set and returns itself.
+     *
+     * @param rule {@link Rule} to be added to the rule set
+     * @return {@link RuleSet} itself
+     */
+    public BasicRuleSet withRule(Rule rule) {
+        addRule(rule);
+        return this;
+    }
+
     @Override
     public List<Rule> getRules() {
         return Collections.unmodifiableList(rules);

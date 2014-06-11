@@ -1,5 +1,6 @@
-package de.codescape.bitvunit.samples;
+package de.codescape.bitvunit.samples.compatibility;
 
+import de.codescape.bitvunit.samples.AbstractBaseSpec;
 import org.junit.Test;
 
 import java.net.URL;

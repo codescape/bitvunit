@@ -1,7 +1,5 @@
 package de.codescape.bitvunit.samples;
 
-import de.codescape.bitvunit.ruleset.RuleSet;
-import de.codescape.bitvunit.ruleset.XmlRuleSet;
 import de.codescape.bitvunit.util.io.ClassPathResource;
 
 import java.io.IOException;
