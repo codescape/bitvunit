@@ -7,8 +7,8 @@ BitvUnit is free, open source software licensed under the [Apache License, Versi
 ## Table of Contents
 
 * [Getting started](#getting-started)
-* [Contributing](#contributing)
    * [Configuring rule set](#configuring-rule-set)
+* [Contributing](#contributing)
 * [Development](#development)
     * [Building the project](#building-the-project)
     * [Implementing new rules](#implementing-new-rules)
