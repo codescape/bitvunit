@@ -8,6 +8,7 @@ BitvUnit is free, open source software licensed under the [Apache License, Versi
 
 * [Getting started](#getting-started)
 * [Contributing](#contributing)
+   * [Configuring rule set](#configuring-rule-set)
 * [Development](#development)
     * [Building the project](#building-the-project)
     * [Implementing new rules](#implementing-new-rules)
@@ -36,7 +37,7 @@ Inside your test you can use the Hamcrest matcher to verify your website against
 
 To learn about other ways of using BitvUnit have a look at the tests inside the `bitvunit-samples` project that are written to show other ways of testing against the rules of this library.
 
-### Configuring applied rule set
+### Configuring rule set
 
 There are two supported ways to configure the set of rules that shall be applied to verify accessibility. The statement typically looks like this:
 
