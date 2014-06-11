@@ -45,7 +45,7 @@ There are two supported ways to configure the set of rules that shall be applied
 
 The matcher `compliantTo()` accepts instances of type `Rule` and `RuleSet`. As you usually want to assert against multiple rules you will need to supply that matcher with a configured `RuleSet` instance.
 
-TODO: describe ways of creating the RuleSet instance
+> TODO describe both ways (xml and code) to create the RuleSet instance
 
 ## Contributing
 
