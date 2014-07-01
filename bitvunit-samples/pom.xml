@@ -2,6 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- inherit parent project -->
     <parent>
         <groupId>de.codescape.bitvunit</groupId>
         <artifactId>bitvunit-project</artifactId>
@@ -20,6 +21,7 @@
     </properties>
 
     <build>
+        <!-- filter properties files and fill placeholders -->
         <testResources>
             <testResource>
                 <directory>src/test/resources</directory>
@@ -27,6 +29,7 @@
             </testResource>
         </testResources>
         <plugins>
+            <!-- run all *Spec files without failing -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
@@ -43,6 +46,7 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- provide jetty server for integration tests  -->
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
@@ -79,11 +83,13 @@
     </build>
 
     <dependencies>
+        <!-- bitvunit library -->
         <dependency>
             <groupId>de.codescape.bitvunit</groupId>
             <artifactId>bitvunit-core</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- testing dependencies -->
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-core</artifactId>
