@@ -89,6 +89,7 @@
             <artifactId>bitvunit-core</artifactId>
             <scope>test</scope>
         </dependency>
+
         <!-- testing dependencies -->
         <dependency>
             <groupId>org.hamcrest</groupId>
