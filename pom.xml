@@ -35,7 +35,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- library versions -->
-        <selenium.version>2.42.0</selenium.version>
+        <selenium.version>2.42.2</selenium.version>
     </properties>
 
     <!-- contributors -->
