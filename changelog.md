@@ -1,7 +1,11 @@
 Changelog for BitvUnit
 ----------------------
 
-### Release 0.12 (????-??-??)
+### Release 0.13 (????-??-??)
+
+* ...
+
+### Release 0.12 (2014-08-02)
 
 * added AllRules class and allRules factory to ease testing against all configured rules
 * remove project bitvunit-cli to ease development
