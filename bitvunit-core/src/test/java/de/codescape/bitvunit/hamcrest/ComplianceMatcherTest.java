@@ -5,19 +5,13 @@ import de.codescape.bitvunit.rule.Rule;
 import de.codescape.bitvunit.rule.Violation;
 import de.codescape.bitvunit.rule.Violations;
 import de.codescape.bitvunit.ruleset.RuleSet;
-import org.apache.commons.io.IOUtils;
+import de.codescape.bitvunit.test.TestPage;
 import org.hamcrest.Description;
 import org.hamcrest.StringDescription;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.InputStream;
-import java.io.Reader;
-import java.io.StringReader;
-import java.net.URL;
-
 import static de.codescape.bitvunit.hamcrest.ComplianceMatcher.compliantTo;
-import static de.codescape.bitvunit.util.html.HtmlPageUtil.toHtmlPage;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.*;
@@ -50,62 +44,62 @@ public class ComplianceMatcherTest {
 
     @Test
     public void compliantToForHtmlPageAgainstRuleSet() throws Exception {
-        assertThat(somePage(), is(compliantTo(satisfiedRuleSet)));
-        assertThat(somePage(), is(not(compliantTo(unsatisfiedRuleSet))));
+        assertThat(TestPage.asHtmlPage(), is(compliantTo(satisfiedRuleSet)));
+        assertThat(TestPage.asHtmlPage(), is(not(compliantTo(unsatisfiedRuleSet))));
     }
 
     @Test
     public void compliantToForHtmlPageAgainstRule() throws Exception {
-        assertThat(somePage(), is(compliantTo(satisfiedRule)));
-        assertThat(somePage(), is(not(compliantTo(unsatisfiedRule))));
+        assertThat(TestPage.asHtmlPage(), is(compliantTo(satisfiedRule)));
+        assertThat(TestPage.asHtmlPage(), is(not(compliantTo(unsatisfiedRule))));
     }
 
     @Test
     public void compliantToForStringAgainstRuleSet() throws Exception {
-        assertThat(someString(), is(compliantTo(satisfiedRuleSet)));
-        assertThat(someString(), is(not(compliantTo(unsatisfiedRuleSet))));
+        assertThat(TestPage.asString(), is(compliantTo(satisfiedRuleSet)));
+        assertThat(TestPage.asString(), is(not(compliantTo(unsatisfiedRuleSet))));
     }
 
     @Test
     public void compliantToForStringAgainstRule() throws Exception {
-        assertThat(someString(), is(compliantTo(satisfiedRule)));
-        assertThat(someString(), is(not(compliantTo(unsatisfiedRule))));
+        assertThat(TestPage.asString(), is(compliantTo(satisfiedRule)));
+        assertThat(TestPage.asString(), is(not(compliantTo(unsatisfiedRule))));
     }
 
     @Test
     public void compliantToForReaderAgainstRuleSet() throws Exception {
-        assertThat(someReader(), is(compliantTo(satisfiedRuleSet)));
-        assertThat(someReader(), is(not(compliantTo(unsatisfiedRuleSet))));
+        assertThat(TestPage.asReader(), is(compliantTo(satisfiedRuleSet)));
+        assertThat(TestPage.asReader(), is(not(compliantTo(unsatisfiedRuleSet))));
     }
 
     @Test
     public void compliantToForReaderAgainstRule() throws Exception {
-        assertThat(someReader(), is(compliantTo(satisfiedRule)));
-        assertThat(someReader(), is(not(compliantTo(unsatisfiedRule))));
+        assertThat(TestPage.asReader(), is(compliantTo(satisfiedRule)));
+        assertThat(TestPage.asReader(), is(not(compliantTo(unsatisfiedRule))));
     }
 
     @Test
     public void compliantToForURLAgainstRuleSet() throws Exception {
-        assertThat(someURL(), is(compliantTo(satisfiedRuleSet)));
-        assertThat(someURL(), is(not(compliantTo(unsatisfiedRuleSet))));
+        assertThat(TestPage.asURL(), is(compliantTo(satisfiedRuleSet)));
+        assertThat(TestPage.asURL(), is(not(compliantTo(unsatisfiedRuleSet))));
     }
 
     @Test
     public void compliantToForURLAgainstRule() throws Exception {
-        assertThat(someURL(), is(compliantTo(satisfiedRule)));
-        assertThat(someURL(), is(not(compliantTo(unsatisfiedRule))));
+        assertThat(TestPage.asURL(), is(compliantTo(satisfiedRule)));
+        assertThat(TestPage.asURL(), is(not(compliantTo(unsatisfiedRule))));
     }
 
     @Test
     public void compliantToForInputStreamAgainstRuleSet() throws Exception {
-        assertThat(someInputStream(), is(compliantTo(satisfiedRuleSet)));
-        assertThat(someInputStream(), is(not(compliantTo(unsatisfiedRuleSet))));
+        assertThat(TestPage.asInputStream(), is(compliantTo(satisfiedRuleSet)));
+        assertThat(TestPage.asInputStream(), is(not(compliantTo(unsatisfiedRuleSet))));
     }
 
     @Test
     public void compliantToForInputStreamAgainstRule() throws Exception {
-        assertThat(someInputStream(), is(compliantTo(satisfiedRule)));
-        assertThat(someInputStream(), is(not(compliantTo(unsatisfiedRule))));
+        assertThat(TestPage.asInputStream(), is(compliantTo(satisfiedRule)));
+        assertThat(TestPage.asInputStream(), is(not(compliantTo(unsatisfiedRule))));
     }
 
     @Test
@@ -141,32 +135,12 @@ public class ComplianceMatcherTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void callToDescribeMismatchDoesNotThrowNullPointerException() throws Exception {
-        compliantTo(satisfiedRuleSet).describeMismatch(somePage(), new StringDescription());
-    }
-
-    private String someString() {
-        return "<html><body><p>Hello Hamcrest!</p></body></html>";
-    }
-
-    private HtmlPage somePage() {
-        return toHtmlPage(someString());
-    }
-
-    private Reader someReader() {
-        return new StringReader(someString());
-    }
-
-    private URL someURL() {
-        return getClass().getClassLoader().getResource("sample-page.html");
-    }
-
-    private InputStream someInputStream() {
-        return IOUtils.toInputStream(someString());
+        compliantTo(satisfiedRuleSet).describeMismatch(TestPage.asHtmlPage(), new StringDescription());
     }
 
     private Violations someViolation(Rule rule) {
         Violations violations = new Violations();
-        violations.add(new Violation(rule, somePage().getBody(), "uh oh"));
+        violations.add(new Violation(rule, TestPage.asHtmlPage().getBody(), "uh oh"));
         return violations;
     }
 
