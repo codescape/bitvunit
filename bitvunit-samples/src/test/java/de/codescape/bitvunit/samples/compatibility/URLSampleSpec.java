@@ -5,8 +5,8 @@ import org.junit.Test;
 
 import java.net.URL;
 
-import static de.codescape.bitvunit.hamcrest.ComplianceMatcher.compliantTo;
-import static de.codescape.bitvunit.ruleset.AllRules.allRules;
+import static de.codescape.bitvunit.BitvUnit.allRules;
+import static de.codescape.bitvunit.BitvUnit.compliantTo;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
