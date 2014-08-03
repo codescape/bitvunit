@@ -2,10 +2,9 @@ package de.codescape.bitvunit.hamcrest;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.rule.Rule;
-import de.codescape.bitvunit.rule.Violation;
-import de.codescape.bitvunit.rule.Violations;
 import de.codescape.bitvunit.ruleset.RuleSet;
 import de.codescape.bitvunit.test.TestPage;
+import de.codescape.bitvunit.test.TestViolations;
 import org.hamcrest.Description;
 import org.hamcrest.StringDescription;
 import org.junit.Before;
@@ -30,16 +29,16 @@ public class ComplianceMatcherTest {
     @Before
     public void setUp() throws Exception {
         satisfiedRule = mock(Rule.class);
-        when(satisfiedRule.applyTo(any(HtmlPage.class))).thenReturn(noViolation());
+        when(satisfiedRule.applyTo(any(HtmlPage.class))).thenReturn(TestViolations.noViolations());
 
         unsatisfiedRule = mock(Rule.class);
-        when(unsatisfiedRule.applyTo(any(HtmlPage.class))).thenReturn(someViolation(unsatisfiedRule));
+        when(unsatisfiedRule.applyTo(any(HtmlPage.class))).thenReturn(TestViolations.violationOf(unsatisfiedRule));
 
         satisfiedRuleSet = mock(RuleSet.class);
-        when(satisfiedRuleSet.applyTo(any(HtmlPage.class))).thenReturn(noViolation());
+        when(satisfiedRuleSet.applyTo(any(HtmlPage.class))).thenReturn(TestViolations.noViolations());
 
         unsatisfiedRuleSet = mock(RuleSet.class);
-        when(unsatisfiedRuleSet.applyTo(any(HtmlPage.class))).thenReturn(someViolation(unsatisfiedRule));
+        when(unsatisfiedRuleSet.applyTo(any(HtmlPage.class))).thenReturn(TestViolations.violationOf(unsatisfiedRule));
     }
 
     @Test
@@ -136,16 +135,6 @@ public class ComplianceMatcherTest {
     @Test(expected = IllegalArgumentException.class)
     public void callToDescribeMismatchDoesNotThrowNullPointerException() throws Exception {
         compliantTo(satisfiedRuleSet).describeMismatch(TestPage.asHtmlPage(), new StringDescription());
-    }
-
-    private Violations someViolation(Rule rule) {
-        Violations violations = new Violations();
-        violations.add(new Violation(rule, TestPage.asHtmlPage().getBody(), "uh oh"));
-        return violations;
-    }
-
-    private Violations noViolation() {
-        return new Violations();
     }
 
 }
