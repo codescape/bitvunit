@@ -3,7 +3,9 @@ Changelog for BitvUnit
 
 ### Release 0.13 (????-??-??)
 
-* ...
+* internal structure
+    * new interface Testable as common basis for Rule and RuleSet that both can be verified against
+    * simplifying ComplianceMatcher to make use of the new interface Testable
 
 ### Release 0.12 (2014-08-02)
 
