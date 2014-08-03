@@ -6,6 +6,7 @@ import de.codescape.bitvunit.rule.Violation;
 import de.codescape.bitvunit.rule.Violations;
 import de.codescape.bitvunit.ruleset.RuleSet;
 import de.codescape.bitvunit.ruleset.XmlRuleSet;
+import de.codescape.bitvunit.test.TestPage;
 import org.apache.commons.io.IOUtils;
 import org.junit.After;
 import org.junit.Before;
@@ -14,8 +15,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileReader;
 import java.io.OutputStream;
 import java.io.PrintStream;
-
-import static de.codescape.bitvunit.util.html.HtmlPageUtil.toHtmlPage;
 
 /**
  * Abstract test class for testing {@link ReportWriter} implementations capturing the console and file output.
@@ -61,7 +60,7 @@ public abstract class AbstractReportWriterTest {
     }
 
     protected HtmlPage someHtmlPage() {
-        return toHtmlPage("<html><head><title>Hello World</title></head><body></body></html>");
+        return TestPage.asHtmlPage();
     }
 
 }
