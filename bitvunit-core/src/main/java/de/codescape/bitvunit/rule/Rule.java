@@ -1,6 +1,6 @@
 package de.codescape.bitvunit.rule;
 
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import de.codescape.bitvunit.Testable;
 
 /**
  * Interface that must be implemented by all rules that should be checked with this library. You should always extend
@@ -8,7 +8,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
  *
  * @author Stefan Glase
  */
-public interface Rule {
+public interface Rule extends Testable {
 
     /**
      * Returns the name of that rule.
@@ -17,13 +17,6 @@ public interface Rule {
      */
     String getName();
 
-    /**
-     * Applies that rule to the given {@link HtmlPage} and returns all {@link Violations} of that rule.
-     *
-     * @param htmlPage {@link HtmlPage} under test
-     * @return all {@link Violations} of that rule
-     */
-    Violations applyTo(HtmlPage htmlPage);
 
     /**
      * Returns the {@link Priority} for that rule.

@@ -1,8 +1,7 @@
 package de.codescape.bitvunit.ruleset;
 
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import de.codescape.bitvunit.Testable;
 import de.codescape.bitvunit.rule.Rule;
-import de.codescape.bitvunit.rule.Violations;
 
 import java.util.List;
 
@@ -13,7 +12,7 @@ import java.util.List;
  *
  * @author Stefan Glase
  */
-public interface RuleSet {
+public interface RuleSet extends Testable {
 
     /**
      * Returns a list of all rules contained in that rule set.
@@ -21,14 +20,5 @@ public interface RuleSet {
      * @return list of all rules contained in that rule set
      */
     List<Rule> getRules();
-
-    /**
-     * Applies that rule set to the given {@link HtmlPage} and returns all {@link Violations} of the rules contained in
-     * this rule set.
-     *
-     * @param htmlPage {@link HtmlPage} under test
-     * @return all {@link Violations} of rules contained in this rule set
-     */
-    Violations applyTo(HtmlPage htmlPage);
 
 }
