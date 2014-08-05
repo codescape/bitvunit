@@ -1,16 +1,21 @@
 package de.codescape.bitvunit;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import de.codescape.bitvunit.report.ReportWriter;
+import de.codescape.bitvunit.report.ReportingContext;
+import de.codescape.bitvunit.report.XmlReportWriter;
 import de.codescape.bitvunit.rule.Rule;
 import de.codescape.bitvunit.rule.page.AvoidAbstractRoleRule;
 import de.codescape.bitvunit.rule.text.AvoidBlinkTextRule;
 import de.codescape.bitvunit.ruleset.RuleSet;
 import de.codescape.bitvunit.test.TestPage;
 import de.codescape.bitvunit.test.TestViolations;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static de.codescape.bitvunit.test.Matchers.containsRules;
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Matchers.any;
@@ -22,6 +27,8 @@ public class BitvUnitTest {
     private Rule singleRule;
     private RuleSet multipleRules;
 
+    private ReportWriter reportWriter;
+
     @Before
     public void setUp() throws Exception {
         singleRule = mock(Rule.class);
@@ -29,6 +36,15 @@ public class BitvUnitTest {
 
         multipleRules = mock(RuleSet.class);
         when(multipleRules.applyTo(any(HtmlPage.class))).thenReturn(TestViolations.noViolations());
+
+        // save ReportWriter for tests changing settings
+        reportWriter = ReportingContext.getReportWriter();
+    }
+
+    @After
+    public void after() {
+        // restore original ReportWriter after tests
+        ReportingContext.setReportWriter(reportWriter);
     }
 
     /* Junit Assertions */
@@ -77,7 +93,7 @@ public class BitvUnitTest {
         assertThat(TestPage.asString(), is(BitvUnit.compliantTo(multipleRules)));
     }
 
-    /* Rule Sets */
+    /* RuleSet configuration */
 
     @Test
     public void shouldProvideAllRulesAccessor() {
@@ -87,6 +103,18 @@ public class BitvUnitTest {
     @Test
     public void shouldProfileCustomRuleSetAccessor() {
         assertThat(BitvUnit.withRules(new AvoidBlinkTextRule(), new AvoidAbstractRoleRule()), containsRules(2));
+    }
+
+    /* ReportWriter configuration */
+
+    @Test
+    public void shouldExposeReportWriterConfiguration() {
+        XmlReportWriter expectedReportWriter = new XmlReportWriter();
+        expectedReportWriter.setWriteToFile(false);
+
+        BitvUnit.useReportWriter(expectedReportWriter);
+
+        assertThat(ReportingContext.getReportWriter(), is(equalTo((ReportWriter) expectedReportWriter)));
     }
 
 }

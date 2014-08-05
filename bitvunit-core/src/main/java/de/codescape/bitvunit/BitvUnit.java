@@ -2,6 +2,9 @@ package de.codescape.bitvunit;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.hamcrest.ComplianceMatcher;
+import de.codescape.bitvunit.report.ReportWriter;
+import de.codescape.bitvunit.report.ReportingContext;
+import de.codescape.bitvunit.report.XmlReportWriter;
 import de.codescape.bitvunit.rule.Rule;
 import de.codescape.bitvunit.ruleset.AllRules;
 import de.codescape.bitvunit.ruleset.BasicRuleSet;
@@ -100,7 +103,7 @@ public class BitvUnit {
         return ComplianceMatcher.compliantTo(testable);
     }
 
-    /* Rule Sets */
+    /* RuleSet configuration */
 
     /**
      * {@link de.codescape.bitvunit.ruleset.RuleSet} containing all rules provided by the library itself.
@@ -119,6 +122,17 @@ public class BitvUnit {
      */
     public static RuleSet withRules(Rule... rules) {
         return new BasicRuleSet(rules);
+    }
+
+    /* ReportWriter configuration */
+
+    /**
+     * Configure the {@link de.codescape.bitvunit.report.ReportWriter} to be used while testing.
+     *
+     * @param reportWriter {@link de.codescape.bitvunit.report.ReportWriter} to be used
+     */
+    public static void useReportWriter(ReportWriter reportWriter) {
+        ReportingContext.setReportWriter(reportWriter);
     }
 
 }
