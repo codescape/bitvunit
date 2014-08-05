@@ -2,6 +2,8 @@ package de.codescape.bitvunit;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.rule.Rule;
+import de.codescape.bitvunit.rule.page.AvoidAbstractRoleRule;
+import de.codescape.bitvunit.rule.text.AvoidBlinkTextRule;
 import de.codescape.bitvunit.ruleset.RuleSet;
 import de.codescape.bitvunit.test.TestPage;
 import de.codescape.bitvunit.test.TestViolations;
@@ -80,6 +82,11 @@ public class BitvUnitTest {
     @Test
     public void shouldProvideAllRulesAccessor() {
         assertThat(BitvUnit.allRules(), containsRules());
+    }
+
+    @Test
+    public void shouldProfileCustomRuleSetAccessor() {
+        assertThat(BitvUnit.withRules(new AvoidBlinkTextRule(), new AvoidAbstractRoleRule()), containsRules(2));
     }
 
 }

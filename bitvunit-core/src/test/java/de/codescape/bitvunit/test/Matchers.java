@@ -24,4 +24,23 @@ public class Matchers {
         };
     }
 
+    public static Matcher<? super RuleSet> containsRules(final int count) {
+        return new TypeSafeMatcher<RuleSet>() {
+            @Override
+            protected boolean matchesSafely(RuleSet item) {
+                return item.getRules().size() == count;
+            }
+
+            @Override
+            public void describeTo(Description description) {
+                description.appendText("RuleSet contains exactly ").appendValue(count).appendText(" rules");
+            }
+
+            @Override
+            protected void describeMismatchSafely(RuleSet item, Description mismatchDescription) {
+                mismatchDescription.appendText("RuleSet contains ").appendValue(item.getRules().size()).appendText(" rules");
+            }
+        };
+    }
+
 }

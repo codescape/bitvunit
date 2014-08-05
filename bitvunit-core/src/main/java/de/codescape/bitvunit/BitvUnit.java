@@ -2,7 +2,9 @@ package de.codescape.bitvunit;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.hamcrest.ComplianceMatcher;
+import de.codescape.bitvunit.rule.Rule;
 import de.codescape.bitvunit.ruleset.AllRules;
+import de.codescape.bitvunit.ruleset.BasicRuleSet;
 import de.codescape.bitvunit.ruleset.RuleSet;
 import org.hamcrest.Matcher;
 import org.openqa.selenium.WebDriver;
@@ -107,6 +109,16 @@ public class BitvUnit {
      */
     public static RuleSet allRules() {
         return AllRules.allRules();
+    }
+
+    /**
+     * Creates and returns a {@link de.codescape.bitvunit.ruleset.RuleSet} containing all provided rules.
+     *
+     * @param rules provided rule(s)
+     * @return {@link de.codescape.bitvunit.ruleset.RuleSet} containing all provided rules
+     */
+    public static RuleSet withRules(Rule... rules) {
+        return new BasicRuleSet(rules);
     }
 
 }
