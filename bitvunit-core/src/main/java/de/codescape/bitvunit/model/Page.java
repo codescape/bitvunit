@@ -364,4 +364,13 @@ public class Page {
         return allByTagName(HtmlTeletype.TAG_NAME);
     }
 
+    /**
+     * Returns all <code>&lt;u/&gt;</code> tags as {@link HtmlUnderlined} instances.
+     *
+     * @return all <code>&lt;u/&gt;</code> tags as {@link HtmlUnderlined} instances
+     */
+    public List<HtmlUnderlined> findAllUnderlineTags() {
+        return allByTagName(HtmlUnderlined.TAG_NAME);
+    }
+
 }

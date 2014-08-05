@@ -9,6 +9,8 @@ Changelog for BitvUnit
     * new class BitvUnit with all commonly used methods to interact with the library
 * updated plugins
     * org.eclipse.jetty:jetty-maven-plugin9.2.2.v20140723
+* rules
+    * added new rule AvoidUnderlineTagRule
 
 ### Release 0.12 (2014-08-02)
 
