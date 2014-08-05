@@ -7,6 +7,8 @@ Changelog for BitvUnit
     * new interface Testable as common basis for Rule and RuleSet that both can be verified against
     * simplifying ComplianceMatcher to make use of the new interface Testable
     * new class BitvUnit with all commonly used methods to interact with the library
+* updated plugins
+    * org.eclipse.jetty:jetty-maven-plugin9.2.2.v20140723
 
 ### Release 0.12 (2014-08-02)
 
