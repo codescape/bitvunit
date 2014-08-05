@@ -2,9 +2,7 @@ package de.codescape.bitvunit.rule.text;
 
 import com.gargoylesoftware.htmlunit.html.HtmlUnderlined;
 import de.codescape.bitvunit.model.Page;
-import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.AvoidElementRule;
-import de.codescape.bitvunit.rule.Violations;
 
 import java.util.List;
 
