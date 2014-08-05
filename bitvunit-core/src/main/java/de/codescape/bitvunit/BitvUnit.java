@@ -4,7 +4,6 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import de.codescape.bitvunit.hamcrest.ComplianceMatcher;
 import de.codescape.bitvunit.report.ReportWriter;
 import de.codescape.bitvunit.report.ReportingContext;
-import de.codescape.bitvunit.report.XmlReportWriter;
 import de.codescape.bitvunit.rule.Rule;
 import de.codescape.bitvunit.ruleset.AllRules;
 import de.codescape.bitvunit.ruleset.BasicRuleSet;
