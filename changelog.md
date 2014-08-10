@@ -22,6 +22,7 @@ Changelog for BitvUnit
     * org.seleniumhq.selenium:selenium-htmlunit-driver:2.42.2
 * rules
     * removed rule DoctypeForPageRule due to incompatibility with webdriver
+    * split rule TitleForPageRule into TitleContainsTextRule and SingleTitlePerPageRule
 
 ### Release 0.11 (2014-06-08)
 

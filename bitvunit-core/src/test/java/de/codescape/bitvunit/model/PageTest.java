@@ -8,6 +8,8 @@ import org.junit.Test;
 import java.util.List;
 
 import static de.codescape.bitvunit.util.html.HtmlPageUtil.toHtmlPage;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 public class PageTest {
@@ -37,9 +39,9 @@ public class PageTest {
     @Test
     public void findTitleTagShouldReturnTheCorrectTitle() {
         String content = "<html><head><title>" + EXPECTED_TITLE + "</title><body></body></html>";
-        HtmlTitle titleTag = new Page(toHtmlPage(content)).findTitleTag();
-        assertNotNull(titleTag);
-        assertEquals(EXPECTED_TITLE, titleTag.getTextContent());
+        List<HtmlTitle> allTitleTags = new Page(toHtmlPage(content)).findAllTitleTags();
+        assertThat(allTitleTags.size(), is(equalTo(1)));
+        assertThat(allTitleTags.get(0).getTextContent(), is(equalTo(EXPECTED_TITLE)));
     }
 
     @Test

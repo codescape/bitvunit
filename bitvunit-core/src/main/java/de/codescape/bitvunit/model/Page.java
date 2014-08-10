@@ -309,12 +309,12 @@ public class Page {
     }
 
     /**
-     * Returns the first <code>&lt;title/&gt;</code> tag as {@link HtmlTitle} instance.
+     * Returns all <code>&lt;title/&gt;</code> tags as {@link HtmlTitle} instances.
      *
-     * @return the first <code>&lt;title/&gt;</code> tag as {@link HtmlTitle} instance
+     * @return all <code>&lt;title/&gt;</code> tags as {@link HtmlTitle} instances
      */
-    public HtmlTitle findTitleTag() {
-        return htmlPage.getFirstByXPath("/html/head/title[1]");
+    public List<HtmlTitle> findAllTitleTags() {
+        return allByTagName(HtmlTitle.TAG_NAME);
     }
 
     /**
