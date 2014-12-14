@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class Violations {
 
-    private final List<Violation> violations = new ArrayList<Violation>();
+    private final List<Violation> violations = new ArrayList<>();
 
     /**
      * Add a new {@link Violation} to the list of violations.

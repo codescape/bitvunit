@@ -20,7 +20,7 @@ import static de.codescape.bitvunit.report.ReportingContext.getReportWriter;
  */
 public class BasicRuleSet implements RuleSet {
 
-    private final List<Rule> rules = new ArrayList<Rule>();
+    private final List<Rule> rules = new ArrayList<>();
 
     /**
      * Create a BasicRuleSet from the optionally provided list of {@link Rule} instances.
@@ -82,7 +82,7 @@ public class BasicRuleSet implements RuleSet {
      * @return names of all rules in this {@link RuleSet} sorted by name
      */
     private List<String> collectRuleNames() {
-        List<String> ruleNames = new ArrayList<String>();
+        List<String> ruleNames = new ArrayList<>();
         for (Rule rule : rules) {
             ruleNames.add(rule.getName());
         }

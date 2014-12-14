@@ -116,7 +116,7 @@ public class XmlRuleSetTest {
          * @return list of all sub classes
          */
         public static List<Class<?>> findAllSubClasses(String packageName, Class<?> superClass) {
-            List<Class<?>> subClasses = new ArrayList<Class<?>>();
+            List<Class<?>> subClasses = new ArrayList<>();
 
             for (String classPathEntry : JAVA_CLASS_PATH.split(PATH_SEPARATOR)) {
                 if (!classPathEntry.endsWith(".jar")) {
@@ -128,7 +128,7 @@ public class XmlRuleSetTest {
         }
 
         private static List<Class<?>> findAllSubClassesInClassPath(String classPath, String packageName, Class<?> superClass) {
-            List<Class<?>> subClasses = new ArrayList<Class<?>>();
+            List<Class<?>> subClasses = new ArrayList<>();
 
             File[] files = new File(classPath + FILE_SEPARATOR + packageName.replace(".", FILE_SEPARATOR)).listFiles();
             if (files != null) {
