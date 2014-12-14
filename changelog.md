@@ -1,6 +1,10 @@
 Changelog for BitvUnit
 ----------------------
 
+### Release 0.14 (????-??-??)
+
+* update readme for more concise deployment process
+
 ### Release 0.13 (2014-12-14)
 
 * internal structure
