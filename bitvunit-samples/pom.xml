@@ -6,7 +6,7 @@
     <parent>
         <groupId>de.codescape.bitvunit</groupId>
         <artifactId>bitvunit-project</artifactId>
-        <version>0.13-SNAPSHOT</version>
+        <version>0.13</version>
     </parent>
 
     <artifactId>bitvunit-samples</artifactId>
