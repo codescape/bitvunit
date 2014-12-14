@@ -1,2 +1,5 @@
 # Jekyll
 _site/
+
+# Maven
+target/
