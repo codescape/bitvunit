@@ -1,9 +1,7 @@
 # jekyll configuration
 # --------------------
-auto: true
-server: true
 permalink: /blog/:year/:month/:day/:title
-pygments: true
+highlighter: pygments
 
 # custom configuration
 # --------------------

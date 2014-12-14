@@ -1,0 +1,21 @@
+ - title: Issue Tracker
+   image: images/icons/issue-tracker.png
+   url: https://github.com/codescape/bitvunit/issues
+   description: Found a bug? Want to request an improvement? The <a href="https://github.com/codescape/bitvunit/issues">Issue Tracker</a> is the right tool for you!
+ - title: Source Code Repository
+   image: images/icons/source-code.png
+   url: https://github.com/codescape/bitvunit
+   description: The library's <a href="https://github.com/codescape/bitvunit">Source Code Repository</a> is hosted on GitHub and can be accessed easily.
+ - title: Documentation
+   image: images/icons/documentation.png
+   url: /
+   description: The page you are currently viewing holds all relevant <a href="/">Documentation</a> to the library.
+ - title: Feedback
+   image: images/icons/feedback.png
+   url: /feedback
+   description: For feedback, questions or comments please use the <a href="/feedback">Feedback</a> page.
+ - title: Continuous Integration
+   image: images/icons/continuous-integration.png
+   url: https://travis-ci.org/codescape/bitvunit
+   description: Changes of the library are checked by the <a href="https://travis-ci.org/codescape/bitvunit">Travis CI</a> server.
+ 

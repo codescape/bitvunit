@@ -6,7 +6,7 @@ permalink: usage/index.html
 
 Find out how to use the BitvUnit library to automate your checks.
 
-h3. Sample (with Hamcrest matchers and XmlRuleSet)
+### Sample (with Hamcrest matchers and XmlRuleSet)
 
 The following sample demonstrates already a bunch of features that are coming with the BitvUnit library. The sample shows how to check against a set of rules defined in a XML document with the use of the provided Hamcrest matchers to verify accessibility compliance.
 
@@ -26,10 +26,10 @@ public class SampleHamcrestMatchersWithXmlRuleSetTest {
 }
 {% endhighlight %}
 
-h3. API Docs
+### API Docs
 
-The latest version of the API docs generated from the Javadoc is constantly updated at the following location: "http://bitvunit.codescape.de/apidocs(API Docs)":http://bitvunit.codescape.de/apidocs
+The latest version of the API docs generated from the Javadoc is constantly updated at the following location: [http://bitvunit.codescape.de/apidocs](http://bitvunit.codescape.de/apidocs)
 
-h3. Not enough?
+### Not enough?
 
-If you know other ways of using the library that should be documented here please use the "Issue Tracker":https://github.com/codescape/bitvunit/issues on GitHub and explain your way of getting the most out of this library!
+If you know other ways of using the library that should be documented here please use the [Issue Tracker](https://github.com/codescape/bitvunit/issues) on GitHub and explain your way of getting the most out of this library!
