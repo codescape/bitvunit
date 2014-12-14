@@ -10,6 +10,11 @@ Changelog for BitvUnit
     * new class BitvUnit with all commonly used methods to interact with the library
 * updated plugins
     * org.eclipse.jetty:jetty-maven-plugin9.2.2.v20140723
+* updates dependencies
+    * org.seleniumhq.selenium:selenium-htmlunit-driver:2.44.0
+    * org.seleniumhq.selenium:selenium-api:2.44.0
+    * junit:junit:4.12
+    * org.mockito:mockito:1.10.8
 * rules
     * added new rule AvoidUnderlineTagRule
 
