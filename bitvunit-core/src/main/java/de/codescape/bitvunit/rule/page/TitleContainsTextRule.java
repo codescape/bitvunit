@@ -9,7 +9,7 @@ import de.codescape.bitvunit.rule.Violations;
  * TitleContainsTextRule ensures that page titles defined by the <code>&lt;title/&gt;</code> tag to describe that page
  * contain text. This rule is satisfied by a <code>&lt;title/&gt;</code> tag that contains minimum one readable
  * character inside it's body.
- * <p/>
+ * <p>
  * A good example would look like this:
  * <pre><code>&lt;title&gt;BitvUnit - User Manual&lt;/title&gt;</code></pre>
  *
