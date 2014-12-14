@@ -148,7 +148,7 @@ The complete process to bring out a new release currently includes:
 * update [readme.md](/readme.md) and update version number in maven coordinates
 * update version number in _config.yml in the gh-pages branch
 * `mvn release:clean release:prepare` to prepare the release
-* `mvn release:perform` to deploy to sonatype and close release
+* `mvn release:perform -Darguments=-Dgpg.passphrase=<passphrase>` to deploy to sonatype and close release
 * `git clean -f` to remove all .backup files created during release process
 
 ### Documenting changes
