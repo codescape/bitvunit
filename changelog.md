@@ -9,7 +9,7 @@ Changelog for BitvUnit
 * external api
     * new class BitvUnit with all commonly used methods to interact with the library
 * updated plugins
-    * org.eclipse.jetty:jetty-maven-plugin9.2.2.v20140723
+    * all plugins use the latest available version
 * updates dependencies
     * org.seleniumhq.selenium:selenium-htmlunit-driver:2.44.0
     * org.seleniumhq.selenium:selenium-api:2.44.0
