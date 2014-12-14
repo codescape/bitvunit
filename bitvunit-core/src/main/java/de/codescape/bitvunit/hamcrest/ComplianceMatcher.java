@@ -12,13 +12,13 @@ import static de.codescape.bitvunit.util.html.HtmlPageUtil.toHtmlPage;
 
 /**
  * Hamcrest matcher to be used to run accessibility checks against the {@link de.codescape.bitvunit.Testable} rule(s).
- * <p/>
+ * <p>
  * <b>Usage examples:</b>
  * <pre><code>
  * assertThat(supportedType, is(compliantTo(ruleSet)));
  * assertThat(supportedType, is(compliantTo(rule)));
  * </code></pre>
- * <p/>
+ * <p>
  * Have a look at {@link de.codescape.bitvunit.util.html.HtmlPageUtil} methods for supported types.
  *
  * @param <T> one of the supported types
