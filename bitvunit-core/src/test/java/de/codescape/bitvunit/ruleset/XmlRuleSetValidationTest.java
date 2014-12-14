@@ -3,7 +3,6 @@ package de.codescape.bitvunit.ruleset;
 import de.codescape.bitvunit.util.io.ClassPathResource;
 import org.custommonkey.xmlunit.jaxp13.Validator;
 import org.junit.Test;
-import org.xml.sax.SAXException;
 
 import javax.xml.transform.stream.StreamSource;
 
@@ -36,9 +35,8 @@ public class XmlRuleSetValidationTest {
      *
      * @param xmlDocument    the XML document to be validated
      * @param schemaDocument the XSD document used for validation
-     * @throws SAXException
      */
-    private void assertValidDocument(String xmlDocument, String schemaDocument) throws SAXException {
+    private void assertValidDocument(String xmlDocument, String schemaDocument) {
         Validator validator = createValidatorForSchema(schemaDocument);
         assertTrue(validator.isInstanceValid(new StreamSource(ClassPathResource.asInputStream(xmlDocument))));
     }
