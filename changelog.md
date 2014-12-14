@@ -1,7 +1,7 @@
 Changelog for BitvUnit
 ----------------------
 
-### Release 0.13 (????-??-??)
+### Release 0.13 (2014-12-14)
 
 * internal structure
     * new interface Testable as common basis for Rule and RuleSet that both can be verified against
