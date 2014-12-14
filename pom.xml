@@ -5,7 +5,7 @@
     <!-- maven coordinates -->
     <groupId>de.codescape.bitvunit</groupId>
     <artifactId>bitvunit-project</artifactId>
-    <version>0.14-SNAPSHOT</version>
+    <version>0.13-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <!-- project metadata -->
