@@ -1,7 +1,5 @@
 # BitvUnit [![Build Status](https://travis-ci.org/codescape/bitvunit.png?branch=master)](https://travis-ci.org/codescape/bitvunit)
 
-[![Join the chat at https://gitter.im/codescape/bitvunit](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/codescape/bitvunit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 BitvUnit is an open source accessibility testing library that makes it easy to automate accessibility checking for pages and applications that run in your browser. It integrates well with Selenium Webdriver and HtmlUnit and provides Hamcrest matchers.
 
 BitvUnit is free, open source software licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
@@ -107,6 +105,8 @@ There are many ways to support this project. Here is an incomplete list of ways 
 * contact me and tell me about your experiences with the library
 * write a blog post, send a tweet or promote this project
 * use the library for your project and tell others about it
+
+[![Join the chat at https://gitter.im/codescape/bitvunit](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/codescape/bitvunit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 BitvUnit is open source and every kind of contribution is welcome!
 
