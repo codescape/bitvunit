@@ -10,10 +10,16 @@ import groovy.text.SimpleTemplateEngine
  * @since 0.6
  */
 
+// terminal colors
 RED = '\u001B[31m'
 GREEN = '\u001B[32m'
 YELLOW = '\u001B[33m'
 NOCOLOR = '\u001B[0m'
+
+// directory paths
+ruleDirectory = './bitvunit-core/src/main/java/de/codescape/bitvunit/rule'
+ruleTestDirectory = './bitvunit-core/src/test/java/de/codescape/bitvunit/rule'
+
 
 def availableCommands = [
         'create-rule': 'Wizard that helps you to create new rules.',
@@ -53,13 +59,13 @@ def addToRuleSet(rule) {
 }
 
 def createRule(rule) {
-    def target = "./bitvunit-core/src/main/java/de/codescape/bitvunit/rule/${rule.category}/${rule.name}.java"
+    def target = "${ruleDirectory}/${rule.category}/${rule.name}.java"
     fileFromTemplate('./bitvunit-core/templates/Rule.template', rule, target)
     target
 }
 
 def createTest(rule) {
-    def target = "./bitvunit-core/src/test/java/de/codescape/bitvunit/rule/${rule.category}/${rule.name}Test.java"
+    def target = "${ruleTestDirectory}/${rule.category}/${rule.name}Test.java"
     fileFromTemplate('./bitvunit-core/templates/Test.template', rule, target)
     target
 }
@@ -78,7 +84,7 @@ def getUserInput(text, validation = { true }) {
 
 def getAvailableCategories() {
     def categories = []
-    new File('./bitvunit-core/src/main/java/de/codescape/bitvunit/rule/').eachDir { dir ->
+    new File(ruleDirectory).eachDir { dir ->
         categories << dir.name
     }
     categories
