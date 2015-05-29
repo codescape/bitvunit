@@ -10,12 +10,17 @@ import groovy.text.SimpleTemplateEngine
  * @since 0.6
  */
 
+RED = '\u001B[31m'
+GREEN = '\u001B[32m'
+YELLOW = '\u001B[33m'
+NOCOLOR = '\u001B[0m'
+
 def availableCommands = [
         'create-rule': 'Wizard that helps you to create new rules.',
 ]
 
 if (args.size() != 1 || !(args[0] in availableCommands.keySet())) {
-    println 'Unknown or missing command.\nUsage:'
+    println "${RED}Unknown or missing command.${NOCOLOR}\nUsage:"
     availableCommands.each { println "\t${it.key}\t${it.value}" }
     System.exit 1
 }
@@ -36,7 +41,7 @@ if (args[0] == 'create-rule') {
     addToRuleSet(rule)
     println "Added new rule to ruleset all-rules.xml"
 
-    println 'Done. Happy Coding!'
+    println "${GREEN}Done. Happy Coding!"
 }
 
 def addToRuleSet(rule) {
@@ -65,7 +70,7 @@ def getUserInput(text, validation = { true }) {
     while (!value || !validation(value)) {
         value = new Scanner(System.in).nextLine()
         if (!validation(value)) {
-            print "Value '${value}' is not a valid input: "
+            print "${RED}Value '${value}' is not a valid input:${NOCOLOR} "
         }
     }
     value
