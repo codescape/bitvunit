@@ -17,9 +17,9 @@ YELLOW = '\u001B[33m'
 NOCOLOR = '\u001B[0m'
 
 // directory paths
-ruleDirectory = './bitvunit-core/src/main/java/de/codescape/bitvunit/rule'
-ruleTestDirectory = './bitvunit-core/src/test/java/de/codescape/bitvunit/rule'
-
+RULE_DIR = './bitvunit-core/src/main/java/de/codescape/bitvunit/rule'
+RULE_TEST_DIR = './bitvunit-core/src/test/java/de/codescape/bitvunit/rule'
+RULE_SET_DIR = './bitvunit-core/src/main/resources/rulesets'
 
 def availableCommands = [
         'create-rule': 'Wizard that helps you to create new rules.',
@@ -51,7 +51,7 @@ if (args[0] == 'create-rule') {
 }
 
 def addToRuleSet(rule) {
-    def ruleSetFile = new File('./bitvunit-core/src/main/resources/rulesets/all-rules.xml')
+    def ruleSetFile = new File("${RULE_SET_DIR}/all-rules.xml")
     def content = ruleSetFile.text
     def categoryString = "<!-- ${rule.category.capitalize()} -->"
     def ruleNode = "<rule class=\"de.codescape.bitvunit.rule.${rule.category}.${rule.name}\"/>"
@@ -59,13 +59,13 @@ def addToRuleSet(rule) {
 }
 
 def createRule(rule) {
-    def target = "${ruleDirectory}/${rule.category}/${rule.name}.java"
+    def target = "${RULE_DIR}/${rule.category}/${rule.name}.java"
     fileFromTemplate('./bitvunit-core/templates/Rule.template', rule, target)
     target
 }
 
 def createTest(rule) {
-    def target = "${ruleTestDirectory}/${rule.category}/${rule.name}Test.java"
+    def target = "${RULE_TEST_DIR}/${rule.category}/${rule.name}Test.java"
     fileFromTemplate('./bitvunit-core/templates/Test.template', rule, target)
     target
 }
@@ -84,7 +84,7 @@ def getUserInput(text, validation = { true }) {
 
 def getAvailableCategories() {
     def categories = []
-    new File(ruleDirectory).eachDir { dir ->
+    new File(RULE_DIR).eachDir { dir ->
         categories << dir.name
     }
     categories
