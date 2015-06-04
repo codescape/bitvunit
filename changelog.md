@@ -4,6 +4,8 @@ Changelog for BitvUnit
 ### Release 0.14 (????-??-??)
 
 * update readme for more concise deployment process
+* improve groovy script for rule creation using colors in output
+* update dependencies to latest compatible versions
 
 ### Release 0.13 (2014-12-14)
 
@@ -141,7 +143,7 @@ Changelog for BitvUnit
     * added a goal to generate and publish apidocs on the website
 * improvements to documentation website
     * the website now comes in a much cleaner layout
-    * all rules are listed and documented on the website 
+    * all rules are listed and documented on the website
     * apidocs are now available from the usage page
 * updated dependencies
     * now using commons-io:commons-io:2.1
