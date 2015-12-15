@@ -101,7 +101,7 @@ public class BitvUnitTest {
     }
 
     @Test
-    public void shouldProfileCustomRuleSetAccessor() {
+    public void shouldProvideCustomRuleSetAccessor() {
         assertThat(BitvUnit.withRules(new AvoidBlinkTextRule(), new AvoidAbstractRoleRule()), containsRules(2));
     }
 
