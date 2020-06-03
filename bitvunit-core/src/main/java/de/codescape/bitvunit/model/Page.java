@@ -172,9 +172,8 @@ public class Page {
      * <code>&lt;h4/&gt;</code>, <code>&lt;h5/&gt;</code> and <code>&lt;h6/&gt;</code> tags as {@link
      * HtmlElement} instances
      */
-    @SuppressWarnings("unchecked")
     public List<HtmlElement> findAllHeadingTags() {
-        return (List<HtmlElement>) htmlPage.getByXPath("//*[name()='h1' or name()='h2' or name()='h3' or name()='h4' or name() = 'h5' or name()='h6']");
+        return htmlPage.getByXPath("//*[name()='h1' or name()='h2' or name()='h3' or name()='h4' or name() = 'h5' or name()='h6']");
     }
 
     /**
@@ -250,7 +249,7 @@ public class Page {
      *
      * @return all <code>&lt;applet/&gt;</code> tags as {@link HtmlApplet} instances
      */
-    public List<HtmlApplet> findAllAppletTags() {
+    public List<HtmlUnknownElement> findAllAppletTags() {
         return allByTagName(HtmlApplet.TAG_NAME);
     }
 
@@ -323,9 +322,8 @@ public class Page {
      * @param attributeName name of the attribute to filter by
      * @return all elements with the given attribute name as {@link HtmlElement} instances
      */
-    @SuppressWarnings("unchecked")
     public List<HtmlElement> findAllElementsWithAttribute(String attributeName) {
-        return (List<HtmlElement>) htmlPage.getByXPath("//*[@" + attributeName + "]");
+        return htmlPage.getByXPath("//*[@" + attributeName + "]");
     }
 
     /**

@@ -2,8 +2,8 @@ package de.codescape.bitvunit.util.html;
 
 import com.gargoylesoftware.htmlunit.StringWebResponse;
 import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HTMLParser;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import com.gargoylesoftware.htmlunit.html.parser.neko.HtmlUnitNekoHtmlParser;
 import org.apache.commons.io.IOUtils;
 import org.openqa.selenium.WebDriver;
 
@@ -32,7 +32,10 @@ public final class HtmlPageUtil {
     public static HtmlPage toHtmlPage(String string) {
         try {
             URL url = new URL("http://bitvunit.codescape.de/some_page.html");
-            return HTMLParser.parseHtml(new StringWebResponse(string, url), new WebClient().getCurrentWindow());
+            return new HtmlUnitNekoHtmlParser().parseHtml(
+                    new StringWebResponse(string, url), new
+                            WebClient().getCurrentWindow()
+            );
         } catch (IOException e) {
             throw new RuntimeException("Error creating HtmlPage from String.", e);
         }
@@ -88,7 +91,7 @@ public final class HtmlPageUtil {
      */
     public static HtmlPage toHtmlPage(WebDriver webDriver) {
         try {
-            return HTMLParser.parseHtml(
+            return new HtmlUnitNekoHtmlParser().parseHtml(
                     new StringWebResponse(webDriver.getPageSource(), new URL(webDriver.getCurrentUrl())),
                     new WebClient().getCurrentWindow()
             );

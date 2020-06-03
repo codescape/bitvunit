@@ -1,6 +1,7 @@
 package de.codescape.bitvunit.rule.media;
 
 import com.gargoylesoftware.htmlunit.html.HtmlApplet;
+import com.gargoylesoftware.htmlunit.html.HtmlUnknownElement;
 import de.codescape.bitvunit.model.Page;
 import de.codescape.bitvunit.rule.AbstractRule;
 import de.codescape.bitvunit.rule.Violations;
@@ -25,7 +26,7 @@ public class AlternativeTextForAppletRule extends AbstractRule {
 
     @Override
     protected void applyTo(Page page, Violations violations) {
-        for (HtmlApplet applet : page.findAllAppletTags()) {
+        for (HtmlUnknownElement applet : page.findAllAppletTags()) {
             if (applet.getTextContent() == null || applet.getTextContent().trim().isEmpty()) {
                 violations.add(createViolation(applet, page, RULE_MESSAGE));
             }
