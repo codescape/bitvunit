@@ -1,11 +1,12 @@
 Changelog for BitvUnit
 ----------------------
 
-### Release 0.14 (????-??-??)
+### Unreleased (????-??-??)
 
 * update readme for more concise deployment process
 * improve groovy script for rule creation using colors in output
 * update dependencies to latest compatible versions
+* update htmlunit dependency because of known vulnerability
 
 ### Release 0.13 (2014-12-14)
 
