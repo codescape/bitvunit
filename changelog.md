@@ -7,6 +7,7 @@ Changelog for BitvUnit
 * improve groovy script for rule creation using colors in output
 * update dependencies to latest compatible versions
 * update htmlunit dependency because of known vulnerability
+* update travic ci configuration
 
 ### Release 0.13 (2014-12-14)
 

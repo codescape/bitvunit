@@ -1,11 +1,7 @@
+dist: xenial
+sudo: false
 language: java
-
-branches:
-  excludes:
-    - gh-pages
-
-script: mvn verify
-
 jdk:
-  - oraclejdk8
-  - oraclejdk7
+  - openjdk8
+script:
+  - mvn verify
