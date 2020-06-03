@@ -3,7 +3,6 @@ package de.codescape.bitvunit.hamcrest;
 import de.codescape.bitvunit.Testable;
 import de.codescape.bitvunit.rule.Violations;
 import org.hamcrest.Description;
-import org.hamcrest.Factory;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
 
@@ -65,7 +64,6 @@ public class ComplianceMatcher<T> extends TypeSafeMatcher<T> {
      * @param <T>      supported types are contained in JavaDoc at class level
      * @return {@link ComplianceMatcher} to check against the {@link de.codescape.bitvunit.Testable} rule(s)
      */
-    @Factory
     public static <T> Matcher<T> compliantTo(Testable testable) {
         return new ComplianceMatcher<>(testable);
     }
